@@ -1,0 +1,57 @@
+
+/* Whole body */
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Inter', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+  width: 100%;
+  min-width: 100vh;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#root{
+  width: 100%;
+}
+
+button{
+  cursor: pointer;
+}
+
+
+
+/* To style the lightbox galleries */
+
+.yarl__icon {
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 50%;
+  border: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+  &:hover{
+    fill: black;
+
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.1);
+  }
+}
+
+svg g {
+  fill: rgba(157, 157, 157, 0.754);
+  &:hover{
+    fill: black;
+  }
+}
+
+/* ----------------------- */

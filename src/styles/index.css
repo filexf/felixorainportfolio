@@ -1,0 +1,125 @@
+/* These are the main files that are gonna be used for all the pages */
+
+/* This one is for various things such as resizing the css properties, effects etc.. */
+@import url(style.css);
+
+/* The landing page / index */
+@import url(landing-page.css);
+
+/* The lightbox css properties */
+@import url(lightbox.css);
+
+@import "tailwindcss";
+
+/* Dark mode and light mode - CSS variables customized */
+:root {
+  color-scheme: light;
+  /* Variables mode clair */
+  --background-primary: #fffffff7;
+  --background-secondary: #f9fafb;
+  --background-tertiary: #f3f4f6;
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-muted: #6b7280;
+  --border-color: #e5e7eb;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --card-bg: #ffffff;
+  --navbar-bg: #ffffff;
+  --footer-bg: #2e2e32;
+  --footer-text: #ffffff;
+  --gradient-start: #64748b;
+  --gradient-middle: #0369a1;
+  --gradient-end: #0284c7;
+  --dot-color: #e5e7eb; /* Couleur des points en mode clair */
+  --sidebar-bg: #ffffff;
+}
+
+/* Mode sombre */
+.dark {
+  color-scheme: dark;
+  --background-primary: #111827;
+  --background-secondary: #1f2937;
+  --background-tertiary: #374151;
+  --text-primary: #f3f4f6;
+  --text-secondary: #e5e7eb;
+  --text-muted: #9ca3af;
+  --border-color: #4b5563;
+  --shadow-color: rgba(0, 0, 0, 0.25);
+  --card-bg: #1f2937;
+  --navbar-bg: #171f2e;
+  --footer-bg: #171f2e;
+  --footer-text: #f3f4f6;
+  --gradient-start: #94a3b8;
+  --gradient-middle: #7dd3fc;
+  --gradient-end: #38bdf8;
+  --dot-color: #232c3a; /* Couleur des points en mode sombre */
+  --sidebar-bg: #1f2937; /* Couleur de fond de la sidebar en mode sombre */
+}
+
+/* Désactiver l'auto dark mode du système */
+@media (prefers-color-scheme: dark) {
+  :root:not(.dark) {
+    color-scheme: light;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root.dark {
+    color-scheme: dark;
+  }
+}
+
+/* Appliquer les variables aux classes principales */
+body {
+  color: var(--text-primary);
+  background-color: var(--background-primary);
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+/* ‼️ Les motif à points de fond */
+body > div {
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Some custom styling for the components */
+.bg-sidebar {
+  background-color: var(--sidebar-bg);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.bg-slate-50 {
+  background-color: var(--background-secondary) !important;
+}
+
+.border-card {
+  border-color: var(--text-primary) !important;
+}
+
+.border-gray-200,
+.border-gray-300,
+.border-gray-400 {
+  border-color: var(--border-color) !important;
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-to-tr from-slate-500 via-sky-700 to-sky-600 bg-clip-text text-transparent text-shadow-sm;
+    background-image: linear-gradient(
+      to right top,
+      var(--gradient-start),
+      var(--gradient-middle),
+      var(--gradient-end)
+    );
+  }
+  .vertical-animation {
+    @apply transition-all duration-300 ease-in-out hover:-translate-y-1;
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "navbar": {
+    "home": "Home",
+    "applications": "Applications",
+    "photos": "Photos",
+    "books": "Books"
+  },
+  "landing": {
+    "title": "Félix Orain",
+    "profession": "Developer and photographer  "
+  },
+  "portfolio": {
+    "title": "My portfolio",
+    "intro": "After four years as a freelance photographer, I ventured into web development to blend my artistic vision with technology, creating unique digital experiences. <br />Dive into my projects and see what I’ve been working on!"
+  },
+  "about": {
+    "title": "About me",
+    "desc": "I’m a creative web developer with a strong background in photography and design. For years, I’ve loved exploring ways to bring ideas to life through visuals and storytelling, honing my eye for detail and aesthetics.<br /><br />Now, I’m channeling that passion into crafting intuitive, user-friendly digital experiences. I’m currently expanding my skills by learning Ruby on Rails and React, eager to combine my creative background with new technical expertise to build meaningful and engaging products.",
+    "resume": "My resume"
+  },
+  "readMore": "Read more",
+  "seeMore": "See more",
+  "contact": {
+    "title": "Contact me",
+    "text": "Feel free to contact me for any project at : felix.orain@gmail.com",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Your message",
+    "send": "Send message"
+  },
+  "notFound": {
+    "title": "404 - Page not found",
+    "subtitle": "You may have gotten lost, go back to the main page:",
+    "back": "Back home"
+  },
+  "footer": {
+    "copyright": "Copyright Felix Orain © All rights reserved.",
+    "madeby": "Developed with ❤️ by Félix Orain"
+  },
+  "webdev": {
+    "title": "Web development",
+    "desc": "I graduated from Le Wagon and built real-world applications from scratch, gaining hands-on experience in web development. With a background in photography, I bring a strong sense of design, now combined with solid programming skills.",
+    "sportify": "SPORTIFY",
+    "tymouet": "TY MOUET",
+    "portfolio": "PORTFOLIO"
+  },
+  "design": {
+    "title": "Design",
+    "desc": "I created two books showcasing five months of adventure in Southeast Asia, using my own photos and writing. Self-edited and sold over 500 copies, this experience taught me consistency in design and how to manage large-scale projects effectively."
+  },
+  "photographysection": {
+    "title": "Photography",
+    "desc": "Since I was little, I've always been fascinated by art and adventure. I wanted to fulfill this deep need for adventure and be able to tell those stories in my own way. So, when I discovered photography a few years ago, an entirely new world opened up to me."
+  },
+
+  "photospage": {
+    "title": "Photography",
+    "desc": "Since I was little, I've always been fascinated by art and adventure. I wanted to fulfill this deep need for adventure and be able to tell those stories in my own way. So, when I discovered photography a few years ago, an entirely new world opened up to me.",
+    "sport": "Sport",
+    "mosaic": "Mosaic",
+    "cityscape": "Cityscape",
+    "landscape": "Landscape",
+    "wedding": "Wedding"
+  },
+
+  "sportphotopage": {
+    "title": "Sports",
+    "desc": "Discovering action photography felt like the perfect way to capture movement, emotion, and storytelling. Shooting parkour, climbing, or silhouettes in vast environments allowed me to showcase both human dynamism and the scale of the world around us. Each shot froze a moment of energy, where movement met the stillness of nature or architecture. Through this, I learned to embrace the unpredictability of motion and the challenge of timing, capturing not just action but the story of effort, freedom, and our connection with the world. This photography style taught me to see movement and meaning in the relationship between humans and their surroundings."
+  },
+  "mosaicphotopage": {
+    "title": "Mosaics",
+    "desc": "I love capturing patterns in photography because they reveal beauty in simplicity and repetition. Whether found in nature or architecture, patterns create rhythm and harmony that draw the eye. Shooting these details—like ripples in water, tiled facades, or symmetrical shadows—feels like uncovering hidden art in the everyday. Patterns tell stories of design, structure, and balance, offering a sense of order in a chaotic world. Through my lens, I aim to celebrate these mesmerizing visuals and invite others to see the world differently."
+  },
+  "landscapephotopage": {
+    "title": "Landscapes",
+    "desc": "As a photographer, I love landscapes for their ability to evoke both stillness and awe. Capturing the clouds drifting through Yosemite’s cliffs and valleys feels like preserving nature’s fleeting masterpieces. Each moment is unique, with light and weather transforming the scenery before my eyes. Shooting starry skies offers a humbling connection to the vastness of the universe, blending patience with wonder. Whether it’s misty forests or cosmic expanses, landscapes remind me of the beauty and grandeur of the world. Through my lens, I aim to share these timeless, breathtaking moments with others."
+  },
+  "cityscapephotopage": {
+    "title": "Cityscapes",
+    "desc": "As a photographer, I’m drawn to the energy and vibrancy of cityscapes, especially at night in Hong Kong. The city transforms after dark, with neon signs and shimmering skyscrapers painting the skyline in vivid colors. Capturing the interplay of light and shadow in bustling streets or reflections on Victoria Harbour feels like preserving the pulse of the city. Each shot tells a story of movement, culture, and endless possibilities. The contrast between the urban glow and the quiet corners offers a unique perspective on its beauty. Through my lens, I seek to share the dynamic allure of Hong Kong’s nights with others."
+  },
+  "weddingphotopage": {
+    "title": "Wedding",
+    "desc": "Your wedding day is a unique story, and my goal is to capture it authentically and beautifully. I focus on candid moments and genuine emotions while ensuring every detail, from the décor to the small gestures, is thoughtfully documented. My style combines natural photojournalism with creative storytelling, shaped by my background in filmmaking.  Here is a glimpse of the love and joy that fills the day."
+  },
+
+  "applications": {
+    "title": "Applications",
+    "desc": "I'm a recent Le Wagon graduate with hands-on experience in web development, where I built applications from scratch using Ruby on Rails, JavaScript, and React. Throughout the program, I developed strong problem-solving skills and learned to work with tools like Git, SQL, and API integrations. This way I got a solid understanding of both frontend and backend development.",
+    "github": "My GitHub account",
+    "techstack": "My tech stack"
+  },
+  "projects": {
+    "sportify": {
+      "title": "SPORTIFY",
+      "desc": "Sportify is a PWA built with Ruby on Rails, PostgreSQL, and Javascript with AJAX to connect users with sports partners by browsing or creating local events. We designed it in Figma, used Bootstrap for the UI, and deployed it on Heroku with a custom domain. The project was then presented in front of a big crowd."
+    },
+    "gis": {
+      "title": "GIS PROJECT",
+      "desc": "This project is a web GIS application that allows users to visualize and interact with geospatial data. It was built using React, Leaflet, and Mapbox, and it includes features such as map layers, markers, and popups. The application is designed to be user-friendly and responsive."
+    },
+    "carbonSavings": {
+      "title": "CARBON SAVINGS SIMULATOR",
+      "desc": "The Carbon Savings Simulator is a web app that shows what you save by biking instead of using a car or public transportation. It calculates carbon emissions, money saved, and calories burned, with graph visualizations for easy insights. Built with React, Tailwind CSS, and the Mapbox API, it’s user-friendly and responsive."
+    },
+    "portfolio": {
+      "title": "PORTFOLIO",
+      "desc": "This portfolio was built using React. I used React Router to manage multiple pages and hosted it on Github Pages. The animations are made with Framer Motion. I finally implemented a Dark Mode for a more pleasant UI as well as a language management system. It showcases my projects, skills, and experiences, with a clean and personal design."
+    },
+    "tymouet": {
+      "title": "TY MOUET",
+      "desc": "Ty Mouet was our first project at Le Wagon, a seagull-themed Airbnb clone built with Ruby on Rails, PostgreSQL, and AJAX. We handled a many-to-many database, deployed on Heroku, and worked in an agile team. Key features included booking logic, user authentication, and geolocation-based dynamic search."
+    },
+    "movieWatchlist": {
+      "title": "MOVIES WATCHLIST",
+      "desc": "The Movies Watchlist is a React and Redux application that helps users discover and organize movies using TMDB's database. Features include real-time search, categorized browsing, and a personal watchlist with ratings and comments. Built with Tailwind CSS and includes local storage for persistence."
+    }
+  },
+  "books": {
+    "title": "Books",
+    "description": "I created two books showcasing five months of adventure in Southeast Asia, using my own photos and writing. Self-edited and sold over 500 copies, this experience taught me consistency in design and how to manage large-scale projects effectively.",
+    "civilisation": {
+      "title": "Civilisation",
+      "description": "The first book I made is Civilisation, narrating the behind the scenes of the eponym film, watched by more than 5000 people. Civilisation is the adventure of 9 friends who travel to the other side of the world to shoot a parkour and adventure film in Southeast Asia. Follow them through their filming journey across three different countries and environments, where they faced a multitude of challenges. Travel with them through this story and their breathtaking photos. <br /> <br /> This book is 80 pages long and was entirely edited by me.<br /> <br /> Click on it to read a few pages !"
+    },
+    "wizzy": {
+      "title": "Wizzy en Asie",
+      "description": "The second book I made is Wizzy en Asie, following the journey of Civilisation. Wizzy in Asia is the adventure of 9 friends traveling to the other side of the world for several months with the goal of practicing Parkour on the rooftops of Asia's megacities. Follow them on their journey as they face a multitude of challenges. From leaping across the massive rooftops of Bangkok to exploring a ghost town in Malaysia and even being stranded together in Hong Kong for a month, it's an adventure packed with adrenaline. Experience their story and breathtaking photos as you travel along with them. <br /> <br /> This book is 112 pages long and was entirely edited by me. <br /> <br /> Click on it to read a few pages !"
+    },
+    "galleryphoto": "See the gallery",
+    "watchmovie": "See the movie",
+    "seegallery": "See gallery"
+  },
+  "bookgallery": {
+    "desc": "Here are a few pages of the magazine I wrote and illustrated."
+  },
+  "cardData": {
+    "webDevelopment": {
+      "title": "Web Development",
+      "text": "Web development seamlessly merges creativity and problem-solving, drawing inspiration from my photography background."
+    },
+    "photography": {
+      "title": "Photography",
+      "text": "Discovering photography bridged my passions for art and storytelling, letting me capture unique moments."
+    },
+    "design": {
+      "title": "Design",
+      "text": "I edited and sold 500+ copies of 2 books documenting my journey in Southeast Asia. All photos and text are mine."
+    }
+  }
+}

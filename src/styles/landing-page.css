@@ -1,0 +1,26 @@
+/* Main 1st frame  */
+
+/* The animation that's used to fade in the photo  */
+
+@keyframes fade-up {
+  0% {
+    opacity: 0.3;
+    transform: translateY (30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+
+/* This is for animating the arrow blinking, cta to scroll down*/
+
+@keyframes blinker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
