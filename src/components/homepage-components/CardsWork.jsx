@@ -75,10 +75,10 @@ const Card = ({ icon, title, text, path, language }) => {
   return (
     <Link to={path}>
       <div
-        className={`group vertical-animation mx-4 my-3 flex h-auto w-72 flex-col items-center justify-center gap-8 rounded-3xl border p-5 shadow-md backdrop-blur-sm transition-colors duration-300 ${
+        className={`group vertical-animation mx-4 my-3 flex h-auto w-100 flex-col items-center justify-center gap-8 rounded-3xl border p-7 shadow-md backdrop-blur-sm transition-colors duration-300 md:w-72 md:p-5 ${
           darkMode
             ? "border-gray-700 bg-gradient-to-br from-gray-700 to-gray-900"
-            : "border-gray-400 bg-gradient-to-br from-gray-50 to-gray-200"
+            : "from-gray_50 border-gray-200 bg-gradient-to-br to-gray-200"
         }`}
       >
         <div className="rounded-full bg-gray-200 p-2.5 transition-colors duration-300 group-hover:bg-gray-200 dark:bg-gray-800 dark:group-hover:bg-gray-700">
@@ -91,7 +91,7 @@ const Card = ({ icon, title, text, path, language }) => {
         <div className="flex flex-col items-center justify-center gap-5 text-center">
           <h3 className="text-gradient text-xl font-bold">{title}</h3>
           <p className="h-25 text-base leading-relaxed">{text}</p>
-          <button className="mt-2 mb-2 w-full rounded-2xl border-1 px-5 py-2 text-sm font-semibold transition-all duration-300 ease-in-out hover:border-transparent hover:bg-gray-900 hover:text-white md:w-3/4 dark:hover:bg-gray-100 dark:hover:text-gray-900">
+          <button className="mt-2 mb-2 w-80 rounded-2xl border-1 px-5 py-2 text-sm font-semibold transition-all duration-300 ease-in-out hover:border-transparent hover:bg-gray-900 hover:text-white md:w-3/4 dark:hover:bg-gray-100 dark:hover:text-gray-900">
             <span className="flex items-center justify-center gap-2">
               {t("readMore", language)}
               <svg

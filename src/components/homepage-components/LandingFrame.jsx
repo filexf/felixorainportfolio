@@ -84,10 +84,10 @@ export default function LandingFrame() {
             />
           </motion.div>
         </div>
-        <Reveal>
+        <Reveal y={75} duration={0.8} delay={0}>
           <div>
             <img
-              className="relative flex w-full justify-center"
+              className="h-full w-full object-cover"
               src={PhotoLandingPage}
               srcSet={`${PhotoLandingPage} 500w, ${PhotoLandingPage} 1000w, ${PhotoLandingPage} 1500w`}
               sizes="(max-width: 600px) 500px, (max-width: 1000px) 1000px, 1500px"

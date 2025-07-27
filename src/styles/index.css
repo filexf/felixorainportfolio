@@ -82,7 +82,6 @@ body {
   line-height: normal;
 }
 
-
 /* ‼️ Les motif à points de fond */
 body > div {
   background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
