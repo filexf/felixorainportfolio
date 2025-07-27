@@ -2,11 +2,23 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "felix-orain.com"
+        }
+      ],
+      "destination": "https://www.felix-orain.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/index.html",
-      "permanent": true
+      "destination": "/index.html"
     }
   ]
 }
