@@ -21,7 +21,7 @@ export default function DesignSection() {
           </p>
 
           {/* Grille de designs */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <DesignCard photo={Photo1} />
             <DesignCard photo={Photo2} />
           </div>
@@ -36,15 +36,12 @@ export default function DesignSection() {
 function DesignCard({ photo }) {
   return (
     <Link to="/books">
-      <div className="group relative overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1">
-        {/* Container d'image avec ratio fixe */}
-        <div className="aspect-[2/3] h-[600px] w-full">
-          <img
-            src={photo}
-            alt="Book Cover"
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-        </div>
+      <div className="group relative mx-auto aspect-[2/3] w-full max-w-[350px] overflow-hidden rounded-xl transition-all duration-300 hover:-translate-y-1">
+        <img
+          src={photo}
+          alt="Book Cover"
+          className="h-full w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
+        />
 
         {/* Overlay au hover */}
         <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
