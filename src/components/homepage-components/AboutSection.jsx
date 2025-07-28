@@ -23,7 +23,7 @@ export default function AboutSection() {
     <>
       <Reveal>
         <SectionWrapper title={t("about.title", language)}>
-          <div className="lg:width-[80%] mt-2 flex w-full flex-col items-center justify-center gap-6 lg:flex-row lg:justify-center lg:gap-10 lg:pl-12">
+          <div className="lg:width-[80%] flex w-full flex-col items-center justify-center gap-6 lg:flex-row lg:justify-center lg:gap-10 lg:pl-12">
             <img
               className="vertical-animation my-2 mb-2 h-[400px] w-auto rounded-4xl shadow-md lg:h-[400px]"
               src={profileImage}

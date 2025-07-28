@@ -16,12 +16,12 @@ export default function DesignSection() {
       <SectionWrapper title={t("design.title", language)}>
         <div className="flex flex-col gap-12">
           {/* Texte d'introduction */}
-          <p className="body-font mx-auto max-w-6xl text-center">
+          <p className="body-font mx-auto max-w-5xl text-center">
             {t("design.desc", language)}
           </p>
 
           {/* Grille de designs */}
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <DesignCard photo={Photo1} />
             <DesignCard photo={Photo2} />
           </div>
@@ -36,11 +36,11 @@ export default function DesignSection() {
 function DesignCard({ photo }) {
   return (
     <Link to="/books">
-      <div className="group relative mx-auto aspect-[2/3] w-full max-w-[350px] overflow-hidden rounded-xl transition-all duration-300 hover:-translate-y-1">
+      <div className="group relative mx-auto aspect-[2/3] w-full max-w-[350px] overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1">
         <img
           src={photo}
           alt="Book Cover"
-          className="h-full w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
 
         {/* Overlay au hover */}
