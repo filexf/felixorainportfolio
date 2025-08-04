@@ -7,7 +7,6 @@ import { t } from "../i18n/i18n";
 export default function NotFound() {
 
   const { language } = useLanguage();
-
   return (
     <div className="flex h-screen flex-col items-center justify-center text-center">
       <h1 className="text-3xl">
