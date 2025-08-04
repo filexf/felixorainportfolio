@@ -1,35 +1,35 @@
-import githubIcon from "../assets/icons/Main-icons/Github-icon-white.svg";
-import instagramIcon from "../assets/icons/Main-icons/Instagram-icon.svg";
-import linkedinIcon from "../assets/icons/Main-icons/Linkedin-icon-white.svg";
-import { useTheme } from "../context/ThemeContext";
-import "../styles/index.css";
+"use client";
 
+import Image from "next/image";
 import { useLanguage } from "../context/LanguageContext";
+import { useTheme } from "../context/ThemeContext";
 import { t } from "../i18n/i18n";
 
 export default function Footer({ noPadding }) {
   const { darkMode } = useTheme();
-
   const { language } = useLanguage();
 
   return (
     // To make sure that there isn't the padding on the bottom of the page
-    <div className={noPadding ? undefined : "bg-transparent pt-[15vh]"}>
+    <div className={noPadding ? undefined : "bg-transparent pt-[10vh] w-full"}>
       <footer
-        className="relative bottom-0 w-full py-8 md:py-10"
+        className="relative bottom-0 w-full py-6 md:py-8"
         style={{ backgroundColor: "var(--footer-bg)" }}
       >
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center gap-8">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center gap-6">
             {/* Social Icons with hover effects */}
             <ul className="flex items-center gap-6 md:gap-8">
-              <SocialIcon icon={githubIcon} link="https://github.com/filexf" />
               <SocialIcon
-                icon={linkedinIcon}
+                icon="/icons/Main-icons/Github-icon-white.svg"
+                link="https://github.com/filexf"
+              />
+              <SocialIcon
+                icon="/icons/Main-icons/Linkedin-icon-white.svg"
                 link="https://www.linkedin.com/in/felix-orain/"
               />
               <SocialIcon
-                icon={instagramIcon}
+                icon="/icons/Main-icons/Instagram-icon.svg"
                 link="https://www.instagram.com/_filex_/?hl=fr"
                 invert={!darkMode}
               />
@@ -39,7 +39,7 @@ export default function Footer({ noPadding }) {
             <div className="h-px w-64 bg-gray-400/20"></div>
 
             {/* Text content */}
-            <div className="flex w-full flex-col items-center justify-around gap-4 md:flex-row md:px-8 lg:px-32">
+            <div className="flex w-full flex-col items-center justify-center gap-4 px-4 text-center sm:flex-row sm:justify-between sm:px-8 lg:px-16">
               <p
                 className="text-sm font-light tracking-wide md:text-base"
                 style={{ color: "var(--footer-text)" }}
@@ -69,10 +69,12 @@ function SocialIcon({ icon, link, invert }) {
         rel="noopener noreferrer"
         className="block transition-transform duration-300 ease-in-out hover:-translate-y-1"
       >
-        <img
+        <Image
           src={icon}
-          alt="Social icon list"
-          className={`w-8 opacity-80 transition-opacity duration-300 hover:opacity-100 md:w-9 ${
+          alt="Social icon"
+          width={32}
+          height={32}
+          className={`opacity-80 transition-opacity duration-300 hover:opacity-100 md:h-9 md:w-9 ${
             invert ? "contrast-[3]" : ""
           }`}
         />

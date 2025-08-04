@@ -1,0 +1,22 @@
+import "../styles/globals.css";
+import "../styles/landing-page.css";
+import "../styles/lightbox.css";
+import "../styles/style.css";
+
+import Providers from "../components/Providers";
+
+export const metadata = {
+  title: "Félix Orain - Portfolio",
+  description: "Portfolio de Félix Orain - Développeur web et photographe",
+  viewport: "width=device-width, initial-scale=1.0",
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en" className="scroll-smooth">
+      <body>
+        <Providers>{children}</Providers>
+      </body>
+    </html>
+  );
+}

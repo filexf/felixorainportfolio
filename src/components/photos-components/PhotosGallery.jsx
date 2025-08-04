@@ -8,8 +8,8 @@ const Gallery = ({ title, images, text }) => {
 
   return (
     <div className="flex w-full justify-center pt-[40px] pb-[120px]">
-      <div className="flex w-4/5 flex-col gap-[40px]">
-        <h2 className="text-center text-6xl font-bold leading-normal md:text-7xl text-gradient">
+      <div className="flex flex-col gap-[40px]">
+        <h2 className="text-center text-7xl font-bold leading-normal md:text-7xl text-gradient">
           {title}
         </h2>
         <p className="body-font mx-auto max-w-4xl text-center">{text}</p>

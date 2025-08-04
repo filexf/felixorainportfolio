@@ -1,8 +1,10 @@
+"use client";
+
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
-import { Link } from "react-router-dom";
-import logoSite from "../assets/icons/Main-icons/Logo-website-icon.svg";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import ThemeToggle from "../components/ThemeToggle";
 import { useLanguage } from "../context/LanguageContext";
@@ -25,16 +27,16 @@ export default function Navbar() {
   const NavLinks = ({ onClick }) => (
     <ul className="flex flex-col items-center gap-[18px] text-2xl font-medium md:flex-row md:gap-[25px]">
       <li className="transition-opacity hover:opacity-70" onClick={onClick}>
-        <Link to="/">{t("navbar.home", language)}</Link>
+        <Link href="/">{t("navbar.home", language)}</Link>
       </li>
       <li className="transition-opacity hover:opacity-70" onClick={onClick}>
-        <Link to="/applications">{t("navbar.applications", language)}</Link>
+        <Link href="/applications">{t("navbar.applications", language)}</Link>
       </li>
       <li className="transition-opacity hover:opacity-70" onClick={onClick}>
-        <Link to="/photos">{t("navbar.photos", language)}</Link>
+        <Link href="/photos">{t("navbar.photos", language)}</Link>
       </li>
       <li className="transition-opacity hover:opacity-70" onClick={onClick}>
-        <Link to="/books">{t("navbar.books", language)}</Link>
+        <Link href="/books">{t("navbar.books", language)}</Link>
       </li>
     </ul>
   );
@@ -54,11 +56,13 @@ export default function Navbar() {
                 <HiMenu />
               </button>
               {/* Logo */}
-              <div className="hidden size-[2rem] mr-3 items-center md:flex md:size-[2.4rem]">
-                <Link to="/">
-                  <img
-                    src={logoSite}
+              <div className="mr-3 hidden size-[2rem] items-center md:flex md:size-[2.2rem]">
+                <Link href="/">
+                  <Image
+                    src="/icons/Main-icons/Logo-website-icon.svg"
                     alt="Logo website"
+                    width={36}
+                    height={36}
                     className={darkMode ? "invert filter" : ""}
                   />
                 </Link>
@@ -100,7 +104,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "tween" }}
-              className="fixed top-0 left-0 z-50 h-full w-64 bg-white shadow-xl bg-sidebar"
+              className="bg-sidebar fixed top-0 left-0 z-50 h-full w-64 bg-white shadow-xl"
             >
               <div className="flex flex-col p-4">
                 {/* Logo */}
@@ -111,11 +115,13 @@ export default function Navbar() {
                 >
                   <HiX />
                 </button>
-                <div className="flex items-center justify-center mb-8">
-                  <Link to="/">
-                    <img
-                      src={logoSite}
+                <div className="mb-8 flex items-center justify-center">
+                  <Link href="/">
+                    <Image
+                      src="/icons/Main-icons/Logo-website-icon.svg"
                       alt="Logo website"
+                      width={36}
+                      height={36}
                       className={darkMode ? "invert filter" : ""}
                     />
                   </Link>

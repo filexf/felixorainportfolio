@@ -1,9 +1,9 @@
-import React from "react";
-import Photo1 from "../../assets/images/Couvertures magazines/Civilisation Mag.jpg";
-import Photo2 from "../../assets/images/Couvertures magazines/WIZZY En Asie BONNE VERSION.jpg";
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
 import SeeMore from "./SeeMore";
 
-import { Link } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
 import { t } from "../../i18n/i18n";
 import Reveal from "../Reveal";
@@ -21,9 +21,9 @@ export default function DesignSection() {
           </p>
 
           {/* Grille de designs */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <DesignCard photo={Photo1} />
-            <DesignCard photo={Photo2} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <DesignCard photo="/images/Couvertures magazines/Civilisation Mag.jpg" />
+            <DesignCard photo="/images/Couvertures magazines/WIZZY En Asie BONNE VERSION.jpg" />
           </div>
 
           <SeeMore projectLink={"/books"} />
@@ -35,12 +35,14 @@ export default function DesignSection() {
 
 function DesignCard({ photo }) {
   return (
-    <Link to="/books">
-      <div className="group relative mx-auto aspect-[2/3] w-full max-w-[350px] overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1">
-        <img
+    <Link href="/books">
+      <div className="group relative mx-auto aspect-[2/3] w-full max-w-[300px] md:max-w-[350px] overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1">
+        <Image
           src={photo}
           alt="Book Cover"
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          width={350}
+          height={525}
         />
 
         {/* Overlay au hover */}

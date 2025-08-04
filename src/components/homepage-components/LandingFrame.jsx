@@ -1,6 +1,7 @@
+"use client";
+
 import { motion } from "framer-motion";
-import ArrowLogo from "../../assets/icons/Main-icons/Vector-arrow-white.svg";
-import PhotoLandingPage from "../../assets/images/Photo-GGB/Photo_GGB_Landing_page.webp";
+import Image from "next/image";
 import SplitStrings from "../../util/regexSplitString.js";
 import Reveal from "../Reveal";
 
@@ -23,10 +24,10 @@ export default function LandingFrame() {
   return (
     <>
       <section className="relative flex animate-[fade-up_1s_ease-in-out] flex-col items-center gap-[40px]">
-        <div className="absolute z-10 mt-[30px] ml-[140px] flex items-start justify-center gap-60 self-stretch pl-[20px]">
+        <div className="absolute z-10 mt-[30px] ml-[30px] md:ml-[100px] flex items-start justify-center gap-60 self-stretch pl-[20px]">
           <div className="flex flex-col items-start gap-[16px]">
             <motion.h1
-              className="text-[4rem] leading-[normal] font-extrabold text-shadow-lg md:text-[90px]"
+              className="text-5xl leading-[normal] font-extrabold text-shadow-lg md:text-[90px]"
               initial="hidden"
               animate="reveal"
               whileInView={"reveal"}
@@ -44,7 +45,7 @@ export default function LandingFrame() {
               ))}
             </motion.h1>
             <motion.p
-              className="text-2xl font-semibold text-shadow-md md:text-3xl"
+              className="text-xl font-semibold text-shadow-md md:text-3xl"
               initial="hidden"
               animate="reveal"
               whileInView={"reveal"}
@@ -77,23 +78,25 @@ export default function LandingFrame() {
               repeatDelay: 2, // Delay before repeating
             }}
           >
-            <img
-              src={ArrowLogo}
+            <Image
+              src="/icons/Main-icons/Vector-arrow-white.svg"
               className="w-[80px] animate-[blinker_3s_ease-in-out_infinite]"
               alt="Downward Arrow"
+              width={80}
+              height={80}
             />
           </motion.div>
         </div>
         <Reveal y={75} duration={0.8} delay={0}>
           <div>
-            <img
+            <Image
               className="h-full w-full object-cover"
-              src={PhotoLandingPage}
-              srcSet={`${PhotoLandingPage} 500w, ${PhotoLandingPage} 1000w, ${PhotoLandingPage} 1500w`}
-              sizes="(max-width: 600px) 500px, (max-width: 1000px) 1000px, 1500px"
+              src="/images/Photo-GGB/Photo_GGB_Landing_page.webp"
               alt="Landscape photo"
-              fetchPriority="high"
-              loading="eager"
+              width={1500}
+              height={800}
+              priority={true}
+              sizes="100vw"
             />
           </div>
         </Reveal>

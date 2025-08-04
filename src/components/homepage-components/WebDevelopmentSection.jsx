@@ -1,10 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import SeeMore from "./SeeMore";
+"use client";
 
-import GoldenGatePicture from "../../assets/images/Photo-GGB/Photo_GGB_Squared.jpg";
-import watchlistPicture from "../../assets/images/Photo-projets-dev/Watchlist_Cover.jpg";
-import gisPicture from "../../assets/images/Photo-projets-dev/Web_Gis_Cover_Picture.jpg";
+import Image from "next/image";
+import Link from "next/link";
+import SeeMore from "./SeeMore";
 
 import { useLanguage } from "../../context/LanguageContext";
 import { t } from "../../i18n/i18n";
@@ -25,17 +23,17 @@ export default function WebDevelopmentSection() {
           {/* Grille de projets mise à jour */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <ProjectCard
-              image={watchlistPicture}
+              image="/images/Photo-projets-dev/Watchlist_Cover.jpg"
               title="WATCHLIST"
               path="/applications"
             />
             <ProjectCard
-              image={gisPicture}
+              image="/images/Photo-projets-dev/Web_Gis_Cover_Picture.jpg"
               title="GIS PROJECT"
               path="/applications"
             />
             <ProjectCard
-              image={GoldenGatePicture}
+              image="/images/Photo-GGB/Photo_GGB_Squared.jpg"
               title="PORTFOLIO"
               path="/applications"
             />
@@ -50,10 +48,16 @@ export default function WebDevelopmentSection() {
 
 function ProjectCard({ image, title, path }) {
   return (
-    <Link to={path}>
+    <Link href={path}>
       <div className="group relative h-[300px] overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:-translate-y-1">
         {/* Image */}
-        <img src={image} alt={title} className="h-full w-full object-cover" />
+        <Image
+          src={image}
+          alt={title}
+          className="h-full w-full object-cover"
+          width={400}
+          height={300}
+        />
 
         {/* Overlay avec titre qui apparaît au hover */}
         <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent p-8 opacity-0 transition-opacity duration-300 group-hover:opacity-100">

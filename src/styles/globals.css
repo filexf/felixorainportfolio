@@ -1,13 +1,13 @@
 /* These are the main files that are gonna be used for all the pages */
 
 /* This one is for various things such as resizing the css properties, effects etc.. */
-@import url(style.css);
+@import url(./style.css);
 
 /* The landing page / index */
-@import url(landing-page.css);
+@import url(./landing-page.css);
 
 /* The lightbox css properties */
-@import url(lightbox.css);
+@import url(./lightbox.css);
 
 @import "tailwindcss";
 
@@ -76,7 +76,6 @@ body {
   transition:
     background-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
-
   font-size: 20px;
   font-weight: 400;
   line-height: normal;
