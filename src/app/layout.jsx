@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body>
+      <body className="text-base">
         <Providers>{children}</Providers>
       </body>
     </html>
