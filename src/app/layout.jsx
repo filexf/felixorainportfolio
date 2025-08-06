@@ -8,7 +8,6 @@ import Providers from "../components/Providers";
 export const metadata = {
   title: "Félix Orain - Portfolio",
   description: "Portfolio de Félix Orain - Développeur web et photographe",
-  viewport: "width=device-width, initial-scale=1.0",
 };
 
 export default function RootLayout({ children }) {

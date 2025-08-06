@@ -28,7 +28,7 @@ export default function PhotographySection() {
           </p>
 
           {/* Grille de photos */}
-          <div className="flex gap-10">
+          <div className="flex flex-wrap md:flex-nowrap justify-center  md:justify-start gap-10">
             {photos.map((photo, index) => (
               <PhotoCard key={index} photo={photo} />
             ))}
@@ -46,7 +46,7 @@ function PhotoCard({ photo }) {
     <Link href="/photos">
       <div className="group relative mb-2 overflow-hidden rounded shadow-xl transition-all duration-300 hover:-translate-y-1">
         {/* Container d'image avec ratio aspect */}
-        <div className="relative h-[450px] w-full overflow-hidden rounded">
+        <div className="relative h-[400px] overflow-hidden rounded">
           <Image
             src={photo}
             alt="Photography"
