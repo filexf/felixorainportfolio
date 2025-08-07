@@ -52,7 +52,7 @@ export default function Navbar() {
             {/* Section gauche avec burger menu et logo */}
             <div className="flex items-center gap-4">
               {/* Burger menu */}
-              <button className="text-4xl md:hidden" onClick={toggleSidebar}>
+              <button className="text-3xl md:text-4xl md:hidden" onClick={toggleSidebar}>
                 <HiMenu />
               </button>
               {/* Logo */}

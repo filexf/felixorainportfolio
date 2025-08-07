@@ -30,14 +30,14 @@ const techStack = [
 // Reusable Tech Stack Icon component
 function TechStackIcon({ name, icon }) {
   return (
-    <div className="border-2px mb-1 flex items-center gap-3 rounded-3xl border-1 border-gray-200 bg-slate-50 px-6 py-2 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200">
-      <p className="text-gradient font-bold">{name}</p>
+    <div className="border-2px mb-1 flex items-center gap-2 rounded-3xl border-1 border-gray-200 bg-slate-50 px-3 py-1 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200 sm:gap-3 sm:px-6 sm:py-2">
+      <p className="text-gradient text-sm font-bold sm:text-base">{name}</p>
       <Image
         src={icon}
         alt={name}
-        width={40}
-        height={40}
-        className="h-10 w-10"
+        width={32}
+        height={32}
+        className="h-6 w-6 sm:h-8 sm:w-8"
       />
     </div>
   );
@@ -50,11 +50,11 @@ export default function ApplicationsPage() {
   return (
     <Reveal>
       <div className="mt-4 flex flex-row justify-center">
-        <div className="mt-[30px] flex w-4/5 flex-col items-center gap-[70px] px-12 py-[0]">
-          <h1 className="text-gradient text-center text-5xl md:text-7xl leading-normal font-bold">
+        <div className="mt-[30px] flex w-full max-w-6xl flex-col items-center gap-[40px] px-4 sm:px-8 md:gap-[70px] md:px-12">
+          <h1 className="text-gradient text-center text-4xl leading-normal font-bold sm:text-5xl md:text-7xl">
             {t("applications.title", language)}
           </h1>
-          <p className="body-font mx-auto max-w-4xl text-center">
+          <p className="body-font mx-auto max-w-4xl px-2 text-center">
             {t("applications.desc", language)}
           </p>
           <Link
@@ -62,8 +62,8 @@ export default function ApplicationsPage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="border-2px flex items-center gap-5 rounded-3xl border-1 border-gray-200 bg-slate-50 px-6 py-3 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200">
-              <p className="text-gradient text-bold text-xl">
+            <div className="border-2px flex items-center gap-3 rounded-3xl border-1 border-gray-200 bg-slate-50 px-4 py-2 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200 sm:gap-5 sm:px-6 sm:py-3">
+              <p className="text-gradient text-bold text-sm sm:text-lg md:text-xl">
                 {t("applications.github", language)}
               </p>
               <Image
@@ -73,9 +73,9 @@ export default function ApplicationsPage() {
                     : "/icons/Tech stack icons/Github-icon.svg"
                 }
                 alt="GitHub logo icon"
-                width={40}
-                height={40}
-                className="hover:scale-102"
+                width={32}
+                height={32}
+                className="h-8 w-8 hover:scale-102 sm:h-10 sm:w-10"
               />
             </div>
           </Link>
@@ -87,11 +87,11 @@ export default function ApplicationsPage() {
 
           {/* Tech Stack Section */}
           <Reveal>
-            <div className="flex w-full flex-col items-center justify-center gap-[64px]">
-              <h2 className="text-gradient my-4 pb-1 text-center text-6xl font-bold">
+            <div className="flex w-full flex-col items-center justify-center gap-[30px] md:gap-[64px]">
+              <h2 className="text-gradient my-2 pb-1 text-center text-3xl font-bold sm:my-4 sm:text-4xl md:text-6xl">
                 {t("applications.techstack", language)}
               </h2>
-              <div className="flex w-4/5 flex-wrap items-center justify-center gap-10">
+              <div className="flex w-full flex-wrap items-center justify-center gap-4 sm:w-11/12 sm:gap-6 md:w-4/5 md:gap-10">
                 {techStack.map((tech, index) => (
                   <TechStackIcon key={index} {...tech} />
                 ))}

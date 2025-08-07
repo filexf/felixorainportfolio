@@ -36,17 +36,17 @@ export default function PhotosPage() {
   return (
     <>
       <div className="flex justify-center">
-        <div className="mb-12 flex w-4/5 flex-col items-center gap-8 p-5">
+        <div className="mb-8 flex w-full max-w-4xl flex-col items-center gap-4 px-4 sm:mb-12 sm:gap-8 sm:px-8 md:px-12">
           <Reveal>
-            <h2 className="text-gradient my-10 text-center text-4xl md:text-7xl leading-normal font-bold">
+            <h2 className="text-gradient my-6 text-center text-4xl leading-normal font-bold sm:my-10 sm:text-5xl md:text-7xl">
               {t("photospage.title", language)}
             </h2>
-            <p className="body-font mx-auto mb-16 max-w-4xl text-center">
+            <p className="body-font mx-auto mb-8 max-w-4xl px-2 text-center sm:mb-16">
               {t("photospage.desc", language)}
             </p>
 
             {/* Grille de photos */}
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 md:gap-12">
               {photos.map((photo) => (
                 <PhotoCard
                   key={photo.id}
@@ -67,14 +67,14 @@ function PhotoCard({ photoPath, title }) {
 
   return (
     <Link href={`/photos/${title.toLowerCase()}`}>
-      <div className="vertical-animation group my-3 flex flex-col overflow-hidden rounded-2xl border border-gray-200/10 bg-white/5 shadow-lg transition-all duration-300 hover:bg-white/10">
+      <div className="vertical-animation group my-2 flex flex-col overflow-hidden rounded-2xl border border-gray-200/10 bg-white/5 shadow-lg transition-all duration-300 hover:bg-white/10 sm:my-3">
         <div className="relative overflow-hidden">
-          <div className="h-[500px] w-full">
+          <div className="relative h-[300px] w-full sm:h-[400px] md:h-[450px]">
             <Image
               src={photoPath}
               alt={t(`photospage.${title}`, language)}
               fill
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 640px) 95vw, (max-width: 768px) 90vw, (max-width: 1024px) 45vw, 40vw"
               priority={title === "sport"}
               className="object-cover transition-transform duration-500 group-hover:scale-105"
               quality={85}
@@ -83,13 +83,13 @@ function PhotoCard({ photoPath, title }) {
 
           <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-slate-900/75 via-slate-900/25 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             <div className="translate-y-4 transform transition-transform duration-300 group-hover:translate-y-0">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm sm:h-14 sm:w-14 md:h-16 md:w-16">
                 <Image
                   src="/icons/Main-icons/Loop-plus-icon.svg"
                   alt="View more"
-                  width={32}
-                  height={32}
-                  className="transition-transform duration-300 group-hover:scale-110"
+                  width={24}
+                  height={24}
+                  className="h-6 w-6 transition-transform duration-300 group-hover:scale-110 sm:h-8 sm:w-8 md:h-10 md:w-10"
                 />
               </div>
             </div>
@@ -97,8 +97,8 @@ function PhotoCard({ photoPath, title }) {
         </div>
 
         {/* Titre en bas de carte */}
-        <div className="bg-slate-50 p-4">
-          <h3 className="text-gradient text-center text-3xl font-bold">
+        <div className="bg-slate-50 p-3 sm:p-4">
+          <h3 className="text-gradient text-center text-xl font-bold sm:text-2xl md:text-3xl">
             {t(`photospage.${title}`, language)}
           </h3>
         </div>

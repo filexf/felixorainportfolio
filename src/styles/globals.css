@@ -80,11 +80,11 @@ body {
   line-height: normal;
 }
 
-/* ‼️ Les motif à points de fond */
+/* ‼️ Les motif à points de fond
 body > div {
   background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
   background-size: 16px 16px;
-}
+} */
 
 /* Some custom styling for the components */
 .bg-sidebar {

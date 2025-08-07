@@ -49,14 +49,14 @@ export default function WebDevelopmentSection() {
 function ProjectCard({ image, title, path }) {
   return (
     <Link href={path}>
-      <div className="group relative h-[300px] overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:-translate-y-1">
+      <div className="group relative h-[200px] md:h-[300px] overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:-translate-y-1">
         {/* Image */}
         <Image
           src={image}
           alt={title}
           className="h-full w-full object-cover"
           width={400}
-          height={300}
+          height={400}
         />
 
         {/* Overlay avec titre qui apparaît au hover */}

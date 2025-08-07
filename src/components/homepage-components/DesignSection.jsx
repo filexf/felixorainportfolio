@@ -21,7 +21,7 @@ export default function DesignSection() {
           </p>
 
           {/* Grille de designs */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <DesignCard photo="/images/Couvertures magazines/Civilisation Mag.jpg" />
             <DesignCard photo="/images/Couvertures magazines/WIZZY En Asie BONNE VERSION.jpg" />
           </div>
@@ -36,7 +36,7 @@ export default function DesignSection() {
 function DesignCard({ photo }) {
   return (
     <Link href="/books">
-      <div className="group relative mx-auto aspect-[2/3] w-full max-w-[300px] md:max-w-[350px] overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1">
+      <div className="group relative mx-auto aspect-[2/3] w-full max-w-[250px] md:max-w-[320px] overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1">
         <Image
           src={photo}
           alt="Book Cover"

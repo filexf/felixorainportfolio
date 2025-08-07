@@ -80,7 +80,7 @@ export default function LandingFrame() {
           >
             <Image
               src="/icons/Main-icons/Vector-arrow-white.svg"
-              className="w-[80px] animate-[blinker_3s_ease-in-out_infinite]"
+              className="w-8 md:w-24 animate-[blinker_3s_ease-in-out_infinite]"
               alt="Downward Arrow"
               width={80}
               height={80}

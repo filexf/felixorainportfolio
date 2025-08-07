@@ -14,7 +14,7 @@ export default function Gallery({ title, images }) {
 
   return (
     <div className="flex w-full justify-center px-2 py-12 sm:px-4">
-      <div className="flex w-full max-w-7xl flex-col gap-6 sm:gap-10 md:w-11/12">
+      <div className="flex w-full flex-col gap-6 sm:gap-10 max-w-5xl">
         <h2 className="text-gradient text-center text-5xl leading-normal font-bold sm:text-6xl md:text-7xl">
           {title}
         </h2>
@@ -22,7 +22,7 @@ export default function Gallery({ title, images }) {
           {t("bookgallery.desc", language)}
         </p>
 
-        <div className="xs:grid-cols-2 grid grid-cols-1 gap-2 sm:gap-3 md:grid-cols-3 lg:grid-cols-4">
+        <div className="xs:grid-cols-2 grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-4 px-4">
           {images.map((image, index) => (
             <div
               key={index}

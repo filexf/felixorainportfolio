@@ -196,27 +196,27 @@ export function ProjectCard({
     <>
       <Reveal>
         <div className="my-2 mb-2 flex flex-col rounded-2xl border-1 border-gray-200 bg-slate-50 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-2 hover:bg-gray-100 md:flex md:items-center lg:flex-row">
-          <div className="relative h-64 w-full overflow-hidden rounded-2xl md:h-96 md:w-96 md:min-w-96 md:flex-shrink-0">
+          <div className="relative h-48 w-full overflow-hidden rounded-2xl sm:h-56 md:h-64 md:w-80 md:min-w-80 md:flex-shrink-0 lg:h-80 lg:w-96 lg:min-w-96">
             <Image
               src={image}
               alt={t(`projects.${title}.title`, language)}
               fill
-              sizes="(max-width: 768px) 100vw, 384px"
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, (max-width: 1024px) 384px, 384px"
               className="object-cover"
               priority={title === "gis"}
               quality={85}
             />
           </div>
 
-          <div className="flex flex-col gap-4 p-4 leading-normal md:p-7">
-            <h5 className="text-gradient mb-2 text-center text-2xl font-bold tracking-tight md:text-4xl">
+          <div className="flex flex-col gap-2 p-3 leading-normal sm:gap-3 sm:p-4 md:gap-4 md:p-5 lg:p-7">
+            <h5 className="text-gradient mb-1 text-center text-xl font-bold tracking-tight sm:mb-2 sm:text-2xl md:text-3xl lg:text-4xl">
               {t(`projects.${title}.title`, language)}
             </h5>
 
-            <p className="mb-3 p-2 text-center text-sm font-normal md:p-3 md:text-base">
+            <p className="mb-2 p-1 text-center text-xs font-normal sm:mb-3 sm:p-2 sm:text-sm md:p-3 md:text-base">
               {t(`projects.${description}.desc`, language)}
             </p>
-            <div className="flex justify-center gap-5 md:gap-10">
+            <div className="flex justify-center gap-3 sm:gap-5 md:gap-10">
               <Link href={githubLink} target="_blank" rel="noopener noreferrer">
                 <Image
                   src={
@@ -225,9 +225,9 @@ export function ProjectCard({
                       : "/icons/Tech stack icons/Github-icon.svg"
                   }
                   alt="GitHub"
-                  width={48}
-                  height={48}
-                  className="vertical-animation opacity-80 hover:scale-102 hover:opacity-100"
+                  width={36}
+                  height={36}
+                  className="vertical-animation h-8 w-8 opacity-80 hover:scale-102 hover:opacity-100 sm:h-10 sm:w-10 md:h-12 md:w-12"
                 />
               </Link>
               {images && (
@@ -235,9 +235,9 @@ export function ProjectCard({
                   <Image
                     src="/icons/Main-icons/Gallery-icon.svg"
                     alt="Gallery Icon"
-                    width={48}
-                    height={48}
-                    className={`vertical-animation opacity-80 hover:scale-102 hover:opacity-100 ${darkMode ? "invert filter" : ""}`}
+                    width={36}
+                    height={36}
+                    className={`vertical-animation h-8 w-8 opacity-80 hover:scale-102 hover:opacity-100 sm:h-10 sm:w-10 md:h-12 md:w-12 ${darkMode ? "invert filter" : ""}`}
                   />
                 </div>
               )}
@@ -262,9 +262,9 @@ export function ProjectCard({
                   <Image
                     src="/icons/Main-icons/Website-icon.svg"
                     alt="Website"
-                    width={48}
-                    height={48}
-                    className={`vertical-animation opacity-80 hover:scale-102 hover:opacity-100 ${darkMode ? "invert filter" : ""}`}
+                    width={36}
+                    height={36}
+                    className={`vertical-animation h-8 w-8 opacity-80 hover:scale-102 hover:opacity-100 sm:h-10 sm:w-10 md:h-12 md:w-12 ${darkMode ? "invert filter" : ""}`}
                   />
                 </Link>
               )}

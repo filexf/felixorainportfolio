@@ -19,7 +19,7 @@ export default function Home() {
       <ScrollToTop />
       <LandingFrame />
       <CardsWork />
-      <div className="mt-20 flex flex-col items-center justify-center gap-8 px-[20px]">
+      <div className="mt-20 flex flex-col items-center justify-center gap-16 px-[20px]">
         <Divider />
         <WebDevelopmentSection />
         <Divider />

@@ -76,7 +76,7 @@ function BookCard({
             {title}
           </h2>
           <p
-            className="mb-2 p-1 text-center text-sm sm:mb-3 sm:p-2 sm:text-base"
+            className="mb-2 p-1 text-center sm:mb-3 sm:p-2 md:text-base"
             dangerouslySetInnerHTML={{ __html: description }}
           ></p>
           <div className="mb-4 flex flex-wrap justify-center gap-3 sm:gap-4">
