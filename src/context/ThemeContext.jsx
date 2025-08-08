@@ -1,3 +1,5 @@
+"use client";
+
 import { createContext, useContext, useEffect, useState } from "react";
 
 // Création du contexte de thème
@@ -10,15 +12,20 @@ export const useTheme = () => {
 
 // Fournisseur du contexte de thème
 export const ThemeProvider = ({ children }) => {
-  // Vérifier si le thème est stocké dans localStorage, sinon utiliser la préférence du système
-  const [darkMode, setDarkMode] = useState(() => {
+  // Initialize with a default value
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Only run on client side
+  useEffect(() => {
+    // Vérifier si le thème est stocké dans localStorage, sinon utiliser la préférence du système
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
-      return savedTheme === "dark";
+      setDarkMode(savedTheme === "dark");
+    } else {
+      // Si aucune préférence n'est enregistrée, vérifier la préférence du système
+      setDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
     }
-    // Si aucune préférence n'est enregistrée, vérifier la préférence du système
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
-  });
+  }, []);
 
   // Appliquer le thème au chargement et lors des changements
   useEffect(() => {

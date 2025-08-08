@@ -1,12 +1,20 @@
+"use client";
+
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
-  const [language, setLanguage] = useState(() => {
+  // Initialize with default language
+  const [language, setLanguage] = useState("en");
+
+  // Only run on client side
+  useEffect(() => {
     const saved = localStorage.getItem("language");
-    return saved || "en";
-  });
+    if (saved) {
+      setLanguage(saved);
+    }
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("language", language);

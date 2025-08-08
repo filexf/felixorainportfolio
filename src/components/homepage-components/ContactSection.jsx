@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import { IoSend } from "react-icons/io5";
 import { useLanguage } from "../../context/LanguageContext";
 import { t } from "../../i18n/i18n";

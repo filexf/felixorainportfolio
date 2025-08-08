@@ -1,3 +1,5 @@
+"use client";
+
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
@@ -20,7 +22,7 @@ export default function Reveal({
   return (
     <div
       ref={ref}
-      style={{ position: "relative", width: "auto", overflow: "hidden" }}
+      style={{ position: "relative", width: "100%", overflow: "hidden" }}
     >
       <motion.div
         variants={{

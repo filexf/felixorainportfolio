@@ -1,21 +1,18 @@
-import React from "react";
-import profileImage from "../../assets/images/Important-photos/photo-profil-V2.jpg";
+"use client";
 
+import Image from "next/image";
 import { useLanguage } from "../../context/LanguageContext";
 import { t } from "../../i18n/i18n";
 import Reveal from "../Reveal";
 import SectionWrapper from "./SectionWrapper";
-import EnglishResume from "/Felix_Orain_Web_Developer_Resume .pdf";
-import FrenchResume from "/Felix_Orain_CV_Developpeur_Web.pdf";
-
 
 export default function AboutSection() {
   const { language } = useLanguage();
 
   const resumeMap = {
-    en: EnglishResume,
-    fr: FrenchResume,
-    es: EnglishResume, // fallback to English if Spanish
+    en: "/Felix_Orain_Web_Developer_Resume .pdf",
+    fr: "/Felix_Orain_CV_Developpeur_Web.pdf",
+    es: "/Felix_Orain_Web_Developer_Resume .pdf", // fallback to English if Spanish
   };
   const resumeFile = resumeMap[language] || resumeMap["en"];
 
@@ -24,10 +21,12 @@ export default function AboutSection() {
       <Reveal>
         <SectionWrapper title={t("about.title", language)}>
           <div className="lg:width-[80%] flex w-full flex-col items-center justify-center gap-6 lg:flex-row lg:justify-center lg:gap-10 lg:pl-12">
-            <img
-              className="vertical-animation my-2 mb-2 h-[400px] w-auto rounded-4xl shadow-md lg:h-[400px]"
-              src={profileImage}
+            <Image
+              className="vertical-animation my-2 mb-2 h-[300px] w-auto rounded-4xl shadow-md lg:h-[400px]"
+              src="/images/Important-photos/photo-profil-V2.jpg"
               alt="Profile Image"
+              width={300}
+              height={400}
             />
             <div className="mt-4 flex flex-col items-center justify-center gap-10">
               <p

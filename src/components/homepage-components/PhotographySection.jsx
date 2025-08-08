@@ -1,11 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import SeeMore from "./SeeMore";
+"use client";
 
-import Photo2 from "../../assets/images/Important-photos/Photos_Bangkok_V1_33.jpg";
-import Photo3 from "../../assets/images/Important-photos/Photos_HK_chill_109.jpg";
-import Photo4 from "../../assets/images/Important-photos/Photos_HK_chill_132.jpg";
-import Photo1 from "../../assets/images/Important-photos/Tests_photos_USA_147.jpg";
+import Image from "next/image";
+import Link from "next/link";
+import SeeMore from "./SeeMore";
 
 import { useLanguage } from "../../context/LanguageContext";
 import { t } from "../../i18n/i18n";
@@ -13,7 +10,12 @@ import Reveal from "../Reveal";
 import SectionWrapper from "./SectionWrapper";
 
 export default function PhotographySection() {
-  const photos = [Photo1, Photo2, Photo3, Photo4];
+  const photos = [
+    "/images/Important-photos/Tests_photos_USA_147.jpg",
+    "/images/Important-photos/Photos_Bangkok_V1_33.jpg",
+    "/images/Important-photos/Photos_HK_chill_109.jpg",
+    "/images/Important-photos/Photos_HK_chill_132.jpg",
+  ];
   const { language } = useLanguage();
 
   return (
@@ -26,7 +28,7 @@ export default function PhotographySection() {
           </p>
 
           {/* Grille de photos */}
-          <div className="flex gap-10">
+          <div className="flex flex-wrap md:flex-nowrap justify-center gap-10">
             {photos.map((photo, index) => (
               <PhotoCard key={index} photo={photo} />
             ))}
@@ -41,14 +43,16 @@ export default function PhotographySection() {
 
 function PhotoCard({ photo }) {
   return (
-    <Link to="/photos">
+    <Link href="/photos">
       <div className="group relative mb-2 overflow-hidden rounded shadow-xl transition-all duration-300 hover:-translate-y-1">
         {/* Container d'image avec ratio aspect */}
-        <div className="relative h-[450px] w-full overflow-hidden rounded">
-          <img
+        <div className="relative h-[300px] md:h-[350px] overflow-hidden rounded">
+          <Image
             src={photo}
             alt="Photography"
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 relative"
+            width={300}
+            height={450}
           />
         </div>
 

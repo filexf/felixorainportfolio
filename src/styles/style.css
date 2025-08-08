@@ -7,22 +7,21 @@
   font-family: 'Inter', sans-serif;
 }
 
-html{
+html {
   scroll-behavior: smooth;
   width: 100%;
-  min-width: 100vh;
+  height: 100%;
+  -webkit-text-size-adjust: 100%; /* Empêche le zoom automatique sur iOS */
 }
-
 
 body {
   margin: 0;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-#root{
-  width: 100%;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
 button{

@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import { useTheme } from "../context/ThemeContext";
 
 export default function ThemeToggle() {
@@ -7,7 +8,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className={`flex h-10 w-10 transition-all hover:shadow-md items-center justify-center rounded-full duration-300 ${
+      className={`flex h-8 w-8 sm:h-10 sm:w-10 transition-all hover:shadow-md items-center justify-center rounded-full duration-300 ${
         darkMode
           ? "bg-slate-700 hover:bg-slate-600"
           : "bg-sky-100 hover:bg-sky-200"
@@ -18,7 +19,7 @@ export default function ThemeToggle() {
         // Icône soleil pour passer au mode clair
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 rotate-0 text-yellow-300 transition-transform duration-500 hover:rotate-45"
+          className="h-5 w-5 sm:h-6 sm:w-6 rotate-0 text-yellow-300 transition-transform duration-500 hover:rotate-45"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -34,7 +35,7 @@ export default function ThemeToggle() {
         // Icône lune pour passer au mode sombre
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 rotate-0 text-slate-800 transition-transform duration-500 hover:-rotate-45"
+          className="h-5 w-5 sm:h-6 sm:w-6 rotate-0 text-slate-800 transition-transform duration-500 hover:-rotate-45"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
