@@ -1,10 +1,9 @@
-
 /* Whole body */
-*{
+* {
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 html {
@@ -12,6 +11,7 @@ html {
   width: 100%;
   height: 100%;
   -webkit-text-size-adjust: 100%; /* Empêche le zoom automatique sur iOS */
+  color-scheme: light; /* Force le mode clair par défaut */
 }
 
 body {
@@ -22,13 +22,17 @@ body {
   flex-direction: column;
   align-items: center;
   overflow-x: hidden; /* Empêche le défilement horizontal */
+  background-color: #ffffff;
+  color: #000000;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
-
+button {
+  cursor: pointer;
+}
 
 /* To style the lightbox galleries */
 
@@ -38,7 +42,7 @@ button{
   border-radius: 50%;
   border: rgb(255, 255, 255);
   transition: all 0.3s ease;
-  &:hover{
+  &:hover {
     fill: black;
 
     background-color: rgb(255, 255, 255);
@@ -48,7 +52,7 @@ button{
 
 svg g {
   fill: rgba(157, 157, 157, 0.754);
-  &:hover{
+  &:hover {
     fill: black;
   }
 }
