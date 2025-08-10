@@ -8,8 +8,9 @@ import Providers from "../components/Providers";
 export const metadata = {
   title: "Félix Orain - Portfolio",
   description: "Portfolio de Félix Orain - Développeur web et photographe",
-  colorScheme: "light",
-  themeColor: "#ffffff",
+  icons: {
+    icon: '/favicon.ico'
+  }
 };
 
 export default function RootLayout({ children }) {
