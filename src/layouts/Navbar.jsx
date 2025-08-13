@@ -44,15 +44,22 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="sticky top-0 z-50 w-full shadow-md"
-        style={{ backgroundColor: "var(--navbar-bg)" }}
+        className="sticky top-0 z-50 w-full shadow-sm backdrop-blur-md"
+        style={{
+          backgroundColor: "rgba(var(--navbar-bg-rgb, 255, 255, 255), 0.85)",
+          transition: "all 0.3s ease-in-out",
+          backdropFilter: "blur(10px)",
+        }}
       >
         <div className="mx-auto flex w-full max-w-[1800px] px-8 py-4">
           <div className="flex w-full items-center justify-between px-4 lg:px-24">
             {/* Section gauche avec burger menu et logo */}
             <div className="flex items-center gap-4">
               {/* Burger menu */}
-              <button className="text-3xl md:text-4xl md:hidden" onClick={toggleSidebar}>
+              <button
+                className="text-3xl md:hidden md:text-4xl"
+                onClick={toggleSidebar}
+              >
                 <HiMenu />
               </button>
               {/* Logo */}
@@ -104,7 +111,11 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "tween" }}
-              className="bg-sidebar fixed top-0 left-0 z-50 h-full w-64 bg-white shadow-xl"
+              className="fixed top-0 left-0 z-50 h-full w-64 shadow-xl backdrop-blur-lg"
+              style={{
+                backgroundColor: "rgba(var(--navbar-bg-rgb, 255, 255, 255), 1)",
+                transition: "all 0.3s ease-in-out",
+              }}
             >
               <div className="flex flex-col p-4">
                 {/* Logo */}

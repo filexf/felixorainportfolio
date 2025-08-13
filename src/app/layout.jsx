@@ -1,8 +1,4 @@
 import "../styles/globals.css";
-import "../styles/landing-page.css";
-import "../styles/lightbox.css";
-import "../styles/style.css";
-
 import Providers from "../components/Providers";
 
 export const metadata = {

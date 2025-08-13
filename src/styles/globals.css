@@ -25,6 +25,7 @@
   --shadow-color: rgba(0, 0, 0, 0.1);
   --card-bg: #ffffff;
   --navbar-bg: #ffffff;
+  --navbar-bg-rgb: 255, 255, 255;
   --footer-bg: #2e2e32;
   --footer-text: #ffffff;
   --gradient-start: #64748b;
@@ -47,6 +48,7 @@
   --shadow-color: rgba(0, 0, 0, 0.25);
   --card-bg: #1f2937;
   --navbar-bg: #171f2e;
+  --navbar-bg-rgb: 23, 31, 46;
   --footer-bg: #171f2e;
   --footer-text: #f3f4f6;
   --gradient-start: #94a3b8;
@@ -73,6 +75,13 @@
 body {
   color: var(--text-primary);
   background-color: var(--background-primary);
+  /* background-image: linear-gradient(
+    to bottom right,
+    rgba(100, 116, 139, 0.05),
+    rgba(3, 105, 161, 0.07),
+    rgba(2, 132, 199, 0.05)
+  );
+  background-attachment: fixed; */
   transition:
     background-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
