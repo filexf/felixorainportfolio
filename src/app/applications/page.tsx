@@ -4,6 +4,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Applications",
   description: "Découvrez mon portfolio de développement web : applications React/Next.js, projets full-stack et solutions interactives. Un savoir-faire technique combinant innovation, performance et design soigné pour des expériences utilisateur exceptionnelles.",
+  alternates: {
+    canonical: "https://felix-orain.com/applications",
+  },
   openGraph: {
     title: "Applications & Développement Web | Félix Orain",
     description: "Découvrez mon portfolio de développement web : applications React/Next.js, projets full-stack et solutions interactives optimisées pour l'expérience utilisateur.",

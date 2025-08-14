@@ -56,7 +56,7 @@ export default function CardsWork() {
             dangerouslySetInnerHTML={{ __html: t("portfolio.intro", language) }}
           />
           <Reveal>
-            <div className="my-2 flex flex-col flex-wrap items-center justify-center gap-4 sm:my-4 sm:gap-6 md:my-6 md:flex-row md:gap-5 lg:gap-8">
+            <div className="my-2 flex flex-col flex-wrap items-center justify-center gap-4 sm:my-4 sm:gap-6 md:my-6 md:flex-row md:gap-8 lg:gap-10">
               {cardData.map((card) => (
                 <Card
                   key={card.title}
@@ -88,7 +88,7 @@ const Card = ({ icon, title, text, path, language }: CardProps) => {
   return (
     <Link href={path}>
       <div
-        className={`group vertical-animation mx-2 my-2 flex h-auto w-full max-w-[290px] flex-col items-center justify-center gap-4 rounded-3xl border p-4 shadow-md backdrop-blur-sm transition-colors duration-300 sm:mx-3 sm:my-3 sm:max-w-[320px] sm:gap-6 sm:p-5 md:mx-4 md:max-w-[300px] md:gap-8 md:p-7 ${
+        className={`group vertical-animation mx-2 my-2 flex h-[340px] w-[290px] flex-col items-center justify-center gap-4 rounded-3xl border px-4 shadow-md backdrop-blur-sm transition-colors duration-300 sm:h-[380px] sm:w-[320px] sm:gap-6 sm:p-5 md:h-[380px] md:w-[300px] md:gap-8 md:p-7 ${
           darkMode
             ? "border-gray-700 bg-gradient-to-br from-gray-700 to-gray-900"
             : "from-gray_50 border-gray-200 bg-gradient-to-br to-gray-200"

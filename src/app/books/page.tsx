@@ -4,6 +4,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Design",
   description: "Explorez mes publications et livres de photographie. Des ouvrages alliant narration visuelle et design éditorial, témoignant de mon regard unique sur le monde à travers des projets comme 'Civilisation' et 'Wizzy en Asie'.",
+  alternates: {
+    canonical: "https://felix-orain.com/books",
+  },
   openGraph: {
     title: "Publications & Livres | Félix Orain",
     description: "Explorez mes publications et livres de photographie. Des ouvrages alliant narration visuelle et design éditorial, témoignant de mon regard unique sur le monde.",

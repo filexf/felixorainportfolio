@@ -1,0 +1,82 @@
+{
+  "name": "Félix Orain Portfolio",
+  "short_name": "F.Orain",
+  "description": "Portfolio de Félix Orain - Développeur web, photographe et designer basé à Paris",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#111827",
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "categories": ["portfolio", "design", "photography", "web development"],
+  "scope": "/",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/icons/Favicons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/Favicons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/Favicons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/Favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/Favicons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop.jpg",
+      "sizes": "1280x800",
+      "type": "image/jpeg",
+      "platform": "wide",
+      "label": "Portfolio de Félix Orain sur ordinateur"
+    },
+    {
+      "src": "/screenshots/mobile.jpg",
+      "sizes": "750x1334",
+      "type": "image/jpeg",
+      "platform": "narrow",
+      "label": "Portfolio de Félix Orain sur mobile"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Projets de développement web",
+      "url": "/applications",
+      "description": "Voir mes projets de développement web"
+    },
+    {
+      "name": "Photographie",
+      "url": "/photos",
+      "description": "Voir mes travaux photographiques"
+    },
+    {
+      "name": "Books",
+      "url": "/books",
+      "description": "Découvrir mes publications et livres"
+    }
+  ],
+  "related_applications": [],
+  "iarc_rating_id": ""
+}
