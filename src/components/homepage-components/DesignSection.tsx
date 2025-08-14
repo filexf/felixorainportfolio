@@ -33,7 +33,11 @@ export default function DesignSection() {
   );
 }
 
-function DesignCard({ photo }) {
+interface DesignCardProps {
+  photo: string;
+}
+
+function DesignCard({ photo }: DesignCardProps) {
   return (
     <Link href="/books">
       <div className="group relative mx-auto aspect-[2/3] w-full max-w-[250px] md:max-w-[320px] overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1">

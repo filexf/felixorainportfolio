@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import SplitStrings from "../../util/regexSplitString.ts";
-import Reveal from "../Reveal.tsx";
+import SplitStrings from "../../util/regexSplitString";
+import Reveal from "../Reveal";
 
-import { useLanguage } from "../../context/LanguageContext.tsx";
-import { t } from "../../i18n/i18n.ts";
+import { useLanguage } from "../../context/LanguageContext";
+import { t } from "../../i18n/i18n";
 
 export default function LandingFrame() {
   const title = "Félix Orain";
