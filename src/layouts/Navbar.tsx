@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import ThemeToggle from "../components/ThemeToggle";
