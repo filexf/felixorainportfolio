@@ -94,7 +94,7 @@ const Card = ({ icon, title, text, path, language }: CardProps) => {
             : "from-gray_50 border-gray-200 bg-gradient-to-br to-gray-200"
         }`}
       >
-        <div className="rounded-full bg-gray-200 p-2 transition-colors duration-300 group-hover:bg-gray-200 sm:p-2.5 dark:bg-gray-800 dark:group-hover:bg-gray-700">
+        <div className="rounded-full bg-gray-200 p-2 duration-300 group-hover:bg-gray-200 sm:p-2.5">
           <Image
             className="h-10 w-10 transition-transform duration-300 group-hover:scale-110 sm:h-12 sm:w-12"
             src={icon}
@@ -110,7 +110,7 @@ const Card = ({ icon, title, text, path, language }: CardProps) => {
           <p className="h-auto min-h-[80px] text-sm leading-relaxed sm:text-base">
             {text}
           </p>
-          <button className="mt-1 mb-1 w-full rounded-2xl border-1 px-4 py-1.5 text-xs font-semibold transition-all duration-300 ease-in-out hover:border-transparent hover:bg-gray-900 hover:text-white sm:mt-2 sm:mb-2 sm:w-3/4 sm:px-5 sm:py-2 sm:text-sm dark:hover:bg-gray-100 dark:hover:text-gray-900">
+          <button className="mt-1 mb-1 w-full rounded-2xl border-1 px-4 py-1.5 text-xs font-semibold transition-all duration-300 ease-in-out hover:border-transparent hover:bg-gray-900 hover:text-white sm:mt-2 sm:mb-2 sm:w-3/4 sm:px-5 sm:py-2 sm:text-sm">
             <span className="flex items-center justify-center gap-1 sm:gap-2">
               {t("readMore", language)}
               <svg

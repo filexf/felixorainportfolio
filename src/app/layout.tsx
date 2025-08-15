@@ -3,6 +3,7 @@ import { Inter, Poppins } from "next/font/google";
 import Providers from "../components/Providers";
 import { description, title } from "../lib/constants";
 import "../styles/globals.css";
+import React from "react";
 
 const inter = Inter({
   subsets: ["latin"],
