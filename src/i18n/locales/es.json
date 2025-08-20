@@ -3,7 +3,24 @@
     "home": "Inicio",
     "applications": "Aplicaciones",
     "photos": "Fotos",
-    "books": "Libros"
+    "books": "Libros",
+    "contact": "Contacto",
+    "wedding": "Boda",
+    "mosaic": "Mosaico",
+    "sport": "Deporte",
+    "cityscape": "Ciudad",
+    "landscape": "Paisaje",
+    "civilisation": "Civilisation",
+    "wizzyenasie": "Wizzy en Asia",
+    "descriptions": {
+      "wedding": "Descubre mis fotos de boda",
+      "mosaic": "Colección de fotos en mosaico",
+      "sport": "Fotos de deportes y eventos",
+      "cityscape": "Paisajes urbanos y rascacielos",
+      "landscape": "Paisajes naturales y montañas",
+      "civilisation": "Mi libro sobre la película Civilisation",
+      "wizzyenasie": "Mi libro de mis aventuras en Asia"
+    }
   },
   "landing": {
     "title": "Félix Orain",
