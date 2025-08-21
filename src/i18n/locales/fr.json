@@ -36,7 +36,20 @@
     "resume": "Mon CV"
   },
   "readMore": "En savoir plus",
-  "seeMore": "Voir plus",
+  "seeMore": {
+    "webdev": {
+      "text": "Voir tous mes projets",
+      "ariaLabel": "Voir tous les projets de développement web de Félix Orain"
+    },
+    "photography": {
+      "text": "Voir toutes mes photos",
+      "ariaLabel": "Voir toute la galerie photo de Félix Orain"
+    },
+    "books": {
+      "text": "Voir mes publications",
+      "ariaLabel": "Voir tous les livres et magazines de Félix Orain"
+    }
+  },
   "contact": {
     "title": "Contactez-moi",
     "text": "N'hésitez pas à me contacter pour tout projet à : felix.orain@gmail.com",

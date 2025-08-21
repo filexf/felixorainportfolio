@@ -1,6 +1,7 @@
 # Félix Orain Portfolio 🚀
 
-## [View Portfolio](https://felix-orain.com) 🌐 felix-orain.com
+## [View Portfolio](https://www.felix-orain.com) 🌐 - [felix-orain.com](https://www.felix-orain.com)
+
 
 This portfolio showcases my skills in web development, photography, and design. It's built to be interactive, responsive, and multilingual.
 

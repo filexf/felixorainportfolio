@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
+import React from "react";
 import Providers from "../components/Providers";
 import { description, title } from "../lib/constants";
 import "../styles/globals.css";
-import React from "react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,8 +25,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   // Métadonnées de base
-  metadataBase: new URL("https://felix-orain.com"), // Remplacez par votre domaine réel
-
+  metadataBase: new URL("https://www.felix-orain.com"), // Remplacez par votre domaine réel
   title: {
     default: title,
     template: `%s | ${title}`,
@@ -53,9 +52,7 @@ export const metadata: Metadata = {
         sizes: "512x512",
       },
     ],
-    apple: [
-      { url: "/icons/Favicons/apple-touch-icon.png", sizes: "180x180" },
-    ],
+    apple: [{ url: "/icons/Favicons/apple-touch-icon.png", sizes: "180x180" }],
   },
 
   // Métadonnées pour les moteurs de recherche
@@ -86,26 +83,27 @@ export const metadata: Metadata = {
 
   // Contrôle du référencement
   alternates: {
-    canonical: "https://felix-orain.com",
-    languages: {
-      "fr-FR": "https://felix-orain.com/fr",
-      "en-US": "https://felix-orain.com/en",
-      "es-ES": "https://felix-orain.com/es",
-    },
+    canonical: "https://www.felix-orain.com",
+    // languages: {
+    //   "fr-FR": "https://www.felix-orain.com/fr",
+    //   "en-US": "https://www.felix-orain.com/en",
+    //   "es-ES": "https://www.felix-orain.com/es",
+    // },
   },
 
   // Métadonnées Open Graph pour les réseaux sociaux
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://felix-orain.com",
+    alternateLocale: ["en_US", "es_ES"], // Langues alternatives
+    url: "https://www.felix-orain.com",
     title: "Félix Orain - Portfolio",
     description:
       "Portfolio de Félix Orain - Développeur web, photographe et designer basé à Paris",
     siteName: "Félix Orain Portfolio",
     images: [
       {
-        url: "https://felix-orain.com/og-image.jpg",
+        url: "https://www.felix-orain.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Félix Orain Portfolio Preview",
@@ -119,7 +117,7 @@ export const metadata: Metadata = {
     title: "Félix Orain - Portfolio",
     description:
       "Portfolio de Félix Orain - Développeur web, photographe et designer",
-    images: ["https://felix-orain.com/twitter-image.jpg"],
+    images: ["https://www.felix-orain.com/twitter-image.jpg"],
     creator: "@votreidentifianttwitter",
   },
 

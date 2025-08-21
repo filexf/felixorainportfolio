@@ -34,7 +34,7 @@ export default function PhotographySection() {
             ))}
           </div>
 
-          <SeeMore projectLink={"/photos"} />
+          <SeeMore projectLink={"/photos"} context="photography" />
         </div>
       </SectionWrapper>
     </Reveal>

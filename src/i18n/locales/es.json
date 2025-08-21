@@ -36,7 +36,20 @@
     "resume": "Mi currículum"
   },
   "readMore": "Leer más",
-  "seeMore": "Ver más",
+  "seeMore": {
+    "webdev": {
+      "text": "Ver todos mis proyectos",
+      "ariaLabel": "Ver todos mis proyectos de desarrollo web"
+    },
+    "photography": {
+      "text": "Ver todas mis fotos",
+      "ariaLabel": "Ver todas mis fotos"
+    },
+    "books": {
+      "text": "Ver mis publicaciones",
+      "ariaLabel": "Ver todos mis libros y revistas"
+    }
+  },
   "contact": {
     "title": "Contáctame",
     "text": "No dudes en contactarme para cualquier proyecto en: felix.orain@gmail.com",

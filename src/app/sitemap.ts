@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://felix-orain.com";
+  const baseUrl = "https://www.felix-orain.com";
 
   // Structure avec priorités et fréquences personnalisées
   const pages = [

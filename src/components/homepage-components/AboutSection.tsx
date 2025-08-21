@@ -5,6 +5,7 @@ import { useLanguage } from "../../context/LanguageContext";
 import { t } from "../../i18n/i18n";
 import Reveal from "../Reveal";
 import SectionWrapper from "./SectionWrapper";
+import React from "react";
 
 export default function AboutSection() {
   const { language } = useLanguage();
@@ -29,10 +30,16 @@ export default function AboutSection() {
               height={400}
             />
             <div className="mt-4 flex flex-col items-center justify-center gap-10">
-              <p
-                className="body-font max-width-md w-[80%] max-w-6xl text-start lg:text-left"
-                dangerouslySetInnerHTML={{ __html: t("about.desc", language) }}
-              />
+              <p className="body-font max-width-md w-[80%] max-w-6xl text-start lg:text-left">
+                {t("about.desc", language)
+                  .split("<br />")
+                  .map((line, index, array) => (
+                    <React.Fragment key={index}>
+                      {line}
+                      {index < array.length - 1 && <br />}
+                    </React.Fragment>
+                  ))}
+              </p>
               <a
                 href={resumeFile}
                 download

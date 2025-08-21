@@ -6,6 +6,7 @@ import Reveal from "../../components/Reveal";
 import { useLanguage } from "../../context/LanguageContext";
 import { useTheme } from "../../context/ThemeContext";
 import { t } from "../../i18n/i18n";
+import React from "react";
 
 export default function BooksPage() {
   const { darkMode } = useTheme();
@@ -86,10 +87,16 @@ function BookCard({
           <h2 className="text-gradient py-1 pt-2 text-center text-3xl font-bold sm:pt-5 sm:text-5xl">
             {title}
           </h2>
-          <p
-            className="mb-2 p-1 text-center sm:mb-3 sm:p-2 md:text-base"
-            dangerouslySetInnerHTML={{ __html: description }}
-          ></p>
+          <p className="mb-2 p-1 text-center sm:mb-3 sm:p-2 md:text-base">
+            {description
+              .split("<br />")
+              .map((line, index, array) => (
+                <React.Fragment key={index}>
+                  {line}
+                  {index < array.length - 1 && <br />}
+                </React.Fragment>
+              ))}
+          </p>
           <div className="mb-4 flex flex-wrap justify-center gap-3 sm:gap-4">
             {/* Bouton Galerie */}
             <Link
@@ -162,7 +169,7 @@ interface PhotoMagazineProps {
   darkMode?: boolean;
 }
 
-function PhotoMagazine({ link, src, darkMode }: PhotoMagazineProps) {
+function PhotoMagazine({ link, src }: PhotoMagazineProps) {
   const { language } = useLanguage();
 
   return (

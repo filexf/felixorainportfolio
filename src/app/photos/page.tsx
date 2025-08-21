@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Photos",
   description: "Découvrez mon portfolio de photographie : paysages, portraits, événements et photos urbaines. Une vision unique capturée à travers mon objectif de photographe passionné.",
   alternates: {
-    canonical: "https://felix-orain.com/photos",
+    canonical: "https://www.felix-orain.com/photos",
   },
   openGraph: {
     title: "Photographie | Félix Orain",

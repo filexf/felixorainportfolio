@@ -36,7 +36,20 @@
     "resume": "My resume"
   },
   "readMore": "Read more",
-  "seeMore": "See more",
+  "seeMore": {
+    "webdev": {
+      "text": "See all my projects",
+      "ariaLabel": "See all my web development projects"
+    },
+    "photography": {
+      "text": "See all my photos",
+      "ariaLabel": "See all my photography projects"
+    },
+    "books": {
+      "text": "See my publications",
+      "ariaLabel": "See all my books and magazines"
+    }
+  },
   "contact": {
     "title": "Contact me",
     "text": "Feel free to contact me for any project at : felix.orain@gmail.com",

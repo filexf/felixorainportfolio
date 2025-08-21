@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 import { useLanguage, LanguageType } from "../../context/LanguageContext";
 import { useTheme } from "../../context/ThemeContext";
@@ -13,11 +14,11 @@ export default function CardsWork() {
   const { language } = useLanguage();
 
   interface CardData {
-  title: string;
-  icon: string;
-  text: string;
-  path: string;
-}
+    title: string;
+    icon: string;
+    text: string;
+    path: string;
+  }
 
   const cardData: CardData[] = [
     {
@@ -51,10 +52,16 @@ export default function CardsWork() {
             {t("portfolio.title", language)}
           </h2>
 
-          <p
-            className="w-full max-w-6xl p-2 px-4 text-center text-base sm:w-5/6 sm:p-3 sm:text-lg md:w-3/4 md:p-[20px] md:text-[22px]"
-            dangerouslySetInnerHTML={{ __html: t("portfolio.intro", language) }}
-          />
+          <p className="w-full max-w-6xl p-2 px-4 text-center text-base sm:w-5/6 sm:p-3 sm:text-lg md:w-3/4 md:p-[20px] md:text-[22px]">
+            {t("portfolio.intro", language)
+              .split("<br />")
+              .map((line, index, array) => (
+                <React.Fragment key={index}>
+                  {line}
+                  {index < array.length - 1 && <br />}
+                </React.Fragment>
+              ))}
+          </p>
           <Reveal>
             <div className="my-2 flex flex-col flex-wrap items-center justify-center gap-4 sm:my-4 sm:gap-6 md:my-6 md:flex-row md:gap-8 lg:gap-10">
               {cardData.map((card) => (

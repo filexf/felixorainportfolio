@@ -10,7 +10,7 @@ export default function robots(): MetadataRoute.Robots {
         // disallow: ['/admin/', '/private/'],
       },
     ],
-    sitemap: "https://felix-orain.com/sitemap.xml",
-    host: "https://felix-orain.com",
+    sitemap: "https://www.felix-orain.com/sitemap.xml",
+    host: "https://www.felix-orain.com",
   };
 }

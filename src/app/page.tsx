@@ -17,7 +17,10 @@ export default function Home() {
   return (
     <>
       <ScrollToTop />
+
+      {/* Hero Section */}
       <LandingFrame />
+
       <CardsWork />
       <div className="mt-20 flex flex-col items-center justify-center gap-16 px-[20px]">
         <Divider />

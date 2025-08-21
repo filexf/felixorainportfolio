@@ -26,7 +26,7 @@ export default function DesignSection() {
             <DesignCard photo="/images/Couvertures magazines/WIZZY En Asie BONNE VERSION.jpg" />
           </div>
 
-          <SeeMore projectLink={"/books"} />
+          <SeeMore projectLink={"/books"} context="books" />
         </div>
       </SectionWrapper>
     </Reveal>

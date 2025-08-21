@@ -1,11 +1,12 @@
 "use client";
 
+import React from "react";
 import { LanguageProvider } from "../context/LanguageContext";
 import { ThemeProvider } from "../context/ThemeContext";
 import Footer from "../layouts/Footer";
 import Navbar from "../layouts/Navbar";
 
-import { GridBackground } from './GridBackground'
+import { GridBackground } from "./GridBackground";
 
 interface ProvidersProps {
   children: React.ReactNode;
@@ -23,7 +24,7 @@ export default function Providers({ children }: ProvidersProps) {
 
           <div className="flex min-h-screen flex-col">
             <Navbar />
-            <main className="flex-grow w-full">{children}</main>
+            <main className="w-full flex-grow">{children}</main>
             <Footer />
           </div>
         </div>
