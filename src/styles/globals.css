@@ -89,24 +89,10 @@ body {
   line-height: normal;
 }
 
-/* ‼️ Les motif à points de fond
-body > div {
-  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
-  background-size: 16px 16px;
-} */
-
 /* Some custom styling for the components */
-.bg-sidebar {
-  background-color: var(--sidebar-bg);
-  transition: background-color 0.3s ease-in-out;
-}
 
-.bg-slate-50 {
+.bg-secondary {
   background-color: var(--background-secondary) !important;
-}
-
-.border-card {
-  border-color: var(--text-primary) !important;
 }
 
 .border-gray-200,

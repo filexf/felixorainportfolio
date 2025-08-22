@@ -351,6 +351,7 @@ const Navbar = ({
                   className="max-h-10"
                   alt={logo.alt}
                   style={darkMode ? { filter: "brightness(0) invert(1)" } : {}}
+                  priority
                 />
                 <span
                   className={`text-xl font-semibold tracking-tighter ${
@@ -389,6 +390,7 @@ const Navbar = ({
                   className="max-h-8"
                   alt={logo.alt}
                   style={darkMode ? { filter: "brightness(0) invert(1)" } : {}}
+                  priority
                 />
               </Link>
 

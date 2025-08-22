@@ -56,8 +56,8 @@ export const projects: Project[] = [
     title: "portfolio",
     description: "portfolio",
     image: "/images/Photo-GGB/Photo_GGB_Squared.jpg",
-    githubLink: "https://github.com/filexf/felix-portfolio",
-    websiteLink: "https://filexf.github.io/felix-portfolio/",
+    githubLink: "https://www.felix-orain.com",
+    websiteLink: "https://github.com/filexf/felixorainportfolio",
   },
   {
     title: "carbonSavings",
@@ -218,7 +218,7 @@ export function ProjectCard({
   return (
     <>
       <Reveal>
-        <div className="my-2 mb-2 flex flex-col rounded-2xl border-1 border-gray-200 bg-slate-50 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-2 hover:bg-gray-100 md:flex md:items-center lg:flex-row">
+        <div className="my-2 mb-2 flex flex-col rounded-2xl border-1 border-gray-200 bg-secondary shadow-md transition-all duration-300 ease-in-out hover:-translate-y-2 hover:bg-gray-100 md:flex md:items-center lg:flex-row">
           <div className="relative h-48 w-full overflow-hidden rounded-2xl sm:h-56 md:h-64 md:w-80 md:min-w-80 md:flex-shrink-0 lg:h-80 lg:w-96 lg:min-w-96">
             <Image
               src={image}

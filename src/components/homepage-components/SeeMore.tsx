@@ -21,7 +21,7 @@ export default function SeeMore({ projectLink, context }: SeeMoreProps) {
         className="w-full sm:w-auto"
         aria-label={t(`seeMore.${context}.ariaLabel`, language)} // ✅ Aria-label descriptif
       >
-        <div className="group my-2 inline-flex w-full items-center justify-center gap-2 rounded-full border border-gray-300 bg-slate-50 px-4 py-1.5 shadow-sm transition-all duration-300 ease-in-out hover:bg-gray-100 sm:w-auto sm:gap-3 sm:px-5 sm:py-2">
+        <div className="group my-2 inline-flex w-full items-center justify-center gap-2 rounded-full border border-gray-300 bg-secondary px-4 py-1.5 shadow-sm transition-all duration-300 ease-in-out hover:bg-gray-100 sm:w-auto sm:gap-3 sm:px-5 sm:py-2">
           <span className="text-xs font-medium tracking-wide sm:text-sm">
             {t(`seeMore.${context}.text`, language)} {/* ✅ Texte contextuel */}
           </span>

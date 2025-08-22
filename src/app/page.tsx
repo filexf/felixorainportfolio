@@ -1,5 +1,3 @@
-"use client";
-
 import AboutSection from "../components/homepage-components/AboutSection";
 import CardsWork from "../components/homepage-components/CardsWork";
 import ContactSection from "../components/homepage-components/ContactSection";
@@ -11,7 +9,7 @@ import ScrollToTop from "../components/ScrollToTop";
 
 export default function Home() {
   const Divider = () => (
-    <hr className="my-2 w-1/2 border-[0.1px] border-gray-400/20" />
+    <hr className="w-1/2 border-[0.1px] border-gray-400/30" />
   );
 
   return (

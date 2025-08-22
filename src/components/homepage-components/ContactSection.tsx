@@ -52,7 +52,7 @@ export default function ContactSection() {
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="group mb-2 inline-flex items-center gap-3 self-start rounded-full border border-gray-300 bg-slate-50 px-5 py-2 shadow-md transition-all duration-300 ease-in-out hover:border-gray-900"
+                className="group mb-2 inline-flex items-center gap-3 self-start rounded-full border border-gray-300 bg-secondary px-5 py-2 shadow-md transition-all duration-300 ease-in-out hover:border-gray-900"
               >
                 <span className="text-sm font-medium tracking-wide">
                   {t("contact.send", language)}

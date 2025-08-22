@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-import { useLanguage, LanguageType } from "../../context/LanguageContext";
+import { useLanguage } from "../../context/LanguageContext";
 import { useTheme } from "../../context/ThemeContext";
 import { t } from "../../i18n/i18n";
 
@@ -71,7 +71,6 @@ export default function CardsWork() {
                   icon={card.icon}
                   text={card.text}
                   path={card.path}
-                  language={language}
                 />
               ))}
             </div>
@@ -87,37 +86,45 @@ interface CardProps {
   title: string;
   text: string;
   path: string;
-  language: LanguageType;
 }
 
-const Card = ({ icon, title, text, path, language }: CardProps) => {
+const Card = ({ icon, title, text, path }: CardProps) => {
   const { darkMode } = useTheme();
+  const { language } = useLanguage();
   return (
     <Link href={path}>
       <div
-        className={`group vertical-animation mx-2 my-2 flex h-[340px] w-[290px] flex-col items-center justify-center gap-4 rounded-3xl border px-4 shadow-md backdrop-blur-sm transition-colors duration-300 sm:h-[380px] sm:w-[320px] sm:gap-6 sm:p-5 md:h-[380px] md:w-[300px] md:gap-8 md:p-7 ${
+        className={`group vertical-animation mx-1 my-1 flex w-[280px] max-w-[90vw] flex-col items-center justify-center gap-2 rounded-2xl border px-3 py-4 shadow-md backdrop-blur-sm transition-colors duration-300 sm:mx-2 sm:my-2 sm:h-[340px] sm:w-[290px] sm:gap-4 sm:rounded-3xl sm:px-4 sm:py-5 md:h-[380px] md:w-[300px] md:gap-6 md:px-6 md:py-7 lg:gap-8 ${
           darkMode
             ? "border-gray-700 bg-gradient-to-br from-gray-700 to-gray-900"
             : "from-gray_50 border-gray-200 bg-gradient-to-br to-gray-200"
         }`}
       >
-        <div className="rounded-full bg-gray-200 p-2 duration-300 group-hover:bg-gray-200 sm:p-2.5">
+        {/* Icône - Plus petite sur mobile */}
+        <div className="rounded-full bg-gray-200 p-1.5 duration-300 group-hover:bg-gray-200 sm:p-2 md:p-2.5">
           <Image
-            className="h-10 w-10 transition-transform duration-300 group-hover:scale-110 sm:h-12 sm:w-12"
+            className="h-8 w-8 transition-transform duration-300 group-hover:scale-110 sm:h-10 sm:w-10 md:h-12 md:w-12"
             src={icon}
             alt={title}
             width={48}
             height={48}
           />
         </div>
-        <div className="flex flex-col items-center justify-center gap-3 text-center sm:gap-4 md:gap-5">
-          <h3 className="text-gradient text-lg font-bold sm:text-xl">
+
+        {/* Contenu - Espacement optimisé */}
+        <div className="flex flex-col items-center justify-center gap-2 text-center sm:gap-3 md:gap-4 lg:gap-5">
+          {/* Titre - Plus petit sur mobile */}
+          <h3 className="text-gradient text-base leading-tight font-bold sm:text-lg md:text-xl">
             {title}
           </h3>
-          <p className="h-auto min-h-[80px] text-sm leading-relaxed sm:text-base">
+
+          {/* Texte - Hauteur adaptative */}
+          <p className="min-h-[60px] text-xs leading-relaxed sm:min-h-[70px] sm:text-sm md:min-h-[80px] md:text-base">
             {text}
           </p>
-          <button className="mt-1 mb-1 w-full rounded-2xl border-1 px-4 py-1.5 text-xs font-semibold transition-all duration-300 ease-in-out hover:border-transparent hover:bg-gray-900 hover:text-white sm:mt-2 sm:mb-2 sm:w-3/4 sm:px-5 sm:py-2 sm:text-sm">
+
+          {/* Bouton - Plus compact sur mobile */}
+          <button className="mt-1 w-full max-w-[90%] rounded-xl border px-3 py-1.5 text-xs font-semibold transition-all duration-300 ease-in-out hover:border-transparent hover:bg-gray-900 hover:text-white sm:mt-2 sm:rounded-2xl sm:px-4 sm:py-2 sm:text-sm md:px-5">
             <span className="flex items-center justify-center gap-1 sm:gap-2">
               {t("readMore", language)}
               <svg

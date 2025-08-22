@@ -18,7 +18,9 @@ interface TechStackItem {
 
 // Tech stack data
 const techStack: TechStackItem[] = [
+  { name: "Next.js", icon: "/icons/Tech stack icons/Next.js.svg" },
   { name: "React", icon: "/icons/Tech stack icons/React.svg" },
+  { name: "TypeScript", icon: "/icons/Tech stack icons/TypeScript.svg" },
   { name: "Ruby on Rails", icon: "/icons/Tech stack icons/Rails-icon.svg" },
   { name: "Tailwind", icon: "/icons/Tech stack icons/Tailwind-icon.svg" },
   { name: "Ruby", icon: "/icons/Tech stack icons/Ruby-icons.svg" },
@@ -41,7 +43,7 @@ interface TechStackIconProps {
 // Reusable Tech Stack Icon component
 function TechStackIcon({ name, icon }: TechStackIconProps) {
   return (
-    <div className="border-2px mb-1 flex items-center gap-2 rounded-3xl border-1 border-gray-200 bg-slate-50 px-3 py-1 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200 sm:gap-3 sm:px-6 sm:py-2">
+    <div className="border-2px mb-1 flex items-center gap-2 rounded-3xl border-1 border-gray-200 bg-secondary px-3 py-1 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200 sm:gap-3 sm:px-6 sm:py-2">
       <p className="text-gradient text-sm font-bold sm:text-base">{name}</p>
       <Image
         src={icon}
@@ -73,7 +75,7 @@ export default function ApplicationsPage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="border-2px flex items-center gap-3 rounded-3xl border-1 border-gray-200 bg-slate-50 px-4 py-2 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200 sm:gap-5 sm:px-6 sm:py-3">
+            <div className="border-2px flex items-center gap-3 rounded-3xl border-1 border-gray-200 bg-secondary px-4 py-2 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200 sm:gap-5 sm:px-6 sm:py-3">
               <p className="text-gradient text-bold text-sm sm:text-lg md:text-xl">
                 {t("applications.github", language)}
               </p>

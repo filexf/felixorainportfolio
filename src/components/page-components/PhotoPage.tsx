@@ -85,9 +85,7 @@ function PhotoCard({ photoPath, title }: PhotoCardProps) {
               alt={t(`photospage.${title}`, language)}
               fill
               sizes="(max-width: 640px) 95vw, (max-width: 768px) 90vw, (max-width: 1024px) 45vw, 40vw"
-              priority={title === "sport"}
               className="object-cover transition-transform duration-500 group-hover:scale-105"
-              quality={85}
             />
           </div>
 
@@ -107,7 +105,7 @@ function PhotoCard({ photoPath, title }: PhotoCardProps) {
         </div>
 
         {/* Titre en bas de carte */}
-        <div className="bg-slate-50 p-3 sm:p-4">
+        <div className="bg-secondary p-3 sm:p-4">
           <h3 className="text-gradient text-center text-xl font-bold sm:text-2xl md:text-3xl">
             {t(`photospage.${title}`, language)}
           </h3>
