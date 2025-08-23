@@ -1,9 +1,15 @@
-import { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
-import React from "react";
-import Providers from "@/components/Providers";
+import { GridBackground } from "@/components/GridBackground";
+import { LanguageProvider } from "@/context/LanguageContext";
+import { IntlProvider } from "@/components/IntlProvider";
+import { ThemeProvider } from "@/context/ThemeContext";
+import Footer from "@/layouts/Footer";
+import Navbar from "@/layouts/Navbar";
 import { description, title } from "@/lib/constants";
 import "@/styles/globals.css";
+import { Metadata } from "next";
+import { getMessages } from "next-intl/server";
+import { Inter, Poppins } from "next/font/google";
+import React from "react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -130,19 +136,36 @@ export const metadata: Metadata = {
   },
 };
 
-interface RootLayoutProps {
-  children: React.ReactNode;
-}
+export default async function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  const messages = await getMessages()
 
-export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html
-      lang="en"
-      className={`light scroll-smooth ${inter.variable} ${poppins.variable}`}
-      data-scroll-behavior="smooth"
+      lang="fr"
+      suppressHydrationWarning
+      className={`${inter.variable} ${poppins.variable} scroll-smooth`}
     >
-      <body className="text-sm sm:text-base md:text-xl">
-        <Providers>{children}</Providers>
+      <body className="font-sans antialiased">
+        <IntlProvider initialMessages={messages}>
+        <ThemeProvider>
+          <LanguageProvider>
+            <div className="relative min-h-screen w-full">
+              <div className="absolute inset-0 z-[-1]">
+                <GridBackground />
+              </div>
+              <div className="flex min-h-screen flex-col">
+                <Navbar />
+                <main className="w-full flex-grow">{children}</main>
+                <Footer />
+              </div>
+            </div>
+            </LanguageProvider>
+          </ThemeProvider>
+        </IntlProvider>
       </body>
     </html>
   );
