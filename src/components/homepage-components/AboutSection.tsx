@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useLanguage } from "../../context/LanguageContext";
-import { t } from "../../i18n/i18n";
-import Reveal from "../Reveal";
-import SectionWrapper from "./SectionWrapper";
+import { useLanguage } from "@/context/LanguageContext";
+import { t } from "@/i18n/i18n";
+import Reveal from "@/components/Reveal";
+import SectionWrapper from "@/components/homepage-components/SectionWrapper";
 import React from "react";
 
 export default function AboutSection() {

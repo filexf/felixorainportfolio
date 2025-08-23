@@ -4,9 +4,9 @@ import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useLanguage } from "../context/LanguageContext";
-import { useTheme } from "../context/ThemeContext";
-import { t } from "../i18n/i18n";
+import { useLanguage } from "@/context/LanguageContext";
+import { useTheme } from "@/context/ThemeContext";
+import { t } from "@/i18n/i18n";
 
 export default function NotFound() {
   const { language } = useLanguage();

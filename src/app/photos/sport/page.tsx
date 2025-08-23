@@ -1,8 +1,8 @@
 "use client";
 
-import Gallery from "../../../components/photos-components/PhotosGallery";
-import { useLanguage } from "../../../context/LanguageContext";
-import { t } from "../../../i18n/i18n";
+import Gallery from "@/components/photos-components/PhotosGallery";
+import { useLanguage } from "@/context/LanguageContext";
+import { t } from "@/i18n/i18n";
 
 interface GalleryImage {
   src: string;

@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useLanguage } from "../context/LanguageContext";
-import { useTheme } from "../context/ThemeContext";
-import { t } from "../i18n/i18n";
+import { useLanguage } from "@/context/LanguageContext";
+import { useTheme } from "@/context/ThemeContext";
+import { t } from "@/i18n/i18n";
 
 interface FooterProps {
   noPadding?: boolean;

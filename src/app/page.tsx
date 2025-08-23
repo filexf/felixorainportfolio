@@ -1,11 +1,10 @@
-import AboutSection from "../components/homepage-components/AboutSection";
-import CardsWork from "../components/homepage-components/CardsWork";
-import ContactSection from "../components/homepage-components/ContactSection";
-import DesignSection from "../components/homepage-components/DesignSection";
-import LandingFrame from "../components/homepage-components/LandingFrame";
-import PhotographySection from "../components/homepage-components/PhotographySection";
-import WebDevelopmentSection from "../components/homepage-components/WebDevelopmentSection";
-import ScrollToTop from "../components/ScrollToTop";
+import AboutSection from "@/components/homepage-components/AboutSection";
+import CardsWork from "@/components/homepage-components/CardsWork";
+import ContactSection from "@/components/homepage-components/ContactSection";
+import DesignSection from "@/components/homepage-components/DesignSection";
+import LandingFrame from "@/components/homepage-components/LandingFrame";
+import PhotographySection from "@/components/homepage-components/PhotographySection";
+import WebDevelopmentSection from "@/components/homepage-components/WebDevelopmentSection";
 
 export default function Home() {
   const Divider = () => (
@@ -14,8 +13,6 @@ export default function Home() {
 
   return (
     <>
-      <ScrollToTop />
-
       {/* Hero Section */}
       <LandingFrame />
 

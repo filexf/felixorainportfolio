@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { LanguageProvider } from "../context/LanguageContext";
-import { ThemeProvider } from "../context/ThemeContext";
-import Footer from "../layouts/Footer";
-import Navbar from "../layouts/Navbar";
+import { LanguageProvider } from "@/context/LanguageContext";
+import { ThemeProvider } from "@/context/ThemeContext";
+import Footer from "@/layouts/Footer";
+import Navbar from "@/layouts/Navbar";
 
 import { GridBackground } from "./GridBackground";
 

@@ -4,8 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import { useLanguage } from "../../context/LanguageContext";
-import { t } from "../../i18n/i18n";
+import { useLanguage } from "@/context/LanguageContext";
+import { t } from "@/i18n/i18n";
 
 interface GalleryImage {
   src: string;

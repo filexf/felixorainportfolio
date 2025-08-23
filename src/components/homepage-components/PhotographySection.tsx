@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import SeeMore from "./SeeMore";
+import SeeMore from "@/components/homepage-components/SeeMore";
 
-import { useLanguage } from "../../context/LanguageContext";
-import { t } from "../../i18n/i18n";
-import Reveal from "../Reveal";
-import SectionWrapper from "./SectionWrapper";
+import { useLanguage } from "@/context/LanguageContext";
+import { t } from "@/i18n/i18n";
+import Reveal from "@/components/Reveal";
+import SectionWrapper from "@/components/homepage-components/SectionWrapper";
 
 export default function PhotographySection() {
   const photos: string[] = [

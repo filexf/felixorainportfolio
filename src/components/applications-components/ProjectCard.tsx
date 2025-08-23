@@ -5,10 +5,10 @@ import Link from "next/link";
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import { useLanguage } from "../../context/LanguageContext";
-import { useTheme } from "../../context/ThemeContext";
-import { t } from "../../i18n/i18n";
-import Reveal from "../Reveal";
+import { useLanguage } from "@/context/LanguageContext";
+import { useTheme } from "@/context/ThemeContext";
+import { t } from "@/i18n/i18n";
+import Reveal from "@/components/Reveal";
 
 interface ProjectImage {
   src: string;

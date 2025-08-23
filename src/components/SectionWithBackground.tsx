@@ -1,6 +1,5 @@
-"use client";
-
-import { DotPattern, GradientGrid, WavePattern } from "./GridBackground";
+import React from "react";
+import { DotPattern, GradientGrid, WavePattern } from "@/components/GridBackground";
 
 interface SectionWithBackgroundProps {
   children: React.ReactNode;

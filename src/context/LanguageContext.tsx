@@ -1,7 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { t as translateFunction } from "../i18n/i18n";
+import { t as translateFunction } from "@/i18n/i18n";
 
 // Type pour les langues supportées
 export type LanguageType = "fr" | "en" | "es";

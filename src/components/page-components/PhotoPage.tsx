@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Reveal from "../../components/Reveal";
-import { useLanguage } from "../../context/LanguageContext";
-import { t } from "../../i18n/i18n";
+import Reveal from "@/components/Reveal";
+import { useLanguage } from "@/context/LanguageContext";
+import { t } from "@/i18n/i18n";
 
 interface Photo {
   id: string;

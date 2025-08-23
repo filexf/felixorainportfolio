@@ -1,5 +1,3 @@
-'use client'
-
 // Transparency level presets
 export const transparencyLevels = {
   high: {

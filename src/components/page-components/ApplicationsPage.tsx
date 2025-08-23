@@ -5,11 +5,11 @@ import Link from "next/link";
 import {
   ProjectCard,
   projects,
-} from "../../components/applications-components/ProjectCard";
-import Reveal from "../../components/Reveal";
-import { useLanguage } from "../../context/LanguageContext";
-import { useTheme } from "../../context/ThemeContext";
-import { t } from "../../i18n/i18n";
+} from "@/components/applications-components/ProjectCard";
+import Reveal from "@/components/Reveal";
+import { useLanguage } from "@/context/LanguageContext";
+import { useTheme } from "@/context/ThemeContext";
+import { t } from "@/i18n/i18n";
 
 interface TechStackItem {
   name: string;

@@ -1,4 +1,4 @@
-import BooksPage from "../../components/page-components/BooksPage";
+import BooksPage from "@/components/page-components/BooksPage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

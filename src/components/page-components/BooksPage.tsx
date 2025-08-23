@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Reveal from "../../components/Reveal";
-import { useLanguage } from "../../context/LanguageContext";
-import { useTheme } from "../../context/ThemeContext";
-import { t } from "../../i18n/i18n";
+import Reveal from "@/components/Reveal";
+import { useLanguage } from "@/context/LanguageContext";
+import { useTheme } from "@/context/ThemeContext";
+import { t } from "@/i18n/i18n";
 import React from "react";
 
 export default function BooksPage() {

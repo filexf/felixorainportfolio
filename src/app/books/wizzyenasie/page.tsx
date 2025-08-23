@@ -1,6 +1,6 @@
 "use client";
 
-import BooksGallery from "../../../components/photos-components/BooksGallery";
+import BooksGallery from "@/components/photos-components/BooksGallery";
 
 interface GalleryImage {
   src: string;

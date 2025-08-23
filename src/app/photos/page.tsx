@@ -1,4 +1,4 @@
-import PhotosPage from "../../components/page-components/PhotoPage";
+import PhotosPage from "@/components/page-components/PhotoPage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

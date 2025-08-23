@@ -4,11 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-import { useLanguage } from "../../context/LanguageContext";
-import { useTheme } from "../../context/ThemeContext";
-import { t } from "../../i18n/i18n";
+import { useLanguage } from "@/context/LanguageContext";
+import { useTheme } from "@/context/ThemeContext";
+import { t } from "@/i18n/i18n";
 
-import Reveal from "../Reveal";
+import Reveal from "@/components/Reveal";
 
 export default function CardsWork() {
   const { language } = useLanguage();
