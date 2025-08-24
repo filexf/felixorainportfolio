@@ -1,23 +1,20 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import SeeMore from "@/components/homepage-components/SeeMore";
 
-import { useLanguage } from "@/context/LanguageContext";
-import { t } from "@/i18n/i18n";
+import { getTranslations } from "next-intl/server";
 import Reveal from "@/components/Reveal";
 import SectionWrapper from "@/components/homepage-components/SectionWrapper";
 
-export default function WebDevelopmentSection() {
-  const { language } = useLanguage();
+export default async function WebDevelopmentSection() {
+  const t = await getTranslations();
 
   return (
     <Reveal>
-      <SectionWrapper title={t("webdev.title", language)}>
+      <SectionWrapper title={t("webdev.title")}>
         <div className="flex flex-col gap-12">
           <p className="body-font mx-auto max-w-3xl text-center">
-            {t("webdev.desc", language)}
+            {t("webdev.desc")}
           </p>
 
           {/* Grille de projets mise à jour */}

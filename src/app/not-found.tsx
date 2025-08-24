@@ -4,12 +4,11 @@ import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useLanguage } from "@/context/LanguageContext";
 import { useTheme } from "@/context/ThemeContext";
-import { t } from "@/i18n/i18n";
+import { useTranslations } from "next-intl";
 
 export default function NotFound() {
-  const { language } = useLanguage();
+  const t = useTranslations();
   const { darkMode } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -114,12 +113,12 @@ export default function NotFound() {
 
         {/* Title */}
         <motion.h1 className="mb-4 text-3xl font-bold" variants={itemVariants}>
-          {t("notFound.title", language)}
+          {t("notFound.title")}
         </motion.h1>
 
         {/* Subtitle */}
         <motion.p className="mb-8 text-xl" variants={itemVariants}>
-          {t("notFound.subtitle", language)}
+          {t("notFound.subtitle")}
         </motion.p>
 
         {/* Button */}
@@ -143,7 +142,7 @@ export default function NotFound() {
             >
               ←
             </motion.span>
-            {t("notFound.back", language)}
+            {t("notFound.back")}
           </Link>
         </motion.div>
       </motion.div>

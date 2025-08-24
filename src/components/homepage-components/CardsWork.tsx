@@ -4,14 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-import { useLanguage } from "@/context/LanguageContext";
 import { useTheme } from "@/context/ThemeContext";
-import { t } from "@/i18n/i18n";
+import { useTranslations } from "next-intl";
 
 import Reveal from "@/components/Reveal";
 
 export default function CardsWork() {
-  const { language } = useLanguage();
+  const t = useTranslations();
 
   interface CardData {
     title: string;
@@ -22,21 +21,21 @@ export default function CardsWork() {
 
   const cardData: CardData[] = [
     {
-      title: t("cardData.webDevelopment.title", language),
+      title: t("cardData.webDevelopment.title"),
       icon: "/icons/Main-icons/Web-development-icon.svg",
-      text: t("cardData.webDevelopment.text", language),
+      text: t("cardData.webDevelopment.text"),
       path: "/applications",
     },
     {
-      title: t("cardData.photography.title", language),
+      title: t("cardData.photography.title"),
       icon: "/icons/Main-icons/Photography-icon.svg",
-      text: t("cardData.photography.text", language),
+      text: t("cardData.photography.text"),
       path: "/photos",
     },
     {
-      title: t("cardData.design.title", language),
+      title: t("cardData.design.title"),
       icon: "/icons/Main-icons/Designs-icon.svg",
-      text: t("cardData.design.text", language),
+      text: t("cardData.design.text"),
       path: "/books",
     },
   ];
@@ -49,19 +48,20 @@ export default function CardsWork() {
           id="latest-works"
         >
           <h2 className="text-gradient text-center text-3xl leading-[normal] font-bold sm:text-4xl md:text-5xl lg:text-7xl">
-            {t("portfolio.title", language)}
+            {t("portfolio.title")}
           </h2>
 
           <p className="w-full max-w-6xl p-2 px-4 text-center text-base sm:w-5/6 sm:p-3 sm:text-lg md:w-3/4 md:p-[20px] md:text-[22px]">
-            {t("portfolio.intro", language)
-              .split("<br />")
-              .map((line, index, array) => (
-                <React.Fragment key={index}>
+            {t("portfolio.intro")
+              .split("\n")
+              .map((line, i) => (
+                <span key={i}>
                   {line}
-                  {index < array.length - 1 && <br />}
-                </React.Fragment>
+                  <br />
+                </span>
               ))}
           </p>
+
           <Reveal>
             <div className="my-2 flex flex-col flex-wrap items-center justify-center gap-4 sm:my-4 sm:gap-6 md:my-6 md:flex-row md:gap-8 lg:gap-10">
               {cardData.map((card) => (
@@ -90,7 +90,7 @@ interface CardProps {
 
 const Card = ({ icon, title, text, path }: CardProps) => {
   const { darkMode } = useTheme();
-  const { language } = useLanguage();
+  const t = useTranslations();
   return (
     <Link href={path}>
       <div
@@ -126,7 +126,7 @@ const Card = ({ icon, title, text, path }: CardProps) => {
           {/* Bouton - Plus compact sur mobile */}
           <button className="mt-1 w-full max-w-[90%] rounded-xl border px-3 py-1.5 text-xs font-semibold transition-all duration-300 ease-in-out hover:border-transparent hover:bg-gray-900 hover:text-white sm:mt-2 sm:rounded-2xl sm:px-4 sm:py-2 sm:text-sm md:px-5">
             <span className="flex items-center justify-center gap-1 sm:gap-2">
-              {t("readMore", language)}
+              {t("readMore")}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-2 sm:h-4 sm:w-4"

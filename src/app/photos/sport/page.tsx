@@ -1,8 +1,7 @@
 "use client";
 
 import Gallery from "@/components/photos-components/PhotosGallery";
-import { useLanguage } from "@/context/LanguageContext";
-import { t } from "@/i18n/i18n";
+import { useTranslations } from "next-intl";
 
 interface GalleryImage {
   src: string;
@@ -86,14 +85,14 @@ const images: GalleryImage[] = [
 ];
 
 export default function SportPhotoPage() {
-  const { language } = useLanguage();
+  const t = useTranslations();
 
   return (
     <>
       <Gallery
-        title={t("sportphotopage.title", language)}
+        title={t("sportphotopage.title")}
         images={images}
-        text={t("sportphotopage.desc", language)}
+        text={t("sportphotopage.desc")}
       />
     </>
   );

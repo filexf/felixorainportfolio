@@ -1,8 +1,5 @@
-"use client";
-
 import Gallery from "@/components/photos-components/PhotosGallery";
-import { useLanguage } from "@/context/LanguageContext";
-import { t } from "@/i18n/i18n";
+import { getTranslations } from "next-intl/server";
 
 interface GalleryImage {
   src: string;
@@ -77,15 +74,15 @@ const images: GalleryImage[] = [
   },
 ];
 
-export default function WeddingPhotoPage() {
-  const { language } = useLanguage();
+export default async function WeddingPhotoPage() {
+  const t = await getTranslations();
 
   return (
     <>
       <Gallery
-        title={t("weddingphotopage.title", language)}
+        title={t("weddingphotopage.title")}
         images={images}
-        text={t("weddingphotopage.desc", language)}
+        text={t("weddingphotopage.desc")}
       />
     </>
   );

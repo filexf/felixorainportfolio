@@ -17,9 +17,8 @@ import React, { useEffect, useState } from "react";
 
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ThemeToggle from "@/components/ThemeToggle";
-import { useLanguage } from "@/context/LanguageContext";
 import { useTheme } from "@/context/ThemeContext";
-import { t } from "@/i18n/i18n";
+import { useTranslations } from "next-intl";
 
 interface MenuItem {
   title: string;
@@ -46,65 +45,65 @@ const Navbar = ({
     title: "Félix Orain",
   },
 }: NavbarProps) => {
-  const { language, setLanguage } = useLanguage();
+  const t = useTranslations();
   const { darkMode } = useTheme();
 
   // Create menu with translations
   const menu = [
-    { title: t("navbar.home", language), url: "/" },
+    { title: t("navbar.home"), url: "/" },
     {
-      title: t("navbar.applications", language),
+      title: t("navbar.applications"),
       url: "/applications",
     },
     {
-      title: t("navbar.photos", language),
+      title: t("navbar.photos"),
       url: "/photos",
       items: [
         {
-          title: t("navbar.wedding", language),
-          description: t("navbar.descriptions.wedding", language),
+          title: t("navbar.wedding"),
+          description: t("navbar.descriptions.wedding"),
           icon: <HeartHandshake className="size-5 shrink-0" />,
           url: "/photos/wedding",
         },
         {
-          title: t("navbar.mosaic", language),
-          description: t("navbar.descriptions.mosaic", language),
+          title: t("navbar.mosaic"),
+          description: t("navbar.descriptions.mosaic"),
           icon: <Grid className="size-5 shrink-0" />,
           url: "/photos/mosaic",
         },
         {
-          title: t("navbar.sport", language),
-          description: t("navbar.descriptions.sport", language),
+          title: t("navbar.sport"),
+          description: t("navbar.descriptions.sport"),
           icon: <Trophy className="size-5 shrink-0" />,
           url: "/photos/sport",
         },
         {
-          title: t("navbar.cityscape", language),
-          description: t("navbar.descriptions.cityscape", language),
+          title: t("navbar.cityscape"),
+          description: t("navbar.descriptions.cityscape"),
           icon: <Building className="size-5 shrink-0" />,
           url: "/photos/cityscape",
         },
         {
-          title: t("navbar.landscape", language),
-          description: t("navbar.descriptions.landscape", language),
+          title: t("navbar.landscape"),
+          description: t("navbar.descriptions.landscape"),
           icon: <Mountain className="size-5 shrink-0" />,
           url: "/photos/landscape",
         },
       ],
     },
     {
-      title: t("navbar.books", language),
+      title: t("navbar.books"),
       url: "/books",
       items: [
         {
-          title: t("navbar.civilisation", language),
-          description: t("navbar.descriptions.civilisation", language),
+          title: t("navbar.civilisation"),
+          description: t("navbar.descriptions.civilisation"),
           icon: <Book className="size-5 shrink-0" />,
           url: "/books/civilisation",
         },
         {
-          title: t("navbar.wizzyenasie", language),
-          description: t("navbar.descriptions.wizzyenasie", language),
+          title: t("navbar.wizzyenasie"),
+          description: t("navbar.descriptions.wizzyenasie"),
           icon: <Book className="size-5 shrink-0" />,
           url: "/books/wizzyenasie",
         },
@@ -124,12 +123,6 @@ const Navbar = ({
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState<
     string | null
   >(null);
-
-  const handleLanguageChange = (lang: string) => {
-    if (lang === "fr" || lang === "en" || lang === "es") {
-      setLanguage(lang as "fr" | "en" | "es");
-    }
-  };
 
   // No need for click outside handling since we use hover
 
@@ -371,10 +364,7 @@ const Navbar = ({
             {/* Theme Toggle & Language Switcher */}
             <div className="flex items-center gap-2">
               <ThemeToggle />
-              <LanguageSwitcher
-                currentLanguage={language}
-                onLanguageChange={handleLanguageChange}
-              />
+              <LanguageSwitcher />
             </div>
           </nav>
 
@@ -480,10 +470,7 @@ const Navbar = ({
                 }`}
               >
                 <ThemeToggle />
-                <LanguageSwitcher
-                  currentLanguage={language}
-                  onLanguageChange={handleLanguageChange}
-                />
+                <LanguageSwitcher />
               </div>
             </div>
           </div>

@@ -1,26 +1,26 @@
 "use client";
 
-import Image from "next/image";
-import { useLanguage } from "@/context/LanguageContext";
-import { t } from "@/i18n/i18n";
 import Reveal from "@/components/Reveal";
 import SectionWrapper from "@/components/homepage-components/SectionWrapper";
+import { useTranslations, useLocale } from "next-intl";
+import Image from "next/image";
 import React from "react";
 
 export default function AboutSection() {
-  const { language } = useLanguage();
+  const t = useTranslations();
+  const locale = useLocale();
 
   const resumeMap = {
     en: "/Felix_Orain_Web_Developer_Resume .pdf",
     fr: "/Felix_Orain_CV_Developpeur_Web.pdf",
     es: "/Felix_Orain_Web_Developer_Resume .pdf", // fallback to English if Spanish
   };
-  const resumeFile = resumeMap[language] || resumeMap["en"];
+  const resumeFile = resumeMap[locale as keyof typeof resumeMap] || resumeMap.en;
 
   return (
     <>
       <Reveal>
-        <SectionWrapper title={t("about.title", language)}>
+        <SectionWrapper title={t("about.title")}>
           <div className="lg:width-[80%] flex w-full flex-col items-center justify-center gap-6 lg:flex-row lg:justify-center lg:gap-10 lg:pl-12">
             <Image
               className="vertical-animation my-2 mb-2 h-[300px] w-auto rounded-4xl shadow-md lg:h-[400px]"
@@ -31,22 +31,22 @@ export default function AboutSection() {
             />
             <div className="mt-4 flex flex-col items-center justify-center gap-10">
               <p className="body-font max-width-md w-[80%] max-w-6xl text-start lg:text-left">
-                {t("about.desc", language)
-                  .split("<br />")
-                  .map((line, index, array) => (
-                    <React.Fragment key={index}>
-                      {line}
-                      {index < array.length - 1 && <br />}
-                    </React.Fragment>
-                  ))}
+              {t("portfolio.intro")
+                .split("\n")
+                .map((line, i) => (
+                  <span key={i}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
               </p>
               <a
                 href={resumeFile}
                 download
-                className="group inline-flex items-center gap-3 rounded-full border-2 border-gray-400 bg-secondary px-5 py-2 transition-all duration-300 ease-in-out hover:border-gray-900"
+                className="group bg-secondary inline-flex items-center gap-3 rounded-full border-2 border-gray-400 px-5 py-2 transition-all duration-300 ease-in-out hover:border-gray-900"
               >
                 <span className="text-sm font-medium tracking-wide">
-                  {t("about.resume", language)}
+                  {t("about.resume")}
                 </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

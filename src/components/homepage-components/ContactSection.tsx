@@ -1,19 +1,18 @@
 "use client";
 
 import { IoSend } from "react-icons/io5";
-import { useLanguage } from "@/context/LanguageContext";
-import { t } from "@/i18n/i18n";
+import { useTranslations } from "next-intl";
 import Reveal from "@/components/Reveal";
 import SectionWrapper from "@/components/homepage-components/SectionWrapper";
 
 export default function ContactSection() {
-  const { language } = useLanguage();
+  const t = useTranslations();
   return (
     <Reveal>
-      <SectionWrapper title={t("contact.title", language)}>
+      <SectionWrapper title={t("contact.title")}>
         <div className="flex flex-col gap-12">
           <p className="body-font mx-auto max-w-3xl text-center">
-            {t("contact.text", language)}
+            {t("contact.text")}
           </p>
 
           <form
@@ -27,7 +26,7 @@ export default function ContactSection() {
                 type="text"
                 id="name"
                 name="name"
-                placeholder={t("contact.name", language)}
+                placeholder={t("contact.name")}
                 required
               />
               <input
@@ -35,7 +34,7 @@ export default function ContactSection() {
                 type="email"
                 id="email"
                 name="email"
-                placeholder={t("contact.email", language)}
+                placeholder={t("contact.email")}
                 required
               />
             </div>
@@ -45,7 +44,7 @@ export default function ContactSection() {
               id="message"
               name="message"
               rows={5}
-              placeholder={t("contact.message", language)}
+              placeholder={t("contact.message")}
               required
             />
 
@@ -55,7 +54,7 @@ export default function ContactSection() {
                 className="group mb-2 inline-flex items-center gap-3 self-start rounded-full border border-gray-300 bg-secondary px-5 py-2 shadow-md transition-all duration-300 ease-in-out hover:border-gray-900"
               >
                 <span className="text-sm font-medium tracking-wide">
-                  {t("contact.send", language)}
+                  {t("contact.send")}
                 </span>
                 <IoSend className="h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-1" />
               </button>

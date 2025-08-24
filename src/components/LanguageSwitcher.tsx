@@ -1,12 +1,8 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "@/context/ThemeContext";
-
-interface LanguageSwitcherProps {
-  currentLanguage?: string;
-  onLanguageChange: (lang: string) => void;
-}
 
 interface Language {
   code: string;
@@ -17,13 +13,12 @@ interface Languages {
   [key: string]: Language;
 }
 
-export default function LanguageSwitcher({
-  currentLanguage = "en",
-  onLanguageChange,
-}: LanguageSwitcherProps) {
+export default function LanguageSwitcher() {
+  const [locale, setLocale] = useState<string>("");
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { darkMode } = useTheme();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   // Langues disponibles avec leur code et drapeau
   const languages: Languages = {
@@ -31,6 +26,21 @@ export default function LanguageSwitcher({
     fr: { code: "FR", flag: "🇫🇷" },
     es: { code: "ES", flag: "🇪🇸" },
   };
+
+  useEffect(() => {
+    const cookieLocale = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("MYNEXTAPP_LOCALE="))
+      ?.split("=")[1];
+    if (cookieLocale) {
+      setLocale(cookieLocale);
+    } else {
+      const browserLocale = navigator.language.slice(0, 2);
+      setLocale(browserLocale);
+      document.cookie = `MYNEXTAPP_LOCALE=${browserLocale};`;
+      router.refresh();
+    }
+  }, [router]);
 
   // Ferme le menu déroulant si l'utilisateur clique ailleurs
   useEffect(() => {
@@ -49,10 +59,16 @@ export default function LanguageSwitcher({
     };
   }, []);
 
+  const changeLocale = (newLocale: string) => {
+    setLocale(newLocale);
+    document.cookie = `MYNEXTAPP_LOCALE=${newLocale};`;
+    router.refresh();
+    setIsOpen(false);
+  };
+
   // Gère la sélection d'une langue
   const handleLanguageSelect = (lang: string): void => {
-    onLanguageChange(lang);
-    setIsOpen(false);
+    changeLocale(lang);
   };
 
   return (
@@ -74,10 +90,10 @@ export default function LanguageSwitcher({
         }}
       >
         <span className="mr-0.5 text-base sm:text-lg">
-          {languages[currentLanguage].flag}
+          {languages[locale]?.flag || languages.fr.flag}
         </span>
         <span className="text-xs font-semibold sm:text-sm">
-          {languages[currentLanguage].code}
+          {languages[locale]?.code || languages.fr.code}
         </span>
         <svg
           className={`h-3 w-3 transition-transform duration-200 sm:h-3.5 sm:w-3.5 ${isOpen ? "rotate-180" : ""}`}
@@ -107,18 +123,18 @@ export default function LanguageSwitcher({
               <button
                 key={lang}
                 className={`flex w-full items-center px-2 py-2 text-xs transition-colors duration-150 sm:px-3 sm:py-2.5 sm:text-sm ${
-                  lang === currentLanguage
+                  lang === locale
                     ? "bg-opacity-10 bg-slate-400 font-semibold"
                     : "hover:bg-slate-200 dark:hover:bg-slate-700"
                 }`}
                 onClick={() => handleLanguageSelect(lang)}
-                disabled={lang === currentLanguage}
+                disabled={lang === locale}
               >
                 <span className="mr-2 text-base sm:mr-2.5 sm:text-lg">
                   {languages[lang].flag}
                 </span>
                 {languages[lang].code}
-                {lang === currentLanguage && (
+                {lang === locale && (
                   <span className="ml-auto flex h-1.5 w-1.5 rounded-full bg-sky-500 sm:h-2 sm:w-2"></span>
                 )}
               </button>

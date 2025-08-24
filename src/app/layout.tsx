@@ -1,13 +1,13 @@
 import { GridBackground } from "@/components/GridBackground";
-import { LanguageProvider } from "@/context/LanguageContext";
-import { IntlProvider } from "@/components/IntlProvider";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, getLocale } from "next-intl/server";
+
 import { ThemeProvider } from "@/context/ThemeContext";
 import Footer from "@/layouts/Footer";
 import Navbar from "@/layouts/Navbar";
 import { description, title } from "@/lib/constants";
 import "@/styles/globals.css";
 import { Metadata } from "next";
-import { getMessages } from "next-intl/server";
 import { Inter, Poppins } from "next/font/google";
 import React from "react";
 
@@ -139,20 +139,21 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
-  const messages = await getMessages()
+  const messages = await getMessages();
+  const locale = await getLocale();
 
   return (
     <html
-      lang="fr"
+      lang={locale}
       suppressHydrationWarning
       className={`${inter.variable} ${poppins.variable} scroll-smooth`}
     >
-      <body className="font-sans antialiased">
-        <IntlProvider initialMessages={messages}>
-        <ThemeProvider>
-          <LanguageProvider>
+      <body className="light text-base md:text-xl">
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider>
+
             <div className="relative min-h-screen w-full">
               <div className="absolute inset-0 z-[-1]">
                 <GridBackground />
@@ -163,9 +164,8 @@ export default async function RootLayout({
                 <Footer />
               </div>
             </div>
-            </LanguageProvider>
           </ThemeProvider>
-        </IntlProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

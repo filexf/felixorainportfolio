@@ -1,8 +1,7 @@
 "use client";
 
 import Gallery from "@/components/photos-components/PhotosGallery";
-import { useLanguage } from "@/context/LanguageContext";
-import { t } from "@/i18n/i18n";
+import { useTranslations } from "next-intl";
 
 interface GalleryImage {
   src: string;
@@ -80,14 +79,14 @@ const images: GalleryImage[] = [
 ];
 
 export default function MosaicPhotoPage() {
-  const { language } = useLanguage();
+  const t = useTranslations();
 
   return (
     <>
       <Gallery
-        title={t("mosaicphotopage.title", language)}
+        title={t("mosaicphotopage.title")}
         images={images}
-        text={t("mosaicphotopage.desc", language)}
+        text={t("mosaicphotopage.desc")}
       />
     </>
   );

@@ -7,9 +7,8 @@ import {
   projects,
 } from "@/components/applications-components/ProjectCard";
 import Reveal from "@/components/Reveal";
-import { useLanguage } from "@/context/LanguageContext";
+import { useTranslations } from "next-intl";
 import { useTheme } from "@/context/ThemeContext";
-import { t } from "@/i18n/i18n";
 
 interface TechStackItem {
   name: string;
@@ -58,17 +57,17 @@ function TechStackIcon({ name, icon }: TechStackIconProps) {
 
 export default function ApplicationsPage() {
   const { darkMode } = useTheme();
-  const { language } = useLanguage();
+  const t = useTranslations();
 
   return (
     <Reveal>
       <div className="mt-4 flex flex-row justify-center">
         <div className="mt-[30px] flex w-full max-w-6xl flex-col items-center gap-[40px] px-4 sm:px-8 md:gap-[70px] md:px-12">
           <h1 className="text-gradient text-center text-4xl leading-normal font-bold sm:text-5xl md:text-7xl">
-            {t("applications.title", language)}
+            {t("applications.title")}
           </h1>
           <p className="body-font mx-auto max-w-4xl px-2 text-center">
-            {t("applications.desc", language)}
+            {t("applications.desc")}
           </p>
           <Link
             href="https://github.com/filexf"
@@ -77,7 +76,7 @@ export default function ApplicationsPage() {
           >
             <div className="border-2px flex items-center gap-3 rounded-3xl border-1 border-gray-200 bg-secondary px-4 py-2 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200 sm:gap-5 sm:px-6 sm:py-3">
               <p className="text-gradient text-bold text-sm sm:text-lg md:text-xl">
-                {t("applications.github", language)}
+                {t("applications.github")}
               </p>
               <Image
                 src={
@@ -102,7 +101,7 @@ export default function ApplicationsPage() {
           <Reveal>
             <div className="flex w-full flex-col items-center justify-center gap-[30px] md:gap-[64px]">
               <h2 className="text-gradient my-2 pb-1 text-center text-3xl font-bold sm:my-4 sm:text-4xl md:text-6xl">
-                {t("applications.techstack", language)}
+                {t("applications.techstack")}
               </h2>
               <div className="flex w-full flex-wrap items-center justify-center gap-4 sm:w-11/12 sm:gap-6 md:w-4/5 md:gap-10">
                 {techStack.map((tech, index) => (

@@ -4,8 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import { useLanguage } from "@/context/LanguageContext";
-import { t } from "@/i18n/i18n";
+import { useTranslations } from "next-intl";
 
 interface GalleryImage {
   src: string;
@@ -18,7 +17,7 @@ interface GalleryProps {
 }
 
 export default function Gallery({ title, images }: GalleryProps) {
-  const { language } = useLanguage();
+  const t = useTranslations();
   const [open, setOpen] = useState<boolean>(false);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
@@ -29,7 +28,7 @@ export default function Gallery({ title, images }: GalleryProps) {
           {title}
         </h2>
         <p className="body-font mx-auto max-w-4xl px-4 text-center">
-          {t("bookgallery.desc", language)}
+          {t("bookgallery.desc")}
         </p>
 
         <div className="xs:grid-cols-2 grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-4 px-4">

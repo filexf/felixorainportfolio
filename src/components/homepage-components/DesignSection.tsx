@@ -1,23 +1,20 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import SeeMore from "@/components/homepage-components/SeeMore";
 
-import { useLanguage } from "@/context/LanguageContext";
-import { t } from "@/i18n/i18n";
+import { getTranslations } from "next-intl/server";
 import Reveal from "@/components/Reveal";
 import SectionWrapper from "@/components/homepage-components/SectionWrapper";
 
-export default function DesignSection() {
-  const { language } = useLanguage();
+export default async function DesignSection() {
+  const t = await getTranslations();
   return (
     <Reveal>
-      <SectionWrapper title={t("design.title", language)}>
+      <SectionWrapper title={t("design.title")}>
         <div className="flex flex-col gap-12">
           {/* Texte d'introduction */}
           <p className="body-font mx-auto max-w-5xl text-center">
-            {t("design.desc", language)}
+            {t("design.desc")}
           </p>
 
           {/* Grille de designs */}

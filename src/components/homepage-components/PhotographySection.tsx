@@ -4,8 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import SeeMore from "@/components/homepage-components/SeeMore";
 
-import { useLanguage } from "@/context/LanguageContext";
-import { t } from "@/i18n/i18n";
+import { useTranslations } from "next-intl";
 import Reveal from "@/components/Reveal";
 import SectionWrapper from "@/components/homepage-components/SectionWrapper";
 
@@ -16,15 +15,15 @@ export default function PhotographySection() {
     "/images/Important-photos/Photos_HK_chill_109.jpg",
     "/images/Important-photos/Photos_HK_chill_132.jpg",
   ];
-  const { language } = useLanguage();
+  const t = useTranslations();
 
   return (
     <Reveal>
-      <SectionWrapper title={t("photographysection.title", language)}>
+      <SectionWrapper title={t("photographysection.title")}>
         <div className="items flex flex-col gap-12">
           {/* Texte d'introduction */}
           <p className="body-font mx-auto max-w-3xl text-center">
-            {t("photographysection.desc", language)}
+            {t("photographysection.desc")}
           </p>
 
           {/* Grille de photos */}

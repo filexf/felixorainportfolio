@@ -5,9 +5,8 @@ import Link from "next/link";
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import { useLanguage } from "@/context/LanguageContext";
 import { useTheme } from "@/context/ThemeContext";
-import { t } from "@/i18n/i18n";
+import { useTranslations } from "next-intl";
 import Reveal from "@/components/Reveal";
 
 interface ProjectImage {
@@ -204,7 +203,7 @@ export function ProjectCard({
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
   const { darkMode } = useTheme();
-  const { language } = useLanguage();
+  const t = useTranslations();
 
   const openLightbox = (): void => {
     setCurrentImageIndex(0);
@@ -222,7 +221,7 @@ export function ProjectCard({
           <div className="relative h-48 w-full overflow-hidden rounded-2xl sm:h-56 md:h-64 md:w-80 md:min-w-80 md:flex-shrink-0 lg:h-80 lg:w-96 lg:min-w-96">
             <Image
               src={image}
-              alt={t(`projects.${title}.title`, language)}
+              alt={t(`projects.${title}.title`)}
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, (max-width: 1024px) 384px, 384px"
               className="object-cover"
@@ -233,11 +232,11 @@ export function ProjectCard({
 
           <div className="flex flex-col gap-2 p-3 leading-normal sm:gap-3 sm:p-4 md:gap-4 md:p-5 lg:p-7">
             <h5 className="text-gradient mb-1 text-center text-xl font-bold tracking-tight sm:mb-2 sm:text-2xl md:text-3xl lg:text-4xl">
-              {t(`projects.${title}.title`, language)}
+              {t(`projects.${title}.title`)}
             </h5>
 
             <p className="mb-2 p-1 text-center text-xs font-normal sm:mb-3 sm:p-2 sm:text-sm md:p-3 md:text-base">
-              {t(`projects.${description}.desc`, language)}
+              {t(`projects.${description}.desc`)}
             </p>
             <div className="flex justify-center gap-3 sm:gap-5 md:gap-10">
               <Link href={githubLink} target="_blank" rel="noopener noreferrer">

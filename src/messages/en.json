@@ -28,11 +28,11 @@
   },
   "portfolio": {
     "title": "My portfolio",
-    "intro": "After four years as a freelance photographer, I ventured into web development to blend my artistic vision with technology, creating unique digital experiences. <br />Dive into my projects and see what I’ve been working on!"
+    "intro": "After four years as a freelance photographer, I ventured into web development to blend my artistic vision with technology, creating unique digital experiences. \n Dive into my projects and see what I’ve been working on!"
   },
   "about": {
     "title": "About me",
-    "desc": "I’m a creative web developer with a strong background in photography and design. For years, I’ve loved exploring ways to bring ideas to life through visuals and storytelling, honing my eye for detail and aesthetics.<br /><br />Now, I’m channeling that passion into crafting intuitive, user-friendly digital experiences. I’m currently expanding my skills by learning Ruby on Rails and React, eager to combine my creative background with new technical expertise to build meaningful and engaging products.",
+    "desc": "I’m a creative web developer with a strong background in photography and design. For years, I’ve loved exploring ways to bring ideas to life through visuals and storytelling, honing my eye for detail and aesthetics.\n\n Now, I’m channeling that passion into crafting intuitive, user-friendly digital experiences. I’m currently expanding my skills by learning Ruby on Rails and React, eager to combine my creative background with new technical expertise to build meaningful and engaging products.",
     "resume": "My resume"
   },
   "readMore": "Read more",
@@ -151,11 +151,11 @@
     "description": "I created two books showcasing five months of adventure in Southeast Asia, using my own photos and writing. Self-edited and sold over 500 copies, this experience taught me consistency in design and how to manage large-scale projects effectively.",
     "civilisation": {
       "title": "Civilisation",
-      "description": "The first book I made is Civilisation, narrating the behind the scenes of the eponym film, watched by more than 5000 people. Civilisation is the adventure of 9 friends who travel to the other side of the world to shoot a parkour and adventure film in Southeast Asia. Follow them through their filming journey across three different countries and environments, where they faced a multitude of challenges. Travel with them through this story and their breathtaking photos. <br /> <br /> This book is 80 pages long and was entirely edited by me.<br /> <br /> Click on it to read a few pages !"
+      "description": "The first book I made is Civilisation, narrating the behind the scenes of the eponym film, watched by more than 5000 people. Civilisation is the adventure of 9 friends who travel to the other side of the world to shoot a parkour and adventure film in Southeast Asia. Follow them through their filming journey across three different countries and environments, where they faced a multitude of challenges. Travel with them through this story and their breathtaking photos. \n\n This book is 80 pages long and was entirely edited by me.\n\n Click on it to read a few pages !"
     },
     "wizzy": {
       "title": "Wizzy en Asie",
-      "description": "The second book I made is Wizzy en Asie, following the journey of Civilisation. Wizzy in Asia is the adventure of 9 friends traveling to the other side of the world for several months with the goal of practicing Parkour on the rooftops of Asia's megacities. Follow them on their journey as they face a multitude of challenges. From leaping across the massive rooftops of Bangkok to exploring a ghost town in Malaysia and even being stranded together in Hong Kong for a month, it's an adventure packed with adrenaline. Experience their story and breathtaking photos as you travel along with them. <br /> <br /> This book is 112 pages long and was entirely edited by me. <br /> <br /> Click on it to read a few pages !"
+      "description": "The second book I made is Wizzy en Asie, following the journey of Civilisation. Wizzy in Asia is the adventure of 9 friends traveling to the other side of the world for several months with the goal of practicing Parkour on the rooftops of Asia's megacities. Follow them on their journey as they face a multitude of challenges. From leaping across the massive rooftops of Bangkok to exploring a ghost town in Malaysia and even being stranded together in Hong Kong for a month, it's an adventure packed with adrenaline. Experience their story and breathtaking photos as you travel along with them. \n\n This book is 112 pages long and was entirely edited by me. \n\n Click on it to read a few pages !"
     },
     "galleryphoto": "See the gallery",
     "watchmovie": "See the movie",

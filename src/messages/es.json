@@ -28,11 +28,11 @@
   },
   "portfolio": {
     "title": "Mi portafolio",
-    "intro": "Después de cuatro años como fotógrafo freelance, me aventuré en el desarrollo web para combinar mi visión artística con la tecnología, creando experiencias digitales únicas. <br />¡Explora mis proyectos y descubre en qué he estado trabajando!"
+    "intro": "Después de cuatro años como fotógrafo freelance, me aventuré en el desarrollo web para combinar mi visión artística con la tecnología, creando experiencias digitales únicas. \n ¡Explora mis proyectos y descubre en qué he estado trabajando!"
   },
   "about": {
     "title": "Sobre mí",
-    "desc": "Soy un desarrollador web creativo con una sólida experiencia en fotografía y diseño. Durante años, he explorado formas de dar vida a las ideas a través de imágenes y narrativas, perfeccionando mi ojo para los detalles y la estética.<br /><br />Ahora, canalizo esa pasión en la creación de experiencias digitales intuitivas y accesibles. Actualmente estoy ampliando mis habilidades aprendiendo Ruby on Rails y React, deseoso de combinar mi experiencia creativa con nuevas competencias técnicas para diseñar productos útiles y atractivos.",
+    "desc": "Soy un desarrollador web creativo con una sólida experiencia en fotografía y diseño. Durante años, he explorado formas de dar vida a las ideas a través de imágenes y narrativas, perfeccionando mi ojo para los detalles y la estética. \n\n Ahora, canalizo esa pasión en la creación de experiencias digitales intuitivas y accesibles. Actualmente estoy ampliando mis habilidades aprendiendo Ruby on Rails y React, deseoso de combinar mi experiencia creativa con nuevas competencias técnicas para diseñar productos útiles y atractivos.",
     "resume": "Mi currículum"
   },
   "readMore": "Leer más",
@@ -148,11 +148,11 @@
     "description": "Creé dos libros que documentan cinco meses de aventura en el sudeste asiático, utilizando mis propias fotos y textos. Autoeditados y vendidos en más de 500 copias, esta experiencia me enseñó la consistencia en el diseño y cómo gestionar proyectos a gran escala.",
     "civilisation": {
       "title": "Civilisation",
-      "description": "El primer libro que hice es Civilisation, narrando los detrás de escena de la película homónima, vista por más de 5000 personas. Civilisation es la aventura de 9 amigos que viajan al otro lado del mundo para filmar una película de parkour y aventura en el sudeste asiático. Síguelos a través de su viaje de filmación en tres países y entornos diferentes, donde enfrentaron una multitud de desafíos. Viaja con ellos a través de esta historia y sus impresionantes fotos. <br /> <br /> Este libro tiene 80 páginas y fue editado completamente por mí. <br /> <br /> ¡Haz clic en él para leer algunas páginas!"
+      "description": "El primer libro que hice es Civilisation, narrando los detrás de escena de la película homónima, vista por más de 5000 personas. Civilisation es la aventura de 9 amigos que viajan al otro lado del mundo para filmar una película de parkour y aventura en el sudeste asiático. Síguelos a través de su viaje de filmación en tres países y entornos diferentes, donde enfrentaron una multitud de desafíos. Viaja con ellos a través de esta historia y sus impresionantes fotos. \n\n Este libro tiene 80 páginas y fue editado completamente por mí. \n\n ¡Haz clic en él para leer algunas páginas!"
     },
     "wizzy": {
       "title": "Wizzy en Asia",
-      "description": "El segundo libro que hice es Wizzy en Asia, siguiendo el viaje de Civilisation. Wizzy en Asia es la aventura de 9 amigos que viajan al otro lado del mundo durante varios meses con el objetivo de practicar Parkour en los tejados de las megaciudades de Asia. Síguelos en su viaje mientras enfrentan una multitud de desafíos. Desde saltar por los enormes tejados de Bangkok hasta explorar una ciudad fantasma en Malasia e incluso quedar varados juntos en Hong Kong durante un mes, es una aventura llena de adrenalina. Experimenta su historia y sus impresionantes fotos mientras viajas con ellos. <br /> <br /> Este libro tiene 112 páginas y fue editado completamente por mí. <br /> <br /> ¡Haz clic en él para leer algunas páginas!"
+      "description": "El segundo libro que hice es Wizzy en Asia, siguiendo el viaje de Civilisation. Wizzy en Asia es la aventura de 9 amigos que viajan al otro lado del mundo durante varios meses con el objetivo de practicar Parkour en los tejados de las megaciudades de Asia. Síguelos en su viaje mientras enfrentan una multitud de desafíos. Desde saltar por los enormes tejados de Bangkok hasta explorar una ciudad fantasma en Malasia e incluso quedar varados juntos en Hong Kong durante un mes, es una aventura llena de adrenalina. Experimenta su historia y sus impresionantes fotos mientras viajas con ellos. \n\n Este libro tiene 112 páginas y fue editado completamente por mí. \n\n ¡Haz clic en él para leer algunas páginas!"
     },
     "galleryphoto": "Ver la galería",
     "watchmovie": "Ver la película",

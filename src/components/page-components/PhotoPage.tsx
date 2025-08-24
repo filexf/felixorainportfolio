@@ -1,10 +1,8 @@
-"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
-import { useLanguage } from "@/context/LanguageContext";
-import { t } from "@/i18n/i18n";
+import { getTranslations } from "next-intl/server";
 
 interface Photo {
   id: string;
@@ -16,8 +14,8 @@ interface PhotoCardProps {
   title: string;
 }
 
-export default function PhotosPage() {
-  const { language } = useLanguage();
+export default async function PhotosPage() {
+  const t = await getTranslations("photospage");
 
   // Définition des photos avec leurs chemins corrects
   const photos: Photo[] = [
@@ -49,10 +47,10 @@ export default function PhotosPage() {
         <div className="mb-8 flex w-full max-w-4xl flex-col items-center gap-4 px-4 sm:mb-12 sm:gap-8 sm:px-8 md:px-12">
           <Reveal>
             <h2 className="text-gradient my-6 text-center text-4xl leading-normal font-bold sm:my-10 sm:text-5xl md:text-7xl">
-              {t("photospage.title", language)}
+              {t("title")}
             </h2>
             <p className="body-font mx-auto mb-8 max-w-4xl px-2 text-center sm:mb-16">
-              {t("photospage.desc", language)}
+              {t("desc")}
             </p>
 
             {/* Grille de photos */}
@@ -72,8 +70,8 @@ export default function PhotosPage() {
   );
 }
 
-function PhotoCard({ photoPath, title }: PhotoCardProps) {
-  const { language } = useLanguage();
+async function PhotoCard({ photoPath, title }: PhotoCardProps) {
+  const t = await getTranslations("photospage");
 
   return (
     <Link href={`/photos/${title.toLowerCase()}`}>
@@ -82,7 +80,7 @@ function PhotoCard({ photoPath, title }: PhotoCardProps) {
           <div className="relative h-[300px] w-full sm:h-[400px] md:h-[450px]">
             <Image
               src={photoPath}
-              alt={t(`photospage.${title}`, language)}
+              alt={t(`${title}`)}
               fill
               sizes="(max-width: 640px) 95vw, (max-width: 768px) 90vw, (max-width: 1024px) 45vw, 40vw"
               className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -107,7 +105,7 @@ function PhotoCard({ photoPath, title }: PhotoCardProps) {
         {/* Titre en bas de carte */}
         <div className="bg-secondary p-3 sm:p-4">
           <h3 className="text-gradient text-center text-xl font-bold sm:text-2xl md:text-3xl">
-            {t(`photospage.${title}`, language)}
+            {t(`${title}`)}
           </h3>
         </div>
       </div>

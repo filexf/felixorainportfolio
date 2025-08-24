@@ -3,14 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
-import { useLanguage } from "@/context/LanguageContext";
+import { useTranslations } from "next-intl";
 import { useTheme } from "@/context/ThemeContext";
-import { t } from "@/i18n/i18n";
 import React from "react";
 
 export default function BooksPage() {
   const { darkMode } = useTheme();
-  const { language } = useLanguage();
+  const t = useTranslations();
 
   return (
     <>
@@ -18,16 +17,16 @@ export default function BooksPage() {
         <div className="flex justify-center p-4 sm:p-8">
           <div className="mt-[30px] flex w-full flex-col items-center gap-8 sm:w-[90%] sm:gap-12 lg:w-4/5">
             <h1 className="text-gradient text-center text-5xl md:text-7xl leading-normal font-bold">
-              {t("books.title", language)}
+              {t("books.title")}
             </h1>
             <p className="body-font mx-auto max-w-4xl px-4 text-center">
-              {t("books.description", language)}
+              {t("books.description")}
             </p>
 
             {/* Civilisation Book */}
             <BookCard
-              title={t("books.civilisation.title", language)}
-              description={t("books.civilisation.description", language)}
+              title={t("books.civilisation.title")}
+              description={t("books.civilisation.description")}
               coverImage="/images/Couvertures magazines/Civilisation Mag.jpg"
               galleryLink="/books/civilisation"
               reverseLayout={true}
@@ -38,8 +37,8 @@ export default function BooksPage() {
 
             {/* Wizzy en Asie Book */}
             <BookCard
-              title={t("books.wizzy.title", language)}
-              description={t("books.wizzy.description", language)}
+              title={t("books.wizzy.title")}
+              description={t("books.wizzy.description")}
               coverImage="/images/Couvertures magazines/WIZZY En Asie BONNE VERSION.jpg"
               galleryLink="/books/wizzyenasie"
               reverseLayout={false}
@@ -77,7 +76,7 @@ function BookCard({
   const layoutClasses = reverseLayout
     ? "vertical-animation my-3 flex flex-col lg:flex-row-reverse w-full items-center justify-center gap-8 rounded-2xl border-1 border-gray-200 bg-secondary p-4 shadow-lg transition-all duration-300 hover:bg-gray-100 sm:p-6 md:gap-[64px]"
     : "vertical-animation my-3 flex flex-col lg:flex-row w-full items-center justify-center gap-8 rounded-2xl border-1 border-gray-200 bg-secondary p-4 shadow-lg transition-all duration-300 hover:bg-gray-100 sm:p-6 md:gap-[64px]";
-  const { language } = useLanguage();
+  const t = useTranslations();
 
   return (
     <Reveal>
@@ -89,7 +88,7 @@ function BookCard({
           </h2>
           <p className="mb-2 p-1 text-center sm:mb-3 sm:p-2 md:text-base">
             {description
-              .split("<br />")
+              .split("\n")
               .map((line, index, array) => (
                 <React.Fragment key={index}>
                   {line}
@@ -104,7 +103,7 @@ function BookCard({
               className="group inline-flex items-center gap-2 rounded-full border px-4 py-2 transition-all duration-300 ease-in-out hover:bg-gray-300 sm:gap-3 sm:px-5"
             >
               <span className="text-xs font-medium tracking-wide sm:text-sm">
-                {t("books.galleryphoto", language)}
+                {t("books.galleryphoto")}
               </span>
               <Image
                 src="/icons/Main-icons/Loop-plus-icon.svg"
@@ -124,7 +123,7 @@ function BookCard({
                 className="group inline-flex items-center gap-2 rounded-full border px-4 py-2 transition-all duration-300 ease-in-out hover:bg-gray-300 sm:gap-3 sm:px-5"
               >
                 <span className="text-xs font-medium tracking-wide sm:text-sm">
-                  {t("books.watchmovie", language)}
+                  {t("books.watchmovie")}
                 </span>
                 <svg
                   className="h-4 w-4 transform transition-transform duration-300 group-hover:scale-110 sm:h-5 sm:w-5"
@@ -170,7 +169,7 @@ interface PhotoMagazineProps {
 }
 
 function PhotoMagazine({ link, src }: PhotoMagazineProps) {
-  const { language } = useLanguage();
+  const t = useTranslations();
 
   return (
     <Link
@@ -191,7 +190,7 @@ function PhotoMagazine({ link, src }: PhotoMagazineProps) {
             <div className="flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm">
               <div className="flex justify-center gap-3 px-3 py-2 sm:gap-6 sm:px-4 sm:py-3">
                 <p className="text-xl font-bold text-white sm:text-3xl">
-                  {t("books.seegallery", language)}
+                  {t("books.seegallery")}
                 </p>
                 <Image
                   src="/icons/Main-icons/Loop-plus-icon.svg"

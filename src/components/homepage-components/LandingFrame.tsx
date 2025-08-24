@@ -5,15 +5,13 @@ import Image from "next/image";
 import SplitStrings from "@/util/regexSplitString";
 import Reveal from "@/components/Reveal";
 
-import { useLanguage } from "@/context/LanguageContext";
-import { t } from "@/i18n/i18n";
+import { useTranslations } from "next-intl";
 
 export default function LandingFrame() {
   const title = "Félix Orain";
   const splitTitle = SplitStrings(title);
-  const { language } = useLanguage();
-  const profession =
-    t("landing.profession", language) || "Developer and photographer";
+  const t = useTranslations("landing");
+  const profession = t("profession") || "Developer and photographer";
   const splitProfession = SplitStrings(profession);
 
   const charVariants = {

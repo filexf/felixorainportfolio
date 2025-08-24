@@ -1,9 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useLanguage } from "@/context/LanguageContext";
 import { useTheme } from "@/context/ThemeContext";
-import { t } from "@/i18n/i18n";
+import { useTranslations } from "next-intl";
 
 interface FooterProps {
   noPadding?: boolean;
@@ -17,7 +16,7 @@ interface SocialIconProps {
 
 export default function Footer({ noPadding }: FooterProps) {
   const { darkMode } = useTheme();
-  const { language } = useLanguage();
+  const t = useTranslations();
 
   return (
     // To make sure that there isn't the padding on the bottom of the page
@@ -54,13 +53,13 @@ export default function Footer({ noPadding }: FooterProps) {
                 className="text-sm font-light tracking-wide md:text-base"
                 style={{ color: "var(--footer-text)" }}
               >
-                {t("footer.madeby", language)}
+                {t("footer.madeby")}
               </p>
               <p
                 className="text-sm font-light tracking-wide md:text-base"
                 style={{ color: "var(--footer-text)" }}
               >
-                {t("footer.copyright", language)}
+                {t("footer.copyright")}
               </p>
             </div>
           </div>

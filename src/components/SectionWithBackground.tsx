@@ -1,3 +1,5 @@
+// Ne sert à rien pour l'instant, à supprimer plus tard si pas utilisé
+
 import React from "react";
 import { DotPattern, GradientGrid, WavePattern } from "@/components/GridBackground";
 

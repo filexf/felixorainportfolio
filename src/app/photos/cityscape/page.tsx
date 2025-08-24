@@ -1,8 +1,7 @@
 "use client";
 
 import Gallery from "@/components/photos-components/PhotosGallery";
-import { useLanguage } from "@/context/LanguageContext";
-import { t } from "@/i18n/i18n";
+import { useTranslations } from "next-intl";
 
 interface GalleryImage {
   src: string;
@@ -94,14 +93,14 @@ const images: GalleryImage[] = [
 ];
 
 export default function CityscapePhotoPage() {
-  const { language } = useLanguage();
+  const t = useTranslations();
 
   return (
     <>
       <Gallery
-        title={t("cityscapephotopage.title", language)}
+        title={t("cityscapephotopage.title")}
         images={images}
-        text={t("cityscapephotopage.desc", language)}
+        text={t("cityscapephotopage.desc")}
       />
     </>
   );
