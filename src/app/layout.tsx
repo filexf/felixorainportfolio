@@ -61,15 +61,20 @@ export const metadata: Metadata = {
     apple: [{ url: "/icons/Favicons/apple-touch-icon.png", sizes: "180x180" }],
   },
 
-  // Métadonnées pour les moteurs de recherche
+  // Métadonnées pour les moteurs de recherche (enrichies)
   keywords: [
-    "développeur web",
-    "full stack",
-    "react",
-    "next.js",
-    "photographie",
-    "design",
-    "portfolio",
+    "développeur web Rennes",
+    "développeur full stack",
+    "React Next.js",
+    "photographe professionnel Rennes",
+    "photographie mariage Bretagne",
+    "portfolio créatif",
+    "développement web moderne",
+    "photographe sport",
+    "designer web",
+    "freelance Rennes",
+    "Félix Orain",
+    "développeur photographe",
   ],
   authors: [{ name: "Félix Orain" }],
   creator: "Félix Orain",
@@ -90,41 +95,50 @@ export const metadata: Metadata = {
   // Contrôle du référencement
   alternates: {
     canonical: "https://www.felix-orain.com",
-    // languages: {
-    //   "fr-FR": "https://www.felix-orain.com/fr",
-    //   "en-US": "https://www.felix-orain.com/en",
-    //   "es-ES": "https://www.felix-orain.com/es",
-    // },
   },
 
   // Métadonnées Open Graph pour les réseaux sociaux
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    alternateLocale: ["en_US", "es_ES"], // Langues alternatives
+    alternateLocale: ["en_US", "es_ES"],
     url: "https://www.felix-orain.com",
-    title: "Félix Orain - Portfolio",
+    title: "Félix Orain - Portfolio | Photographe & Développeur Pro",
     description:
-      "Portfolio de Félix Orain - Développeur web, photographe et designer basé à Paris",
-    siteName: "Félix Orain Portfolio",
+      "Développeur et photographe pro à Rennes. Création web moderne et reportages photos.",
+    siteName: "Félix Orain - Portfolio Créatif",
     images: [
       {
-        url: "https://www.felix-orain.com/og-image.jpg",
+        url: "https://www.felix-orain.com/images/Photo-GGB/Photo_GGB_Landing_page.webp",
         width: 1200,
         height: 630,
-        alt: "Félix Orain Portfolio Preview",
+        alt: "Portfolio de Félix Orain - Développeur web et photographe professionnel basé à Rennes",
+      },
+      {
+        url: "https://www.felix-orain.com/images/og-portfolio-preview.jpg",
+        width: 1080,
+        height: 1080,
+        alt: "Projets créatifs de Félix Orain - Développement web et photographie",
       },
     ],
   },
 
-  // Métadonnées Twitter Card
+   // Métadonnées Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: "Félix Orain - Portfolio",
+    title: "Félix Orain - Portfolio | Photographe & Développeur Pro",
     description:
-      "Portfolio de Félix Orain - Développeur web, photographe et designer",
-    images: ["https://www.felix-orain.com/twitter-image.jpg"],
-    creator: "@votreidentifianttwitter",
+      "Portfolio créatif de Félix Orain : développement web moderne, photographie professionnelle (mariage, sport, paysages) et projets innovants basés à Rennes.",
+    images: [
+      {
+        url: "https://www.felix-orain.com/images/Photo-GGB/Photo_GGB_Landing_page.webp",
+        width: 1200,
+        height: 630,
+        alt: "Portfolio de Félix Orain - Développeur web et photographe professionnel"
+      }
+    ],
+    creator: "@felixorain", // Remplace par ton vrai handle Twitter
+    site: "@felixorain",
   },
 
   // Manifeste d'application web

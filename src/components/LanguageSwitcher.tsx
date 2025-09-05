@@ -1,8 +1,8 @@
 "use client";
 
+import { useTheme } from "@/context/ThemeContext";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { useTheme } from "@/context/ThemeContext";
 
 interface Language {
   code: string;
@@ -27,11 +27,16 @@ export default function LanguageSwitcher() {
     es: { code: "ES", flag: "🇪🇸" },
   };
 
-  useEffect(() => {
-    const cookieLocale = document.cookie
+  // Fonction pour lire le cookie
+  const getCookieLocale = () => {
+    return document.cookie
       .split("; ")
       .find((row) => row.startsWith("MYNEXTAPP_LOCALE="))
       ?.split("=")[1];
+  };
+
+  useEffect(() => {
+    const cookieLocale = getCookieLocale();
     if (cookieLocale) {
       setLocale(cookieLocale);
     } else {
@@ -41,6 +46,22 @@ export default function LanguageSwitcher() {
       router.refresh();
     }
   }, [router]);
+
+  // Ajoute un listener pour détecter les changements de cookie
+  useEffect(() => {
+    const checkForLocaleChange = () => {
+      const currentCookieLocale = getCookieLocale();
+      if (currentCookieLocale && currentCookieLocale !== locale) {
+        setLocale(currentCookieLocale);
+      }
+    };
+
+    // Vérifie périodiquement les changements de cookie
+    const interval = setInterval(checkForLocaleChange, 100);
+
+    // Nettoie l'interval au démontage
+    return () => clearInterval(interval);
+  }, [locale]);
 
   // Ferme le menu déroulant si l'utilisateur clique ailleurs
   useEffect(() => {
@@ -75,7 +96,9 @@ export default function LanguageSwitcher() {
     <div className="relative" ref={dropdownRef}>
       {/* Bouton principal avec la langue actuelle et le drapeau */}
       <button
-        className={`flex items-center justify-center gap-1 rounded-full sm:gap-2 ${isOpen ? "ring-opacity-50 ring-2" : ""} px-2 py-1 transition-all duration-300 hover:shadow-md sm:px-3 sm:py-1.5`}
+        className={`flex items-center justify-center gap-1 rounded-full sm:gap-2 ${
+          isOpen ? "ring-opacity-50 ring-2" : ""
+        } px-2 py-1 transition-all duration-300 hover:shadow-md sm:px-3 sm:py-1.5`}
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-haspopup="true"
@@ -96,7 +119,9 @@ export default function LanguageSwitcher() {
           {languages[locale]?.code || languages.fr.code}
         </span>
         <svg
-          className={`h-3 w-3 transition-transform duration-200 sm:h-3.5 sm:w-3.5 ${isOpen ? "rotate-180" : ""}`}
+          className={`h-3 w-3 transition-transform duration-200 sm:h-3.5 sm:w-3.5 ${
+            isOpen ? "rotate-180" : ""
+          }`}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
