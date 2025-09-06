@@ -22,9 +22,17 @@
       "wizzyenasie": "Mi libro de mis aventuras en Asia"
     }
   },
-  "landing": {
+  "heroSection": {
     "title": "Félix Orain",
-    "profession": "Desarrollador y fotógrafo "
+    "profession": "Desarrollador y fotógrafo ",
+    "description": {
+      "part1": "Desarrollo web personalizado y fotografía profesional",
+      "part2": " — sitios web de alto rendimiento e imágenes cautivadoras, unidos en un enfoque creativo único para mejorar tu presencia digital."
+    },
+    "buttons": {
+      "browse": "Ver portafolio",
+      "contact": "Contáctame"
+    }
   },
   "portfolio": {
     "title": "Mi portafolio",
@@ -154,7 +162,7 @@
       "title": "Wizzy en Asia",
       "description": "El segundo libro que hice es Wizzy en Asia, siguiendo el viaje de Civilisation. Wizzy en Asia es la aventura de 9 amigos que viajan al otro lado del mundo durante varios meses con el objetivo de practicar Parkour en los tejados de las megaciudades de Asia. Síguelos en su viaje mientras enfrentan una multitud de desafíos. Desde saltar por los enormes tejados de Bangkok hasta explorar una ciudad fantasma en Malasia e incluso quedar varados juntos en Hong Kong durante un mes, es una aventura llena de adrenalina. Experimenta su historia y sus impresionantes fotos mientras viajas con ellos. \n\n Este libro tiene 112 páginas y fue editado completamente por mí. \n\n ¡Haz clic en él para leer algunas páginas!"
     },
-    "galleryphoto": "Ver la galería",
+    "galleryphoto": "Ver libro",
     "watchmovie": "Ver la película",
     "seegallery": "Ver galería"
   },

@@ -22,13 +22,25 @@
       "wizzyenasie": "My book of my adventures in Asia"
     }
   },
-  "landing": {
+  "heroSection": {
     "title": "Félix Orain",
-    "profession": "Developer and photographer  "
+    "profession": "Developer and photographer ",
+    "description": {
+      "part1": "Custom web development and professional photography",
+      "part2": " — high-performance websites and captivating images, united in a unique creative approach to enhance your digital presence."
+    },
+    "buttons": {
+      "browse": "Browse Portfolio",
+      "contact": "Contact me"
+    }
   },
   "portfolio": {
     "title": "My portfolio",
-    "intro": "After four years as a freelance photographer, I ventured into web development to blend my artistic vision with technology, creating unique digital experiences. \n Dive into my projects and see what I’ve been working on!"
+    "intro": "After four years as a freelance photographer, I ventured into web development to blend my artistic vision with technology, creating unique digital experiences. \n Dive into my projects and see what I’ve been working on!",
+    "buttons": {
+      "browse": "Browse Portfolio",
+      "contact": "Contact me"
+    }
   },
   "about": {
     "title": "About me",
@@ -157,7 +169,7 @@
       "title": "Wizzy en Asie",
       "description": "The second book I made is Wizzy en Asie, following the journey of Civilisation. Wizzy in Asia is the adventure of 9 friends traveling to the other side of the world for several months with the goal of practicing Parkour on the rooftops of Asia's megacities. Follow them on their journey as they face a multitude of challenges. From leaping across the massive rooftops of Bangkok to exploring a ghost town in Malaysia and even being stranded together in Hong Kong for a month, it's an adventure packed with adrenaline. Experience their story and breathtaking photos as you travel along with them. \n\n This book is 112 pages long and was entirely edited by me. \n\n Click on it to read a few pages !"
     },
-    "galleryphoto": "See the gallery",
+    "galleryphoto": "See the book",
     "watchmovie": "See the movie",
     "seegallery": "See gallery"
   },

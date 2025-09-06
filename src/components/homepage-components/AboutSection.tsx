@@ -31,7 +31,7 @@ export default function AboutSection() {
             />
             <div className="mt-4 flex flex-col items-center justify-center gap-10">
               <p className="body-font max-width-md w-[80%] max-w-6xl text-start lg:text-left">
-              {t("portfolio.intro")
+              {t("about.desc")
                 .split("\n")
                 .map((line, i) => (
                   <span key={i}>

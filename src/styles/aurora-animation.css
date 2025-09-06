@@ -1,0 +1,25 @@
+@keyframes aurora {
+  0% {
+    background-position:
+      0% 0%,
+      0% 0%;
+  }
+  50% {
+    background-position:
+      100% 100%,
+      100% 100%;
+  }
+  100% {
+    background-position:
+      0% 0%,
+      0% 0%;
+  }
+}
+
+.animate-aurora {
+  animation: aurora 100s linear infinite;
+}
+
+.after\:animate-aurora::after {
+  animation: aurora 60s linear infinite;
+}

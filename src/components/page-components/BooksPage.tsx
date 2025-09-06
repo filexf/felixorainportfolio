@@ -6,6 +6,8 @@ import Reveal from "@/components/Reveal";
 import { useTranslations } from "next-intl";
 import { useTheme } from "@/context/ThemeContext";
 import React from "react";
+import { ButtonLink } from "@/components/ui/button";
+import { BookOpen, Film } from "lucide-react";
 
 export default function BooksPage() {
   const { darkMode } = useTheme();
@@ -98,53 +100,30 @@ function BookCard({
           </p>
           <div className="mb-4 flex flex-wrap justify-center gap-3 sm:gap-4">
             {/* Bouton Galerie */}
-            <Link
+            <ButtonLink
               href={galleryLink}
-              className="group inline-flex items-center gap-2 rounded-full border px-4 py-2 transition-all duration-300 ease-in-out hover:bg-gray-300 sm:gap-3 sm:px-5"
+              variant="outline"
+              className="group items-center"
             >
               <span className="text-xs font-medium tracking-wide sm:text-sm">
                 {t("books.galleryphoto")}
               </span>
-              <Image
-                src="/icons/Main-icons/Loop-plus-icon.svg"
-                alt="View more"
-                width={20}
-                height={20}
-                className={`transform transition-transform duration-300 group-hover:scale-110 ${darkMode ? "" : "invert"}`}
-              />
-            </Link>
+              <BookOpen className="h-5 w-5 transform transition-transform duration-300 group-hover:scale-110" />
+            </ButtonLink>
 
             {/* Bouton Film (conditionnel) */}
             {hasFilmLink && (
-              <a
-                href={filmLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full border px-4 py-2 transition-all duration-300 ease-in-out hover:bg-gray-300 sm:gap-3 sm:px-5"
+              <ButtonLink
+                href={filmLink || "#"}
+                variant="outline"
+                className="group items-center"
+                {...(filmLink ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               >
                 <span className="text-xs font-medium tracking-wide sm:text-sm">
                   {t("books.watchmovie")}
                 </span>
-                <svg
-                  className="h-4 w-4 transform transition-transform duration-300 group-hover:scale-110 sm:h-5 sm:w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </a>
+                <Film className="h-5 w-5 transform transition-transform duration-300 group-hover:scale-110" />
+              </ButtonLink>
             )}
           </div>
         </div>
@@ -192,13 +171,7 @@ function PhotoMagazine({ link, src }: PhotoMagazineProps) {
                 <p className="text-xl font-bold text-white sm:text-3xl">
                   {t("books.seegallery")}
                 </p>
-                <Image
-                  src="/icons/Main-icons/Loop-plus-icon.svg"
-                  alt="View more"
-                  width={40}
-                  height={40}
-                  className="transition-transform duration-300 group-hover:scale-110"
-                />
+                <BookOpen className="h-6 w-6 text-white sm:h-10 sm:w-10 transition-transform duration-300 group-hover:scale-110" />
               </div>
             </div>
           </div>

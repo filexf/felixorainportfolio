@@ -11,6 +11,12 @@
 
 @import "tailwindcss";
 
+@import "tw-animate-css";
+
+@import './aurora-animation.css';
+
+@custom-variant dark (&:is(.dark *));
+
 /* Dark mode and light mode - CSS variables customized */
 :root {
   color-scheme: light;
@@ -28,11 +34,19 @@
   --navbar-bg-rgb: 255, 255, 255;
   --footer-bg: #2e2e32;
   --footer-text: #ffffff;
-  --gradient-start: #64748b;
-  --gradient-middle: #0369a1;
-  --gradient-end: #0284c7;
+  --gradient-start: #475569;  /* Plus sombre que #64748b */
+  --gradient-middle: #0c4a6e;  /* Plus sombre que #0369a1 */
+  --gradient-end: #0369a1;  /* Plus sombre que #0284c7 */
   --dot-color: #e5e7eb; /* Couleur des points en mode clair */
   --sidebar-bg: #ffffff;
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
 }
 
 /* Mode sombre */
@@ -51,11 +65,18 @@
   --navbar-bg-rgb: 23, 31, 46;
   --footer-bg: #171f2e;
   --footer-text: #f3f4f6;
-  --gradient-start: #94a3b8;
-  --gradient-middle: #7dd3fc;
-  --gradient-end: #38bdf8;
+  --gradient-start: #64748b;  /* Plus sombre que #94a3b8 */
+  --gradient-middle: #0ea5e9;  /* Plus sombre que #7dd3fc */
+  --gradient-end: #0284c7;  /* Plus sombre que #38bdf8 */
   --dot-color: #232c3a; /* Couleur des points en mode sombre */
   --sidebar-bg: #1f2937; /* Couleur de fond de la sidebar en mode sombre */
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
 }
 
 /* Désactiver l'auto dark mode du système */
@@ -75,13 +96,6 @@
 body {
   color: var(--text-primary);
   background-color: var(--background-primary);
-  /* background-image: linear-gradient(
-    to bottom right,
-    rgba(100, 116, 139, 0.05),
-    rgba(3, 105, 161, 0.07),
-    rgba(2, 132, 199, 0.05)
-  );
-  background-attachment: fixed; */
   transition:
     background-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
@@ -101,17 +115,32 @@ body {
   border-color: var(--border-color) !important;
 }
 
-@layer components {
-  .text-gradient {
-    @apply bg-gradient-to-tr from-slate-500 via-sky-700 to-sky-600 bg-clip-text text-transparent text-shadow-sm;
-    background-image: linear-gradient(
-      to right top,
-      var(--gradient-start),
-      var(--gradient-middle),
-      var(--gradient-end)
-    );
+/* Classes utilitaires personnalisées */
+.text-gradient {
+  background-image: linear-gradient(
+    to right top,
+    var(--gradient-start),
+    var(--gradient-middle),
+    var(--gradient-end)
+  );
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.vertical-animation {
+  transition: all 0.3s ease-in-out;
+}
+.vertical-animation:hover {
+  transform: translateY(-4px);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+    outline-color: rgba(var(--ring), 0.5);
   }
-  .vertical-animation {
-    @apply transition-all duration-300 ease-in-out hover:-translate-y-1;
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
   }
 }
