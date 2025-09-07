@@ -3,25 +3,37 @@
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { ButtonLink } from "@/components/ui/button";
 import { useTheme } from "@/context/ThemeContext";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { BookOpen, Send } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function AuroraBackgroundDemo() {
   const t = useTranslations("heroSection");
   const { darkMode } = useTheme();
 
+  // Créer un contrôleur d'animation
+  const controls = useAnimation();
+
+  // Déclencher l'animation une seule fois au montage du composant
+  useEffect(() => {
+    controls.start({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.3,
+        duration: 0.8,
+        ease: "easeInOut",
+      },
+    });
+  }, [controls]);
+
   return (
     <AuroraBackground>
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.3,
-          duration: 0.8,
-          ease: "easeInOut",
-        }}
+        animate={controls} // Utiliser le contrôleur d'animation au lieu de whileInView
         className="relative -mt-4 flex flex-col items-center justify-center gap-4 px-4 py-2"
       >
         <motion.div
@@ -113,6 +125,7 @@ export default function AuroraBackgroundDemo() {
           </span>
         </div>
 
+        {/* La partie des boutons */}
         <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
           <ButtonLink
             href="#latest-works"
@@ -124,7 +137,7 @@ export default function AuroraBackgroundDemo() {
             {t("buttons.browse")}
           </ButtonLink>
           <ButtonLink
-            href="#contact"
+            href="#contact-section"
             variant="outline"
             size="lg"
             className="rounded-xl border-gray-300 bg-gray-50 text-gray-700 hover:bg-gray-100/50 dark:border-white/20 dark:bg-slate-800/90 dark:text-white dark:hover:bg-slate-700/90"

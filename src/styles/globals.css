@@ -3,9 +3,6 @@
 /* This one is for various things such as resizing the css properties, effects etc.. */
 @import url(./style.css);
 
-/* The landing page / index */
-@import url(./landing-page.css);
-
 /* The lightbox css properties */
 @import url(./lightbox.css);
 
@@ -34,9 +31,9 @@
   --navbar-bg-rgb: 255, 255, 255;
   --footer-bg: #2e2e32;
   --footer-text: #ffffff;
-  --gradient-start: #475569;  /* Plus sombre que #64748b */
-  --gradient-middle: #0c4a6e;  /* Plus sombre que #0369a1 */
-  --gradient-end: #0369a1;  /* Plus sombre que #0284c7 */
+  --gradient-start: #64748b ;  /* Plus sombre que #64748b */
+  --gradient-middle: #0369a1;  /* Plus sombre que #0369a1 */
+  --gradient-end: #0284c7;  /* Plus sombre que #0284c7 */
   --dot-color: #e5e7eb; /* Couleur des points en mode clair */
   --sidebar-bg: #ffffff;
   --radius: 0.625rem;

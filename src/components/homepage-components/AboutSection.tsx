@@ -30,7 +30,7 @@ export default function AboutSection() {
               height={400}
             />
             <div className="mt-4 flex flex-col items-center justify-center gap-10">
-              <p className="body-font max-width-md w-[80%] max-w-6xl text-start lg:text-left">
+              <p className="text-base md:text-lg max-width-md w-[80%] max-w-6xl text-start lg:text-left">
               {t("about.desc")
                 .split("\n")
                 .map((line, i) => (

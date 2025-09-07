@@ -13,9 +13,9 @@ export default async function WebDevelopmentSection() {
     <Reveal>
       <SectionWrapper title={t("webdev.title")}>
         <div className="flex flex-col gap-12">
-          <p className="body-font mx-auto max-w-3xl text-center">
-            {t("webdev.desc")}
-          </p>
+          <div className="mx-auto max-w-3xl space-y-4 text-center">
+            <p className="body-font">{t("webdev.desc")}</p>
+          </div>
 
           {/* Grille de projets mise à jour */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

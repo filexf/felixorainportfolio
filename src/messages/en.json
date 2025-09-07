@@ -35,16 +35,13 @@
     }
   },
   "portfolio": {
-    "title": "My portfolio",
-    "intro": "After four years as a freelance photographer, I ventured into web development to blend my artistic vision with technology, creating unique digital experiences. \n Dive into my projects and see what I’ve been working on!",
-    "buttons": {
-      "browse": "Browse Portfolio",
-      "contact": "Contact me"
-    }
+    "title": "Web, Photography & Design",
+    "intro": "Bringing your digital projects to life with a unique blend of creativity and technical expertise.",
+    "subIntro": "Explore each area and discover how my approach can meet your needs."
   },
   "about": {
     "title": "About me",
-    "desc": "I’m a creative web developer with a strong background in photography and design. For years, I’ve loved exploring ways to bring ideas to life through visuals and storytelling, honing my eye for detail and aesthetics.\n\n Now, I’m channeling that passion into crafting intuitive, user-friendly digital experiences. I’m currently expanding my skills by learning Ruby on Rails and React, eager to combine my creative background with new technical expertise to build meaningful and engaging products.",
+    "desc": "Creative web developer and professional photographer, I combine technical expertise and artistic sensitivity in a unique approach. My background has given me a keen eye for detail that I apply to both code and imagery. As a freelancer, I adapt to the specific needs of each project, blending technical performance with visual impact to deliver results that exceed expectations.\n\nIn development, I master modern technologies to create elegant, high-performance interfaces. My dual experience allows me to offer comprehensive web solutions where every element is thoughtfully designed. In photography, I capture the essence of diverse worlds: urban landscapes, sports, events, and weddings. This practice constantly enriches my creativity and influences my web design approach.",
     "resume": "My resume"
   },
   "readMore": "Read more",
@@ -80,11 +77,9 @@
     "madeby": "Developed with ❤️ by Félix Orain"
   },
   "webdev": {
-    "title": "Web development",
-    "desc": "I graduated from Le Wagon and built real-world applications from scratch, gaining hands-on experience in web development. With a background in photography, I bring a strong sense of design, now combined with solid programming skills.",
-    "sportify": "SPORTIFY",
-    "tymouet": "TY MOUET",
-    "portfolio": "PORTFOLIO"
+    "title": "Web Development",
+    "desc": "Specialized in modern technologies, I develop high-performance websites and applications using Next.js, React, and Tailwind CSS. My expertise ranges from responsive design to SEO optimization, including smooth animations and intuitive user interfaces.",
+    "desc2": "I build scalable web solutions that adapt perfectly to all devices, with a special focus on accessibility and performance. For each project, I apply best practices in modern front-end development to ensure an exceptional user experience."
   },
   "design": {
     "title": "Design",
@@ -92,7 +87,7 @@
   },
   "photographysection": {
     "title": "Photography",
-    "desc": "Since I was little, I've always been fascinated by art and adventure. I wanted to fulfill this deep need for adventure and be able to tell those stories in my own way. So, when I discovered photography a few years ago, an entirely new world opened up to me."
+    "desc": "Photography is for me the art of capturing emotion and telling a story. Specialized in sports, portraits, weddings, landscapes, and architecture, I capture authentic moments with an approach that combines technique and artistic sensitivity, for natural and timeless images."
   },
 
   "photospage": {
@@ -128,7 +123,7 @@
 
   "applications": {
     "title": "Applications",
-    "desc": "I'm a recent Le Wagon graduate with hands-on experience in web development, where I built applications from scratch using Ruby on Rails, JavaScript, and React. Throughout the program, I developed strong problem-solving skills and learned to work with tools like Git, SQL, and API integrations. This way I got a solid understanding of both frontend and backend development.",
+    "desc": "As a Fullstack developer, I create high-performance web applications with Next.js, React, and Tailwind CSS on the front side, supplemented by Ruby on Rails and API integrations on the back side. This double expertise allows me to deliver complete web solutions, from responsive design to technical architecture. I undertake to produce elegant and intuitive interfaces while ensuring robustness and scalability, for projects that combine performance, user experience, and technical solidity.",
     "github": "My GitHub account",
     "techstack": "My tech stack"
   },

@@ -66,7 +66,7 @@ export default function ApplicationsPage() {
           <h1 className="text-gradient text-center text-4xl leading-normal font-bold sm:text-5xl md:text-7xl">
             {t("applications.title")}
           </h1>
-          <p className="body-font mx-auto max-w-4xl px-2 text-center">
+          <p className="body-font mx-auto max-w-5xl px-2 text-center">
             {t("applications.desc")}
           </p>
           <Link

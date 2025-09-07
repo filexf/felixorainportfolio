@@ -13,7 +13,7 @@ export default async function DesignSection() {
       <SectionWrapper title={t("design.title")}>
         <div className="flex flex-col gap-12">
           {/* Texte d'introduction */}
-          <p className="body-font mx-auto max-w-5xl text-center">
+          <p className="body-font mx-auto max-w-3xl text-center">
             {t("design.desc")}
           </p>
 

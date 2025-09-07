@@ -35,12 +35,14 @@
     }
   },
   "portfolio": {
-    "title": "Mon portfolio",
-    "intro": "Après quatre ans comme photographe freelance, je me suis lancé dans le développement web pour mêler ma vision artistique à la technologie et créer des expériences numériques uniques. \n Découvrez mes projets et voyez sur quoi j’ai travaillé !"
+    "title": "Web, Photographie & Design",
+    "intro": "Concrétisez vos ambitions digitales avec une approche où chaque détail compte.",
+    "subIntro": "Explorez chaque domaine et découvrez comment mon approche peut répondre à vos besoins."
   },
   "about": {
     "title": "À propos",
-    "desc": "Je suis un développeur web créatif avec une solide expérience en photographie et en design. Depuis des années, j’aime explorer différentes façons de donner vie aux idées à travers l’image et le récit, affinant mon œil pour le détail et l’esthétique. \n\n Aujourd’hui, je mets cette passion au service de la création d’expériences numériques intuitives et accessibles. J’élargis actuellement mes compétences en apprenant Ruby on Rails et React, désireux de combiner mon bagage créatif à de nouvelles expertises techniques pour concevoir des produits utiles et engageants.",
+    "desc": "Développeur web créatif et photographe professionnel, j'allie expertise technique et sensibilité artistique dans une approche unique. Mon parcours m'a doté d'un œil attentif aux détails que j'applique tant au code qu'à l'image. En tant que freelance, je m'adapte aux besoins spécifiques de chaque projet, combinant performance technique et impact visuel pour des résultats qui dépassent les attentes.\n\nCôté développement, je maîtrise les technologies modernes pour créer des interfaces à la fois élégantes et performantes. Ma double expertise me permet d'offrir des solutions web complètes où chaque élément est pensé avec rigueur. En photographie, je capture l'essence de différents univers : paysages urbains, sports, événements et mariages. Cette pratique enrichit constamment ma créativité et influence mon approche du design web.",
+
     "resume": "Mon CV"
   },
   "readMore": "En savoir plus",
@@ -76,20 +78,18 @@
     "madeby": "Développé avec ❤️ par Félix Orain"
   },
   "webdev": {
-    "title": "Développement web",
-    "desc": "J'ai été diplômé du Wagon et j'ai créé des applications réelles de A à Z, acquérant une expérience concrète en développement web. Grâce à mon parcours en photographie, j'apporte un sens aigu du design, désormais allié à de solides compétences en programmation.",
-    "sportify": "SPORTIFY",
-    "tymouet": "TY MOUET",
-    "portfolio": "PORTFOLIO"
+    "title": "Développement Web",
+    "desc": "Spécialiste des technologies modernes, je développe des sites et applications performants avec Next.js, React et Tailwind CSS. Mon expertise s'étend du responsive design à l'optimisation SEO, en passant par les animations fluides et les interfaces utilisateur intuitives.",
+    "desc2": "Je construis des solutions web évolutives qui s'adaptent parfaitement à tous les appareils, avec une attention particulière portée à l'accessibilité et aux performances. Chaque projet bénéficie des meilleures pratiques du développement front-end moderne."
   },
   "design": {
     "title": "Design",
     "desc": "J'ai créé deux livres retraçant cinq mois d'aventure en Asie du Sud-Est, en utilisant mes propres photos et textes. Auto-édités et vendus à plus de 500 exemplaires, cette expérience m'a appris la rigueur dans le design et la gestion de projets d'envergure."
   },
   "photographysection": {
-    "title": "Photographie",
-    "desc": "Depuis tout petit, j'ai toujours été fasciné par l'art et l'aventure. Je voulais répondre à ce besoin profond d'aventure et pouvoir raconter ces histoires à ma façon. Quand j'ai découvert la photographie il y a quelques années, un tout nouveau monde s'est ouvert à moi."
-  },
+  "title": "Photographie",
+  "desc": "La photographie est pour moi l’art de saisir l’émotion et de raconter une histoire. Spécialisé en sport, portraits, mariages, paysages et architecture, je capture des instants authentiques avec une approche alliant technique et sensibilité artistique, pour des images naturelles et intemporelles."
+},
 
   "photospage": {
     "title": "Photographie",
@@ -123,7 +123,8 @@
 
   "applications": {
     "title": "Applications",
-    "desc": "Je suis diplômé du Wagon avec une expérience concrète en développement web, où j'ai créé des applications de A à Z avec Ruby on Rails, JavaScript et React. Durant la formation, j'ai développé de solides compétences en résolution de problèmes et appris à utiliser des outils comme Git, SQL et les intégrations d'API. J'ai ainsi acquis une bonne compréhension du développement frontend et backend.",
+    "desc": "Développeur fullstack, je crée des applications web performantes avec Next.js, React et Tailwind CSS côté front, complétées par Ruby on Rails et des intégrations API côté back. Cette double expertise me permet de livrer des solutions web complètes, du design responsive à l'architecture technique. Je m'engage à produire des interfaces élégantes et intuitives tout en assurant robustesse et évolutivité, pour des projets qui allient performance, expérience utilisateur et solidité technique.",
+
     "github": "Mon compte GitHub",
     "techstack": "Ma stack technique"
   },

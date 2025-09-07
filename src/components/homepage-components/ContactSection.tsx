@@ -10,7 +10,7 @@ export default function ContactSection() {
   return (
     <Reveal>
       <SectionWrapper title={t("contact.title")}>
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-12" id="contact-section">
           <p className="body-font mx-auto max-w-3xl text-center">
             {t("contact.text")}
           </p>
