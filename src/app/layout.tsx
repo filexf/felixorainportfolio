@@ -1,11 +1,11 @@
 import { GridBackground } from "@/components/GridBackground";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getLocale } from "next-intl/server";
+import { getLocale, getMessages } from "next-intl/server";
 
+import StructuredData from "@/components/StructuredData";
 import { ThemeProvider } from "@/context/ThemeContext";
 import Footer from "@/layouts/Footer";
 import Navbar from "@/layouts/Navbar";
-import { description, title } from "@/lib/constants";
 import "@/styles/globals.css";
 import { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
@@ -33,10 +33,11 @@ export const metadata: Metadata = {
   // Métadonnées de base
   metadataBase: new URL("https://www.felix-orain.com"), // Remplacez par votre domaine réel
   title: {
-    default: title,
-    template: `%s | ${title}`,
+    default: "Félix Orain - Développeur Web & Photographe à Rennes",
+    template: `%s | Félix Orain - Développeur & Photographe Rennes`,
   },
-  description,
+  description:
+    "Développeur fullstack et photographe professionnel basé à Rennes, Bretagne. Spécialisé en Next.js, React, Tailwind CSS et photographie événementielle. Services sur mesure pour particuliers et entreprises.",
 
   // Favoris et icônes
   icons: {
@@ -64,19 +65,21 @@ export const metadata: Metadata = {
   // Métadonnées pour les moteurs de recherche (enrichies)
   keywords: [
     "développeur web Rennes",
-    "développeur full stack",
-    "React Next.js",
-    "photographe professionnel Rennes",
-    "photographie mariage Bretagne",
-    "portfolio créatif",
+    "photographe Rennes",
+    "développeur fullstack Bretagne",
+    "Next.js React Rennes",
+    "photographe mariage Rennes",
+    "photographie événementielle Bretagne",
+    "développeur freelance Rennes",
+    "portfolio créatif Rennes",
+    "photographe sport Bretagne",
     "développement web moderne",
-    "photographe sport",
-    "designer web",
-    "freelance Rennes",
-    "Félix Orain",
-    "développeur photographe",
+    "Tailwind CSS Rennes",
+    "Ruby on Rails développeur",
+    "Félix Orain photographe",
+    "freelance web Bretagne",
   ],
-  authors: [{ name: "Félix Orain" }],
+  authors: [{ name: "Félix Orain", url: "https://www.felix-orain.com" }],
   creator: "Félix Orain",
   publisher: "Félix Orain",
 
@@ -103,10 +106,10 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     alternateLocale: ["en_US", "es_ES"],
     url: "https://www.felix-orain.com",
-    title: "Félix Orain - Portfolio | Photographe & Développeur Pro",
+    title: "Félix Orain - Développeur Web & Photographe à Rennes",
     description:
-      "Développeur et photographe pro à Rennes. Création web moderne et reportages photos.",
-    siteName: "Félix Orain - Portfolio Créatif",
+      "Développeur fullstack et photographe professionnel basé à Rennes, Bretagne. Services sur mesure pour particuliers et entreprises.",
+    siteName: "Félix Orain - Portfolio",
     images: [
       {
         url: "https://www.felix-orain.com/images/Photo-GGB/Photo_GGB_Landing_page.webp",
@@ -123,19 +126,19 @@ export const metadata: Metadata = {
     ],
   },
 
-   // Métadonnées Twitter Card
+  // Métadonnées Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: "Félix Orain - Portfolio | Photographe & Développeur Pro",
+    title: "Félix Orain - Développeur Web & Photographe à Rennes",
     description:
-      "Portfolio créatif de Félix Orain : développement web moderne, photographie professionnelle (mariage, sport, paysages) et projets innovants basés à Rennes.",
+      "Développeur fullstack et photographe professionnel basé à Rennes, Bretagne. Spécialisé en Next.js, React et photographie événementielle.",
     images: [
       {
         url: "https://www.felix-orain.com/images/Photo-GGB/Photo_GGB_Landing_page.webp",
         width: 1200,
         height: 630,
-        alt: "Portfolio de Félix Orain - Développeur web et photographe professionnel"
-      }
+        alt: "Portfolio de Félix Orain - Développeur web et photographe professionnel",
+      },
     ],
     creator: "@felixorain", // Remplace par ton vrai handle Twitter
     site: "@felixorain",
@@ -164,10 +167,12 @@ export default async function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${poppins.variable} scroll-smooth`}
     >
+      <head>
+        <StructuredData />
+      </head>
       <body className="light text-base md:text-xl">
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
-
             <div className="relative min-h-screen w-full">
               <div className="absolute inset-0 z-[-1]">
                 <GridBackground />

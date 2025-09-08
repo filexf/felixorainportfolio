@@ -1,8 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { useTheme } from "@/context/ThemeContext";
+import { FileText, Mail, MapPin, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 interface FooterProps {
   noPadding?: boolean;
@@ -20,7 +21,7 @@ export default function Footer({ noPadding }: FooterProps) {
 
   return (
     // To make sure that there isn't the padding on the bottom of the page
-    <div className={noPadding ? undefined : "bg-transparent pt-[10vh] w-full"}>
+    <div className={noPadding ? undefined : "w-full bg-transparent pt-[10vh]"}>
       <footer
         className="relative bottom-0 w-full py-6 md:py-8"
         style={{ backgroundColor: "var(--footer-bg)" }}
@@ -45,6 +46,62 @@ export default function Footer({ noPadding }: FooterProps) {
             </ul>
 
             {/* Divider line */}
+            <div className="h-px w-64 bg-gray-400/20"></div>
+
+            {/* Professional information - mise à jour */}
+            <div className="flex w-full flex-col items-center justify-center gap-3 px-4 text-center sm:gap-4">
+              <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
+                <div className="flex items-center">
+                  <span className="mr-2 text-blue-300">
+                    <Phone size={16} />
+                  </span>
+                  <span
+                    style={{ color: "var(--footer-text)" }}
+                    className="text-xs md:text-sm"
+                  >
+                    07 78 76 44 54
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <span className="mr-2 text-blue-300">
+                    <Mail size={16} />
+                  </span>
+                  <a
+                    href="mailto:felix.orain@gmail.com"
+                    style={{ color: "var(--footer-text)" }}
+                    className="text-xs transition-colors hover:text-blue-300 md:text-sm"
+                  >
+                    felix.orain@gmail.com
+                  </a>
+                </div>
+                <div className="flex items-center">
+                  <span className="mr-2 text-blue-300">
+                    <MapPin size={16} />
+                  </span>
+                  <span
+                    style={{ color: "var(--footer-text)" }}
+                    className="text-xs md:text-sm"
+                  >
+                    Rennes, Bretagne
+                  </span>
+                </div>
+              </div>
+
+              {/* Ligne séparée pour le SIRET */}
+              <div className="flex items-center">
+                <span className="mr-2 text-blue-300">
+                  <FileText size={16} />
+                </span>
+                <span
+                  style={{ color: "var(--footer-text)" }}
+                  className="text-xs md:text-sm"
+                >
+                  SIRET : 840 825 871 00014
+                </span>
+              </div>
+            </div>
+
+            {/* Another divider */}
             <div className="h-px w-64 bg-gray-400/20"></div>
 
             {/* Text content */}
