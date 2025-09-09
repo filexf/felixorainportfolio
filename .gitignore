@@ -27,3 +27,6 @@ dist-ssr
 /.next/
 /out/
 .vercel
+
+# Local environment variables
+.env.local

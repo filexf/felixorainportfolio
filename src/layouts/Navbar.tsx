@@ -109,10 +109,10 @@ const Navbar = ({
         },
       ],
     },
-    // {
-    //   title: t("navbar.contact", language),
-    //   url: "/#contact",
-    // },
+    {
+      title: t("navbar.contact"),
+      url: "/contact",
+    },
   ];
 
   const [isDesktopDropdownOpen, setIsDesktopDropdownOpen] = useState<

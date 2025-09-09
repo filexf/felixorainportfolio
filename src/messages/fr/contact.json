@@ -1,10 +1,26 @@
 {
   "contact": {
     "title": "Contactez-moi",
-    "text": "N'hésitez pas à me contacter pour tout projet à : felix.orain@gmail.com",
-    "name": "Votre nom",
-    "email": "Votre email",
-    "message": "Votre message",
-    "send": "Envoyer le message"
+    "info": {
+      "title": "Informations de contact",
+      "email": "Email",
+      "phone": "Téléphone",
+      "location": "Localisation",
+      "availability": "Disponibilité",
+      "availabilityText": "Disponible pour de nouveaux projets. Réponse sous 24h."
+    },
+    "form": {
+      "title": "Envoyez-moi un message",
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "namePlaceholder": "Votre nom complet",
+      "emailPlaceholder": "Votre email",
+      "messagePlaceholder": "Décrivez votre projet...",
+      "send": "Envoyer le message",
+      "sending": "Envoi en cours..."
+    },
+    "success": "Message envoyé avec succès !",
+    "error": "Une erreur s'est produite. Veuillez réessayer."
   }
 }
