@@ -1,0 +1,20 @@
+{
+  "books": {
+    "title": "Livres",
+    "description": "J'ai créé deux livres retraçant cinq mois d'aventure en Asie du Sud-Est, en utilisant mes propres photos et textes. Auto-édités et vendus à plus de 500 exemplaires, cette expérience m'a appris la rigueur dans le design et la gestion de projets d'envergure.",
+    "civilisation": {
+      "title": "Civilisation",
+      "description": "Le premier livre que j'ai créé s'intitule Civilisation, et raconte les coulisses du film éponyme, vu par plus de 5000 spectateurs. Civilisation retrace l'aventure de 9 amis qui traversent le monde pour tourner un film mêlant parkour et aventure en Asie du Sud-Est. Suivez-les tout au long de leur périple à travers trois pays et environnements différents, où ils ont affronté de nombreux défis. Voyagez avec eux à travers cette histoire et découvrez leurs photos à couper le souffle. \n\n Ce livre de 80 pages a été entièrement édité par mes soins. \n\n Cliquez dessus pour lire quelques pages!"
+    },
+    "wizzy": {
+      "title": "Wizzy en Asie",
+      "description": "Le deuxième livre que j'ai créé s'intitule Wizzy en Asie, dans la continuité de Civilisation. Wizzy en Asie raconte l'aventure de 9 amis qui partent à l'autre bout du monde pendant plusieurs mois avec pour objectif de pratiquer le Parkour sur les toits des mégapoles asiatiques. Suivez-les dans leur périple alors qu'ils affrontent une multitude de défis. Du saut sur les immenses toits de Bangkok à l'exploration d'une ville fantôme en Malaisie, en passant par un mois bloqués ensemble à Hong Kong, c'est une aventure pleine d'adrénaline. Vivez leur histoire et découvrez leurs photos à couper le souffle en les accompagnant dans leur voyage. \n\n Ce livre de 112 pages a été entièrement édité par mes soins. \n\n Cliquez dessus pour lire quelques pages!"
+    },
+    "galleryphoto": "Voir le livre",
+    "watchmovie": "Voir le film",
+    "seegallery": "Voir galerie"
+  },
+  "bookgallery": {
+    "desc": "Voici quelques pages du magazine que j'ai écrit et illustré."
+  }
+}

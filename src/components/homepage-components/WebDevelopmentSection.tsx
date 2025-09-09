@@ -7,14 +7,14 @@ import Reveal from "@/components/Reveal";
 import SectionWrapper from "@/components/homepage-components/SectionWrapper";
 
 export default async function WebDevelopmentSection() {
-  const t = await getTranslations();
+  const t = await getTranslations("webdevsection");
 
   return (
     <Reveal>
-      <SectionWrapper title={t("webdev.title")}>
+      <SectionWrapper title={t("title")}>
         <div className="flex flex-col gap-12">
           <div className="mx-auto max-w-3xl space-y-4 text-center">
-            <p className="body-font">{t("webdev.desc")}</p>
+            <p className="body-font">{t("desc")}</p>
           </div>
 
           {/* Grille de projets mise à jour */}

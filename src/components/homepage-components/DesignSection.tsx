@@ -7,14 +7,14 @@ import Reveal from "@/components/Reveal";
 import SectionWrapper from "@/components/homepage-components/SectionWrapper";
 
 export default async function DesignSection() {
-  const t = await getTranslations();
+  const t = await getTranslations("designsection");
   return (
     <Reveal>
-      <SectionWrapper title={t("design.title")}>
+      <SectionWrapper title={t("title")}>
         <div className="flex flex-col gap-12">
           {/* Texte d'introduction */}
           <p className="body-font mx-auto max-w-3xl text-center">
-            {t("design.desc")}
+            {t("desc")}
           </p>
 
           {/* Grille de designs */}

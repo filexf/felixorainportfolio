@@ -1,0 +1,31 @@
+{
+  "photospage": {
+    "title": "Photography",
+    "desc": "Since I was little, I've always been fascinated by art and adventure. I wanted to fulfill this deep need for adventure and be able to tell those stories in my own way. So, when I discovered photography a few years ago, an entirely new world opened up to me.",
+    "sport": "Sport",
+    "mosaic": "Mosaic",
+    "cityscape": "Cityscape",
+    "landscape": "Landscape",
+    "wedding": "Wedding"
+  },
+  "sportphotopage": {
+    "title": "Sports",
+    "desc": "Discovering action photography felt like the perfect way to capture movement, emotion, and storytelling. Shooting parkour, climbing, or silhouettes in vast environments allowed me to showcase both human dynamism and the scale of the world around us. Each shot froze a moment of energy, where movement met the stillness of nature or architecture. Through this, I learned to embrace the unpredictability of motion and the challenge of timing, capturing not just action but the story of effort, freedom, and our connection with the world. This photography style taught me to see movement and meaning in the relationship between humans and their surroundings."
+  },
+  "mosaicphotopage": {
+    "title": "Mosaics",
+    "desc": "I love capturing patterns in photography because they reveal beauty in simplicity and repetition. Whether found in nature or architecture, patterns create rhythm and harmony that draw the eye. Shooting these details—like ripples in water, tiled facades, or symmetrical shadows—feels like uncovering hidden art in the everyday. Patterns tell stories of design, structure, and balance, offering a sense of order in a chaotic world. Through my lens, I aim to celebrate these mesmerizing visuals and invite others to see the world differently."
+  },
+  "landscapephotopage": {
+    "title": "Landscapes",
+    "desc": "As a photographer, I love landscapes for their ability to evoke both stillness and awe. Capturing the clouds drifting through Yosemite's cliffs and valleys feels like preserving nature's fleeting masterpieces. Each moment is unique, with light and weather transforming the scenery before my eyes. Shooting starry skies offers a humbling connection to the vastness of the universe, blending patience with wonder. Whether it's misty forests or cosmic expanses, landscapes remind me of the beauty and grandeur of the world. Through my lens, I aim to share these timeless, breathtaking moments with others."
+  },
+  "cityscapephotopage": {
+    "title": "Cityscapes",
+    "desc": "As a photographer, I'm drawn to the energy and vibrancy of cityscapes, especially at night in Hong Kong. The city transforms after dark, with neon signs and shimmering skyscrapers painting the skyline in vivid colors. Capturing the interplay of light and shadow in bustling streets or reflections on Victoria Harbour feels like preserving the pulse of the city. Each shot tells a story of movement, culture, and endless possibilities. The contrast between the urban glow and the quiet corners offers a unique perspective on its beauty. Through my lens, I seek to share the dynamic allure of Hong Kong's nights with others."
+  },
+  "weddingphotopage": {
+    "title": "Wedding",
+    "desc": "Your wedding day is a unique story, and my goal is to capture it authentically and beautifully. I focus on candid moments and genuine emotions while ensuring every detail, from the décor to the small gestures, is thoughtfully documented. My style combines natural photojournalism with creative storytelling, shaped by my background in filmmaking. Here is a glimpse of the love and joy that fills the day."
+  }
+}

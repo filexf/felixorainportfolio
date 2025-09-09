@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "home": "Home",
+    "applications": "Applications",
+    "photos": "Photos",
+    "books": "Books",
+    "contact": "Contact",
+    "wedding": "Wedding",
+    "mosaic": "Mosaic",
+    "sport": "Sport",
+    "cityscape": "Cityscape",
+    "landscape": "Landscape",
+    "civilisation": "Civilisation",
+    "wizzyenasie": "Wizzy en Asie",
+    "descriptions": {
+      "wedding": "Discover my wedding photos",
+      "mosaic": "Collection of mosaic photos",
+      "sport": "Sports and event photos",
+      "cityscape": "Urban landscapes and skyscrapers",
+      "landscape": "Natural landscapes and mountains",
+      "civilisation": "My book on the film Civilisation",
+      "wizzyenasie": "My book of my adventures in Asia"
+    }
+  },
+  "footer": {
+    "copyright": "Copyright Felix Orain © All rights reserved.",
+    "madeby": "Developed with ❤️ by Félix Orain"
+  },
+  "notFound": {
+    "title": "404 - Page not found",
+    "subtitle": "You may have gotten lost, go back to the main page:",
+    "back": "Back home"
+  }
+}

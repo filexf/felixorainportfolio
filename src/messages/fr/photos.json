@@ -1,0 +1,31 @@
+{
+  "photospage": {
+    "title": "Photographie",
+    "desc": "Depuis tout petit, j'ai toujours été fasciné par l'art et l'aventure. Je voulais répondre à ce besoin profond d'aventure et pouvoir raconter ces histoires à ma façon. Quand j'ai découvert la photographie il y a quelques années, un tout nouveau monde s'est ouvert à moi.",
+    "sport": "Sport",
+    "mosaic": "Mosaïque",
+    "cityscape": "Ville",
+    "landscape": "Paysage",
+    "wedding": "Mariage"
+  },
+  "sportphotopage": {
+    "title": "Sport",
+    "desc": "Découvrir la photographie d'action m'a semblé être le moyen idéal de capturer le mouvement, l'émotion et la narration. Photographier le parkour, l'escalade ou les silhouettes dans de vastes environnements m'a permis de mettre en valeur à la fois le dynamisme humain et l'échelle du monde qui nous entoure. Chaque cliché figeait un moment d'énergie, où le mouvement rencontrait l'immobilité de la nature ou de l'architecture. Grâce à cela, j'ai appris à embrasser l'imprévisibilité du mouvement et le défi du timing, capturant non seulement l'action mais aussi l'histoire de l'effort, de la liberté et de notre connexion avec le monde. Ce style de photographie m'a appris à voir le mouvement et le sens dans la relation entre les humains et leur environnement."
+  },
+  "mosaicphotopage": {
+    "title": "Mosaïque",
+    "desc": "J'adore capturer les motifs en photographie car ils révèlent la beauté dans la simplicité et la répétition. Qu'ils soient trouvés dans la nature ou l'architecture, les motifs créent un rythme et une harmonie qui attirent le regard. Photographier ces détails—comme les ondulations de l'eau, les façades carrelées ou les ombres symétriques—c'est comme découvrir un art caché dans le quotidien. Les motifs racontent des histoires de design, de structure et d'équilibre, offrant un sentiment d'ordre dans un monde chaotique. À travers mon objectif, je cherche à célébrer ces visuels fascinants et à inviter les autres à voir le monde différemment."
+  },
+  "landscapephotopage": {
+    "title": "Paysages",
+    "desc": "En tant que photographe, j'aime les paysages pour leur capacité à évoquer à la fois le calme et l'émerveillement. Capturer les nuages dérivant à travers les falaises et vallées de Yosemite, c'est comme préserver les chefs-d'œuvre éphémères de la nature. Chaque moment est unique, avec la lumière et le climat transformant le paysage sous mes yeux. Photographier les cieux étoilés offre une connexion humble à l'immensité de l'univers, mêlant patience et émerveillement. Qu'il s'agisse de forêts embrumées ou d'étendues cosmiques, les paysages me rappellent la beauté et la grandeur du monde. À travers mon objectif, je vise à partager ces moments intemporels et époustouflants avec les autres."
+  },
+  "cityscapephotopage": {
+    "title": "Ville",
+    "desc": "En tant que photographe, je suis attiré par l'énergie et la vitalité des paysages urbains, surtout la nuit à Hong Kong. La ville se transforme après la tombée de la nuit, avec des enseignes au néon et des gratte-ciels scintillants peignant la ligne d'horizon de couleurs vives. Capturer le jeu de lumière et d'ombre dans les rues animées ou les reflets sur le port Victoria, c'est comme préserver le pouls de la ville. Chaque cliché raconte une histoire de mouvement, de culture et de possibilités infinies. Le contraste entre la lueur urbaine et les coins tranquilles offre une perspective unique sur sa beauté. À travers mon objectif, je cherche à partager l'attrait dynamique des nuits de Hong Kong avec les autres."
+  },
+  "weddingphotopage": {
+    "title": "Mariage",
+    "desc": "Votre jour de mariage est une histoire unique, et mon objectif est de la capturer de manière authentique et magnifique. Je me concentre sur les moments spontanés et les émotions sincères tout en m'assurant que chaque détail, du décor aux petits gestes, soit soigneusement immortalisé. Mon style allie le photojournalisme naturel à une narration créative, influencée par mon expérience dans le cinéma. Voici un aperçu de l'amour et de la joie qui remplissent cette journée."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "applications": {
+    "title": "Applications",
+    "desc": "Développeur fullstack, je crée des applications web performantes avec Next.js, React et Tailwind CSS côté front, complétées par Ruby on Rails et des intégrations API côté back. Cette double expertise me permet de livrer des solutions web complètes, du design responsive à l'architecture technique. Je m'engage à produire des interfaces élégantes et intuitives tout en assurant robustesse et évolutivité, pour des projets qui allient performance, expérience utilisateur et solidité technique.",
+    "github": "Mon compte GitHub",
+    "techstack": "Ma stack technique"
+  },
+  "projects": {
+    "sportify": {
+      "title": "SPORTIFY",
+      "desc": "Sportify est une PWA développée avec Ruby on Rails, PostgreSQL et Javascript avec AJAX pour connecter des sportifs en créant ou rejoignant des événements locaux. Design sur Figma, UI avec Bootstrap, déploiement sur Heroku avec domaine personnalisé. Projet présenté devant un large public."
+    },
+    "gis": {
+      "title": "PROJET SIG",
+      "desc": "Ce projet est une application web SIG permettant de visualiser et d'interagir avec des données géospatiales. Réalisée avec React, Leaflet et Mapbox, elle propose des couches cartographiques, marqueurs et popups. L'application est conçue pour être intuitive et responsive."
+    },
+    "carbonSavings": {
+      "title": "CARBON SAVINGS SIMULATOR",
+      "desc": "Le Simulateur d'Économies de Carbone est une application web qui montre ce que vous économisez en faisant du vélo plutôt qu'en utilisant une voiture ou les transports en commun. Elle calcule les émissions de carbone, l'argent économisé et les calories brûlées, avec des visualisations graphiques pour des analyses claires. Développée avec React, Tailwind CSS et l'API Mapbox, elle est conviviale et réactive."
+    },
+    "portfolio": {
+      "title": "PORTFOLIO",
+      "desc": "Ce portfolio a été réalisé avec React. J'ai utilisé React Router pour gérer plusieurs pages et l'ai hébergé sur Github Pages. Les animations sont faites avec Framer Motion. J'ai finalement implémenté un Dark Mode pour une UI plus agréable ainsi qu'un système de gestion des langues. Il met en avant mes projets, compétences et expériences, avec un design épuré et personnel."
+    },
+    "tymouet": {
+      "title": "TY MOUET",
+      "desc": "Ty Mouet était notre premier projet au Wagon, un clone d'Airbnb sur le thème des mouettes, développé avec Ruby on Rails, PostgreSQL et AJAX. Gestion d'une base de données complexe, déploiement sur Heroku, travail en équipe agile. Fonctionnalités : réservation, authentification, recherche géolocalisée."
+    },
+    "movieWatchlist": {
+      "title": "MOVIES WATCHLIST",
+      "desc": "Movies Watchlist est une application web React et Redux qui permet aux utilisateurs de découvrir et d'organiser leurs films préférés grâce à la base de données de TMDB. Les fonctionnalités incluent une recherche en temps réel, un parcours de navigation catégorisé et une liste de lecture personnelle où les utilisateurs peuvent noter et commenter les films, avec un cache local pour la persistance des sélections."
+    }
+  }
+}

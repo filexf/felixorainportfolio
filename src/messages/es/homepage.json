@@ -1,0 +1,66 @@
+{
+  "heroSection": {
+    "title": "Félix Orain",
+    "profession": "Desarrollador y fotógrafo ",
+    "description": {
+      "part1": "Desarrollo web personalizado y fotografía profesional",
+      "part2": " — sitios web de alto rendimiento e imágenes cautivadoras, unidos en un enfoque creativo único para mejorar tu presencia digital."
+    },
+    "buttons": {
+      "browse": "Ver portafolio",
+      "contact": "Contáctame"
+    }
+  },
+  "portfolio": {
+    "title": "Web, Fotografía & Diseño",
+    "intro": "Concrétizate tus proyectos digitales con un enfoque que combina creatividad y experiencia técnica.",
+    "subIntro": "Explora cada área y descubre cómo mi enfoque puede satisfacer tus necesidades."
+  },
+  "cardData": {
+    "webDevelopment": {
+      "title": "Desarrollo Web",
+      "text": "El desarrollo web combina creatividad y resolución de problemas, inspirándose en mi experiencia en fotografía."
+    },
+    "photography": {
+      "title": "Fotografía",
+      "text": "Descubrir la fotografía conectó mis pasiones por el arte y la narración, permitiéndome capturar momentos únicos."
+    },
+    "design": {
+      "title": "Diseño",
+      "text": "Creé y vendí más de 500 copias de 2 libros sobre mi viaje en el sudeste asiático, con mis fotos y textos."
+    }
+  },
+  "webdevsection": {
+    "title": "Desarrollo Web",
+    "desc": "Especializado en tecnologías modernas, desarrollo sitios y aplicaciones de alto rendimiento con Next.js, React y Tailwind CSS. Mi experiencia abarca desde el diseño responsivo hasta la optimización SEO, pasando por animaciones fluidas e interfaces de usuario intuitivas.",
+    "desc2": "Construyo soluciones web escalables que se adaptan perfectamente a cualquier dispositivo, con un enfoque especial en accesibilidad y rendimiento. Para cada proyecto, aplico las mejores prácticas del desarrollo front-end moderno para garantizar una experiencia de usuario excepcional."
+  },
+  "photographysection": {
+    "title": "Fotografía",
+    "desc": "La fotografía es para mí el arte de capturar la emoción y contar una historia. Especializado en deportes, retratos, bodas, paisajes y arquitectura, capturo momentos auténticos con un enfoque que combina técnica y sensibilidad artística, para imágenes naturales e intemporales."
+  },
+  "designsection": {
+    "title": "Diseño",
+    "desc": "Creé dos libros que documentan cinco meses de aventura en el sudeste asiático, utilizando mis propias fotos y textos. Autoeditados y vendidos en más de 500 copias, esta experiencia me enseñó la consistencia en el diseño y cómo gestionar proyectos a gran escala."
+  },
+  "about": {
+    "title": "Sobre mí",
+    "desc": "Desarrollador web creativo y fotógrafo profesional, combino experiencia técnica y sensibilidad artística en un enfoque único. Mi trayectoria me ha dotado de un ojo atento a los detalles que aplico tanto al código como a la imagen. Como freelance, me adapto a las necesidades específicas de cada proyecto, combinando rendimiento técnico e impacto visual para obtener resultados que superan las expectativas.\n\nEn el ámbito del desarrollo, domino las tecnologías modernas para crear interfaces elegantes y de alto rendimiento. Mi doble experiencia me permite ofrecer soluciones web completas donde cada elemento está pensado con rigor. En fotografía, capturo la esencia de diversos mundos: paisajes urbanos, deportes, eventos y bodas. Esta práctica enriquece constantemente mi creatividad e influye en mi enfoque del diseño web.",
+    "resume": "Mi currículum"
+  },
+  "readMore": "Leer más",
+  "seeMore": {
+    "webdev": {
+      "text": "Ver todos mis proyectos",
+      "ariaLabel": "Ver todos mis proyectos de desarrollo web"
+    },
+    "photography": {
+      "text": "Ver todas mis fotos",
+      "ariaLabel": "Ver todas mis fotos"
+    },
+    "books": {
+      "text": "Ver mis publicaciones",
+      "ariaLabel": "Ver todos mis libros y revistas"
+    }
+  }
+}

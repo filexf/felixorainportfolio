@@ -1,0 +1,66 @@
+{
+  "heroSection": {
+    "title": "Félix Orain",
+    "profession": "Developer and photographer ",
+    "description": {
+      "part1": "Custom web development and professional photography",
+      "part2": " — high-performance websites and captivating images, united in a unique creative approach to enhance your digital presence."
+    },
+    "buttons": {
+      "browse": "Browse Portfolio",
+      "contact": "Contact me"
+    }
+  },
+  "portfolio": {
+    "title": "Web, Photography & Design",
+    "intro": "Bringing your digital projects to life with a unique blend of creativity and technical expertise.",
+    "subIntro": "Explore each area and discover how my approach can meet your needs."
+  },
+  "cardData": {
+    "webDevelopment": {
+      "title": "Web Development",
+      "text": "Web development seamlessly merges creativity and problem-solving, drawing inspiration from my photography background."
+    },
+    "photography": {
+      "title": "Photography",
+      "text": "Discovering photography bridged my passions for art and storytelling, letting me capture unique moments."
+    },
+    "design": {
+      "title": "Design",
+      "text": "I edited and sold 500+ copies of 2 books documenting my journey in Southeast Asia. All photos and text are mine."
+    }
+  },
+  "webdevsection": {
+    "title": "Web Development",
+    "desc": "Specialized in modern technologies, I develop high-performance websites and applications using Next.js, React, and Tailwind CSS. My expertise ranges from responsive design to SEO optimization, including smooth animations and intuitive user interfaces.",
+    "desc2": "I build scalable web solutions that adapt perfectly to all devices, with a special focus on accessibility and performance. For each project, I apply best practices in modern front-end development to ensure an exceptional user experience."
+  },
+  "photographysection": {
+    "title": "Photography",
+    "desc": "Photography is for me the art of capturing emotion and telling a story. Specialized in sports, portraits, weddings, landscapes, and architecture, I capture authentic moments with an approach that combines technique and artistic sensitivity, for natural and timeless images."
+  },
+  "designsection": {
+    "title": "Design",
+    "desc": "I created two books showcasing five months of adventure in Southeast Asia, using my own photos and writing. Self-edited and sold over 500 copies, this experience taught me consistency in design and how to manage large-scale projects effectively."
+  },
+  "about": {
+    "title": "About me",
+    "desc": "Creative web developer and professional photographer, I combine technical expertise and artistic sensitivity in a unique approach. My background has given me a keen eye for detail that I apply to both code and imagery. As a freelancer, I adapt to the specific needs of each project, blending technical performance with visual impact to deliver results that exceed expectations.\n\nIn development, I master modern technologies to create elegant, high-performance interfaces. My dual experience allows me to offer comprehensive web solutions where every element is thoughtfully designed. In photography, I capture the essence of diverse worlds: urban landscapes, sports, events, and weddings. This practice constantly enriches my creativity and influences my web design approach.",
+    "resume": "My resume"
+  },
+  "readMore": "Read more",
+  "seeMore": {
+    "webdev": {
+      "text": "See all my projects",
+      "ariaLabel": "See all my web development projects"
+    },
+    "photography": {
+      "text": "See all my photos",
+      "ariaLabel": "See all my photography projects"
+    },
+    "books": {
+      "text": "See my publications",
+      "ariaLabel": "See all my books and magazines"
+    }
+  }
+}

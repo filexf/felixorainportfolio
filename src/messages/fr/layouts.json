@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "applications": "Applications",
+    "photos": "Photos",
+    "books": "Livres",
+    "contact": "Contact",
+    "wedding": "Mariage",
+    "mosaic": "Mosaïque",
+    "sport": "Sport",
+    "cityscape": "Ville",
+    "landscape": "Paysage",
+    "civilisation": "Civilisation",
+    "wizzyenasie": "Wizzy en Asie",
+    "descriptions": {
+      "wedding": "Découvrez mes photos de mariage",
+      "mosaic": "Collection de photos en mosaïque",
+      "sport": "Photos de sports et d'événements sportifs",
+      "cityscape": "Paysages urbains et gratte-ciels",
+      "landscape": "Paysages naturels et montagnes",
+      "civilisation": "Mon livre sur le film Civilisation",
+      "wizzyenasie": "Mon livre de mes aventures en Asie"
+    }
+  },
+  "footer": {
+    "copyright": "Copyright Félix Orain © Tous droits réservés.",
+    "madeby": "Développé avec ❤️ par Félix Orain"
+  },
+  "notFound": {
+    "title": "404 - Page non trouvée",
+    "subtitle": "Vous vous êtes peut-être perdu, retournez à la page principale :",
+    "back": "Retour à l'accueil"
+  }
+}

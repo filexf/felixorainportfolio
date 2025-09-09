@@ -1,0 +1,10 @@
+{
+  "contact": {
+    "title": "Contactez-moi",
+    "text": "N'hésitez pas à me contacter pour tout projet à : felix.orain@gmail.com",
+    "name": "Votre nom",
+    "email": "Votre email",
+    "message": "Votre message",
+    "send": "Envoyer le message"
+  }
+}

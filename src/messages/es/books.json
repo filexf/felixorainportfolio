@@ -1,0 +1,20 @@
+{
+  "books": {
+    "title": "Libros",
+    "description": "Creé dos libros que muestran cinco meses de aventura en el Sudeste Asiático, usando mis propias fotos y escritos. Autoeditados y vendidos en más de 500 copias, esta experiencia me enseñó la consistencia en el diseño y cómo gestionar proyectos a gran escala de manera efectiva.",
+    "civilisation": {
+      "title": "Civilisation",
+      "description": "El primer libro que hice es Civilisation, narrando los detrás de escena de la película epónima, vista por más de 5000 personas. Civilisation es la aventura de 9 amigos que viajan al otro lado del mundo para filmar una película de parkour y aventura en el Sudeste Asiático. Síguelos a través de su viaje de filmación por tres países y entornos diferentes, donde enfrentaron una multitud de desafíos. Viaja con ellos a través de esta historia y sus fotos impresionantes. \n\n Este libro tiene 80 páginas y fue editado completamente por mí.\n\n ¡Haz clic en él para leer algunas páginas!"
+    },
+    "wizzy": {
+      "title": "Wizzy en Asia",
+      "description": "El segundo libro que hice es Wizzy en Asia, siguiendo el viaje de Civilisation. Wizzy en Asia es la aventura de 9 amigos que viajan al otro lado del mundo durante varios meses con el objetivo de practicar Parkour en los tejados de las megaciudades de Asia. Síguelos en su viaje mientras enfrentan una multitud de desafíos. Desde saltar por los enormes tejados de Bangkok hasta explorar una ciudad fantasma en Malasia e incluso quedar varados juntos en Hong Kong durante un mes, es una aventura llena de adrenalina. Experimenta su historia y sus impresionantes fotos mientras viajas con ellos. \n\n Este libro tiene 112 páginas y fue editado completamente por mí. \n\n ¡Haz clic en él para leer algunas páginas!"
+    },
+    "galleryphoto": "Ver libro",
+    "watchmovie": "Ver la película",
+    "seegallery": "Ver galería"
+  },
+  "bookgallery": {
+    "desc": "Aquí hay algunas páginas de la revista que escribí e ilustré."
+  }
+}
