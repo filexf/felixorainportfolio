@@ -7,7 +7,7 @@
       "phone": "Téléphone",
       "location": "Localisation",
       "availability": "Disponibilité",
-      "availabilityText": "Disponible pour de nouveaux projets. Réponse sous 24h."
+      "availabilityText": "Disponible pour vos projets web (sites vitrine, e-commerce, applications), photographie (mariages, événements, portraits). Consultation gratuite, réponse sous 24h, devis personnalisé sous 48h."
     },
     "form": {
       "title": "Envoyez-moi un message",
@@ -17,7 +17,7 @@
       "message": "Message",
       "namePlaceholder": "Votre nom complet",
       "emailPlaceholder": "Votre email",
-      "subjectPlaceholder": "Sélectionnez le sujet de votre demande",
+      "subjectPlaceholder": "Sélectionnez le sujet",
       "messagePlaceholder": "Décrivez votre projet...",
       "subjects": {
         "webProject": "💻 Projet Web",
@@ -30,6 +30,11 @@
       "sending": "Envoi en cours..."
     },
     "success": "Message envoyé avec succès !",
-    "error": "Une erreur s'est produite. Veuillez réessayer."
+    "error": "Une erreur s'est produite. Veuillez réessayer.",
+    "homepage": {
+      "title": "Parlons de votre projet",
+      "subtitle": "Une idée ? Un projet ? Contactez-moi et discutons-en !",
+      "cta": "Démarrer la conversation"
+    }
   }
 }

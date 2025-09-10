@@ -7,7 +7,7 @@
       "phone": "Teléfono",
       "location": "Ubicación",
       "availability": "Disponibilidad",
-      "availabilityText": "Disponible para nuevos proyectos. Respuesta en 24 horas."
+      "availabilityText": "Disponible para tus proyectos web (sitios vitrina, e-commerce, aplicaciones), fotografía (bodas, eventos, retratos). Consulta gratuita, respuesta en 24 horas, presupuesto personalizado en 48 horas."
     },
     "form": {
       "title": "Envíame un mensaje",
@@ -17,7 +17,7 @@
       "message": "Tu mensaje",
       "namePlaceholder": "Tu nombre completo",
       "emailPlaceholder": "Tu dirección de correo electrónico",
-      "subjectPlaceholder": "Selecciona el asunto de tu solicitud",
+      "subjectPlaceholder": "Selecciona el asunto",
       "messagePlaceholder": "Tu mensaje",
       "subjects": {
         "webProject": "💻 Proyecto Web",
@@ -30,6 +30,11 @@
       "sending": "Enviando..."
     },
     "success": "¡Mensaje enviado con éxito!",
-    "error": "Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde."
+    "error": "Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.",
+    "homepage": {
+      "title": "Hablemos de tu proyecto",
+      "subtitle": "¿Una idea? ¿Un proyecto? ¡Contáctame y hablemos!",
+      "cta": "Iniciar la conversación"
+    }
   }
 }

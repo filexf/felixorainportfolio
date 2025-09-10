@@ -7,7 +7,7 @@
       "phone": "Phone",
       "location": "Location",
       "availability": "Availability",
-      "availabilityText": "Available for new projects. Response within 24 hours."
+      "availabilityText": "Available for your web projects (showcase sites, e-commerce, applications), photography (weddings, events, portraits). Free consultation, response within 24 hours, personalized quote within 48 hours."
     },
     "form": {
       "title": "Send me a message",
@@ -17,7 +17,7 @@
       "message": "Your message",
       "namePlaceholder": "Your full name",
       "emailPlaceholder": "Your email address",
-      "subjectPlaceholder": "Select the subject of your request",
+      "subjectPlaceholder": "Select the subject",
       "messagePlaceholder": "Your message",
       "subjects": {
         "webProject": "💻 Web Project",
@@ -30,6 +30,11 @@
       "sending": "Sending..."
     },
     "success": "Message sent successfully!",
-    "error": "There was an error sending your message. Please try again later."
+    "error": "There was an error sending your message. Please try again later.",
+    "homepage": {
+      "title": "Let's talk about your project",
+      "subtitle": "An idea? A project? Contact me and let's discuss!",
+      "cta": "Start the conversation"
+    }
   }
 }
