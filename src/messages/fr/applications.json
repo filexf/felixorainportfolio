@@ -6,6 +6,15 @@
     "techstack": "Ma stack technique"
   },
   "projects": {
+    "actions": {
+      "code": "Code",
+      "preview": "Aperçu",
+      "demo": "Démo"
+    },
+    "lifoAI": {
+      "title": "LIFO.AI",
+      "desc": "Travail dans la startup LIFO.AI en tant que développeur frontend, création d'une plateforme de gestion des stocks propulsée par l'IA avec Next.js, TypeScript et Tailwind CSS. L'application utilise des algorithmes d'apprentissage automatique pour optimiser les niveaux de stock, prévoir la demande et automatiser les décisions d'achat. J'ai développé des composants UI responsives qui transforment les analyses en informations commerciales exploitables."
+    },
     "sportify": {
       "title": "SPORTIFY",
       "desc": "Sportify est une PWA développée avec Ruby on Rails, PostgreSQL et Javascript avec AJAX pour connecter des sportifs en créant ou rejoignant des événements locaux. Design sur Figma, UI avec Bootstrap, déploiement sur Heroku avec domaine personnalisé. Projet présenté devant un large public."
@@ -20,7 +29,8 @@
     },
     "portfolio": {
       "title": "PORTFOLIO",
-      "desc": "Ce portfolio a été réalisé avec React. J'ai utilisé React Router pour gérer plusieurs pages et l'ai hébergé sur Github Pages. Les animations sont faites avec Framer Motion. J'ai finalement implémenté un Dark Mode pour une UI plus agréable ainsi qu'un système de gestion des langues. Il met en avant mes projets, compétences et expériences, avec un design épuré et personnel."
+        "desc": "Portfolio développé avec Next.js, TypeScript et Tailwind. Intègre Next-intl pour le multilinguisme, le dark mode, des animations avec Framer Motion, une optimisation SEO avancée et un déploiement sur Vercel. Présente mes projets et services dans une interface moderne et responsive avec des performances optimales."
+
     },
     "tymouet": {
       "title": "TY MOUET",

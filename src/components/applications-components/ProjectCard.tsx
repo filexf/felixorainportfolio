@@ -35,6 +35,13 @@ interface ProjectCardProps {
 // Project data
 export const projects: Project[] = [
   {
+    title: "lifoAI",
+    description: "lifoAI",
+    image: "/images/Photo-projets-dev/LIFO-Logo-light-BG.png",
+    githubLink: "https://github.com/lifo-ai",
+    websiteLink: "https://clownfish-app-y2uru.ondigitalocean.app/",
+  },
+  {
     title: "gis",
     description: "gis",
     image: "/images/Photo-projets-dev/Web_Gis_Cover_Picture.jpg",
@@ -55,8 +62,8 @@ export const projects: Project[] = [
     title: "portfolio",
     description: "portfolio",
     image: "/images/Photo-GGB/Photo_GGB_Squared.jpg",
-    githubLink: "https://www.felix-orain.com",
-    websiteLink: "https://github.com/filexf/felixorainportfolio",
+    githubLink: "https://github.com/filexf/felixorainportfolio",
+    websiteLink: "https://www.felix-orain.com",
   },
   {
     title: "carbonSavings",
@@ -217,7 +224,7 @@ export function ProjectCard({
   return (
     <>
       <Reveal>
-        <div className="my-2 mb-2 flex flex-col rounded-2xl border-1 border-gray-200 bg-secondary shadow-md transition-all duration-300 ease-in-out hover:-translate-y-2 hover:bg-gray-100 md:flex md:items-center lg:flex-row">
+        <div className="bg-secondary my-2 mb-2 flex flex-col rounded-2xl border-1 border-gray-200 shadow-md transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex md:items-center lg:flex-row">
           <div className="relative h-48 w-full overflow-hidden rounded-2xl sm:h-56 md:h-64 md:w-80 md:min-w-80 md:flex-shrink-0 lg:h-80 lg:w-96 lg:min-w-96">
             <Image
               src={image}
@@ -239,28 +246,44 @@ export function ProjectCard({
               {t(`projects.${description}.desc`)}
             </p>
             <div className="flex justify-center gap-3 sm:gap-5 md:gap-10">
-              <Link href={githubLink} target="_blank" rel="noopener noreferrer">
-                <Image
-                  src={
-                    darkMode
-                      ? "/icons/Main-icons/Github-icon-white.svg"
-                      : "/icons/Tech stack icons/Github-icon.svg"
-                  }
-                  alt="GitHub"
-                  width={36}
-                  height={36}
-                  className="vertical-animation h-8 w-8 opacity-80 hover:scale-102 hover:opacity-100 sm:h-10 sm:w-10 md:h-12 md:w-12"
-                />
-              </Link>
-              {images && (
-                <div className="cursor-pointer" onClick={openLightbox}>
+              {/* GitHub */}
+              <div className="flex flex-col items-center gap-1">
+                <Link
+                  href={githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Image
-                    src="/icons/Main-icons/Gallery-icon.svg"
-                    alt="Gallery Icon"
+                    src={
+                      darkMode
+                        ? "/icons/Main-icons/Github-icon-white.svg"
+                        : "/icons/Tech stack icons/Github-icon.svg"
+                    }
+                    alt="GitHub"
                     width={36}
                     height={36}
-                    className={`vertical-animation h-8 w-8 opacity-80 hover:scale-102 hover:opacity-100 sm:h-10 sm:w-10 md:h-12 md:w-12 ${darkMode ? "invert filter" : ""}`}
+                    className="vertical-animation h-8 w-8 opacity-80 hover:scale-102 hover:opacity-100 sm:h-10 sm:w-10 md:h-12 md:w-12"
                   />
+                </Link>
+                <span className="text-[.625rem] sm:text-xs font-medium">
+                  {t("projects.actions.code")}
+                </span>
+              </div>
+              {/* Gallery */}
+              {images && (
+                <div className="flex flex-col items-center gap-1">
+                  <div className="cursor-pointer" onClick={openLightbox}>
+                    <Image
+                      src="/icons/Main-icons/Gallery-icon.svg"
+                      alt="Gallery Icon"
+                      width={36}
+                      height={36}
+                      className={`vertical-animation h-8 w-8 opacity-80 hover:scale-102 hover:opacity-100 sm:h-10 sm:w-10 md:h-12 md:w-12 ${darkMode ? "invert filter" : ""}`}
+                    />
+                  </div>
+                  <span className="text-[.625rem] sm:text-xs font-medium">
+                    {t("projects.actions.preview")}
+                  </span>
                 </div>
               )}
               <Lightbox
@@ -275,20 +298,26 @@ export function ProjectCard({
                   }))
                 }
               />
+              {/* Website */}
               {websiteLink && websiteLink !== "#" && (
-                <Link
-                  href={websiteLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src="/icons/Main-icons/Website-icon.svg"
-                    alt="Website"
-                    width={36}
-                    height={36}
-                    className={`vertical-animation h-8 w-8 opacity-80 hover:scale-102 hover:opacity-100 sm:h-10 sm:w-10 md:h-12 md:w-12 ${darkMode ? "invert filter" : ""}`}
-                  />
-                </Link>
+                <div className="flex flex-col items-center gap-1">
+                  <Link
+                    href={websiteLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src="/icons/Main-icons/Website-icon.svg"
+                      alt="Website"
+                      width={36}
+                      height={36}
+                      className={`vertical-animation h-8 w-8 opacity-80 hover:scale-102 hover:opacity-100 sm:h-10 sm:w-10 md:h-12 md:w-12 ${darkMode ? "invert filter" : ""}`}
+                    />
+                  </Link>
+                  <span className="text-[.625rem] sm:text-xs font-medium">
+                    {t("projects.actions.demo")}
+                  </span>
+                </div>
               )}
             </div>
           </div>

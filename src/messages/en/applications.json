@@ -5,8 +5,17 @@
     "github": "My GitHub account",
     "techstack": "My tech stack"
   },
-  
+
   "projects": {
+    "actions": {
+      "code": "Code",
+      "preview": "Preview",
+      "demo": "Demo"
+    },
+    "lifoAI": {
+      "title": "LIFO.AI",
+      "desc": "Work for LIFO.AI startup as a frontend developer, building an AI-driven inventory management platform with Next.js, TypeScript and Tailwind CSS. The application leverages machine learning algorithms to optimize stock levels, forecast demand, and automate purchasing decisions. I developed responsive UI components that transform analytics into actionable business insights."
+    },
     "sportify": {
       "title": "SPORTIFY",
       "desc": "Sportify is a PWA built with Ruby on Rails, PostgreSQL, and Javascript with AJAX to connect users with sports partners by browsing or creating local events. We designed it in Figma, used Bootstrap for the UI, and deployed it on Heroku with a custom domain. The project was then presented in front of a big crowd."
@@ -21,7 +30,7 @@
     },
     "portfolio": {
       "title": "PORTFOLIO",
-      "desc": "This portfolio was built using React. I used React Router to manage multiple pages and hosted it on Github Pages. The animations are made with Framer Motion. I finally implemented a Dark Mode for a more pleasant UI as well as a language management system. It showcases my projects, skills, and experiences, with a clean and personal design."
+      "desc": "This portfolio was developed with Next.js, TypeScript and Tailwind. Integrates a dark mode, next Intl for language support, animations with Framer Motion, advanced SEO optimization and deployed on Vercel. Showcases my projects and services in a modern and responsive interface with optimal performance."
     },
     "tymouet": {
       "title": "TY MOUET",
