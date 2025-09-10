@@ -4,13 +4,14 @@
 import SectionWrapper from "@/components/homepage-components/SectionWrapper";
 import Reveal from "@/components/Reveal";
 import { Button } from "@/components/ui/button";
-import { Loader2, Mail, MapPin, Phone, Send } from "lucide-react";
+import { ChevronDown, Loader2, Mail, MapPin, Phone, Send } from "lucide-react";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 
 interface FormData {
   name: string;
   email: string;
+  subject: string;
   message: string;
 }
 
@@ -25,6 +26,7 @@ export default function ContactPage() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
+    subject: "",
     message: "",
   });
 
@@ -34,7 +36,9 @@ export default function ContactPage() {
   });
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -60,15 +64,18 @@ export default function ContactPage() {
 
       if (response.ok) {
         setStatus({ type: "success", message: t("success") });
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
         setStatus({ type: "error", message: result.error || t("error") });
       }
     } catch {
-      // Pas de variable error définie, donc pas d'avertissement
       setStatus({ type: "error", message: t("error") });
     }
   };
+
+  // Classes communes pour les inputs stylés
+  const inputClasses =
+    "w-full rounded-xl border-0 bg-gray-100 px-4 py-3 text-gray-900 placeholder-gray-500 shadow-sm transition-all duration-200 focus:bg-white focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-400 dark:focus:bg-gray-700 dark:focus:ring-blue-400";
 
   return (
     <div className="min-h-screen py-16">
@@ -148,7 +155,7 @@ export default function ContactPage() {
                     <div>
                       <label
                         htmlFor="name"
-                        className="mb-2 block text-sm font-medium"
+                        className="mb-3 block text-sm font-semibold text-gray-700 dark:text-gray-300"
                       >
                         {t("form.name")} *
                       </label>
@@ -159,7 +166,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:border-blue-500 focus:outline-none dark:border-gray-600 dark:bg-gray-800"
+                        className={inputClasses}
                         placeholder={t("form.namePlaceholder")}
                       />
                     </div>
@@ -167,7 +174,7 @@ export default function ContactPage() {
                     <div>
                       <label
                         htmlFor="email"
-                        className="mb-2 block text-sm font-medium"
+                        className="mb-3 block text-sm font-semibold text-gray-700 dark:text-gray-300"
                       >
                         {t("form.email")} *
                       </label>
@@ -178,15 +185,55 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:border-blue-500 focus:outline-none dark:border-gray-600 dark:bg-gray-800"
+                        className={inputClasses}
                         placeholder={t("form.emailPlaceholder")}
                       />
+                    </div>
+
+                    {/* Dropdown pour le sujet */}
+                    <div>
+                      <label
+                        htmlFor="subject"
+                        className="mb-3 block text-sm font-semibold text-gray-700 dark:text-gray-300"
+                      >
+                        {t("form.subject")} *
+                      </label>
+                      <div className="relative">
+                        <select
+                          id="subject"
+                          name="subject"
+                          value={formData.subject}
+                          onChange={handleInputChange}
+                          required
+                          className={`${inputClasses} appearance-none pr-12`}
+                        >
+                          <option value="">
+                            {t("form.subjectPlaceholder")}
+                          </option>
+                          <option value="web-project">
+                            {t("form.subjects.webProject")}
+                          </option>
+                          <option value="photo-project">
+                            {t("form.subjects.photoProject")}
+                          </option>
+                          <option value="pricing">
+                            {t("form.subjects.pricing")}
+                          </option>
+                          <option value="collaboration">
+                            {t("form.subjects.collaboration")}
+                          </option>
+                          <option value="other">
+                            {t("form.subjects.other")}
+                          </option>
+                        </select>
+                        <ChevronDown className="pointer-events-none absolute top-1/2 right-4 h-5 w-5 -translate-y-1/2 text-gray-500 dark:text-gray-400" />
+                      </div>
                     </div>
 
                     <div>
                       <label
                         htmlFor="message"
-                        className="mb-2 block text-sm font-medium"
+                        className="mb-3 block text-sm font-semibold text-gray-700 dark:text-gray-300"
                       >
                         {t("form.message")} *
                       </label>
@@ -197,7 +244,7 @@ export default function ContactPage() {
                         onChange={handleInputChange}
                         required
                         rows={6}
-                        className="w-full rounded-lg border border-gray-300 px-4 py-3 transition-colors focus:border-blue-500 focus:outline-none dark:border-gray-600 dark:bg-gray-800"
+                        className={`${inputClasses} resize-none`}
                         placeholder={t("form.messagePlaceholder")}
                       />
                     </div>
@@ -205,11 +252,11 @@ export default function ContactPage() {
                     {/* Message de statut */}
                     {status.message && (
                       <div
-                        className={`rounded-lg p-4 ${
+                        className={`rounded-xl p-4 shadow-sm ${
                           status.type === "success"
-                            ? "bg-green-50 text-green-800 dark:bg-green-900/20 dark:text-green-300"
+                            ? "bg-green-50 text-green-800 ring-1 ring-green-200 dark:bg-green-900/20 dark:text-green-300 dark:ring-green-800"
                             : status.type === "error"
-                              ? "bg-red-50 text-red-800 dark:bg-red-900/20 dark:text-red-300"
+                              ? "bg-red-50 text-red-800 ring-1 ring-red-200 dark:bg-red-900/20 dark:text-red-300 dark:ring-red-800"
                               : ""
                         }`}
                       >
@@ -222,7 +269,7 @@ export default function ContactPage() {
                       disabled={status.type === "loading"}
                       variant="default"
                       size="lg"
-                      className="w-full rounded-xl bg-slate-900 text-white hover:bg-slate-800 disabled:opacity-50 dark:bg-blue-600 dark:hover:bg-blue-700"
+                      className="dark:bg-black-600 dark:hover:bg-black-100 w-full rounded-xl bg-slate-900 py-4 text-white shadow-lg transition-all duration-200 hover:bg-slate-800 hover:shadow-xl disabled:opacity-50"
                     >
                       {status.type === "loading" ? (
                         <>

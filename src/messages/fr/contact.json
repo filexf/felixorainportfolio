@@ -13,10 +13,19 @@
       "title": "Envoyez-moi un message",
       "name": "Nom",
       "email": "Email",
+      "subject": "Sujet",
       "message": "Message",
       "namePlaceholder": "Votre nom complet",
       "emailPlaceholder": "Votre email",
+      "subjectPlaceholder": "Sélectionnez le sujet de votre demande",
       "messagePlaceholder": "Décrivez votre projet...",
+      "subjects": {
+        "webProject": "💻 Projet Web",
+        "photoProject": "📸 Projet Photo",
+        "pricing": "💰 Demande de Tarifs",
+        "collaboration": "🤝 Collaboration",
+        "other": "💬 Autre"
+      },
       "send": "Envoyer le message",
       "sending": "Envoi en cours..."
     },

@@ -13,10 +13,19 @@
       "title": "Send me a message",
       "name": "Your name",
       "email": "Your email",
+      "subject": "Subject",
       "message": "Your message",
       "namePlaceholder": "Your full name",
       "emailPlaceholder": "Your email address",
+      "subjectPlaceholder": "Select the subject of your request",
       "messagePlaceholder": "Your message",
+      "subjects": {
+        "webProject": "💻 Web Project",
+        "photoProject": "📸 Photo Project",
+        "pricing": "💰 Pricing Request",
+        "collaboration": "🤝 Collaboration",
+        "other": "💬 Other"
+      },
       "send": "Send message",
       "sending": "Sending..."
     },
