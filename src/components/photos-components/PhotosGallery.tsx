@@ -22,9 +22,9 @@ const Gallery = ({ title, images, text }: GalleryProps) => {
   return (
     <div className="flex w-full justify-center pt-[40px] pb-[120px]">
       <div className="flex flex-col gap-[40px] px-8">
-        <h2 className="text-gradient text-center text-5xl leading-normal font-bold md:text-7xl">
+        <h1 className="text-gradient text-center text-5xl leading-normal font-bold md:text-7xl">
           {title}
-        </h2>
+        </h1>
         <p className="body-font mx-auto max-w-5xl text-center">{text}</p>
 
         <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 overflow-hidden px-4">

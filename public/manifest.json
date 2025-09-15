@@ -44,22 +44,6 @@
       "purpose": "any maskable"
     }
   ],
-  "screenshots": [
-    {
-      "src": "/screenshots/desktop.jpg",
-      "sizes": "1280x800",
-      "type": "image/jpeg",
-      "platform": "wide",
-      "label": "Portfolio de Félix Orain sur ordinateur"
-    },
-    {
-      "src": "/screenshots/mobile.jpg",
-      "sizes": "750x1334",
-      "type": "image/jpeg",
-      "platform": "narrow",
-      "label": "Portfolio de Félix Orain sur mobile"
-    }
-  ],
   "shortcuts": [
     {
       "name": "Projets de développement web",

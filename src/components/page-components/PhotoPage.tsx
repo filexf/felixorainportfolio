@@ -46,9 +46,9 @@ export default async function PhotosPage() {
       <div className="flex justify-center">
         <div className="mb-8 flex w-full max-w-4xl flex-col items-center gap-4 px-4 sm:mb-12 sm:gap-8 sm:px-8 md:px-12">
           <Reveal>
-            <h2 className="text-gradient my-6 text-center text-4xl leading-normal font-bold sm:my-10 sm:text-5xl md:text-7xl">
+            <h1 className="text-gradient my-6 text-center text-4xl leading-normal font-bold sm:my-10 sm:text-5xl md:text-7xl">
               {t("title")}
-            </h2>
+            </h1>
             <p className="body-font mx-auto mb-8 max-w-4xl px-2 text-center sm:mb-16">
               {t("desc")}
             </p>

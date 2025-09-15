@@ -1,99 +1,51 @@
-"use client";
+import SportPhotoPage from "@/components/page-components/photos-page-components/SportPage";
+import { Metadata } from "next";
 
-import Gallery from "@/components/photos-components/PhotosGallery";
-import { useTranslations } from "next-intl";
+export const metadata: Metadata = {
+  title: "Photographe Sport & Parkour",
+  description:
+    "Photographe spécialisé dans le sport et le parkour à Rennes et en Bretagne. Captation de l'action, mouvements dynamiques, performances athlétiques et adrénaline pure. Portfolio professionnel de photographie sportive avec des tarifs compétitifs.",
+  keywords: [
+    "photographe sport Rennes",
+    "photographe parkour Bretagne",
+    "photographie sportive",
+    "photos action sport",
+    "portfolio sport",
+    "photographe athlétisme",
+    "photographie parkour",
+    "Félix Orain photographe sport",
+    "photographe professionnel sport",
+    "photographie mouvement",
+    "photos sport dynamiques",
+    "reportage sportif Rennes",
+  ],
+  openGraph: {
+    title: "Photographe Sport & Parkour à Rennes | Félix Orain",
+    description:
+      "Capturez l'intensité et la beauté du sport et du parkour à Rennes et en Bretagne. Photographies d'action professionnelles et dynamiques.",
+    images: [
+      {
+        url: "/images/Photos-sport/Photo_dub_roofgap.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Photographie de sport et parkour par Félix Orain à Rennes",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Photographe Sport & Parkour à Rennes | Félix Orain",
+    description:
+      "Capturez l'adrénaline et les performances sportives en Bretagne avec des photographies d'action professionnelles.",
+    images: ["/images/Photos-sport/sport-parkour-preview.jpg"],
+  },
+  alternates: {
+    canonical: "https://www.felix-orain.com/photos/sport",
+  },
+};
 
-interface GalleryImage {
-  src: string;
-  title: string;
-}
-
-// Définition des images avec leurs chemins corrects
-const images: GalleryImage[] = [
-  {
-    src: "/images/Photos-sport/Photo_dub_roofgap.jpg",
-    title: "Sport image",
-  },
-  {
-    src: "/images/Photos-sport/Photo_Louis_stride_bridge.jpg",
-    title: "Sport image",
-  },
-  {
-    src: "/images/Photos-sport/Photos_Bangkok_V1-9.jpg",
-    title: "Sport image",
-  },
-  {
-    src: "/images/Photos-sport/Photos_Bangkok_V1-13.jpg",
-    title: "Sport image",
-  },
-  {
-    src: "/images/Photos-sport/Photo_Saint_Sulpice.jpg",
-    title: "Sport image",
-  },
-  {
-    src: "/images/Photos-sport/Photos_Bangkok_V1-27.jpg",
-    title: "Sport image",
-  },
-  {
-    src: "/images/Photos-sport/Photos_Bangkok_V1-124.jpg",
-    title: "Sport image",
-  },
-  {
-    src: "/images/Photos-sport/Photo_reservoir_des_gallets.jpg",
-    title: "Sport image",
-  },
-  {
-    src: "/images/Photos-sport/Ho_chi_Minh_Civilisation_V1-105.jpg",
-    title: "Sport image",
-  },
-  {
-    src: "/images/Photos-sport/Photo_jump_lieges.jpg",
-    title: "Sport image",
-  },
-  {
-    src: "/images/Photos-sport/Ho_chi_Minh_Civilisation_V1-230.jpg",
-    title: "Sport image",
-  },
-  {
-    src: "/images/Photos-sport/Ho_chi_Minh_Civilisation_V1-113.jpg",
-    title: "Sport image",
-  },
-  {
-    src: "/images/Photos-sport/Ho_chi_Minh_Civilisation_V1-212.jpg",
-    title: "Sport image",
-  },
-  {
-    src: "/images/Photos-sport/Gainer_Tour_V1-7.jpg",
-    title: "Sport image",
-  },
-  {
-    src: "/images/Photos-sport/Photo_Avoriaz.jpg",
-    title: "Sport image",
-  },
-  {
-    src: "/images/Photos-sport/Photo_city_London.jpg",
-    title: "Sport image",
-  },
-  {
-    src: "/images/Photos-sport/Photo_roofgap_Leo.jpg",
-    title: "Sport image",
-  },
-  {
-    src: "/images/Photos-sport/Paris_Saint_Eustache.jpg",
-    title: "Sport image",
-  },
-];
-
-export default function SportPhotoPage() {
-  const t = useTranslations();
-
-  return (
-    <>
-      <Gallery
-        title={t("sportphotopage.title")}
-        images={images}
-        text={t("sportphotopage.desc")}
-      />
-    </>
-  );
+export default function Page() {
+  return <SportPhotoPage />;
 }

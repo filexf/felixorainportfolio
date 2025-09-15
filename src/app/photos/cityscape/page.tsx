@@ -1,107 +1,51 @@
-"use client";
+import CityscapePage from "@/components/page-components/photos-page-components/CityscapePage";
+import { Metadata } from "next";
 
-import Gallery from "@/components/photos-components/PhotosGallery";
-import { useTranslations } from "next-intl";
+export const metadata: Metadata = {
+  title: "Photographe Urbain & Cityscape",
+  description:
+    "Photographe spécialisé dans la photographie urbaine et les cityscapes à Rennes et en Bretagne. Architecture moderne, skylines nocturnes, vie urbaine et ambiances métropolitaines. Portfolio professionnel de photographie urbaine avec une vision contemporaine et dynamique.",
+  keywords: [
+    "photographe urbain Rennes",
+    "photographie cityscape Bretagne",
+    "photos architecture urbaine",
+    "skyline nocturne",
+    "portfolio urbain",
+    "photographe ville",
+    "architecture moderne",
+    "Félix Orain photographe urbain",
+    "photographe professionnel ville",
+    "photographie métropolitaine",
+    "ambiances urbaines",
+    "cityscapes Rennes",
+  ],
+  openGraph: {
+    title: "Photographe Urbain & Cityscape à Rennes | Félix Orain",
+    description:
+      "Explorez l'architecture et les ambiances urbaines à travers une photographie contemporaine et dynamique à Rennes et en Bretagne.",
+    images: [
+      {
+        url: "/images/Photos-cityscape/Photos HK chill-109.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Photographie urbaine et cityscape par Félix Orain à Rennes",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Photographe Urbain & Cityscape à Rennes | Félix Orain",
+    description:
+      "Découvrez l'architecture et la vie urbaine en Bretagne à travers une photographie contemporaine et créative.",
+    images: ["/images/Photos-cityscape/Photos HK chill-109.jpg"],
+  },
+  alternates: {
+    canonical: "https://www.felix-orain.com/photos/cityscape",
+  },
+};
 
-interface GalleryImage {
-  src: string;
-  title: string;
-}
-
-// Définition des images avec leurs chemins corrects
-const images: GalleryImage[] = [
-  {
-    src: "/images/Photos-cityscape/Photos HK chill-108.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/Photos HK chill-109.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/Photos HK chill-110.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/Photos HK chill-111.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/Photos HK chill-112.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/HK Street photos 2-12.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/HK Street photos 2-16.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/HK Street photos 2-20.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/HK Street photos 2-21.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/HK Street photos 2-24.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/HK Street photos 2-3.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/HK Street photos 2-8.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/Photos HK chill-113.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/Photos HK chill-114.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/HK Street photos moody weather-8.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/Photos HK chill-132.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/Feu d'artifice-1.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/Feu d'artifice-2.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/Feu d'artifice-3.jpg",
-    title: "Cityscape image",
-  },
-  {
-    src: "/images/Photos-cityscape/Feu d'artifice-4.jpg",
-    title: "Cityscape image",
-  },
-];
-
-export default function CityscapePhotoPage() {
-  const t = useTranslations();
-
-  return (
-    <>
-      <Gallery
-        title={t("cityscapephotopage.title")}
-        images={images}
-        text={t("cityscapephotopage.desc")}
-      />
-    </>
-  );
+export default function Page() {
+  return <CityscapePage />;
 }

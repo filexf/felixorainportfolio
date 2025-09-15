@@ -1,20 +1,19 @@
 // src/components/page-components/ContactPage.tsx
-"use client";
 
 import ContactForm from "@/components/ContactForm";
 import SectionWrapper from "@/components/homepage-components/SectionWrapper";
 import Reveal from "@/components/Reveal";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export default function ContactPage() {
-  const t = useTranslations("contact");
+export default async function ContactPage() {
+  const t = await getTranslations("contact");
 
   return (
     <div className="min-h-screen py-16">
       <div className="container mx-auto px-4">
         <Reveal>
-          <SectionWrapper title={t("title")}>
+          <SectionWrapper title={t("title")} as="h1">
             <div className="mx-auto max-w-6xl">
               <div className="grid gap-12 lg:grid-cols-2">
                 {/* Informations de contact */}

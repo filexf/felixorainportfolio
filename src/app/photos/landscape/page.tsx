@@ -1,95 +1,51 @@
-"use client";
+import LandscapePage from "@/components/page-components/photos-page-components/LandscapePage";
+import { Metadata } from "next";
 
-import Gallery from "@/components/photos-components/PhotosGallery";
-import { useTranslations } from "next-intl";
+export const metadata: Metadata = {
+  title: "Photographe Paysages & Nature",
+  description:
+    "Photographe spécialisé dans les paysages et la nature à Rennes et en Bretagne. Captation de la beauté naturelle, panoramas époustouflants, lumières dorées et atmosphères uniques. Portfolio professionnel de photographie de paysage avec une approche artistique et contemplative.",
+  keywords: [
+    "photographe paysage Rennes",
+    "photographe nature Bretagne",
+    "photographie paysage",
+    "photos nature panoramiques",
+    "portfolio paysages",
+    "photographe extérieur",
+    "paysages bretons",
+    "Félix Orain photographe nature",
+    "photographe professionnel paysage",
+    "photographie contemplative",
+    "lumières naturelles",
+    "panoramas Bretagne",
+  ],
+  openGraph: {
+    title: "Photographe Paysages & Nature à Rennes | Félix Orain",
+    description:
+      "Découvrez la beauté des paysages bretons et de la nature à travers une photographie contemplative et artistique à Rennes et en Bretagne.",
+    images: [
+      {
+        url: "/images/Photos-landscape/Tests photos USA-147.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Photographie de paysage breton par Félix Orain à Rennes",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Photographe Paysages & Nature à Rennes | Félix Orain",
+    description:
+      "Explorez la beauté naturelle de la Bretagne à travers une photographie de paysage artistique et contemplative.",
+    images: ["/images/Photos-landscape/Tests photos USA-147.jpg"],
+  },
+  alternates: {
+    canonical: "https://www.felix-orain.com/photos/landscape",
+  },
+};
 
-interface GalleryImage {
-  src: string;
-  title: string;
-}
-
-// Définition des images avec leurs chemins corrects
-const images: GalleryImage[] = [
-  {
-    src: "/images/Photos-landscape/Tests photos USA-71.jpg",
-    title: "Landscape image",
-  },
-  {
-    src: "/images/Photos-landscape/Tests photos USA-32.jpg",
-    title: "Landscape image",
-  },
-  {
-    src: "/images/Photos-landscape/Tests photos USA-61.jpg",
-    title: "Landscape image",
-  },
-  {
-    src: "/images/Photos-landscape/Tests photos USA-18.jpg",
-    title: "Landscape image",
-  },
-  {
-    src: "/images/Photos-landscape/Tests photos USA-126.jpg",
-    title: "Landscape image",
-  },
-  {
-    src: "/images/Photos-landscape/Tests photos USA-145.jpg",
-    title: "Landscape image",
-  },
-  {
-    src: "/images/Photos-landscape/Tests photos USA-147.jpg",
-    title: "Landscape image",
-  },
-  {
-    src: "/images/Photos-landscape/Tests photos USA-152.jpg",
-    title: "Landscape image",
-  },
-  {
-    src: "/images/Photos-landscape/Tests photos USA-154.jpg",
-    title: "Landscape image",
-  },
-  {
-    src: "/images/Photos-landscape/Tests photos USA-178.jpg",
-    title: "Landscape image",
-  },
-  {
-    src: "/images/Photos-landscape/Tests photos USA-184.jpg",
-    title: "Landscape image",
-  },
-  {
-    src: "/images/Photos-landscape/Tests photos USA-186.jpg",
-    title: "Landscape image",
-  },
-  {
-    src: "/images/Photos-landscape/Tests photos USA-199.jpg",
-    title: "Landscape image",
-  },
-  {
-    src: "/images/Photos-landscape/Tests photos USA-209.jpg",
-    title: "Landscape image",
-  },
-  {
-    src: "/images/Photos-landscape/Tests photos USA-233.jpg",
-    title: "Landscape image",
-  },
-  {
-    src: "/images/Photos-landscape/Tests photos USA-234.jpg",
-    title: "Landscape image",
-  },
-  {
-    src: "/images/Photos-landscape/Tests photos USA-291.jpg",
-    title: "Landscape image",
-  },
-];
-
-export default function LandscapePhotoPage() {
-  const t = useTranslations();
-
-  return (
-    <>
-      <Gallery
-        title={t("landscapephotopage.title")}
-        images={images}
-        text={t("landscapephotopage.desc")}
-      />
-    </>
-  );
+export default function Page() {
+  return <LandscapePage />;
 }

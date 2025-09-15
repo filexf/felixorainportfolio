@@ -57,10 +57,10 @@ export default function AuroraBackgroundDemo() {
               ease: "easeInOut",
             },
           }}
-          className="relative mb-4 inline-flex flex-wrap items-center justify-center gap-2 overflow-hidden rounded-full border-2 border-gray-200/60 bg-gradient-to-r from-white/80 to-white/60 px-3 py-1 shadow-lg backdrop-blur-md sm:gap-3 sm:px-5 sm:py-1.5 dark:from-white/10 dark:to-gray-900/40"
+          className="relative mb-4 inline-flex flex-wrap items-center justify-center gap-2 overflow-hidden rounded-full border-2 border-gray-300/60 bg-gradient-to-r from-white/80 to-white/60 px-3 py-1 shadow-lg backdrop-blur-md sm:gap-3 sm:px-5 sm:py-1.5 dark:from-white/10 dark:to-gray-900/40"
         >
           <motion.span
-            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent"
+            className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-100/80 to-transparent"
             animate={{
               x: ["100%", "-100%"],
             }}

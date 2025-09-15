@@ -56,9 +56,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
     },
 
+    {
+      path: "/contact",
+      priority: 0.9,
+      changeFrequency: "monthly" as const,
+    },
+
     // Autres pages (ajoutez-en selon vos besoins)
     // { path: "/blog", priority: 0.9, changeFrequency: "weekly" as const },
-    // { path: "/contact", priority: 0.6, changeFrequency: "yearly" as const },
   ];
 
   // Génération du sitemap avec les priorités et fréquences définies

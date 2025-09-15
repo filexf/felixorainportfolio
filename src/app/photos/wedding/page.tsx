@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     images: ["/images/wedding/mariage-rennes-preview.jpg"],
   },
   alternates: {
-    canonical: "https://felix-orain.com/photos/wedding",
+    canonical: "https://www.felix-orain.com/photos/wedding",
   },
 };
 

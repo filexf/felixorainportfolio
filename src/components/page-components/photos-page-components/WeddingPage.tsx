@@ -75,14 +75,14 @@ const images: GalleryImage[] = [
 ];
 
 export default async function WeddingPhotoPage() {
-  const t = await getTranslations();
+  const t = await getTranslations("weddingphotopage");
 
   return (
     <>
       <Gallery
-        title={t("weddingphotopage.title")}
+        title={t("title")}
         images={images}
-        text={t("weddingphotopage.desc")}
+        text={t("desc")}
       />
     </>
   );

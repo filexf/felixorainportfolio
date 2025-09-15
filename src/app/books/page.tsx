@@ -2,31 +2,50 @@ import BooksPage from "@/components/page-components/BooksPage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Design",
-  description: "Explorez mes publications et livres de photographie. Des ouvrages alliant narration visuelle et design éditorial, témoignant de mon regard unique sur le monde à travers des projets comme 'Civilisation' et 'Wizzy en Asie'.",
-  alternates: {
-    canonical: "https://www.felix-orain.com/books",
-  },
+  title: "Livres & Magazines",
+  description:
+    "Découvrez mes créations de magazines et livres design : Civilisation Magazine et Wizzy en Asie. Portfolio de design graphique, mise en page créative et direction artistique à Rennes. Expertise en édition, typographie et identité visuelle.",
+  keywords: [
+    "design magazine Rennes",
+    "création livre design",
+    "mise en page créative",
+    "graphisme éditorial",
+    "portfolio design graphique",
+    "direction artistique Bretagne",
+    "Civilisation Magazine",
+    "Wizzy en Asie magazine",
+    "édition graphique",
+    "typographie créative",
+    "identité visuelle",
+    "design éditorial Rennes",
+    "maquettage professionnel",
+    "création graphique Bretagne",
+    "designer graphique freelance",
+  ],
   openGraph: {
-    title: "Publications & Livres | Félix Orain",
-    description: "Explorez mes publications et livres de photographie. Des ouvrages alliant narration visuelle et design éditorial, témoignant de mon regard unique sur le monde.",
+    title:
+      "Livres & Magazines Design | Félix Orain - Designer Graphique Rennes",
+    description:
+      "Portfolio de design graphique et éditorial : magazines Civilisation et Wizzy en Asie. Création, mise en page et direction artistique professionnelle en Bretagne.",
     images: [
       {
         url: "/images/Couvertures magazines/Civilisation Mag.jpg",
         width: 1200,
         height: 630,
-        alt: "Livres et publications de Félix Orain",
+        alt: "Magazine Civilisation - Design graphique par Félix Orain",
       },
     ],
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Publications & Livres | Félix Orain",
-    description: "Explorez mes publications et livres de photographie alliant narration visuelle et design éditorial.",
+    title: "Design Graphique & Magazines | Félix Orain Rennes",
+    description:
+      "Découvrez mes créations de magazines et design éditorial : Civilisation et Wizzy en Asie. Portfolio design graphique professionnel.",
     images: ["/images/Couvertures magazines/Civilisation Mag.jpg"],
   },
-  keywords: ["livres photo", "publications", "design éditorial", "livre Civilisation", "Wizzy en Asie", "photographe auteur", "narration visuelle"],
+  alternates: {
+    canonical: "https://www.felix-orain.com/books",
+  },
 };
 
 export default function Page() {

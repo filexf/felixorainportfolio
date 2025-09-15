@@ -24,9 +24,9 @@ export default function Gallery({ title, images }: GalleryProps) {
   return (
     <div className="flex w-full justify-center px-2 py-12 sm:px-4">
       <div className="flex w-full flex-col gap-6 sm:gap-10 max-w-5xl">
-        <h2 className="text-gradient text-center text-5xl leading-normal font-bold sm:text-6xl md:text-7xl">
+        <h1 className="text-gradient text-center text-5xl leading-normal font-bold sm:text-6xl md:text-7xl">
           {title}
-        </h2>
+        </h1>
         <p className="body-font mx-auto max-w-4xl px-4 text-center">
           {t("bookgallery.desc")}
         </p>
