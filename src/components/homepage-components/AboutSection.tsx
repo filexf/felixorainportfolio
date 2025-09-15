@@ -2,9 +2,10 @@
 
 import Reveal from "@/components/Reveal";
 import SectionWrapper from "@/components/homepage-components/SectionWrapper";
-import { useTranslations, useLocale } from "next-intl";
+import { ButtonLink } from "@/components/ui/button";
+import { Download } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import React from "react";
 
 export default function AboutSection() {
   const t = useTranslations();
@@ -15,48 +16,45 @@ export default function AboutSection() {
     fr: "/Felix_Orain_CV_Developpeur_Web.pdf",
     es: "/Felix_Orain_Web_Developer_Resume .pdf", // fallback to English if Spanish
   };
-  const resumeFile = resumeMap[locale as keyof typeof resumeMap] || resumeMap.en;
+  const resumeFile =
+    resumeMap[locale as keyof typeof resumeMap] || resumeMap.en;
 
   return (
     <>
       <Reveal>
         <SectionWrapper title={t("about.title")}>
-          <div className="lg:width-[80%] flex w-full flex-col items-center justify-center gap-6 lg:flex-row lg:justify-center lg:gap-10 lg:pl-12">
-            <Image
-              className="vertical-animation my-2 mb-2 h-[300px] w-auto rounded-4xl shadow-md lg:h-[400px]"
-              src="/images/Important-photos/photo-profil-V2.jpg"
-              alt="Profile Image"
-              width={300}
-              height={400}
-            />
-            <div className="mt-4 flex flex-col items-center justify-center gap-10">
-              <p className="text-base md:text-lg max-width-md w-[80%] max-w-6xl text-start lg:text-left">
-              {t("about.desc")
-                .split("\n")
-                .map((line, i) => (
-                  <span key={i}>
-                    {line}
-                    <br />
-                  </span>
-                ))}
+          <div className="flex w-full flex-col items-center justify-center gap-8 lg:flex-row lg:gap-16 xl:gap-20">
+            <div className="flex-shrink-0">
+              <Image
+                src="/images/Important-photos/photo-profil-V2.jpg"
+                alt="Profile Image"
+                width={280}
+                height={350}
+                sizes="(max-width: 640px) 200px, (max-width: 1024px) 60vw, 30vw"
+                className="vertical-animation h-auto w-[220px] rounded-xl shadow-md transition-all duration-300 sm:w-[250px] lg:w-[280px]"
+              />
+            </div>
+            <div className="flex max-w-2xl flex-col items-center justify-center gap-8">
+              <p className="sm:text-md text-base leading-relaxed text-gray-700 lg:text-left lg:text-lg dark:text-gray-300">
+                {t("about.desc")
+                  .split("\n")
+                  .map((line, i) => (
+                    <span key={i}>
+                      {line}
+                      <br />
+                    </span>
+                  ))}
               </p>
-              <a
+              <ButtonLink
                 href={resumeFile}
+                variant="outline"
+                size="lg"
+                className="rounded-xl bg-slate-900 text-white hover:bg-slate-800 dark:border dark:border-blue-700 dark:bg-gray-900/80 dark:text-white dark:hover:bg-gray-800/90"
                 download
-                className="group bg-secondary inline-flex items-center gap-3 rounded-full border-2 border-gray-400 px-5 py-2 transition-all duration-300 ease-in-out hover:border-gray-900"
               >
-                <span className="text-sm font-medium tracking-wide">
-                  {t("about.resume")}
-                </span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 transform transition-transform duration-300 group-hover:translate-y-[2px]"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-6 4h12v-2H6v2z" />
-                </svg>
-              </a>
+                <Download className="mr-2 h-5 w-5 transition-transform duration-300 group-hover:translate-y-[2px]" />
+                {t("about.resume")}
+              </ButtonLink>
             </div>
           </div>
         </SectionWrapper>

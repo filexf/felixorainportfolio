@@ -32,7 +32,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variantClasses = {
       default: "bg-secondary border border-gray-300 hover:bg-gray-100",
-      outline: "bg-transparent border border-gray-300 hover:bg-secondary/50",
+      outline: "bg-gray-50 border border-gray-300 hover:bg-secondary/50",
     };
 
     return (
