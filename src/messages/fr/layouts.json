@@ -24,7 +24,28 @@
   },
   "footer": {
     "copyright": "Copyright Félix Orain © Tous droits réservés.",
-    "madeby": "Développé avec ❤️ par Félix Orain"
+    "madeby": "Développé avec ❤️ par Félix Orain",
+    "sections": {
+      "services": "Services",
+      "portfolio": "Portfolio Photo",
+      "creations": "Créations Designs",
+      "contact": "Contact"
+    },
+    "links": {
+      "webDevelopment": "Développement Web",
+      "photography": "Photographie",
+      "graphicDesign": "Design Graphique",
+      "weddings": "Mariages",
+      "sportParkour": "Sport & Parkour",
+      "landscapes": "Paysages",
+      "cityscape": "Urbain",
+      "mosaic": "Mosaïques",
+      "civilisationMag": "Magazine Civilisation",
+      "wizzyAsia": "Wizzy en Asie",
+      "sendMessage": "Envoyez-moi un message",
+      "phone": "07 78 76 44 54",
+      "email": "felix.orain@gmail.com"
+    }
   },
   "notFound": {
     "title": "404 - Page non trouvée",

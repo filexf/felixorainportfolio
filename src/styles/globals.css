@@ -10,7 +10,7 @@
 
 @import "tw-animate-css";
 
-@import './aurora-animation.css';
+@import "./aurora-animation.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -31,9 +31,10 @@
   --navbar-bg-rgb: 255, 255, 255;
   --footer-bg: #2e2e32;
   --footer-text: #ffffff;
-  --gradient-start: #64748b ;  /* Plus sombre que #64748b */
-  --gradient-middle: #0369a1;  /* Plus sombre que #0369a1 */
-  --gradient-end: #0284c7;  /* Plus sombre que #0284c7 */
+  --footer-text-light: #fefefe;
+  --gradient-start: #64748b; /* Plus sombre que #64748b */
+  --gradient-middle: #0369a1; /* Plus sombre que #0369a1 */
+  --gradient-end: #0284c7; /* Plus sombre que #0284c7 */
   --dot-color: #e5e7eb; /* Couleur des points en mode clair */
   --sidebar-bg: #ffffff;
   --radius: 0.625rem;
@@ -62,9 +63,10 @@
   --navbar-bg-rgb: 23, 31, 46;
   --footer-bg: #171f2e;
   --footer-text: #f3f4f6;
-  --gradient-start: #64748b;  /* Plus sombre que #94a3b8 */
-  --gradient-middle: #0ea5e9;  /* Plus sombre que #7dd3fc */
-  --gradient-end: #0284c7;  /* Plus sombre que #38bdf8 */
+  --footer-text-light: #f2f2f2;
+  --gradient-start: #64748b; /* Plus sombre que #94a3b8 */
+  --gradient-middle: #0ea5e9; /* Plus sombre que #7dd3fc */
+  --gradient-end: #0284c7; /* Plus sombre que #38bdf8 */
   --dot-color: #232c3a; /* Couleur des points en mode sombre */
   --sidebar-bg: #1f2937; /* Couleur de fond de la sidebar en mode sombre */
   --background: oklch(0.145 0 0);

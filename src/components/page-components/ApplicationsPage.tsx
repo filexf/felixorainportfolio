@@ -1,14 +1,8 @@
-"use client";
-
-import Image from "next/image";
-import Link from "next/link";
-import {
-  ProjectCard,
-  projects,
-} from "@/components/applications-components/ProjectCard";
+import GitHubButton from "@/components/applications-components/GitHubButton";
+import ProjectsGrid from "@/components/applications-components/ProjectsGrid";
 import Reveal from "@/components/Reveal";
-import { useTranslations } from "next-intl";
-import { useTheme } from "@/context/ThemeContext";
+import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 
 interface TechStackItem {
   name: string;
@@ -33,7 +27,6 @@ const techStack: TechStackItem[] = [
   { name: "Bootstrap", icon: "/icons/Tech stack icons/Bootstrap-icon.svg" },
 ];
 
-
 interface TechStackIconProps {
   name: string;
   icon: string;
@@ -42,7 +35,7 @@ interface TechStackIconProps {
 // Reusable Tech Stack Icon component
 function TechStackIcon({ name, icon }: TechStackIconProps) {
   return (
-    <div className="border-2px mb-1 flex items-center gap-2 rounded-3xl border-1 border-gray-200 bg-secondary px-3 py-1 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200 sm:gap-3 sm:px-6 sm:py-2">
+    <div className="border-2px bg-secondary mb-1 flex items-center gap-2 rounded-3xl border-1 border-gray-200 px-3 py-1 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200 sm:gap-3 sm:px-6 sm:py-2">
       <p className="text-gradient text-sm font-bold sm:text-base">{name}</p>
       <Image
         src={icon}
@@ -55,9 +48,8 @@ function TechStackIcon({ name, icon }: TechStackIconProps) {
   );
 }
 
-export default function ApplicationsPage() {
-  const { darkMode } = useTheme();
-  const t = useTranslations();
+export default async function ApplicationsPage() {
+  const t = await getTranslations();
 
   return (
     <Reveal>
@@ -69,33 +61,10 @@ export default function ApplicationsPage() {
           <p className="body-font mx-auto max-w-5xl px-2 text-center">
             {t("applications.desc")}
           </p>
-          <Link
-            href="https://github.com/filexf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="border-2px flex items-center gap-3 rounded-3xl border-1 border-gray-200 bg-secondary px-4 py-2 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200 sm:gap-5 sm:px-6 sm:py-3">
-              <p className="text-gradient text-bold text-sm sm:text-lg md:text-xl">
-                {t("applications.github")}
-              </p>
-              <Image
-                src={
-                  darkMode
-                    ? "/icons/Main-icons/Github-icon-white.svg"
-                    : "/icons/Tech stack icons/Github-icon.svg"
-                }
-                alt="GitHub logo icon"
-                width={32}
-                height={32}
-                className="h-8 w-8 hover:scale-102 sm:h-10 sm:w-10"
-              />
-            </div>
-          </Link>
+          <GitHubButton />
 
           {/* Projects Section */}
-          {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
-          ))}
+          <ProjectsGrid />
 
           {/* Tech Stack Section */}
           <Reveal>
