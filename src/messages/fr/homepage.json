@@ -19,15 +19,18 @@
   "cardData": {
     "webDevelopment": {
       "title": "Développement Web",
-      "text": "Le développement web allie créativité et résolution de problèmes, s'inspirant de mon expérience en photographie."
+      "text": "Le développement web allie créativité et résolution de problèmes, s'inspirant de mon expérience en photographie.",
+      "buttonText": "Voir applications"
     },
     "photography": {
       "title": "Photographie",
-      "text": "Découvrir la photographie a relié mes passions pour l'art et la narration, me permettant de capturer des moments uniques."
+      "text": "Découvrir la photographie a relié mes passions pour l'art et la narration, me permettant de capturer des moments uniques.",
+      "buttonText": "Voir photos"
     },
     "design": {
       "title": "Design",
-      "text": "J'ai créé et vendu plus de 500 exemplaires de 2 livres sur mon voyage en Asie du Sud-Est, avec mes photos et textes."
+      "text": "J'ai créé et vendu plus de 500 exemplaires de 2 livres sur mon voyage en Asie du Sud-Est, avec mes photos et textes.",
+      "buttonText": "Voir livres"
     }
   },
   "webdevsection": {

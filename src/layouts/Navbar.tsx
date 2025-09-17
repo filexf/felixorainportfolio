@@ -476,6 +476,51 @@ const Navbar = ({
           </div>
         </>
       )}
+
+      {/* SEO Hidden Navigation Links - Visible pour les bots, invisible pour les utilisateurs */}
+      <div className="sr-only" aria-label="Navigation Links for Search Engines">
+        <h2>Site Navigation</h2>
+        <nav>
+          <ul>
+            <li>
+              <Link href="/">{t("navbar.home")}</Link>
+            </li>
+            <li>
+              <Link href="/applications">{t("navbar.applications")}</Link>
+            </li>
+            <li>
+              <Link href="/photos">{t("navbar.photos")}</Link>
+            </li>
+            <li>
+              <Link href="/photos/wedding">{t("navbar.wedding")}</Link>
+            </li>
+            <li>
+              <Link href="/photos/sport">{t("navbar.sport")}</Link>
+            </li>
+            <li>
+              <Link href="/photos/landscape">{t("navbar.landscape")}</Link>
+            </li>
+            <li>
+              <Link href="/photos/cityscape">{t("navbar.cityscape")}</Link>
+            </li>
+            <li>
+              <Link href="/photos/mosaic">{t("navbar.mosaic")}</Link>
+            </li>
+            <li>
+              <Link href="/books">{t("navbar.books")}</Link>
+            </li>
+            <li>
+              <Link href="/books/civilisation">{t("navbar.civilisation")}</Link>
+            </li>
+            <li>
+              <Link href="/books/wizzyenasie">{t("navbar.wizzyenasie")}</Link>
+            </li>
+            <li>
+              <Link href="/contact">{t("navbar.contact")}</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </>
   );
 };

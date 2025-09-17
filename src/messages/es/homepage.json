@@ -19,15 +19,18 @@
   "cardData": {
     "webDevelopment": {
       "title": "Desarrollo Web",
-      "text": "El desarrollo web combina creatividad y resolución de problemas, inspirándose en mi experiencia en fotografía."
+      "text": "El desarrollo web combina creatividad y resolución de problemas, inspirándose en mi experiencia en fotografía.",
+      "buttonText": "Ver aplicaciones"
     },
     "photography": {
       "title": "Fotografía",
-      "text": "Descubrir la fotografía conectó mis pasiones por el arte y la narración, permitiéndome capturar momentos únicos."
+      "text": "Descubrir la fotografía conectó mis pasiones por el arte y la narración, permitiéndome capturar momentos únicos.",
+      "buttonText": "Ver fotos"
     },
     "design": {
       "title": "Diseño",
-      "text": "Creé y vendí más de 500 copias de 2 libros sobre mi viaje en el sudeste asiático, con mis fotos y textos."
+      "text": "Creé y vendí más de 500 copias de 2 libros sobre mi viaje en el sudeste asiático, con mis fotos y textos.",
+      "buttonText": "Ver libros"
     }
   },
   "webdevsection": {

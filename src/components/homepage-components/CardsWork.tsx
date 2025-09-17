@@ -17,6 +17,7 @@ export default function CardsWork() {
     icon: string;
     text: string;
     path: string;
+    buttonText: string; // Ajout du texte personnalisé pour le bouton
   }
 
   const cardData: CardData[] = [
@@ -25,18 +26,21 @@ export default function CardsWork() {
       icon: "/icons/Main-icons/Web-development-icon.svg",
       text: t("cardData.webDevelopment.text"),
       path: "/applications",
+      buttonText: t("cardData.webDevelopment.buttonText"), // Texte spécifique pour applications
     },
     {
       title: t("cardData.photography.title"),
       icon: "/icons/Main-icons/Photography-icon.svg",
       text: t("cardData.photography.text"),
       path: "/photos",
+      buttonText: t("cardData.photography.buttonText"), // Texte spécifique pour photos
     },
     {
       title: t("cardData.design.title"),
       icon: "/icons/Main-icons/Designs-icon.svg",
       text: t("cardData.design.text"),
       path: "/books",
+      buttonText: t("cardData.design.buttonText"), // Texte spécifique pour livres/design
     },
   ];
 
@@ -69,6 +73,7 @@ export default function CardsWork() {
                   icon={card.icon}
                   text={card.text}
                   path={card.path}
+                  buttonText={card.buttonText} // Passage du texte personnalisé
                 />
               ))}
             </div>
@@ -84,11 +89,11 @@ interface CardProps {
   title: string;
   text: string;
   path: string;
+  buttonText: string; // Ajout du texte personnalisé
 }
 
-const Card = ({ icon, title, text, path }: CardProps) => {
+const Card = ({ icon, title, text, path, buttonText }: CardProps) => {
   const { darkMode } = useTheme();
-  const t = useTranslations();
   return (
     <div
       className={`group vertical-animation mx-1 my-1 flex w-[280px] max-w-[90vw] flex-col items-center justify-center gap-2 rounded-2xl border px-3 py-4 shadow-md backdrop-blur-sm transition-colors duration-300 sm:mx-2 sm:my-2 sm:h-[340px] sm:w-[290px] sm:gap-4 sm:rounded-3xl sm:px-4 sm:py-5 md:h-[380px] md:w-[300px] md:gap-6 md:px-6 md:py-7 lg:gap-8 ${
@@ -128,7 +133,7 @@ const Card = ({ icon, title, text, path }: CardProps) => {
           className="mt-1 w-full max-w-[90%] rounded-xl border px-3 py-1.5 text-xs font-semibold transition-all duration-300 ease-in-out hover:border-transparent hover:bg-gray-900 hover:text-white sm:mt-2 sm:rounded-2xl sm:px-4 sm:py-2 sm:text-sm md:px-5"
         >
           <span className="flex items-center justify-center gap-1 sm:gap-2">
-            {t("readMore")}
+            {buttonText}
             <ChevronRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-2 sm:h-4 sm:w-4" />
           </span>
         </ButtonLink>
