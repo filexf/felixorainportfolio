@@ -25,7 +25,7 @@ export default function CardsWork() {
       icon: Code,
       text: t("cardData.webDevelopment.text"),
       path: "/applications",
-      buttonText: t("cardData.webDevelopment.buttonText"),
+      buttonText: t("cardData.webDevelopment.buttonText"), // Texte spécifique pour applications
     },
     {
       title: t("cardData.photography.title"),
