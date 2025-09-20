@@ -39,7 +39,7 @@ export const projects: Project[] = [
     description: "lifoAI",
     image: "/images/Photo-projets-dev/LIFO-Logo-light-BG.png",
     githubLink: "https://github.com/lifo-ai",
-    websiteLink: "https://clownfish-app-y2uru.ondigitalocean.app/",
+    websiteLink: "https://lifo-app.com",
   },
   {
     title: "gis",
