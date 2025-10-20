@@ -48,17 +48,41 @@
     {
       "name": "Projets de développement web",
       "url": "/applications",
-      "description": "Voir mes projets de développement web"
+      "description": "Voir mes projets de développement web",
+      "icons": [
+        {
+          "src": "/icons/Favicons/favicon-16x16.png",
+          "sizes": "16x16",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
     },
     {
       "name": "Photographie",
       "url": "/photos",
-      "description": "Voir mes travaux photographiques"
+      "description": "Voir mes travaux photographiques",
+      "icons": [
+        {
+          "src": "/icons/Favicons/favicon-16x16.png",
+          "sizes": "16x16",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
     },
     {
       "name": "Books",
       "url": "/books",
-      "description": "Découvrir mes publications et livres"
+      "description": "Découvrir mes publications et livres",
+      "icons": [
+        {
+          "src": "/icons/Favicons/favicon-16x16.png",
+          "sizes": "16x16",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
     }
   ],
   "related_applications": [],
