@@ -2,8 +2,10 @@
   "name": "Félix Orain Portfolio",
   "short_name": "F.Orain",
   "description": "Portfolio de Félix Orain - Développeur web, photographe et designer basé à Paris",
+  "id": "/",
   "start_url": "/",
   "display": "standalone",
+  "display_override": ["window-controls-overlay"],
   "orientation": "any",
   "background_color": "#ffffff",
   "theme_color": "#111827",
@@ -35,13 +37,25 @@
       "src": "/icons/Favicons/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/Favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "/icons/Favicons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/Favicons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "shortcuts": [
@@ -51,10 +65,9 @@
       "description": "Voir mes projets de développement web",
       "icons": [
         {
-          "src": "/icons/Favicons/favicon-16x16.png",
-          "sizes": "16x16",
-          "type": "image/png",
-          "purpose": "any"
+          "src": "/icons/Main-icons/Web-development-icon.svg",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
         }
       ]
     },
@@ -64,10 +77,9 @@
       "description": "Voir mes travaux photographiques",
       "icons": [
         {
-          "src": "/icons/Favicons/favicon-16x16.png",
-          "sizes": "16x16",
-          "type": "image/png",
-          "purpose": "any"
+          "src": "/icons/Main-icons/Photography-icon.svg",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
         }
       ]
     },
@@ -77,10 +89,9 @@
       "description": "Découvrir mes publications et livres",
       "icons": [
         {
-          "src": "/icons/Favicons/favicon-16x16.png",
-          "sizes": "16x16",
-          "type": "image/png",
-          "purpose": "any"
+          "src": "/icons/Main-icons/Designs-icon.svg",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
         }
       ]
     }
