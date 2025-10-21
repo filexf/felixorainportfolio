@@ -71,6 +71,23 @@
           "purpose": "any"
         }
       ],
+      "name": "Open Homepage",
+      "short_name": "Homepage",
+      "url": "/",
+      "description": "Accueil du portfolio de Félix Orain",
+      "icons": [
+        {
+          "src": "/icons/Main-icons/Logo-website-icon.svg",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Open Applications",
+      "short_name": "Applications",
+      "url": "/applications",
+      "description": "Applications de Félix Orain",
       "icons": [
         {
           "src": "/icons/Main-icons/Web-development-icon.svg",
