@@ -58,44 +58,6 @@
       "purpose": "maskable"
     }
   ],
-  "shortcuts": [
-    {
-      "name": "Projets de développement web",
-      "url": "/applications",
-      "description": "Voir mes projets de développement web",
-      "icons": [
-        {
-          "src": "/icons/Main-icons/Web-development-icon.svg",
-          "sizes": "96x96",
-          "type": "image/svg+xml"
-        }
-      ]
-    },
-    {
-      "name": "Photographie",
-      "url": "/photos",
-      "description": "Voir mes travaux photographiques",
-      "icons": [
-        {
-          "src": "/icons/Main-icons/Photography-icon.svg",
-          "sizes": "96x96",
-          "type": "image/svg+xml"
-        }
-      ]
-    },
-    {
-      "name": "Books",
-      "url": "/books",
-      "description": "Découvrir mes publications et livres",
-      "icons": [
-        {
-          "src": "/icons/Main-icons/Designs-icon.svg",
-          "sizes": "96x96",
-          "type": "image/svg+xml"
-        }
-      ]
-    }
-  ],
   "related_applications": [],
   "iarc_rating_id": ""
 }
