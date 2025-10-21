@@ -60,16 +60,39 @@
   ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   "shortcuts": [
     {
       "name": "Projets de développement web",
       "url": "/applications",
       "description": "Voir mes projets de développement web",
+=======
+  "shortcuts": [
+    {
+      "name": "Open Homepage",
+      "short_name": "Homepage",
+      "url": "/",
+      "description": "Accueil du portfolio de Félix Orain",
+      "icons": [
+        {
+          "src": "/icons/Main-icons/Logo-website-icon.svg",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Open Applications",
+      "short_name": "Applications",
+      "url": "/applications",
+      "description": "Applications de Félix Orain",
+>>>>>>> 0e9c16c (🔧 Manifest update - Added new shortcuts for homepage and applications with corresponding icons for improved user navigation.)
       "icons": [
         {
           "src": "/icons/Main-icons/Web-development-icon.svg",
           "sizes": "96x96",
+<<<<<<< HEAD
           "type": "image/svg+xml"
         }
       ]
@@ -102,6 +125,14 @@
 >>>>>>> 530e412 (🔧 Manifest update - Added new icons and improved display properties for better application integration.)
 =======
 >>>>>>> f6c5994 (🔧 Manifest update - Removed shortcuts for web development, photography, and books to streamline application integration.)
+=======
+          "type": "image/png"
+        }
+      ]
+    }
+
+  ],
+>>>>>>> 0e9c16c (🔧 Manifest update - Added new shortcuts for homepage and applications with corresponding icons for improved user navigation.)
   "related_applications": [],
   "iarc_rating_id": ""
 }
