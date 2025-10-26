@@ -1,4 +1,4 @@
-import BooksGallery from "@/components/photos-components/BooksGallery";
+import BooksGallery from "@/components/books-components/BooksGallery";
 
 interface GalleryImage {
   src: string;

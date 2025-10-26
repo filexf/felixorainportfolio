@@ -1,11 +1,10 @@
 "use client";
 
-import Image from "next/image";
-
-import { ButtonLink } from "@/components/ui/button"; // Importation du composant ButtonLink
+import { ButtonLink } from "@/components/ui/button";
 import { useTheme } from "@/context/ThemeContext";
-import { ChevronRight } from "lucide-react"; // Importation de l'icône
+import { Brush, Camera, ChevronRight, Code } from "lucide-react";
 import { useTranslations } from "next-intl";
+import React from "react";
 
 import Reveal from "@/components/Reveal";
 
@@ -14,29 +13,33 @@ export default function CardsWork() {
 
   interface CardData {
     title: string;
-    icon: string;
+    icon: React.ComponentType<{ className?: string }>;
     text: string;
     path: string;
+    buttonText: string;
   }
 
   const cardData: CardData[] = [
     {
       title: t("cardData.webDevelopment.title"),
-      icon: "/icons/Main-icons/Web-development-icon.svg",
+      icon: Code,
       text: t("cardData.webDevelopment.text"),
       path: "/applications",
+      buttonText: t("cardData.webDevelopment.buttonText"),
     },
     {
       title: t("cardData.photography.title"),
-      icon: "/icons/Main-icons/Photography-icon.svg",
+      icon: Camera,
       text: t("cardData.photography.text"),
       path: "/photos",
+      buttonText: t("cardData.photography.buttonText"),
     },
     {
       title: t("cardData.design.title"),
-      icon: "/icons/Main-icons/Designs-icon.svg",
+      icon: Brush,
       text: t("cardData.design.text"),
       path: "/books",
+      buttonText: t("cardData.design.buttonText"),
     },
   ];
 
@@ -44,31 +47,36 @@ export default function CardsWork() {
     <>
       <Reveal>
         <div
-          className="mt-8 flex flex-col items-center justify-center gap-4 sm:mt-10 sm:gap-6 md:mt-14 md:gap-8"
+          className="mt-8 flex flex-col items-center justify-center gap-6 sm:mt-10 sm:gap-8 md:mt-14 md:gap-10"
           id="latest-works"
         >
-          <h2 className="text-gradient text-center text-3xl leading-[normal] font-bold sm:text-4xl md:text-4xl lg:text-6xl">
-            {t("portfolio.title")}
-          </h2>
+          <div className="text-center">
+            <h2 className="text-gradient text-3xl leading-tight font-bold sm:text-4xl md:text-5xl lg:text-6xl">
+              {t("portfolio.title")}
+            </h2>
+            <div className="mt-2 flex items-center justify-center gap-2"></div>
+          </div>
 
-          <div className="flex w-full max-w-4xl flex-col gap-4 px-4 text-center">
-            <p className="text-sm font-medium sm:text-base md:text-lg lg:text-xl">
+          <div className="flex w-full max-w-5xl flex-col gap-4 px-4 text-center">
+            <p className="text-base font-medium text-gray-700 sm:text-lg md:text-xl lg:text-2xl dark:text-gray-300">
               {t("portfolio.intro")}
             </p>
-            <p className="text-sm text-gray-600 italic sm:text-base dark:text-gray-300">
+            <p className="text-sm text-gray-600 italic sm:text-base dark:text-gray-400">
               {t("portfolio.subIntro")}
             </p>
           </div>
 
           <Reveal>
-            <div className="my-2 flex flex-col flex-wrap items-center justify-center gap-4 sm:my-4 sm:gap-6 md:my-6 md:flex-row md:gap-8 lg:gap-10">
-              {cardData.map((card) => (
+            <div className="my-4 flex flex-col flex-wrap items-center justify-center gap-6 sm:my-6 sm:gap-8 md:my-8 md:flex-row md:gap-10 lg:gap-12">
+              {cardData.map((card, index) => (
                 <Card
                   key={card.title}
                   title={card.title}
                   icon={card.icon}
                   text={card.text}
                   path={card.path}
+                  buttonText={card.buttonText}
+                  delay={index * 100}
                 />
               ))}
             </div>
@@ -80,58 +88,98 @@ export default function CardsWork() {
 }
 
 interface CardProps {
-  icon: string;
+  icon: React.ComponentType<{ className?: string }>;
   title: string;
   text: string;
   path: string;
+  buttonText: string;
+  delay: number;
 }
 
-const Card = ({ icon, title, text, path }: CardProps) => {
+const Card = ({
+  icon: IconComponent,
+  title,
+  text,
+  path,
+  buttonText,
+  delay,
+}: CardProps) => {
   const { darkMode } = useTheme();
-  const t = useTranslations();
+
   return (
     <div
-      className={`group vertical-animation mx-1 my-1 flex w-[280px] max-w-[90vw] flex-col items-center justify-center gap-2 rounded-2xl border px-3 py-4 shadow-md backdrop-blur-sm transition-colors duration-300 sm:mx-2 sm:my-2 sm:h-[340px] sm:w-[290px] sm:gap-4 sm:rounded-3xl sm:px-4 sm:py-5 md:h-[380px] md:w-[300px] md:gap-6 md:px-6 md:py-7 lg:gap-8 ${
+      className={`group vertical-animation relative overflow-hidden rounded-3xl border transition-all duration-300 ease-in-out ${
         darkMode
-          ? "border-gray-700 bg-gradient-to-br from-gray-700 to-gray-900"
-          : "from-gray_50 border-gray-200 bg-gradient-to-br to-gray-200"
+          ? "border-gray-700/50 bg-gradient-to-br from-gray-800/80 via-gray-900/70 to-gray-800/80 backdrop-blur-xl"
+          : "border-gray-200/50 bg-gradient-to-br from-white/90 via-gray-50/80 to-white/90 backdrop-blur-xl"
       }`}
+      style={{
+        animationDelay: `${delay}ms`,
+        width: "300px",
+        height: "400px",
+      }}
     >
-      {/* Icône - Plus petite sur mobile */}
-      <div className="rounded-full bg-gray-200 p-1.5 duration-300 group-hover:bg-gray-200 sm:p-2 md:p-2.5">
-        <Image
-          className="h-8 w-8 transition-transform duration-300 group-hover:scale-110 sm:h-10 sm:w-10 md:h-12 md:w-12"
-          src={icon}
-          alt={title}
-          width={48}
-          height={48}
-        />
-      </div>
+      {/* Subtle accent gradient - transition plus douce */}
+      <div
+        className="absolute inset-0 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-10"
+        style={{
+          background: `linear-gradient(135deg, var(--gradient-start), var(--gradient-middle), var(--gradient-end))`,
+        }}
+      />
 
-      {/* Contenu - Espacement optimisé */}
-      <div className="flex flex-col items-center justify-center gap-2 text-center sm:gap-3 md:gap-4 lg:gap-5">
-        {/* Titre - Plus petit sur mobile */}
-        <h3 className="text-gradient text-base leading-tight font-bold sm:text-lg md:text-xl">
-          {title}
-        </h3>
+      {/* Nouveau gradient gris subtil */}
+      <div
+        className="absolute inset-0 opacity-30"
+        style={{
+          background: darkMode
+            ? "radial-gradient(circle at top left, var(--card-gradient-dark-1) 0%, transparent 70%), radial-gradient(circle at bottom right, var(--card-gradient-dark-2) 0%, transparent 70%)"
+            : "radial-gradient(circle at top left, var(--card-gradient-light-1) 0%, transparent 70%), radial-gradient(circle at bottom right, var(--card-gradient-light-2) 0%, transparent 70%)",
+        }}
+      />
 
-        {/* Texte - Hauteur adaptative */}
-        <p className="min-h-[60px] text-xs leading-relaxed sm:min-h-[70px] sm:text-sm md:min-h-[80px] md:text-base">
-          {text}
-        </p>
+      {/* Content */}
+      <div className="relative z-10 flex h-full flex-col items-center justify-between p-6">
+        {/* Icon section */}
+        <div className="flex flex-col items-center gap-6">
+          <div
+            className="relative transform rounded-4xl p-4 shadow-lg transition-all duration-300 ease-in-out group-hover:scale-105"
+            style={{
+              background: `linear-gradient(135deg, var(--gradient-start), var(--gradient-middle), var(--gradient-end))`,
+            }}
+          >
+            <IconComponent className="h-8 w-8 text-white" />
+            {/* <div className="absolute inset-0 rounded-2xl bg-white/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" /> */}
+          </div>
 
-        {/* ButtonLink au lieu du bouton personnalisé */}
-        <ButtonLink
-          href={path}
-          variant="outline"
-          size="sm"
-          className="mt-1 w-full max-w-[90%] rounded-xl border px-3 py-1.5 text-xs font-semibold transition-all duration-300 ease-in-out hover:border-transparent hover:bg-gray-900 hover:text-white sm:mt-2 sm:rounded-2xl sm:px-4 sm:py-2 sm:text-sm md:px-5"
-        >
-          <span className="flex items-center justify-center gap-1 sm:gap-2">
-            {t("readMore")}
-            <ChevronRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-2 sm:h-4 sm:w-4" />
-          </span>
-        </ButtonLink>
+          <div className="text-center">
+            <h3 className="text-gradient text-xl leading-tight font-bold sm:text-2xl">
+              {title}
+            </h3>
+          </div>
+        </div>
+
+        {/* Text section */}
+        <div className="flex flex-1 items-center justify-center">
+          <p className="text-center text-base leading-relaxed text-gray-600 dark:text-gray-300">
+            {text}
+          </p>
+        </div>
+
+        {/* Button section - keeping current button style */}
+        <div className="w-full">
+          <ButtonLink
+            href={path}
+            variant="outline"
+            size="sm"
+            className="group/btn relative w-full overflow-hidden rounded-2xl border-0 bg-gradient-to-r from-gray-900 to-gray-700 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:from-gray-800 hover:to-gray-600 hover:shadow-xl dark:from-gray-100 dark:to-gray-300 dark:text-gray-900 dark:hover:from-white dark:hover:to-gray-100"
+          >
+            <span className="relative z-10 flex items-center justify-center gap-2">
+              {buttonText}
+              <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 transition-opacity duration-300 group-hover/btn:opacity-100" />
+          </ButtonLink>
+        </div>
       </div>
     </div>
   );

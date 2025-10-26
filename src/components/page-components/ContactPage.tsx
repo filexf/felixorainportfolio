@@ -1,5 +1,3 @@
-// src/components/page-components/ContactPage.tsx
-
 import ContactForm from "@/components/ContactForm";
 import SectionWrapper from "@/components/homepage-components/SectionWrapper";
 import Reveal from "@/components/Reveal";

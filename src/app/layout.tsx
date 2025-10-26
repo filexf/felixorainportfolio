@@ -112,16 +112,16 @@ export const metadata: Metadata = {
     siteName: "Félix Orain - Portfolio",
     images: [
       {
-        url: "https://www.felix-orain.com/images/Photo-GGB/Photo_GGB_Landing_page.webp",
+        url: "https://www.felix-orain.com/Profile_Picture-Felix_Orain.webp",
         width: 1200,
         height: 630,
-        alt: "Portfolio de Félix Orain - Développeur web et photographe professionnel basé à Rennes",
+        alt: "Portrait de Félix Orain - Développeur web et photographe professionnel basé à Rennes",
       },
       {
-        url: "https://www.felix-orain.com/images/og-portfolio-preview.jpg",
+        url: "https://www.felix-orain.com/Profile_Picture-Felix_Orain.webp",
         width: 1080,
         height: 1080,
-        alt: "Projets créatifs de Félix Orain - Développement web et photographie",
+        alt: "Portrait de Félix Orain - Développement web et photographie",
       },
     ],
   },
@@ -134,10 +134,10 @@ export const metadata: Metadata = {
       "Développeur fullstack et photographe professionnel basé à Rennes, Bretagne. Spécialisé en Next.js, React et photographie événementielle.",
     images: [
       {
-        url: "https://www.felix-orain.com/images/Photo-GGB/Photo_GGB_Landing_page.webp",
+        url: "https://www.felix-orain.com/Profile_Picture-Felix_Orain.webp",
         width: 1200,
         height: 630,
-        alt: "Portfolio de Félix Orain - Développeur web et photographe professionnel",
+        alt: "Portrait de Félix Orain - Développeur web et photographe professionnel",
       },
     ],
     creator: "@felixorain", // Remplace par ton vrai handle Twitter

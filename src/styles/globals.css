@@ -45,6 +45,10 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
+
+  /* Nouvelles variables pour les gradients gris */
+  --card-gradient-light-1: #f1f5f9;
+  --card-gradient-light-2: #e2e8f0;
 }
 
 /* Mode sombre */
@@ -76,6 +80,10 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
+
+  /* Nouvelles variables pour les gradients gris en mode sombre */
+  --card-gradient-dark-1: #2a3441;
+  --card-gradient-dark-2: #232c3a;
 }
 
 /* Désactiver l'auto dark mode du système */

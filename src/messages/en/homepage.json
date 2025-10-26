@@ -19,15 +19,18 @@
   "cardData": {
     "webDevelopment": {
       "title": "Web Development",
-      "text": "Web development seamlessly merges creativity and problem-solving, drawing inspiration from my photography background."
+      "text": "Web development seamlessly merges creativity and problem-solving, drawing inspiration from my photography background.",
+      "buttonText": "View applications"
     },
     "photography": {
       "title": "Photography",
-      "text": "Discovering photography bridged my passions for art and storytelling, letting me capture unique moments."
+      "text": "Discovering photography bridged my passions for art and storytelling, letting me capture unique moments.",
+      "buttonText": "View photos"
     },
     "design": {
       "title": "Design",
-      "text": "I edited and sold 500+ copies of 2 books documenting my journey in Southeast Asia. All photos and text are mine."
+      "text": "I edited and sold 500+ copies of 2 books documenting my journey in Southeast Asia. All photos and text are mine.",
+      "buttonText": "View books"
     }
   },
   "webdevsection": {

@@ -2,8 +2,10 @@
   "name": "Félix Orain Portfolio",
   "short_name": "F.Orain",
   "description": "Portfolio de Félix Orain - Développeur web, photographe et designer basé à Paris",
+  "id": "/",
   "start_url": "/",
   "display": "standalone",
+  "display_override": ["window-controls-overlay"],
   "orientation": "any",
   "background_color": "#ffffff",
   "theme_color": "#111827",
@@ -35,32 +37,168 @@
       "src": "/icons/Favicons/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/Favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "/icons/Favicons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/Favicons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   "shortcuts": [
     {
-      "name": "Projets de développement web",
+      "name": "Open Homepage",
+      "short_name": "Homepage",
+      "url": "/",
+      "description": "Accueil du portfolio de Félix Orain",
+      "icons": [
+        {
+          "src": "/icons/Main-icons/Logo-website-icon.svg",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Open Applications",
+      "short_name": "Applications",
       "url": "/applications",
-      "description": "Voir mes projets de développement web"
+<<<<<<< HEAD
+      "description": "Voir mes projets de développement web",
+      "icons": [
+        {
+          "src": "/icons/Favicons/favicon-16x16.png",
+          "sizes": "16x16",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ],
+=======
+<<<<<<< HEAD
+      "description": "Voir mes projets de développement web",
+=======
+  "shortcuts": [
+    {
+>>>>>>> d52a0d15c947a79db1cf6a9309e658a83fbdb91a
+      "name": "Open Homepage",
+      "short_name": "Homepage",
+      "url": "/",
+      "description": "Accueil du portfolio de Félix Orain",
+      "icons": [
+        {
+          "src": "/icons/Main-icons/Logo-website-icon.svg",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Open Applications",
+      "short_name": "Applications",
+      "url": "/applications",
+      "description": "Applications de Félix Orain",
+<<<<<<< HEAD
+=======
+>>>>>>> 0e9c16c (🔧 Manifest update - Added new shortcuts for homepage and applications with corresponding icons for improved user navigation.)
+=======
+      "description": "Applications de Félix Orain",
+>>>>>>> 0e9c16c1b2d409604886ccc82c6aa339a12a0114
+>>>>>>> d52a0d15c947a79db1cf6a9309e658a83fbdb91a
+      "icons": [
+        {
+          "src": "/icons/Main-icons/Web-development-icon.svg",
+          "sizes": "96x96",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d52a0d15c947a79db1cf6a9309e658a83fbdb91a
+          "type": "image/svg+xml"
+        }
+      ]
     },
     {
       "name": "Photographie",
       "url": "/photos",
-      "description": "Voir mes travaux photographiques"
+      "description": "Voir mes travaux photographiques",
+      "icons": [
+        {
+<<<<<<< HEAD
+          "src": "/icons/Favicons/favicon-16x16.png",
+          "sizes": "16x16",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ],
+      "icons": [
+        {
+=======
+>>>>>>> d52a0d15c947a79db1cf6a9309e658a83fbdb91a
+          "src": "/icons/Main-icons/Photography-icon.svg",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
     },
     {
       "name": "Books",
       "url": "/books",
-      "description": "Découvrir mes publications et livres"
+      "description": "Découvrir mes publications et livres",
+      "icons": [
+        {
+<<<<<<< HEAD
+          "src": "/icons/Favicons/favicon-16x16.png",
+          "sizes": "16x16",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ],
+      "icons": [
+        {
+          "src": "/icons/Main-icons/Designs-icon.svg",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+=======
+          "src": "/icons/Main-icons/Designs-icon.svg",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+=======
+          "type": "image/png"
+>>>>>>> 0e9c16c1b2d409604886ccc82c6aa339a12a0114
+>>>>>>> d52a0d15c947a79db1cf6a9309e658a83fbdb91a
+        }
+      ]
     }
+
   ],
+>>>>>>> 530e412 (🔧 Manifest update - Added new icons and improved display properties for better application integration.)
+=======
+>>>>>>> f6c5994 (🔧 Manifest update - Removed shortcuts for web development, photography, and books to streamline application integration.)
+=======
+          "type": "image/png"
+        }
+      ]
+    }
+
+  ],
+>>>>>>> 0e9c16c (🔧 Manifest update - Added new shortcuts for homepage and applications with corresponding icons for improved user navigation.)
   "related_applications": [],
   "iarc_rating_id": ""
 }
