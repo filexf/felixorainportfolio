@@ -1,13 +1,12 @@
 import js from "@eslint/js";
-import globals from "globals";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
 import typescriptEslint from "@typescript-eslint/eslint-plugin"; // Ajout de cet import
 import typescriptParser from "@typescript-eslint/parser"; // Ajout du parser
-
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import globals from "globals";
 
 export default [
-  { ignores: ["dist"] },
+  { ignores: ["dist", ".next/**", "node_modules/**", "build/**", "out/**"] },
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
