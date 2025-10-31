@@ -1,13 +1,10 @@
 import { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
-
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
-  eslint: {
-    // Ignorer les erreurs ESLint pendant le build
-    ignoreDuringBuilds: true,
-  },
+  // Note: eslint.ignoreDuringBuilds was removed in Next.js 16
+  // ESLint is now handled through the eslint.config.js file
 };
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
