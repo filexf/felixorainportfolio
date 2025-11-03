@@ -12,9 +12,9 @@ export default function AboutSection() {
   const locale = useLocale();
 
   const resumeMap = {
-    en: "/Felix_Orain_Web_Developer_Resume .pdf",
+    en: "/Felix_Orain_Web_Developer_Resume.pdf",
     fr: "/Felix_Orain_CV_Developpeur_Web.pdf",
-    es: "/Felix_Orain_Web_Developer_Resume .pdf", // fallback to English if Spanish
+    es: "/Felix_Orain_Web_Developer_Resume.pdf", // fallback to English if Spanish
   };
   const resumeFile =
     resumeMap[locale as keyof typeof resumeMap] || resumeMap.en;

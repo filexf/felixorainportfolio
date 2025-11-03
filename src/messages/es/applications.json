@@ -1,7 +1,7 @@
 {
   "applications": {
     "title": "Aplicaciones",
-    "desc": "Desarrollador FullStack, creo aplicaciones web de alto rendimiento con Next.js, React y Tailwind CSS en el frontend, complementado con Ruby on Rails e integraciones API en el backend. Esta doble experiencia me permite ofrecer soluciones web completas, desde el diseño responsivo hasta la arquitectura técnica. Me comprometo a producir interfaces elegantes e intuitivas al tiempo que garantizo la robustez y la escalabilidad, para proyectos que combinan el rendimiento, la experiencia del usuario y la solidez técnica.",
+    "desc": "Desarrollador web especializado en React, Next.js y TypeScript, diseño aplicaciones de alto rendimiento y centradas en el usuario. Desde la arquitectura técnica hasta el diseño de interfaces, domino todo el ciclo de desarrollo front-end. Mi enfoque combina rigor técnico, optimización del rendimiento y atención a los detalles UX. Formado en fullstack (Ruby on Rails, PostgreSQL), entiendo los desafíos del back-end y colaboro eficazmente con equipos técnicos para entregar soluciones web completas y escalables.",
     "github": "Mi cuenta de GitHub",
     "techstack": "Mi stack tecnológica"
   },
@@ -13,7 +13,7 @@
     },
     "lifoAI": {
       "title": "LIFO.AI",
-      "desc": "Contribuí a la startup LIFO.AI como desarrollador frontend, construyendo una plataforma de gestión de inventarios impulsada por IA con Next.js, TypeScript y Tailwind CSS. La aplicación aprovecha algoritmos de aprendizaje automático para optimizar los niveles de stock, predecir la demanda y automatizar las decisiones de compra. Desarrollé componentes de interfaz de usuario responsivos que transforman los análisis en ideas comerciales procesables."
+      "desc": "Desarrollador frontend en Lifo.AI, startup especializada en gestión de inventarios impulsada por IA. Diseño y desarrollo de la aplicación con Next.js, TypeScript y Tailwind CSS: páginas de marketing, dashboard con filtros avanzados y escaneo OCR, sistema multilingüe, optimización del rendimiento. Implementación de infraestructura técnica (tests Jest, analytics, RGPD) y aseguramiento de calidad completo. La aplicación utiliza algoritmos de machine learning para optimizar niveles de stock, prever la demanda y automatizar decisiones de aprovisionamiento."
     },
     "sportify": {
       "title": "SPORTIFY",

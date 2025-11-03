@@ -1,7 +1,7 @@
 {
   "applications": {
     "title": "Applications",
-    "desc": "Développeur fullstack, je crée des applications web performantes avec Next.js, React et Tailwind CSS côté front, complétées par Ruby on Rails et des intégrations API côté back. Cette double expertise me permet de livrer des solutions web complètes, du design responsive à l'architecture technique. Je m'engage à produire des interfaces élégantes et intuitives tout en assurant robustesse et évolutivité, pour des projets qui allient performance, expérience utilisateur et solidité technique.",
+    "desc": "Développeur web spécialisé en React, Next.js et TypeScript, je conçois des applications performantes et centrées utilisateur. De l'architecture technique au design d'interfaces, je maîtrise l'ensemble du cycle de développement front-end. Mon approche allie rigueur technique, optimisation des performances et attention aux détails UX. Formé en fullstack (Ruby on Rails, PostgreSQL), je comprends les enjeux back-end et collabore efficacement avec les équipes techniques pour livrer des solutions web complètes et évolutives.",
     "github": "Mon compte GitHub",
     "techstack": "Ma stack technique"
   },
@@ -13,7 +13,7 @@
     },
     "lifoAI": {
       "title": "LIFO.AI",
-      "desc": "Travail dans la startup LIFO.AI en tant que développeur frontend, création d'une plateforme de gestion des stocks propulsée par l'IA avec Next.js, TypeScript et Tailwind CSS. L'application utilise des algorithmes d'apprentissage automatique pour optimiser les niveaux de stock, prévoir la demande et automatiser les décisions d'achat. J'ai développé des composants UI responsives qui transforment les analyses en informations commerciales exploitables."
+      "desc": "Développeur frontend chez Lifo.AI, startup spécialisée dans la gestion de stocks propulsée par l'IA. Conception et développement de l'application avec Next.js, TypeScript et Tailwind CSS : pages marketing, dashboard avec filtres avancés et scan OCR, système multilingue, optimisation des performances. Mise en place de l'infrastructure technique (tests Jest, analytics, RGPD) et assurance qualité complète. L'application utilise des algorithmes de machine learning pour optimiser les niveaux de stock, prévoir la demande et automatiser les décisions d'approvisionnement."
     },
     "sportify": {
       "title": "SPORTIFY",

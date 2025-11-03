@@ -14,17 +14,14 @@ const techStack: TechStackItem[] = [
   { name: "Next.js", icon: "/icons/Tech stack icons/Next.js.svg" },
   { name: "React", icon: "/icons/Tech stack icons/React.svg" },
   { name: "TypeScript", icon: "/icons/Tech stack icons/TypeScript.svg" },
+  { name: "Supabase", icon: "/icons/Tech stack icons/Supabase.svg" },
   { name: "Ruby on Rails", icon: "/icons/Tech stack icons/Rails-icon.svg" },
-  { name: "Tailwind", icon: "/icons/Tech stack icons/Tailwind-icon.svg" },
-  { name: "Ruby", icon: "/icons/Tech stack icons/Ruby-icons.svg" },
-  { name: "JavaScript", icon: "/icons/Tech stack icons/Javascript-icon.svg" },
   { name: "PostgreSQL", icon: "/icons/Tech stack icons/Postgresql-icon.svg" },
+  { name: "Tailwind", icon: "/icons/Tech stack icons/Tailwind-icon.svg" },
+  { name: "Vercel", icon: "/icons/Tech stack icons/Vercel.svg" },
   { name: "Figma", icon: "/icons/Tech stack icons/Figma-icon.svg" },
-  { name: "HTML", icon: "/icons/Tech stack icons/HTML-icon.svg" },
-  { name: "CSS", icon: "/icons/Tech stack icons/CSS-icon.svg" },
-  { name: "Git", icon: "/icons/Tech stack icons/Git-icon.svg" },
   { name: "GitHub", icon: "/icons/Tech stack icons/Github-icon.svg" },
-  { name: "Bootstrap", icon: "/icons/Tech stack icons/Bootstrap-icon.svg" },
+  { name: "JavaScript", icon: "/icons/Tech stack icons/Javascript-icon.svg" },
 ];
 
 interface TechStackIconProps {
@@ -72,7 +69,7 @@ export default async function ApplicationsPage() {
               <h2 className="text-gradient my-2 pb-1 text-center text-3xl font-bold sm:my-4 sm:text-4xl md:text-6xl">
                 {t("applications.techstack")}
               </h2>
-              <div className="flex w-full flex-wrap items-center justify-center gap-4 sm:w-11/12 sm:gap-6 md:w-4/5 md:gap-10">
+              <div className="flex w-full flex-wrap items-center justify-center gap-4 sm:w-11/12 sm:gap-6 md:w-4/5 md:gap-10 mb-4">
                 {techStack.map((tech, index) => (
                   <TechStackIcon key={index} {...tech} />
                 ))}

@@ -1,7 +1,7 @@
 {
   "applications": {
     "title": "Applications",
-    "desc": "As a Fullstack developer, I create high-performance web applications with Next.js, React, and Tailwind CSS on the front side, supplemented by Ruby on Rails and API integrations on the back side. This double expertise allows me to deliver complete web solutions, from responsive design to technical architecture. I undertake to produce elegant and intuitive interfaces while ensuring robustness and scalability, for projects that combine performance, user experience, and technical solidity.",
+    "desc": "Web developer specialized in React, Next.js and TypeScript, I design high-performance and user-centered applications. From technical architecture to interface design, I master the entire front-end development cycle. My approach combines technical rigor, performance optimization and attention to UX details. Trained in fullstack (Ruby on Rails, PostgreSQL), I understand back-end challenges and collaborate effectively with technical teams to deliver complete and scalable web solutions.",
     "github": "My GitHub account",
     "techstack": "My tech stack"
   },
@@ -14,7 +14,7 @@
     },
     "lifoAI": {
       "title": "LIFO.AI",
-      "desc": "Work for LIFO.AI startup as a frontend developer, building an AI-driven inventory management platform with Next.js, TypeScript and Tailwind CSS. The application leverages machine learning algorithms to optimize stock levels, forecast demand, and automate purchasing decisions. I developed responsive UI components that transform analytics into actionable business insights."
+      "desc": "Frontend developer at Lifo.AI, startup specialized in AI-powered inventory management. Design and development of the application with Next.js, TypeScript and Tailwind CSS: marketing pages, dashboard with advanced filters and OCR scan, multilingual system, performance optimization. Implementation of technical infrastructure (Jest tests, analytics, GDPR) and complete quality assurance. The application uses machine learning algorithms to optimize stock levels, forecast demand and automate procurement decisions."
     },
     "sportify": {
       "title": "SPORTIFY",
