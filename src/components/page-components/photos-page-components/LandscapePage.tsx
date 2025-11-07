@@ -1,3 +1,4 @@
+import ImageGalleryStructuredData from "@/components/ImageGalleryStructuredData";
 import Gallery from "@/components/photos-components/PhotosGallery";
 import { getTranslations } from "next-intl/server";
 
@@ -83,11 +84,13 @@ export default async function LandscapePhotoPage() {
 
   return (
     <>
-      <Gallery
+      <ImageGalleryStructuredData
         title={t("title")}
+        description={t("desc")}
         images={images}
-        text={t("desc")}
+        pageUrl="https://www.felix-orain.com/photos/landscape"
       />
+      <Gallery title={t("title")} images={images} text={t("desc")} />
     </>
   );
 }

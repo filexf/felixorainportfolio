@@ -20,16 +20,23 @@ const Gallery = ({ title, images, text }: GalleryProps) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   return (
-    <div className="flex w-full justify-center pt-[40px] pb-[120px]">
-      <div className="flex flex-col gap-[40px] px-8">
-        <h1 className="text-gradient text-center text-5xl leading-normal font-bold md:text-7xl">
-          {title}
-        </h1>
-        <p className="body-font mx-auto max-w-5xl text-center">{text}</p>
+    <main className="flex w-full justify-center pt-[40px] pb-[120px]">
+      <article className="flex flex-col gap-[40px] px-8">
+        <header>
+          <h1 className="text-gradient text-center text-5xl leading-normal font-bold md:text-7xl">
+            {title}
+          </h1>
+          {text && (
+            <p className="body-font mx-auto max-w-5xl text-center">{text}</p>
+          )}
+        </header>
 
-        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 overflow-hidden px-4">
+        <section
+          className="xs:grid-cols-2 grid grid-cols-1 gap-4 overflow-hidden px-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-4"
+          aria-label={`Galerie de ${title}`}
+        >
           {images.map((image, index) => (
-            <div
+            <figure
               key={index}
               className="relative aspect-square cursor-pointer overflow-hidden rounded-md transition-all duration-300 hover:shadow-md"
               onClick={() => {
@@ -39,17 +46,21 @@ const Gallery = ({ title, images, text }: GalleryProps) => {
             >
               <Image
                 src={image.src}
-                alt={image.title}
+                alt={image.title || `${title} - Image ${index + 1}`}
                 fill
                 sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 className="rounded-md object-cover transition-all duration-300 hover:scale-[0.97]"
                 quality={85}
                 loading={index < 4 ? "eager" : "lazy"}
                 priority={index < 4}
+                aria-label={`${image.title || title} - Image ${index + 1}`}
               />
-            </div>
+              <figcaption className="sr-only">
+                {image.title || `${title} - Image ${index + 1}`}
+              </figcaption>
+            </figure>
           ))}
-        </div>
+        </section>
 
         <Lightbox
           open={open}
@@ -60,8 +71,8 @@ const Gallery = ({ title, images, text }: GalleryProps) => {
             view: ({ index }) => setCurrentIndex(index),
           }}
         />
-      </div>
-    </div>
+      </article>
+    </main>
   );
 };
 
