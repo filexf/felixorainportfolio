@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter } from "next/navigation"
-import { useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import { useTheme } from "@/context/ThemeContext"
 
 interface Language {
@@ -28,12 +28,12 @@ export default function LanguageSwitcher() {
   }
 
   // Fonction pour lire le cookie
-  const getCookieLocale = () => {
+  const getCookieLocale = useCallback(() => {
     return document.cookie
       .split("; ")
       .find((row) => row.startsWith("MYNEXTAPP_LOCALE="))
       ?.split("=")[1]
-  }
+  }, [])
 
   useEffect(() => {
     const cookieLocale = getCookieLocale()
@@ -45,7 +45,7 @@ export default function LanguageSwitcher() {
       document.cookie = `MYNEXTAPP_LOCALE=${browserLocale};`
       router.refresh()
     }
-  }, [router])
+  }, [router, getCookieLocale])
 
   // Ajoute un listener pour détecter les changements de cookie
   useEffect(() => {
@@ -61,7 +61,7 @@ export default function LanguageSwitcher() {
 
     // Nettoie l'interval au démontage
     return () => clearInterval(interval)
-  }, [locale])
+  }, [locale, getCookieLocale])
 
   // Ferme le menu déroulant si l'utilisateur clique ailleurs
   useEffect(() => {
@@ -93,6 +93,7 @@ export default function LanguageSwitcher() {
     <div className="relative" ref={dropdownRef}>
       {/* Bouton principal avec la langue actuelle et le drapeau */}
       <button
+        type="button"
         className={`flex items-center justify-center gap-1 rounded-full sm:gap-2 ${
           isOpen ? "ring-opacity-50 ring-2" : ""
         } px-2 py-1 transition-all duration-300 hover:shadow-md sm:px-3 sm:py-1.5`}
@@ -140,6 +141,7 @@ export default function LanguageSwitcher() {
             {Object.keys(languages).map((lang) => (
               <button
                 key={lang}
+                type="button"
                 className={`flex w-full items-center px-2 py-2 text-xs transition-colors duration-150 sm:px-3 sm:py-2.5 sm:text-sm ${
                   lang === locale
                     ? "bg-opacity-10 bg-slate-400 font-semibold"

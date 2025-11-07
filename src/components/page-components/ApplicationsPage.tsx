@@ -1,10 +1,10 @@
-import Image from "next/image"
-import { getTranslations } from "next-intl/server"
 import GitHubButton from "@/components/applications-components/GitHubButton"
 import ProjectsGrid from "@/components/applications-components/ProjectsGrid"
 import Reveal from "@/components/Reveal"
 import SoftwareApplicationStructuredData from "@/components/SoftwareApplicationStructuredData"
 import { projects } from "@/lib/projects"
+import { getTranslations } from "next-intl/server"
+import Image from "next/image"
 
 interface TechStackItem {
   name: string
@@ -88,8 +88,8 @@ export default async function ApplicationsPage() {
                   {t("applications.techstack")}
                 </h2>
                 <div className="mb-4 flex w-full flex-wrap items-center justify-center gap-4 sm:w-11/12 sm:gap-6 md:w-4/5 md:gap-10">
-                  {techStack.map((tech, index) => (
-                    <TechStackIcon key={index} {...tech} />
+                  {techStack.map((tech) => (
+                    <TechStackIcon key={tech.name} {...tech} />
                   ))}
                 </div>
               </section>

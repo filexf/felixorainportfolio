@@ -25,8 +25,8 @@ export default function PhotographySection() {
 
           {/* Grille de photos */}
           <div className="flex flex-wrap md:flex-nowrap justify-center gap-10">
-            {photos.map((photo, index) => (
-              <PhotoCard key={index} photo={photo} />
+            {photos.map((photo) => (
+              <PhotoCard key={photo} photo={photo} />
             ))}
           </div>
 

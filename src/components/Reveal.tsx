@@ -19,7 +19,7 @@ export default function Reveal({ children, y = 75, duration = 0.8, delay = 0.4 }
     if (isInView) {
       mainControls.start("visible")
     }
-  }, [isInView])
+  }, [isInView, mainControls])
 
   return (
     <div ref={ref} style={{ position: "relative", width: "100%", overflow: "hidden" }}>

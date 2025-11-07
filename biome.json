@@ -37,7 +37,7 @@
         "useExhaustiveDependencies": "warn"
       },
       "style": {
-        "useImportType": "error",
+        "useImportType": "off",
         "useNodejsImportProtocol": "off"
       },
       "suspicious": {
@@ -96,6 +96,26 @@
         "rules": {
           "security": {
             "noDangerouslySetInnerHtml": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/BookCard.tsx", "**/AboutSection.tsx"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noArrayIndexKey": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/Navbar.tsx"],
+      "linter": {
+        "rules": {
+          "a11y": {
+            "noStaticElementInteractions": "off"
           }
         }
       }

@@ -113,13 +113,13 @@ body {
 /* Some custom styling for the components */
 
 .bg-secondary {
-  background-color: var(--background-secondary) !important;
+  background-color: var(--background-secondary);
 }
 
 .border-gray-200,
 .border-gray-300,
 .border-gray-400 {
-  border-color: var(--border-color) !important;
+  border-color: var(--border-color);
 }
 
 /* Classes utilitaires personnalisées */

@@ -1,6 +1,8 @@
 // src/lib/emailTemplates.ts
 // Composant pour l'email de confirmation - à utiliser plus tard
 
+import type { Resend } from "resend"
+
 export interface ConfirmationEmailData {
   name: string
   email: string
@@ -104,7 +106,7 @@ export const generateConfirmationEmail = ({
  * À utiliser plus tard quand un domaine sera configuré
  */
 export const sendConfirmationEmail = async (
-  resend: any, // Resend instance
+  resend: Resend, // Resend instance
   { name, email, portfolioUrl }: ConfirmationEmailData
 ) => {
   try {

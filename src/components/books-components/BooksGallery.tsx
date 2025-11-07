@@ -36,29 +36,32 @@ export default function Gallery({ title, images }: GalleryProps) {
           aria-label={`Galerie du magazine ${title}`}
         >
           {images.map((image, index) => (
-            <figure
-              key={index}
+            <button
+              key={`${image.src}-${index}`}
+              type="button"
               className="relative aspect-[3/2] cursor-pointer overflow-hidden rounded-md transition-all duration-300 hover:shadow-md"
               onClick={() => {
                 setCurrentIndex(index)
                 setOpen(true)
               }}
+              aria-label={`Voir ${image.title || `${title} - Page ${index + 1}`}`}
             >
-              <Image
-                src={image.src}
-                alt={image.title || `${title} - Page ${index + 1}`}
-                fill
-                sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                className="rounded-md object-cover transition-all duration-300 hover:scale-[0.97]"
-                quality={85}
-                loading={index < 4 ? "eager" : "lazy"}
-                priority={index < 4}
-                aria-label={`${image.title || title} - Page ${index + 1}`}
-              />
-              <figcaption className="sr-only">
-                {image.title || `${title} - Page ${index + 1}`}
-              </figcaption>
-            </figure>
+              <figure className="relative h-full w-full">
+                <Image
+                  src={image.src}
+                  alt={image.title || `${title} - Page ${index + 1}`}
+                  fill
+                  sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  className="rounded-md object-cover transition-all duration-300 hover:scale-[0.97]"
+                  quality={85}
+                  loading={index < 4 ? "eager" : "lazy"}
+                  priority={index < 4}
+                />
+                <figcaption className="sr-only">
+                  {image.title || `${title} - Page ${index + 1}`}
+                </figcaption>
+              </figure>
+            </button>
           ))}
         </section>
 

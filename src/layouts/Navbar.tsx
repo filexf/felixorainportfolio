@@ -1,5 +1,8 @@
 "use client"
 
+import LanguageSwitcher from "@/components/LanguageSwitcher"
+import ThemeToggle from "@/components/ThemeToggle"
+import { useTheme } from "@/context/ThemeContext"
 import {
   Book,
   Building,
@@ -11,13 +14,10 @@ import {
   Trophy,
   X,
 } from "lucide-react"
+import { useTranslations } from "next-intl"
 import Image from "next/image"
 import Link from "next/link"
-import { useTranslations } from "next-intl"
 import React, { useEffect, useState } from "react"
-import LanguageSwitcher from "@/components/LanguageSwitcher"
-import ThemeToggle from "@/components/ThemeToggle"
-import { useTheme } from "@/context/ThemeContext"
 
 interface MenuItem {
   title: string
@@ -244,6 +244,7 @@ const Navbar = ({
               {item.title}
             </Link>
             <button
+              type="button"
               onClick={() => toggleMobileDropdown(item.title)}
               className={`p-2 transition-transform duration-200 ${
                 isMobileDropdownOpen === item.title ? "rotate-180" : ""
@@ -359,6 +360,7 @@ const Navbar = ({
 
               {/* Mobile Menu Button */}
               <button
+                type="button"
                 onClick={openMobileMenu}
                 className={`rounded-md border border-gray-200 p-1.5 transition-colors ${
                   darkMode ? "text-white hover:bg-gray-800" : "text-gray-900 hover:bg-gray-100"
@@ -375,11 +377,13 @@ const Navbar = ({
       {isMobileMenuOpen && (
         <>
           {/* Backdrop */}
-          <div
+          <button
+            type="button"
             className={`fixed inset-0 z-50 bg-black/50 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
               isAnimating ? "opacity-100" : "opacity-0"
             }`}
             onClick={closeMobileMenu}
+            aria-label="Fermer le menu"
           />
 
           {/* Mobile Menu Panel */}
@@ -412,6 +416,7 @@ const Navbar = ({
 
               {/* Close Button */}
               <button
+                type="button"
                 onClick={closeMobileMenu}
                 className={`rounded-full p-1.5 transition-all hover:scale-105 ${
                   darkMode
@@ -443,49 +448,47 @@ const Navbar = ({
       )}
 
       {/* SEO Hidden Navigation Links - Visible pour les bots, invisible pour les utilisateurs */}
-      <div className="sr-only" aria-label="Navigation Links for Search Engines">
+      <nav className="sr-only">
         <h2>Site Navigation</h2>
-        <nav>
-          <ul>
-            <li>
-              <Link href="/">{t("navbar.home")}</Link>
-            </li>
-            <li>
-              <Link href="/applications">{t("navbar.applications")}</Link>
-            </li>
-            <li>
-              <Link href="/photos">{t("navbar.photos")}</Link>
-            </li>
-            <li>
-              <Link href="/photos/wedding">{t("navbar.wedding")}</Link>
-            </li>
-            <li>
-              <Link href="/photos/sport">{t("navbar.sport")}</Link>
-            </li>
-            <li>
-              <Link href="/photos/landscape">{t("navbar.landscape")}</Link>
-            </li>
-            <li>
-              <Link href="/photos/cityscape">{t("navbar.cityscape")}</Link>
-            </li>
-            <li>
-              <Link href="/photos/mosaic">{t("navbar.mosaic")}</Link>
-            </li>
-            <li>
-              <Link href="/books">{t("navbar.books")}</Link>
-            </li>
-            <li>
-              <Link href="/books/civilisation">{t("navbar.civilisation")}</Link>
-            </li>
-            <li>
-              <Link href="/books/wizzyenasie">{t("navbar.wizzyenasie")}</Link>
-            </li>
-            <li>
-              <Link href="/contact">{t("navbar.contact")}</Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
+        <ul>
+          <li>
+            <Link href="/">{t("navbar.home")}</Link>
+          </li>
+          <li>
+            <Link href="/applications">{t("navbar.applications")}</Link>
+          </li>
+          <li>
+            <Link href="/photos">{t("navbar.photos")}</Link>
+          </li>
+          <li>
+            <Link href="/photos/wedding">{t("navbar.wedding")}</Link>
+          </li>
+          <li>
+            <Link href="/photos/sport">{t("navbar.sport")}</Link>
+          </li>
+          <li>
+            <Link href="/photos/landscape">{t("navbar.landscape")}</Link>
+          </li>
+          <li>
+            <Link href="/photos/cityscape">{t("navbar.cityscape")}</Link>
+          </li>
+          <li>
+            <Link href="/photos/mosaic">{t("navbar.mosaic")}</Link>
+          </li>
+          <li>
+            <Link href="/books">{t("navbar.books")}</Link>
+          </li>
+          <li>
+            <Link href="/books/civilisation">{t("navbar.civilisation")}</Link>
+          </li>
+          <li>
+            <Link href="/books/wizzyenasie">{t("navbar.wizzyenasie")}</Link>
+          </li>
+          <li>
+            <Link href="/contact">{t("navbar.contact")}</Link>
+          </li>
+        </ul>
+      </nav>
     </>
   )
 }

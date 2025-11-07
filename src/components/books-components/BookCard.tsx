@@ -91,7 +91,7 @@ export default function BookCard({
           </h2>
           <p className="mb-2 p-1 text-center sm:mb-3 sm:p-2 md:text-base">
             {description.split("\n").map((line, index, array) => (
-              <React.Fragment key={index}>
+              <React.Fragment key={`${line}-${index}`}>
                 {line}
                 {index < array.length - 1 && <br />}
               </React.Fragment>

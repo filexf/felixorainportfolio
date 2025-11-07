@@ -43,46 +43,44 @@ export default function CardsWork() {
   ]
 
   return (
-    <>
-      <Reveal>
-        <div
-          className="mt-8 flex flex-col items-center justify-center gap-6 sm:mt-10 sm:gap-8 md:mt-14 md:gap-10"
-          id="latest-works"
-        >
-          <div className="text-center">
-            <h2 className="text-gradient text-3xl leading-tight font-bold sm:text-4xl md:text-5xl lg:text-6xl">
-              {t("portfolio.title")}
-            </h2>
-            <div className="mt-2 flex items-center justify-center gap-2"></div>
-          </div>
-
-          <div className="flex w-full max-w-5xl flex-col gap-4 px-4 text-center">
-            <p className="text-base font-medium text-gray-700 sm:text-lg md:text-xl lg:text-2xl dark:text-gray-300">
-              {t("portfolio.intro")}
-            </p>
-            <p className="text-sm text-gray-600 italic sm:text-base dark:text-gray-400">
-              {t("portfolio.subIntro")}
-            </p>
-          </div>
-
-          <Reveal>
-            <div className="my-4 flex flex-col flex-wrap items-center justify-center gap-6 sm:my-6 sm:gap-8 md:my-8 md:flex-row md:gap-10 lg:gap-12">
-              {cardData.map((card, index) => (
-                <Card
-                  key={card.title}
-                  title={card.title}
-                  icon={card.icon}
-                  text={card.text}
-                  path={card.path}
-                  buttonText={card.buttonText}
-                  delay={index * 100}
-                />
-              ))}
-            </div>
-          </Reveal>
+    <Reveal>
+      <div
+        className="mt-8 flex flex-col items-center justify-center gap-6 sm:mt-10 sm:gap-8 md:mt-14 md:gap-10"
+        id="latest-works"
+      >
+        <div className="text-center">
+          <h2 className="text-gradient text-3xl leading-tight font-bold sm:text-4xl md:text-5xl lg:text-6xl">
+            {t("portfolio.title")}
+          </h2>
+          <div className="mt-2 flex items-center justify-center gap-2"></div>
         </div>
-      </Reveal>
-    </>
+
+        <div className="flex w-full max-w-5xl flex-col gap-4 px-4 text-center">
+          <p className="text-base font-medium text-gray-700 sm:text-lg md:text-xl lg:text-2xl dark:text-gray-300">
+            {t("portfolio.intro")}
+          </p>
+          <p className="text-sm text-gray-600 italic sm:text-base dark:text-gray-400">
+            {t("portfolio.subIntro")}
+          </p>
+        </div>
+
+        <Reveal>
+          <div className="my-4 flex flex-col flex-wrap items-center justify-center gap-6 sm:my-6 sm:gap-8 md:my-8 md:flex-row md:gap-10 lg:gap-12">
+            {cardData.map((card, index) => (
+              <Card
+                key={card.title}
+                title={card.title}
+                icon={card.icon}
+                text={card.text}
+                path={card.path}
+                buttonText={card.buttonText}
+                delay={index * 100}
+              />
+            ))}
+          </div>
+        </Reveal>
+      </div>
+    </Reveal>
   )
 }
 
