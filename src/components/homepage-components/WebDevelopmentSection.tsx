@@ -1,13 +1,12 @@
-import Image from "next/image";
-import Link from "next/link";
-import SeeMore from "@/components/homepage-components/SeeMore";
-
-import { getTranslations } from "next-intl/server";
-import Reveal from "@/components/Reveal";
-import SectionWrapper from "@/components/homepage-components/SectionWrapper";
+import Image from "next/image"
+import Link from "next/link"
+import { getTranslations } from "next-intl/server"
+import SectionWrapper from "@/components/homepage-components/SectionWrapper"
+import SeeMore from "@/components/homepage-components/SeeMore"
+import Reveal from "@/components/Reveal"
 
 export default async function WebDevelopmentSection() {
-  const t = await getTranslations("webdevsection");
+  const t = await getTranslations("webdevsection")
 
   return (
     <Reveal>
@@ -40,13 +39,13 @@ export default async function WebDevelopmentSection() {
         </div>
       </SectionWrapper>
     </Reveal>
-  );
+  )
 }
 
 interface ProjectCardProps {
-  image: string;
-  title: string;
-  path: string;
+  image: string
+  title: string
+  path: string
 }
 
 function ProjectCard({ image, title, path }: ProjectCardProps) {
@@ -70,5 +69,5 @@ function ProjectCard({ image, title, path }: ProjectCardProps) {
         </div>
       </div>
     </Link>
-  );
+  )
 }

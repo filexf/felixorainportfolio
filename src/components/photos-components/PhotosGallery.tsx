@@ -1,23 +1,23 @@
-"use client";
-import Image from "next/image";
-import { useState } from "react";
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
+"use client"
+import Image from "next/image"
+import { useState } from "react"
+import Lightbox from "yet-another-react-lightbox"
+import "yet-another-react-lightbox/styles.css"
 
 interface GalleryImage {
-  src: string;
-  title: string;
+  src: string
+  title: string
 }
 
 interface GalleryProps {
-  title: string;
-  images: GalleryImage[];
-  text?: string;
+  title: string
+  images: GalleryImage[]
+  text?: string
 }
 
 const Gallery = ({ title, images, text }: GalleryProps) => {
-  const [open, setOpen] = useState<boolean>(false);
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [open, setOpen] = useState<boolean>(false)
+  const [currentIndex, setCurrentIndex] = useState<number>(0)
 
   return (
     <div className="flex w-full justify-center pt-[40px] pb-[120px]">
@@ -26,9 +26,7 @@ const Gallery = ({ title, images, text }: GalleryProps) => {
           <h1 className="text-gradient text-center text-5xl leading-normal font-bold md:text-7xl">
             {title}
           </h1>
-          {text && (
-            <p className="body-font mx-auto max-w-5xl text-center">{text}</p>
-          )}
+          {text && <p className="body-font mx-auto max-w-5xl text-center">{text}</p>}
         </header>
 
         <section
@@ -40,8 +38,8 @@ const Gallery = ({ title, images, text }: GalleryProps) => {
               key={index}
               className="relative aspect-square cursor-pointer overflow-hidden rounded-md transition-all duration-300 hover:shadow-md"
               onClick={() => {
-                setCurrentIndex(index);
-                setOpen(true);
+                setCurrentIndex(index)
+                setOpen(true)
               }}
             >
               <Image
@@ -73,7 +71,7 @@ const Gallery = ({ title, images, text }: GalleryProps) => {
         />
       </article>
     </div>
-  );
-};
+  )
+}
 
-export default Gallery;
+export default Gallery

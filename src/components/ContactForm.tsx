@@ -1,28 +1,28 @@
 // src/components/ContactForm.tsx
-"use client";
+"use client"
 
-import { Button } from "@/components/ui/button";
-import { ChevronDown, Loader2, Send } from "lucide-react";
-import { useTranslations } from "next-intl";
-import React, { useState } from "react";
+import { ChevronDown, Loader2, Send } from "lucide-react"
+import { useTranslations } from "next-intl"
+import React, { useState } from "react"
+import { Button } from "@/components/ui/button"
 
 interface FormData {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
+  name: string
+  email: string
+  subject: string
+  message: string
 }
 
 interface FormStatus {
-  type: "idle" | "loading" | "success" | "error";
-  message: string;
+  type: "idle" | "loading" | "success" | "error"
+  message: string
 }
 
 interface ContactFormProps {
-  title?: string;
-  className?: string;
-  showSubject?: boolean;
-  compact?: boolean;
+  title?: string
+  className?: string
+  showSubject?: boolean
+  compact?: boolean
 }
 
 export default function ContactForm({
@@ -31,35 +31,33 @@ export default function ContactForm({
   showSubject = true,
   compact = false,
 }: ContactFormProps) {
-  const t = useTranslations("contact");
+  const t = useTranslations("contact")
 
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     subject: "",
     message: "",
-  });
+  })
 
   const [status, setStatus] = useState<FormStatus>({
     type: "idle",
     message: "",
-  });
+  })
 
   const handleInputChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData((prev) => ({
       ...prev,
       [name]: value,
-    }));
-  };
+    }))
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus({ type: "loading", message: "" });
+    e.preventDefault()
+    setStatus({ type: "loading", message: "" })
 
     try {
       const response = await fetch("/api/contact", {
@@ -68,38 +66,31 @@ export default function ContactForm({
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-      });
+      })
 
-      const result = await response.json();
+      const result = await response.json()
 
       if (response.ok) {
-        setStatus({ type: "success", message: t("success") });
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setStatus({ type: "success", message: t("success") })
+        setFormData({ name: "", email: "", subject: "", message: "" })
       } else {
-        setStatus({ type: "error", message: result.error || t("error") });
+        setStatus({ type: "error", message: result.error || t("error") })
       }
     } catch {
-      setStatus({ type: "error", message: t("error") });
+      setStatus({ type: "error", message: t("error") })
     }
-  };
+  }
 
   // Classes communes pour les inputs stylés
-  const inputClasses = `w-full rounded-xl border-0 bg-gray-100 px-4 ${compact ? "py-2.5" : "py-3"} text-gray-900 placeholder-gray-500 shadow-sm transition-all duration-200 focus:bg-white focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-400 dark:focus:bg-gray-700 dark:focus:ring-blue-400`;
+  const inputClasses = `w-full rounded-xl border-0 bg-gray-100 px-4 ${compact ? "py-2.5" : "py-3"} text-gray-900 placeholder-gray-500 shadow-sm transition-all duration-200 focus:bg-white focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-400 dark:focus:bg-gray-700 dark:focus:ring-blue-400`
 
   return (
     <div className={className}>
       {title && (
-        <h2
-          className={`${compact ? "mb-4 text-xl" : "mb-6 text-2xl"} font-bold`}
-        >
-          {title}
-        </h2>
+        <h2 className={`${compact ? "mb-4 text-xl" : "mb-6 text-2xl"} font-bold`}>{title}</h2>
       )}
 
-      <form
-        onSubmit={handleSubmit}
-        className={`space-y-${compact ? "4" : "6"}`}
-      >
+      <form onSubmit={handleSubmit} className={`space-y-${compact ? "4" : "6"}`}>
         <div>
           <label
             htmlFor="name"
@@ -157,16 +148,10 @@ export default function ContactForm({
                 className={`${inputClasses} appearance-none pr-12`}
               >
                 <option value="">{t("form.subjectPlaceholder")}</option>
-                <option value="web-project">
-                  {t("form.subjects.webProject")}
-                </option>
-                <option value="photo-project">
-                  {t("form.subjects.photoProject")}
-                </option>
+                <option value="web-project">{t("form.subjects.webProject")}</option>
+                <option value="photo-project">{t("form.subjects.photoProject")}</option>
                 <option value="pricing">{t("form.subjects.pricing")}</option>
-                <option value="collaboration">
-                  {t("form.subjects.collaboration")}
-                </option>
+                <option value="collaboration">{t("form.subjects.collaboration")}</option>
                 <option value="other">{t("form.subjects.other")}</option>
               </select>
               <ChevronDown className="pointer-events-none absolute top-1/2 right-4 h-5 w-5 -translate-y-1/2 text-gray-500 dark:text-gray-400" />
@@ -229,5 +214,5 @@ export default function ContactForm({
         </Button>
       </form>
     </div>
-  );
+  )
 }

@@ -20,40 +20,40 @@ export const transparencyLevels = {
   },
 }
 
-type TransparencyLevel = 'high' | 'medium' | 'low';
+type TransparencyLevel = "high" | "medium" | "low"
 
 interface GridBackgroundProps {
-  className?: string;
-  lineColor?: string;
-  dotColor?: string;
-  lineOpacity?: number;
-  dotOpacity?: number;
-  lineSize?: number;
-  dotSize?: number;
-  gridSize?: number;
-  transparencyLevel?: TransparencyLevel;
+  className?: string
+  lineColor?: string
+  dotColor?: string
+  lineOpacity?: number
+  dotOpacity?: number
+  lineSize?: number
+  dotSize?: number
+  gridSize?: number
+  transparencyLevel?: TransparencyLevel
 }
 
 export function GridBackground({
-  className = '',
-  lineColor = '#CBD5E1',
-  dotColor = '#94A3B8',
+  className = "",
+  lineColor = "#CBD5E1",
+  dotColor = "#94A3B8",
   lineOpacity,
   dotOpacity,
   lineSize = 1,
   dotSize = 2,
   gridSize = 40,
-  transparencyLevel = 'medium',
+  transparencyLevel = "medium",
 }: GridBackgroundProps) {
   const finalLineOpacity = lineOpacity ?? transparencyLevels[transparencyLevel].lineOpacity
   const finalDotOpacity = dotOpacity ?? transparencyLevels[transparencyLevel].dotOpacity
 
   const lineOpacityHex = Math.round(finalLineOpacity * 255)
     .toString(16)
-    .padStart(2, '0')
+    .padStart(2, "0")
   const dotOpacityHex = Math.round(finalDotOpacity * 255)
     .toString(16)
-    .padStart(2, '0')
+    .padStart(2, "0")
 
   return (
     <div className={`absolute inset-0 pointer-events-none overflow-hidden ${className}`}>
@@ -80,23 +80,23 @@ export function GridBackground({
 }
 
 interface DotPatternProps {
-  className?: string;
-  dotColor?: string;
-  dotOpacity?: number;
-  dotSize?: number;
-  gridSize?: number;
+  className?: string
+  dotColor?: string
+  dotOpacity?: number
+  dotSize?: number
+  gridSize?: number
 }
 
 export function DotPattern({
-  className = '',
-  dotColor = '#94A3B8',
+  className = "",
+  dotColor = "#94A3B8",
   dotOpacity = 0.15,
   dotSize = 1,
   gridSize = 20,
 }: DotPatternProps) {
   const dotOpacityHex = Math.round(dotOpacity * 255)
     .toString(16)
-    .padStart(2, '0')
+    .padStart(2, "0")
 
   return (
     <div className={`absolute inset-0 pointer-events-none overflow-hidden ${className}`}>
@@ -112,14 +112,14 @@ export function DotPattern({
 }
 
 interface WavePatternProps {
-  className?: string;
-  waveColor?: string;
-  waveOpacity?: number;
+  className?: string
+  waveColor?: string
+  waveOpacity?: number
 }
 
 export function WavePattern({
-  className = '',
-  waveColor = '#3B82F6',
+  className = "",
+  waveColor = "#3B82F6",
   waveOpacity = 0.05,
 }: WavePatternProps) {
   return (
@@ -140,16 +140,16 @@ export function WavePattern({
 }
 
 interface GradientGridProps {
-  className?: string;
-  startColor?: string;
-  endColor?: string;
-  gridSize?: number;
+  className?: string
+  startColor?: string
+  endColor?: string
+  gridSize?: number
 }
 
 export function GradientGrid({
-  className = '',
-  startColor = 'rgba(59, 130, 246, 0.1)',
-  endColor = 'rgba(16, 185, 129, 0.1)',
+  className = "",
+  startColor = "rgba(59, 130, 246, 0.1)",
+  endColor = "rgba(16, 185, 129, 0.1)",
   gridSize = 40,
 }: GradientGridProps) {
   return (

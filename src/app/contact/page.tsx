@@ -1,6 +1,7 @@
 // src/app/contact/page.tsx
-import ContactPage from "@/components/page-components/ContactPage";
-import { Metadata } from "next";
+
+import { Metadata } from "next"
+import ContactPage from "@/components/page-components/ContactPage"
 
 export const metadata: Metadata = {
   title: "Contact - Devis Gratuit",
@@ -43,8 +44,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.felix-orain.com/contact",
   },
-};
+}
 
 export default function Contact() {
-  return <ContactPage />;
+  return <ContactPage />
 }

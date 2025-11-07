@@ -1,20 +1,20 @@
-import Reveal from "@/components/Reveal";
-import { getTranslations } from "next-intl/server";
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"
+import Link from "next/link"
+import { getTranslations } from "next-intl/server"
+import Reveal from "@/components/Reveal"
 
 interface Photo {
-  id: string;
-  path: string;
+  id: string
+  path: string
 }
 
 interface PhotoCardProps {
-  photoPath: string;
-  title: string;
+  photoPath: string
+  title: string
 }
 
 export default async function PhotosPage() {
-  const t = await getTranslations("photospage");
+  const t = await getTranslations("photospage")
 
   // Définition des photos avec leurs chemins corrects
   const photos: Photo[] = [
@@ -38,7 +38,7 @@ export default async function PhotosPage() {
       id: "wedding",
       path: "/images/Photos-wedding/Wedding_photos_14.jpg",
     },
-  ];
+  ]
 
   return (
     <div className="flex justify-center">
@@ -58,28 +58,21 @@ export default async function PhotosPage() {
             aria-label="Catégories de photographies"
           >
             {photos.map((photo) => (
-              <PhotoCard
-                key={photo.id}
-                title={photo.id}
-                photoPath={photo.path}
-              />
+              <PhotoCard key={photo.id} title={photo.id} photoPath={photo.path} />
             ))}
           </section>
         </Reveal>
       </article>
     </div>
-  );
+  )
 }
 
 async function PhotoCard({ photoPath, title }: PhotoCardProps) {
-  const t = await getTranslations("photospage");
-  const categoryTitle = t(`${title}`);
+  const t = await getTranslations("photospage")
+  const categoryTitle = t(`${title}`)
 
   return (
-    <Link
-      href={`/photos/${title.toLowerCase()}`}
-      aria-label={`Voir la galerie ${categoryTitle}`}
-    >
+    <Link href={`/photos/${title.toLowerCase()}`} aria-label={`Voir la galerie ${categoryTitle}`}>
       <article className="vertical-animation group my-2 flex flex-col overflow-hidden rounded-2xl border border-gray-200/10 bg-white/5 shadow-lg transition-all duration-300 hover:bg-white/10 sm:my-3">
         <figure className="relative overflow-hidden">
           <div className="relative h-[300px] w-full sm:h-[400px] md:h-[450px]">
@@ -118,5 +111,5 @@ async function PhotoCard({ photoPath, title }: PhotoCardProps) {
         </header>
       </article>
     </Link>
-  );
+  )
 }

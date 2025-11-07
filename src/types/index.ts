@@ -1,9 +1,9 @@
-export type ThemeType = "light" | "dark";
+export type ThemeType = "light" | "dark"
 
-export type LanguageType = "fr" | "en" | "es";
+export type LanguageType = "fr" | "en" | "es"
 
 export interface NavItem {
-  name: string;
-  href: string;
-  current?: boolean;
+  name: string
+  href: string
+  current?: boolean
 }

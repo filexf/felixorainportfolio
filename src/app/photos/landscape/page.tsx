@@ -1,5 +1,5 @@
-import LandscapePage from "@/components/page-components/photos-page-components/LandscapePage";
-import { Metadata } from "next";
+import { Metadata } from "next"
+import LandscapePage from "@/components/page-components/photos-page-components/LandscapePage"
 
 export const metadata: Metadata = {
   title: "Photographe Paysages & Nature",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.felix-orain.com/photos/landscape",
   },
-};
+}
 
 export default function Page() {
-  return <LandscapePage />;
+  return <LandscapePage />
 }

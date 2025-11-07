@@ -1,20 +1,20 @@
-"use client";
+"use client"
 
-import { AuroraBackground } from "@/components/ui/aurora-background";
-import { ButtonLink } from "@/components/ui/button";
-import { useTheme } from "@/context/ThemeContext";
-import { motion, useAnimation } from "framer-motion";
-import { BookOpen, Send } from "lucide-react";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion"
+import { BookOpen, Send } from "lucide-react"
+import Image from "next/image"
+import { useTranslations } from "next-intl"
+import { useEffect } from "react"
+import { AuroraBackground } from "@/components/ui/aurora-background"
+import { ButtonLink } from "@/components/ui/button"
+import { useTheme } from "@/context/ThemeContext"
 
 export default function AuroraBackgroundDemo() {
-  const t = useTranslations("heroSection");
-  const { darkMode } = useTheme();
+  const t = useTranslations("heroSection")
+  const { darkMode } = useTheme()
 
   // Créer un contrôleur d'animation
-  const controls = useAnimation();
+  const controls = useAnimation()
 
   // Déclencher l'animation une seule fois au montage du composant
   useEffect(() => {
@@ -26,8 +26,8 @@ export default function AuroraBackgroundDemo() {
         duration: 0.8,
         ease: "easeInOut",
       },
-    });
-  }, [controls]);
+    })
+  }, [controls])
 
   return (
     <AuroraBackground>
@@ -71,9 +71,7 @@ export default function AuroraBackgroundDemo() {
               repeatDelay: 1,
             }}
           />
-          <span className="text-xs text-blue-500 sm:text-sm dark:text-blue-300">
-            ✨
-          </span>
+          <span className="text-xs text-blue-500 sm:text-sm dark:text-blue-300">✨</span>
           <span className="relative bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-xs font-medium tracking-wide text-transparent sm:text-sm dark:from-white/90 dark:to-blue-200">
             Expert
           </span>
@@ -96,9 +94,7 @@ export default function AuroraBackgroundDemo() {
                 className="h-full w-full object-contain"
               />
             </div>
-            <span className={darkMode ? "text-white" : "text-gray-900"}>
-              Félix Orain
-            </span>
+            <span className={darkMode ? "text-white" : "text-gray-900"}>Félix Orain</span>
           </div>
 
           {/* Division visuelle */}
@@ -120,9 +116,7 @@ export default function AuroraBackgroundDemo() {
           <span className="font-medium text-gray-800 dark:text-white">
             {t("description.part1")}
           </span>
-          <span className="text-gray-600 dark:text-white/70">
-            {t("description.part2")}
-          </span>
+          <span className="text-gray-600 dark:text-white/70">{t("description.part2")}</span>
         </div>
 
         {/* La partie des boutons */}
@@ -148,5 +142,5 @@ export default function AuroraBackgroundDemo() {
         </div>
       </motion.div>
     </AuroraBackground>
-  );
+  )
 }

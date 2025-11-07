@@ -1,26 +1,26 @@
-"use client";
+"use client"
 
-import Reveal from "@/components/Reveal";
-import { useTheme } from "@/context/ThemeContext";
-import { projects, type ProjectImage } from "@/lib/projects";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
+import Image from "next/image"
+import Link from "next/link"
+import { useTranslations } from "next-intl"
+import { useState } from "react"
+import Lightbox from "yet-another-react-lightbox"
+import Reveal from "@/components/Reveal"
+import { useTheme } from "@/context/ThemeContext"
+import { type ProjectImage, projects } from "@/lib/projects"
+import "yet-another-react-lightbox/styles.css"
 
 interface ProjectCardProps {
-  title: string;
-  description: string;
-  image: string;
-  githubLink: string;
-  websiteLink: string;
-  images?: ProjectImage[];
+  title: string
+  description: string
+  image: string
+  githubLink: string
+  websiteLink: string
+  images?: ProjectImage[]
 }
 
 // Re-export projects for backward compatibility
-export { projects };
+export { projects }
 
 export function ProjectCard({
   title,
@@ -30,19 +30,19 @@ export function ProjectCard({
   websiteLink,
   images,
 }: ProjectCardProps) {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-  const { darkMode } = useTheme();
-  const t = useTranslations();
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0)
+  const { darkMode } = useTheme()
+  const t = useTranslations()
 
   const openLightbox = (): void => {
-    setCurrentImageIndex(0);
-    setIsOpen(true);
-  };
+    setCurrentImageIndex(0)
+    setIsOpen(true)
+  }
 
   const closeLightbox = (): void => {
-    setIsOpen(false);
-  };
+    setIsOpen(false)
+  }
 
   return (
     <>
@@ -164,5 +164,5 @@ export function ProjectCard({
         </article>
       </Reveal>
     </>
-  );
+  )
 }

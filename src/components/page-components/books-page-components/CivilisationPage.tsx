@@ -1,10 +1,10 @@
-import BooksGallery from "@/components/books-components/BooksGallery";
-import BookStructuredData from "@/components/BookStructuredData";
-import { getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server"
+import BookStructuredData from "@/components/BookStructuredData"
+import BooksGallery from "@/components/books-components/BooksGallery"
 
 interface GalleryImage {
-  src: string;
-  title: string;
+  src: string
+  title: string
 }
 
 const images: GalleryImage[] = [
@@ -64,10 +64,10 @@ const images: GalleryImage[] = [
     src: "/images/Photos-Magazine-Civilisation/Civilisation Mag33.jpg",
     title: "Civilisation",
   },
-];
+]
 
 export default async function CivilisationBook() {
-  const t = await getTranslations("books.civilisation");
+  const t = await getTranslations("books.civilisation")
 
   return (
     <>
@@ -80,5 +80,5 @@ export default async function CivilisationBook() {
       />
       <BooksGallery title={"Civilisation"} images={images} />
     </>
-  );
+  )
 }

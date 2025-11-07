@@ -1,5 +1,5 @@
-import BooksPage from "@/components/page-components/BooksPage";
-import { Metadata } from "next";
+import { Metadata } from "next"
+import BooksPage from "@/components/page-components/BooksPage"
 
 export const metadata: Metadata = {
   title: "Livres & Magazines",
@@ -23,8 +23,7 @@ export const metadata: Metadata = {
     "designer graphique freelance",
   ],
   openGraph: {
-    title:
-      "Livres & Magazines Design | Félix Orain - Designer Graphique Rennes",
+    title: "Livres & Magazines Design | Félix Orain - Designer Graphique Rennes",
     description:
       "Portfolio de design graphique et éditorial : magazines Civilisation et Wizzy en Asie. Création, mise en page et direction artistique professionnelle en Bretagne.",
     images: [
@@ -46,8 +45,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.felix-orain.com/books",
   },
-};
+}
 
 export default function Page() {
-  return <BooksPage />;
+  return <BooksPage />
 }

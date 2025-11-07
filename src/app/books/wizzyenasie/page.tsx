@@ -1,5 +1,5 @@
-import WizzyEnAsiePage from "@/components/page-components/books-page-components/WizzyEnAsiePage";
-import { Metadata } from "next";
+import { Metadata } from "next"
+import WizzyEnAsiePage from "@/components/page-components/books-page-components/WizzyEnAsiePage"
 
 export const metadata: Metadata = {
   title: "Wizzy en Asie - Magazine Voyage",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.felix-orain.com/books/wizzyenasie",
   },
-};
+}
 
 export default function Page() {
-  return <WizzyEnAsiePage />;
+  return <WizzyEnAsiePage />
 }

@@ -1,10 +1,10 @@
-import ImageGalleryStructuredData from "@/components/ImageGalleryStructuredData";
-import Gallery from "@/components/photos-components/PhotosGallery";
-import { getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server"
+import ImageGalleryStructuredData from "@/components/ImageGalleryStructuredData"
+import Gallery from "@/components/photos-components/PhotosGallery"
 
 interface GalleryImage {
-  src: string;
-  title: string;
+  src: string
+  title: string
 }
 
 // Définition des images avec leurs chemins corrects
@@ -75,10 +75,10 @@ const images: GalleryImage[] = [
     src: "/images/Photos-mosaics/HK_Street_photos-18.jpg",
     title: "Mosaics image",
   },
-];
+]
 
 export default async function MosaicPhotoPage() {
-  const t = await getTranslations("mosaicphotopage");
+  const t = await getTranslations("mosaicphotopage")
 
   return (
     <>
@@ -90,5 +90,5 @@ export default async function MosaicPhotoPage() {
       />
       <Gallery title={t("title")} images={images} text={t("desc")} />
     </>
-  );
+  )
 }

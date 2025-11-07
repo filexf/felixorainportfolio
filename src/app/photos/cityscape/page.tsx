@@ -1,5 +1,5 @@
-import CityscapePage from "@/components/page-components/photos-page-components/CityscapePage";
-import { Metadata } from "next";
+import { Metadata } from "next"
+import CityscapePage from "@/components/page-components/photos-page-components/CityscapePage"
 
 export const metadata: Metadata = {
   title: "Photographe Urbain & Cityscape",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.felix-orain.com/photos/cityscape",
   },
-};
+}
 
 export default function Page() {
-  return <CityscapePage />;
+  return <CityscapePage />
 }

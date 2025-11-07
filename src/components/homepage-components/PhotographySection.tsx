@@ -1,12 +1,11 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import Link from "next/link";
-import SeeMore from "@/components/homepage-components/SeeMore";
-
-import { useTranslations } from "next-intl";
-import Reveal from "@/components/Reveal";
-import SectionWrapper from "@/components/homepage-components/SectionWrapper";
+import Image from "next/image"
+import Link from "next/link"
+import { useTranslations } from "next-intl"
+import SectionWrapper from "@/components/homepage-components/SectionWrapper"
+import SeeMore from "@/components/homepage-components/SeeMore"
+import Reveal from "@/components/Reveal"
 
 export default function PhotographySection() {
   const photos: string[] = [
@@ -14,17 +13,15 @@ export default function PhotographySection() {
     "/images/Important-photos/Photos_Bangkok_V1_33.jpg",
     "/images/Important-photos/Photos_HK_chill_109.jpg",
     "/images/Important-photos/Photos_HK_chill_132.jpg",
-  ];
-  const t = useTranslations();
+  ]
+  const t = useTranslations()
 
   return (
     <Reveal>
       <SectionWrapper title={t("photographysection.title")}>
         <div className="items flex flex-col gap-12">
           {/* Texte d'introduction */}
-          <p className="body-font mx-auto max-w-3xl text-center">
-            {t("photographysection.desc")}
-          </p>
+          <p className="body-font mx-auto max-w-3xl text-center">{t("photographysection.desc")}</p>
 
           {/* Grille de photos */}
           <div className="flex flex-wrap md:flex-nowrap justify-center gap-10">
@@ -37,11 +34,11 @@ export default function PhotographySection() {
         </div>
       </SectionWrapper>
     </Reveal>
-  );
+  )
 }
 
 interface PhotoCardProps {
-  photo: string;
+  photo: string
 }
 
 function PhotoCard({ photo }: PhotoCardProps) {
@@ -88,5 +85,5 @@ function PhotoCard({ photo }: PhotoCardProps) {
         </div>
       </div>
     </Link>
-  );
+  )
 }

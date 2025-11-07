@@ -1,10 +1,10 @@
-import ImageGalleryStructuredData from "@/components/ImageGalleryStructuredData";
-import Gallery from "@/components/photos-components/PhotosGallery";
-import { getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server"
+import ImageGalleryStructuredData from "@/components/ImageGalleryStructuredData"
+import Gallery from "@/components/photos-components/PhotosGallery"
 
 interface GalleryImage {
-  src: string;
-  title: string;
+  src: string
+  title: string
 }
 
 // Définition des images avec leurs chemins corrects
@@ -73,10 +73,10 @@ const images: GalleryImage[] = [
     src: "/images/Photos-wedding/Wedding_photos_13.jpg",
     title: "Wedding image",
   },
-];
+]
 
 export default async function WeddingPhotoPage() {
-  const t = await getTranslations("weddingphotopage");
+  const t = await getTranslations("weddingphotopage")
 
   return (
     <>
@@ -88,5 +88,5 @@ export default async function WeddingPhotoPage() {
       />
       <Gallery title={t("title")} images={images} text={t("desc")} />
     </>
-  );
+  )
 }

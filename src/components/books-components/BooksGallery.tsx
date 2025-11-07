@@ -1,25 +1,25 @@
-"use client";
+"use client"
 
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import { useState } from "react";
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
+import Image from "next/image"
+import { useTranslations } from "next-intl"
+import { useState } from "react"
+import Lightbox from "yet-another-react-lightbox"
+import "yet-another-react-lightbox/styles.css"
 
 interface GalleryImage {
-  src: string;
-  title: string;
+  src: string
+  title: string
 }
 
 interface GalleryProps {
-  title: string;
-  images: GalleryImage[];
+  title: string
+  images: GalleryImage[]
 }
 
 export default function Gallery({ title, images }: GalleryProps) {
-  const t = useTranslations();
-  const [open, setOpen] = useState<boolean>(false);
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const t = useTranslations()
+  const [open, setOpen] = useState<boolean>(false)
+  const [currentIndex, setCurrentIndex] = useState<number>(0)
 
   return (
     <div className="flex w-full justify-center px-2 py-12 sm:px-4">
@@ -28,9 +28,7 @@ export default function Gallery({ title, images }: GalleryProps) {
           <h1 className="text-gradient text-center text-5xl leading-normal font-bold sm:text-6xl md:text-7xl">
             {title}
           </h1>
-          <p className="body-font mx-auto max-w-4xl px-4 text-center">
-            {t("bookgallery.desc")}
-          </p>
+          <p className="body-font mx-auto max-w-4xl px-4 text-center">{t("bookgallery.desc")}</p>
         </header>
 
         <section
@@ -42,8 +40,8 @@ export default function Gallery({ title, images }: GalleryProps) {
               key={index}
               className="relative aspect-[3/2] cursor-pointer overflow-hidden rounded-md transition-all duration-300 hover:shadow-md"
               onClick={() => {
-                setCurrentIndex(index);
-                setOpen(true);
+                setCurrentIndex(index)
+                setOpen(true)
               }}
             >
               <Image
@@ -83,5 +81,5 @@ export default function Gallery({ title, images }: GalleryProps) {
         />
       </article>
     </div>
-  );
+  )
 }

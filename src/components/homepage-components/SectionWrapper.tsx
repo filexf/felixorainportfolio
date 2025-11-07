@@ -1,9 +1,9 @@
-import React from "react";
+import React from "react"
 
 interface SectionWrapperProps {
-  children: React.ReactNode;
-  title: string;
-  as?: "h1" | "h2"; // Nouveau prop optionnel
+  children: React.ReactNode
+  title: string
+  as?: "h1" | "h2" // Nouveau prop optionnel
 }
 
 export default function SectionWrapper({
@@ -12,7 +12,7 @@ export default function SectionWrapper({
   as = "h2", // Par défaut h2 pour maintenir la compatibilité
 }: SectionWrapperProps) {
   // Composant dynamique basé sur le prop 'as'
-  const HeadingComponent = as;
+  const HeadingComponent = as
 
   return (
     <div className="flex justify-center">
@@ -23,5 +23,5 @@ export default function SectionWrapper({
         {children}
       </div>
     </div>
-  );
+  )
 }

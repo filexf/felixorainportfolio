@@ -1,9 +1,9 @@
-import Reveal from "@/components/Reveal";
-import { getTranslations } from "next-intl/server";
-import BookCard from "../books-components/BookCard";
+import { getTranslations } from "next-intl/server"
+import Reveal from "@/components/Reveal"
+import BookCard from "../books-components/BookCard"
 
 export default async function BooksPage() {
-  const t = await getTranslations();
+  const t = await getTranslations()
 
   return (
     <div className="flex justify-center p-4 sm:p-8">
@@ -13,9 +13,7 @@ export default async function BooksPage() {
             <h1 className="text-gradient text-center text-5xl leading-normal font-bold md:text-7xl">
               {t("books.title")}
             </h1>
-            <p className="body-font mx-auto max-w-4xl px-4 text-center">
-              {t("books.description")}
-            </p>
+            <p className="body-font mx-auto max-w-4xl px-4 text-center">{t("books.description")}</p>
           </header>
 
           <section
@@ -45,5 +43,5 @@ export default async function BooksPage() {
         </Reveal>
       </article>
     </div>
-  );
+  )
 }

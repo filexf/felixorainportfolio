@@ -1,5 +1,5 @@
-import PhotosPage from "@/components/page-components/PhotoPage";
-import { Metadata } from "next";
+import { Metadata } from "next"
+import PhotosPage from "@/components/page-components/PhotoPage"
 
 export const metadata: Metadata = {
   title: "Portfolio Photos",
@@ -22,8 +22,7 @@ export const metadata: Metadata = {
     "photographe freelance Bretagne",
   ],
   openGraph: {
-    title:
-      "Portfolio Photographie | Félix Orain - Photographe Professionnel Rennes",
+    title: "Portfolio Photographie | Félix Orain - Photographe Professionnel Rennes",
     description:
       "Explorez mon univers photographique : paysages, sport, mariages, cityscapes et créations artistiques. Portfolio professionnel de photographie en Bretagne.",
     images: [
@@ -45,8 +44,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.felix-orain.com/photos",
   },
-};
+}
 
 export default function Page() {
-  return <PhotosPage />;
+  return <PhotosPage />
 }

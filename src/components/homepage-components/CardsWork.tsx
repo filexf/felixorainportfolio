@@ -1,22 +1,21 @@
-"use client";
+"use client"
 
-import { ButtonLink } from "@/components/ui/button";
-import { useTheme } from "@/context/ThemeContext";
-import { Brush, Camera, ChevronRight, Code } from "lucide-react";
-import { useTranslations } from "next-intl";
-import React from "react";
-
-import Reveal from "@/components/Reveal";
+import { Brush, Camera, ChevronRight, Code } from "lucide-react"
+import { useTranslations } from "next-intl"
+import React from "react"
+import Reveal from "@/components/Reveal"
+import { ButtonLink } from "@/components/ui/button"
+import { useTheme } from "@/context/ThemeContext"
 
 export default function CardsWork() {
-  const t = useTranslations();
+  const t = useTranslations()
 
   interface CardData {
-    title: string;
-    icon: React.ComponentType<{ className?: string }>;
-    text: string;
-    path: string;
-    buttonText: string;
+    title: string
+    icon: React.ComponentType<{ className?: string }>
+    text: string
+    path: string
+    buttonText: string
   }
 
   const cardData: CardData[] = [
@@ -41,7 +40,7 @@ export default function CardsWork() {
       path: "/books",
       buttonText: t("cardData.design.buttonText"),
     },
-  ];
+  ]
 
   return (
     <>
@@ -84,27 +83,20 @@ export default function CardsWork() {
         </div>
       </Reveal>
     </>
-  );
+  )
 }
 
 interface CardProps {
-  icon: React.ComponentType<{ className?: string }>;
-  title: string;
-  text: string;
-  path: string;
-  buttonText: string;
-  delay: number;
+  icon: React.ComponentType<{ className?: string }>
+  title: string
+  text: string
+  path: string
+  buttonText: string
+  delay: number
 }
 
-const Card = ({
-  icon: IconComponent,
-  title,
-  text,
-  path,
-  buttonText,
-  delay,
-}: CardProps) => {
-  const { darkMode } = useTheme();
+const Card = ({ icon: IconComponent, title, text, path, buttonText, delay }: CardProps) => {
+  const { darkMode } = useTheme()
 
   return (
     <div
@@ -152,9 +144,7 @@ const Card = ({
           </div>
 
           <div className="text-center">
-            <h3 className="text-gradient text-xl leading-tight font-bold sm:text-2xl">
-              {title}
-            </h3>
+            <h3 className="text-gradient text-xl leading-tight font-bold sm:text-2xl">{title}</h3>
           </div>
         </div>
 
@@ -182,5 +172,5 @@ const Card = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

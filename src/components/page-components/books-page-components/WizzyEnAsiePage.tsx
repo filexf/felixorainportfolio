@@ -1,10 +1,10 @@
-import BooksGallery from "@/components/books-components/BooksGallery";
-import BookStructuredData from "@/components/BookStructuredData";
-import { getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server"
+import BookStructuredData from "@/components/BookStructuredData"
+import BooksGallery from "@/components/books-components/BooksGallery"
 
 interface GalleryImage {
-  src: string;
-  title: string;
+  src: string
+  title: string
 }
 
 const images: GalleryImage[] = [
@@ -64,10 +64,10 @@ const images: GalleryImage[] = [
     src: "/images/Photos-Magazine-Wizzy-en-asie/WIZZY En Asie BONNE VERSION48.jpg",
     title: "Wizzy en Asie",
   },
-];
+]
 
 export default async function WizzyEnAsieBook() {
-  const t = await getTranslations("books.wizzy");
+  const t = await getTranslations("books.wizzy")
 
   return (
     <>
@@ -80,5 +80,5 @@ export default async function WizzyEnAsieBook() {
       />
       <BooksGallery title={"Wizzy en Asie"} images={images} />
     </>
-  );
+  )
 }

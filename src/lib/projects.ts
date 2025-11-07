@@ -1,15 +1,15 @@
 export interface ProjectImage {
-  src: string;
-  alt: string;
+  src: string
+  alt: string
 }
 
 export interface Project {
-  title: string;
-  description: string;
-  image: string;
-  githubLink: string;
-  websiteLink: string;
-  images?: ProjectImage[];
+  title: string
+  description: string
+  image: string
+  githubLink: string
+  websiteLink: string
+  images?: ProjectImage[]
 }
 
 // Project data
@@ -177,4 +177,4 @@ export const projects: Project[] = [
       },
     ],
   },
-];
+]

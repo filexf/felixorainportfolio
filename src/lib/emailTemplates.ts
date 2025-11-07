@@ -2,9 +2,9 @@
 // Composant pour l'email de confirmation - à utiliser plus tard
 
 export interface ConfirmationEmailData {
-  name: string;
-  email: string;
-  portfolioUrl?: string;
+  name: string
+  email: string
+  portfolioUrl?: string
 }
 
 /**
@@ -96,8 +96,8 @@ export const generateConfirmationEmail = ({
       </div>
     </body>
     </html>
-  `;
-};
+  `
+}
 
 /**
  * Fonction pour envoyer l'email de confirmation
@@ -105,7 +105,7 @@ export const generateConfirmationEmail = ({
  */
 export const sendConfirmationEmail = async (
   resend: any, // Resend instance
-  { name, email, portfolioUrl }: ConfirmationEmailData,
+  { name, email, portfolioUrl }: ConfirmationEmailData
 ) => {
   try {
     const { data, error } = await resend.emails.send({
@@ -113,16 +113,16 @@ export const sendConfirmationEmail = async (
       to: [email],
       subject: "✅ Message reçu - Félix Orain Portfolio",
       html: generateConfirmationEmail({ name, email, portfolioUrl }),
-    });
+    })
 
     if (error) {
-      console.error("Erreur envoi email de confirmation:", error);
-      return { success: false, error };
+      console.error("Erreur envoi email de confirmation:", error)
+      return { success: false, error }
     }
 
-    return { success: true, data };
+    return { success: true, data }
   } catch (error) {
-    console.error("Erreur lors de l'envoi de confirmation:", error);
-    return { success: false, error };
+    console.error("Erreur lors de l'envoi de confirmation:", error)
+    return { success: false, error }
   }
-};
+}

@@ -1,41 +1,37 @@
-"use client";
+"use client"
 
-import Reveal from "@/components/Reveal";
-import { ButtonLink } from "@/components/ui/button";
-import { BookOpen, Film } from "lucide-react";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import { BookOpen, Film } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { useTranslations } from "next-intl"
+import React from "react"
+import Reveal from "@/components/Reveal"
+import { ButtonLink } from "@/components/ui/button"
 
 interface BookCardProps {
-  title: string;
-  description: string;
-  coverImage: string;
-  galleryLink: string;
-  reverseLayout: boolean;
-  hasFilmLink?: boolean;
-  filmLink?: string;
+  title: string
+  description: string
+  coverImage: string
+  galleryLink: string
+  reverseLayout: boolean
+  hasFilmLink?: boolean
+  filmLink?: string
 }
 
 interface PhotoMagazineProps {
-  link: string;
-  src: string;
-  title?: string;
+  link: string
+  src: string
+  title?: string
 }
 
 function PhotoMagazine({ link, src, title }: PhotoMagazineProps) {
-  const t = useTranslations();
+  const t = useTranslations()
 
   return (
     <Link
       href={link}
       className="group relative block aspect-[3/4] overflow-hidden rounded-2xl shadow-md"
-      aria-label={
-        title
-          ? `Voir la galerie du magazine ${title}`
-          : `Voir la galerie du magazine`
-      }
+      aria-label={title ? `Voir la galerie du magazine ${title}` : `Voir la galerie du magazine`}
     >
       <figure className="relative h-full w-full">
         <Image
@@ -53,9 +49,7 @@ function PhotoMagazine({ link, src, title }: PhotoMagazineProps) {
           <div className="translate-y-4 transform transition-transform duration-300 group-hover:translate-y-0">
             <div className="flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm">
               <div className="flex justify-center gap-3 px-3 py-2 sm:gap-6 sm:px-4 sm:py-3">
-                <p className="text-xl font-bold text-white sm:text-3xl">
-                  {t("books.seegallery")}
-                </p>
+                <p className="text-xl font-bold text-white sm:text-3xl">{t("books.seegallery")}</p>
                 <BookOpen
                   className="h-6 w-6 text-white transition-transform duration-300 group-hover:scale-110 sm:h-10 sm:w-10"
                   aria-hidden="true"
@@ -69,7 +63,7 @@ function PhotoMagazine({ link, src, title }: PhotoMagazineProps) {
         </figcaption>
       </figure>
     </Link>
-  );
+  )
 }
 
 export default function BookCard({
@@ -84,8 +78,8 @@ export default function BookCard({
   // On définit les classes de mise en page en fonction de reverseLayout
   const layoutClasses = reverseLayout
     ? " my-6 flex flex-col lg:flex-row-reverse w-full items-center justify-center gap-8 rounded-2xl border-1 border-gray-200 bg-secondary p-4 shadow-lg hover:bg-gray-100 sm:p-6 md:gap-[64px]"
-    : " my-3 flex flex-col lg:flex-row w-full items-center justify-center gap-8 rounded-2xl border-1 border-gray-200 bg-secondary p-4 shadow-lg hover:bg-gray-100 sm:p-6 md:gap-[64px]";
-  const t = useTranslations();
+    : " my-3 flex flex-col lg:flex-row w-full items-center justify-center gap-8 rounded-2xl border-1 border-gray-200 bg-secondary p-4 shadow-lg hover:bg-gray-100 sm:p-6 md:gap-[64px]"
+  const t = useTranslations()
 
   return (
     <Reveal>
@@ -126,9 +120,7 @@ export default function BookCard({
               <ButtonLink
                 href={filmLink}
                 className="group bg-primary rounded-xl border-2 border-slate-900 text-slate-900 hover:bg-slate-800 hover:text-white dark:border-slate-300 dark:text-white dark:hover:border-slate-50"
-                {...(filmLink
-                  ? { target: "_blank", rel: "noopener noreferrer" }
-                  : {})}
+                {...(filmLink ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               >
                 <span className="text-xs font-medium tracking-wide sm:text-sm">
                   {t("books.watchmovie")}
@@ -148,5 +140,5 @@ export default function BookCard({
         </aside>
       </article>
     </Reveal>
-  );
+  )
 }

@@ -41,12 +41,12 @@ export default function StructuredData() {
         name: "Rennes",
       },
     },
-  };
+  }
 
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
     />
-  );
+  )
 }

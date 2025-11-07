@@ -1,5 +1,5 @@
-import CivilisationPage from "@/components/page-components/books-page-components/CivilisationPage";
-import { Metadata } from "next";
+import { Metadata } from "next"
+import CivilisationPage from "@/components/page-components/books-page-components/CivilisationPage"
 
 export const metadata: Metadata = {
   title: "Magazine Civilisation - Parkour & Voyage",
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.felix-orain.com/books/civilisation",
   },
-};
+}
 
 export default function Page() {
-  return <CivilisationPage />;
+  return <CivilisationPage />
 }

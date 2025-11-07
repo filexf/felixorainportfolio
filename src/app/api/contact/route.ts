@@ -1,6 +1,6 @@
 // src/app/api/contact/route.ts
-import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
+import { type NextRequest, NextResponse } from "next/server"
+import { Resend } from "resend"
 
 // À importer plus tard pour un email de confirmation
 // import { sendConfirmationEmail } from '@/lib/emailTemplates';
@@ -9,29 +9,26 @@ import { Resend } from "resend";
 // Ajoutez cette déclaration de type
 declare const process: {
   env: {
-    RESEND_API_KEY: string;
-  };
-};
-
-// Vérifier que la clé API est définie
-const apiKey = process.env.RESEND_API_KEY;
-
-if (!apiKey) {
-  console.error("RESEND_API_KEY is not defined in environment variables");
+    RESEND_API_KEY: string
+  }
 }
 
-const resend = new Resend(apiKey);
+// Vérifier que la clé API est définie
+const apiKey = process.env.RESEND_API_KEY
+
+if (!apiKey) {
+  console.error("RESEND_API_KEY is not defined in environment variables")
+}
+
+const resend = new Resend(apiKey)
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, subject, message } = await request.json();
+    const { name, email, subject, message } = await request.json()
 
     // Validation des données
     if (!name || !email || !subject || !message) {
-      return NextResponse.json(
-        { error: "Tous les champs sont requis" },
-        { status: 400 },
-      );
+      return NextResponse.json({ error: "Tous les champs sont requis" }, { status: 400 })
     }
 
     // Fonction pour traduire le sujet
@@ -39,14 +36,14 @@ export async function POST(request: NextRequest) {
       const subjects: Record<string, string> = {
         "web-project": "💻 Projet Web",
         "photo-project": "📸 Projet Photo",
-        "pricing": "💰 Demande de Tarifs",
-        "collaboration": "🤝 Collaboration",
-        "other": "💬 Autre",
-      };
-      return subjects[subjectKey] || subjectKey;
-    };
+        pricing: "💰 Demande de Tarifs",
+        collaboration: "🤝 Collaboration",
+        other: "💬 Autre",
+      }
+      return subjects[subjectKey] || subjectKey
+    }
 
-    const subjectLabel = getSubjectLabel(subject);
+    const subjectLabel = getSubjectLabel(subject)
 
     // Envoyer l'email avec une présentation professionnelle
     const { data: emailToYou, error: errorToYou } = await resend.emails.send({
@@ -87,14 +84,11 @@ export async function POST(request: NextRequest) {
           </div>
         </div>
       `,
-    });
+    })
 
     if (errorToYou) {
-      console.error("Erreur envoi email à vous:", errorToYou);
-      return NextResponse.json(
-        { error: "Erreur lors de l'envoi de l'email" },
-        { status: 500 },
-      );
+      console.error("Erreur envoi email à vous:", errorToYou)
+      return NextResponse.json({ error: "Erreur lors de l'envoi de l'email" }, { status: 500 })
     }
 
     return NextResponse.json(
@@ -102,13 +96,10 @@ export async function POST(request: NextRequest) {
         message: "Email envoyé avec succès",
         data: emailToYou,
       },
-      { status: 200 },
-    );
+      { status: 200 }
+    )
   } catch (error) {
-    console.error("Erreur serveur:", error);
-    return NextResponse.json(
-      { error: "Erreur interne du serveur" },
-      { status: 500 },
-    );
+    console.error("Erreur serveur:", error)
+    return NextResponse.json({ error: "Erreur interne du serveur" }, { status: 500 })
   }
 }

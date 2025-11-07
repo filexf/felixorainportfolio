@@ -1,7 +1,7 @@
-"use client";
+"use client"
 
-import { projects } from "@/lib/projects";
-import { ProjectCard } from "./ProjectCard";
+import { projects } from "@/lib/projects"
+import { ProjectCard } from "./ProjectCard"
 
 export default function ProjectsGrid() {
   return (
@@ -18,5 +18,5 @@ export default function ProjectsGrid() {
         />
       ))}
     </div>
-  );
+  )
 }

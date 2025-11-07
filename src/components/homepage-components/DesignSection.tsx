@@ -1,14 +1,13 @@
-import SeeMore from "@/components/homepage-components/SeeMore";
-import { BookOpen } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-
-import Reveal from "@/components/Reveal";
-import SectionWrapper from "@/components/homepage-components/SectionWrapper";
-import { getTranslations } from "next-intl/server";
+import { BookOpen } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { getTranslations } from "next-intl/server"
+import SectionWrapper from "@/components/homepage-components/SectionWrapper"
+import SeeMore from "@/components/homepage-components/SeeMore"
+import Reveal from "@/components/Reveal"
 
 export default async function DesignSection() {
-  const t = await getTranslations("designsection");
+  const t = await getTranslations("designsection")
   return (
     <Reveal>
       <SectionWrapper title={t("title")}>
@@ -26,11 +25,11 @@ export default async function DesignSection() {
         </div>
       </SectionWrapper>
     </Reveal>
-  );
+  )
 }
 
 interface DesignCardProps {
-  photo: string;
+  photo: string
 }
 
 function DesignCard({ photo }: DesignCardProps) {
@@ -53,5 +52,5 @@ function DesignCard({ photo }: DesignCardProps) {
         </div>
       </div>
     </Link>
-  );
+  )
 }

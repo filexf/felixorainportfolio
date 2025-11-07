@@ -1,12 +1,12 @@
 // Ne sert à rien pour l'instant, à supprimer plus tard si pas utilisé
 
-import React from "react";
-import { DotPattern, GradientGrid, WavePattern } from "@/components/GridBackground";
+import React from "react"
+import { DotPattern, GradientGrid, WavePattern } from "@/components/GridBackground"
 
 interface SectionWithBackgroundProps {
-  children: React.ReactNode;
-  variant?: "dots" | "grid" | "wave";
-  className?: string;
+  children: React.ReactNode
+  variant?: "dots" | "grid" | "wave"
+  className?: string
 }
 
 export function SectionWithBackground({
@@ -16,9 +16,7 @@ export function SectionWithBackground({
 }: SectionWithBackgroundProps) {
   return (
     <div className={`relative overflow-hidden py-16 ${className}`}>
-      {variant === "dots" && (
-        <DotPattern dotColor="#94A3B8" dotOpacity={0.3} gridSize={25} />
-      )}
+      {variant === "dots" && <DotPattern dotColor="#94A3B8" dotOpacity={0.3} gridSize={25} />}
       {variant === "grid" && (
         <GradientGrid
           startColor="rgba(59, 130, 246, 0.1)"
@@ -26,11 +24,9 @@ export function SectionWithBackground({
           gridSize={40}
         />
       )}
-      {variant === "wave" && (
-        <WavePattern waveColor="#3B82F6" waveOpacity={0.05} />
-      )}
+      {variant === "wave" && <WavePattern waveColor="#3B82F6" waveOpacity={0.05} />}
 
       <div className="relative z-10">{children}</div>
     </div>
-  );
+  )
 }

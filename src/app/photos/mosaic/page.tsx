@@ -1,5 +1,5 @@
-import MosaicPhotoPage from "@/components/page-components/photos-page-components/MosaicPage";
-import { Metadata } from "next";
+import { Metadata } from "next"
+import MosaicPhotoPage from "@/components/page-components/photos-page-components/MosaicPage"
 
 export const metadata: Metadata = {
   title: "Photographe Mosaïques & Patterns",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.felix-orain.com/photos/mosaic",
   },
-};
+}
 
 export default function Page() {
-  return <MosaicPhotoPage />;
+  return <MosaicPhotoPage />
 }

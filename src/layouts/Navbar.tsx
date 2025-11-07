@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import {
   Book,
@@ -10,31 +10,30 @@ import {
   Mountain,
   Trophy,
   X,
-} from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-
-import LanguageSwitcher from "@/components/LanguageSwitcher";
-import ThemeToggle from "@/components/ThemeToggle";
-import { useTheme } from "@/context/ThemeContext";
-import { useTranslations } from "next-intl";
+} from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { useTranslations } from "next-intl"
+import React, { useEffect, useState } from "react"
+import LanguageSwitcher from "@/components/LanguageSwitcher"
+import ThemeToggle from "@/components/ThemeToggle"
+import { useTheme } from "@/context/ThemeContext"
 
 interface MenuItem {
-  title: string;
-  url: string;
-  description?: string;
-  icon?: React.ReactNode;
-  items?: MenuItem[];
+  title: string
+  url: string
+  description?: string
+  icon?: React.ReactNode
+  items?: MenuItem[]
 }
 
 interface NavbarProps {
   logo?: {
-    url: string;
-    src: string;
-    alt: string;
-    title: string;
-  };
+    url: string
+    src: string
+    alt: string
+    title: string
+  }
 }
 
 const Navbar = ({
@@ -45,8 +44,8 @@ const Navbar = ({
     title: "Félix Orain",
   },
 }: NavbarProps) => {
-  const t = useTranslations();
-  const { darkMode } = useTheme();
+  const t = useTranslations()
+  const { darkMode } = useTheme()
 
   // Create menu with translations
   const menu = [
@@ -113,51 +112,47 @@ const Navbar = ({
       title: t("navbar.contact"),
       url: "/contact",
     },
-  ];
+  ]
 
-  const [isDesktopDropdownOpen, setIsDesktopDropdownOpen] = useState<
-    string | null
-  >(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState<
-    string | null
-  >(null);
+  const [isDesktopDropdownOpen, setIsDesktopDropdownOpen] = useState<string | null>(null)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isAnimating, setIsAnimating] = useState(false)
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState<string | null>(null)
 
   // No need for click outside handling since we use hover
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = "hidden"
     } else {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "unset"
     }
 
     return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isMobileMenuOpen]);
+      document.body.style.overflow = "unset"
+    }
+  }, [isMobileMenuOpen])
 
   const openMobileMenu = () => {
-    setIsMobileMenuOpen(true);
+    setIsMobileMenuOpen(true)
     // Small delay to ensure the element is mounted before animation
     requestAnimationFrame(() => {
-      setIsAnimating(true);
-    });
-  };
+      setIsAnimating(true)
+    })
+  }
 
   const closeMobileMenu = () => {
-    setIsAnimating(false);
+    setIsAnimating(false)
     setTimeout(() => {
-      setIsMobileMenuOpen(false);
-      setIsMobileDropdownOpen(null);
-    }, 300); // Match the transition duration
-  };
+      setIsMobileMenuOpen(false)
+      setIsMobileDropdownOpen(null)
+    }, 300) // Match the transition duration
+  }
 
   const toggleMobileDropdown = (title: string) => {
-    setIsMobileDropdownOpen(isMobileDropdownOpen === title ? null : title);
-  };
+    setIsMobileDropdownOpen(isMobileDropdownOpen === title ? null : title)
+  }
 
   const renderDesktopMenuItem = (item: MenuItem) => {
     if (item.items) {
@@ -183,9 +178,7 @@ const Navbar = ({
           {isDesktopDropdownOpen === item.title && (
             <div
               className={`absolute top-full left-0 z-50 w-80 rounded-md shadow-lg ${
-                darkMode
-                  ? "border-gray-700 bg-gray-800"
-                  : "border-gray-200 bg-white"
+                darkMode ? "border-gray-700 bg-gray-800" : "border-gray-200 bg-white"
               } border`}
             >
               <div className="p-2">
@@ -194,22 +187,16 @@ const Navbar = ({
                     key={subItem.title}
                     href={subItem.url}
                     className={`flex items-start gap-3 rounded-md p-3 text-base transition-colors ${
-                      darkMode
-                        ? "text-white hover:bg-gray-700"
-                        : "text-gray-900 hover:bg-gray-100"
+                      darkMode ? "text-white hover:bg-gray-700" : "text-gray-900 hover:bg-gray-100"
                     }`}
                   >
                     {subItem.icon && (
-                      <div
-                        className={darkMode ? "text-white" : "text-gray-900"}
-                      >
+                      <div className={darkMode ? "text-white" : "text-gray-900"}>
                         {subItem.icon}
                       </div>
                     )}
                     <div>
-                      <div className="text-sm font-semibold">
-                        {subItem.title}
-                      </div>
+                      <div className="text-sm font-semibold">{subItem.title}</div>
                       {subItem.description && (
                         <p
                           className={`text-sm leading-snug ${
@@ -226,7 +213,7 @@ const Navbar = ({
             </div>
           )}
         </div>
-      );
+      )
     }
 
     return (
@@ -241,8 +228,8 @@ const Navbar = ({
       >
         {item.title}
       </Link>
-    );
-  };
+    )
+  }
 
   const renderMobileMenuItem = (item: MenuItem) => {
     if (item.items) {
@@ -252,9 +239,7 @@ const Navbar = ({
             <Link
               href={item.url}
               onClick={closeMobileMenu}
-              className={`py-2 text-lg font-semibold ${
-                darkMode ? "text-white" : "text-gray-900"
-              }`}
+              className={`py-2 text-lg font-semibold ${darkMode ? "text-white" : "text-gray-900"}`}
             >
               {item.title}
             </Link>
@@ -264,9 +249,7 @@ const Navbar = ({
                 isMobileDropdownOpen === item.title ? "rotate-180" : ""
               }`}
             >
-              <ChevronDown
-                className={`size-5 ${darkMode ? "text-white" : "text-gray-900"}`}
-              />
+              <ChevronDown className={`size-5 ${darkMode ? "text-white" : "text-gray-900"}`} />
             </button>
           </div>
 
@@ -278,15 +261,11 @@ const Navbar = ({
                   href={subItem.url}
                   onClick={closeMobileMenu}
                   className={`flex items-start gap-3 rounded-md p-3 transition-colors ${
-                    darkMode
-                      ? "text-white hover:bg-gray-700"
-                      : "text-gray-900 hover:bg-gray-100"
+                    darkMode ? "text-white hover:bg-gray-700" : "text-gray-900 hover:bg-gray-100"
                   }`}
                 >
                   {subItem.icon && (
-                    <div className={darkMode ? "text-white" : "text-gray-900"}>
-                      {subItem.icon}
-                    </div>
+                    <div className={darkMode ? "text-white" : "text-gray-900"}>{subItem.icon}</div>
                   )}
                   <div>
                     <div className="text-sm font-semibold">{subItem.title}</div>
@@ -305,7 +284,7 @@ const Navbar = ({
             </div>
           )}
         </div>
-      );
+      )
     }
 
     return (
@@ -313,22 +292,18 @@ const Navbar = ({
         key={item.title}
         href={item.url}
         onClick={closeMobileMenu}
-        className={`block py-2 text-lg font-semibold ${
-          darkMode ? "text-white" : "text-gray-900"
-        }`}
+        className={`block py-2 text-lg font-semibold ${darkMode ? "text-white" : "text-gray-900"}`}
       >
         {item.title}
       </Link>
-    );
-  };
+    )
+  }
 
   return (
     <>
       <section
         className={`sticky top-0 z-50 border-b backdrop-blur ${
-          darkMode
-            ? "border-gray-800 bg-gray-900/95"
-            : "border-gray-200 bg-white/95"
+          darkMode ? "border-gray-800 bg-gray-900/95" : "border-gray-200 bg-white/95"
         } supports-[backdrop-filter]:bg-background/60`}
       >
         <div className="container mx-auto px-4">
@@ -356,9 +331,7 @@ const Navbar = ({
               </Link>
 
               {/* Menu Items */}
-              <div className="flex items-center gap-2">
-                {menu.map(renderDesktopMenuItem)}
-              </div>
+              <div className="flex items-center gap-2">{menu.map(renderDesktopMenuItem)}</div>
             </div>
 
             {/* Theme Toggle & Language Switcher */}
@@ -388,9 +361,7 @@ const Navbar = ({
               <button
                 onClick={openMobileMenu}
                 className={`rounded-md border border-gray-200 p-1.5 transition-colors ${
-                  darkMode
-                    ? "text-white hover:bg-gray-800"
-                    : "text-gray-900 hover:bg-gray-100"
+                  darkMode ? "text-white hover:bg-gray-800" : "text-gray-900 hover:bg-gray-100"
                 }`}
               >
                 <Menu className="size-6" />
@@ -423,11 +394,7 @@ const Navbar = ({
                 darkMode ? "border-gray-800" : "border-gray-200"
               }`}
             >
-              <Link
-                href={logo.url}
-                className="flex items-center gap-2"
-                onClick={closeMobileMenu}
-              >
+              <Link href={logo.url} className="flex items-center gap-2" onClick={closeMobileMenu}>
                 <Image
                   src={logo.src}
                   width={32}
@@ -437,9 +404,7 @@ const Navbar = ({
                   style={darkMode ? { filter: "brightness(0) invert(1)" } : {}}
                 />
                 <span
-                  className={`text-lg font-semibold ${
-                    darkMode ? "text-white" : "text-gray-900"
-                  }`}
+                  className={`text-lg font-semibold ${darkMode ? "text-white" : "text-gray-900"}`}
                 >
                   {logo.title}
                 </span>
@@ -522,7 +487,7 @@ const Navbar = ({
         </nav>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

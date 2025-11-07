@@ -1,5 +1,5 @@
-import ApplicationsPage from "@/components/page-components/ApplicationsPage";
-import { Metadata } from "next";
+import { Metadata } from "next"
+import ApplicationsPage from "@/components/page-components/ApplicationsPage"
 
 export const metadata: Metadata = {
   title: "Applications Web",
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.felix-orain.com/applications",
   },
-};
+}
 
 export default function Page() {
-  return <ApplicationsPage />;
+  return <ApplicationsPage />
 }

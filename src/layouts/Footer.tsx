@@ -1,21 +1,21 @@
-import { FileText, MapPin } from "lucide-react";
-import { getTranslations } from "next-intl/server";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import { FileText, MapPin } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { getTranslations } from "next-intl/server"
+import React from "react"
 
 interface FooterProps {
-  noPadding?: boolean;
+  noPadding?: boolean
 }
 
 interface SocialIconProps {
-  icon: string;
-  link: string;
-  invert?: boolean;
+  icon: string
+  link: string
+  invert?: boolean
 }
 
 export default async function Footer({ noPadding }: FooterProps) {
-  const t = await getTranslations("footer");
+  const t = await getTranslations("footer")
 
   return (
     // To make sure that there isn't the padding on the bottom of the page
@@ -34,15 +34,9 @@ export default async function Footer({ noPadding }: FooterProps) {
                   {t("sections.services")}
                 </h3>
                 <nav className="space-y-3">
-                  <FooterLink href="/applications">
-                    {t("links.webDevelopment")}
-                  </FooterLink>
-                  <FooterLink href="/photos">
-                    {t("links.photography")}
-                  </FooterLink>
-                  <FooterLink href="/books">
-                    {t("links.graphicDesign")}
-                  </FooterLink>
+                  <FooterLink href="/applications">{t("links.webDevelopment")}</FooterLink>
+                  <FooterLink href="/photos">{t("links.photography")}</FooterLink>
+                  <FooterLink href="/books">{t("links.graphicDesign")}</FooterLink>
                 </nav>
               </div>
 
@@ -52,21 +46,11 @@ export default async function Footer({ noPadding }: FooterProps) {
                   {t("sections.portfolio")}
                 </h3>
                 <nav className="space-y-3">
-                  <FooterLink href="/photos/wedding">
-                    {t("links.weddings")}
-                  </FooterLink>
-                  <FooterLink href="/photos/sport">
-                    {t("links.sportParkour")}
-                  </FooterLink>
-                  <FooterLink href="/photos/landscape">
-                    {t("links.landscapes")}
-                  </FooterLink>
-                  <FooterLink href="/photos/cityscape">
-                    {t("links.cityscape")}
-                  </FooterLink>
-                  <FooterLink href="/photos/mosaic">
-                    {t("links.mosaic")}
-                  </FooterLink>
+                  <FooterLink href="/photos/wedding">{t("links.weddings")}</FooterLink>
+                  <FooterLink href="/photos/sport">{t("links.sportParkour")}</FooterLink>
+                  <FooterLink href="/photos/landscape">{t("links.landscapes")}</FooterLink>
+                  <FooterLink href="/photos/cityscape">{t("links.cityscape")}</FooterLink>
+                  <FooterLink href="/photos/mosaic">{t("links.mosaic")}</FooterLink>
                 </nav>
               </div>
 
@@ -76,12 +60,8 @@ export default async function Footer({ noPadding }: FooterProps) {
                   {t("sections.creations")}
                 </h3>
                 <nav className="space-y-3">
-                  <FooterLink href="/books/civilisation">
-                    {t("links.civilisationMag")}
-                  </FooterLink>
-                  <FooterLink href="/books/wizzyenasie">
-                    {t("links.wizzyAsia")}
-                  </FooterLink>
+                  <FooterLink href="/books/civilisation">{t("links.civilisationMag")}</FooterLink>
+                  <FooterLink href="/books/wizzyenasie">{t("links.wizzyAsia")}</FooterLink>
                 </nav>
               </div>
 
@@ -94,9 +74,7 @@ export default async function Footer({ noPadding }: FooterProps) {
                   <FooterLink href="/contact" isButton>
                     {t("links.sendMessage")}
                   </FooterLink>
-                  <FooterExternalLink href="tel:0778764454">
-                    {t("links.phone")}
-                  </FooterExternalLink>
+                  <FooterExternalLink href="tel:0778764454">{t("links.phone")}</FooterExternalLink>
                   <FooterExternalLink href="mailto:felix.orain@gmail.com">
                     {t("links.email")}
                   </FooterExternalLink>
@@ -133,10 +111,7 @@ export default async function Footer({ noPadding }: FooterProps) {
                     <span className="mr-2 text-blue-300">
                       <MapPin size={16} />
                     </span>
-                    <span
-                      style={{ color: "var(--footer-text)" }}
-                      className="text-xs md:text-sm"
-                    >
+                    <span style={{ color: "var(--footer-text)" }} className="text-xs md:text-sm">
                       Rennes, Bretagne
                     </span>
                   </div>
@@ -144,10 +119,7 @@ export default async function Footer({ noPadding }: FooterProps) {
                     <span className="mr-2 text-blue-300">
                       <FileText size={16} />
                     </span>
-                    <span
-                      style={{ color: "var(--footer-text)" }}
-                      className="text-xs md:text-sm"
-                    >
+                    <span style={{ color: "var(--footer-text)" }} className="text-xs md:text-sm">
                       SIRET : 840 825 871 00014
                     </span>
                   </div>
@@ -174,27 +146,27 @@ export default async function Footer({ noPadding }: FooterProps) {
         </div>
       </footer>
     </div>
-  );
+  )
 }
 
 // ✅ Enhanced Footer Link Components
 interface FooterLinkProps {
-  href: string;
-  children: React.ReactNode;
-  isButton?: boolean;
+  href: string
+  children: React.ReactNode
+  isButton?: boolean
 }
 
 interface FooterExternalLinkProps {
-  href: string;
-  children: React.ReactNode;
+  href: string
+  children: React.ReactNode
 }
 
 function FooterLink({ href, children, isButton }: FooterLinkProps) {
   const baseClasses =
-    "group flex items-center gap-2 text-sm transition-all duration-300 hover:translate-x-1";
+    "group flex items-center gap-2 text-sm transition-all duration-300 hover:translate-x-1"
   const buttonClasses = isButton
     ? "rounded-lg bg-blue-600/20 px-3 py-2 hover:bg-blue-600/30 hover:translate-x-0 hover:scale-105"
-    : "hover:text-blue-300";
+    : "hover:text-blue-300"
 
   return (
     <Link
@@ -202,9 +174,7 @@ function FooterLink({ href, children, isButton }: FooterLinkProps) {
       className={`${baseClasses} ${buttonClasses}`}
       style={{ color: "var(--footer-text-light)" }}
     >
-      <span
-        className={`${isButton ? "font-medium" : ""} underline-offset-2 group-hover:underline`}
-      >
+      <span className={`${isButton ? "font-medium" : ""} underline-offset-2 group-hover:underline`}>
         {children}
       </span>
       {!isButton && (
@@ -213,7 +183,7 @@ function FooterLink({ href, children, isButton }: FooterLinkProps) {
         </span>
       )}
     </Link>
-  );
+  )
 }
 
 function FooterExternalLink({ href, children }: FooterExternalLinkProps) {
@@ -223,14 +193,12 @@ function FooterExternalLink({ href, children }: FooterExternalLinkProps) {
       className="group flex items-center gap-2 text-sm transition-all duration-300 hover:translate-x-1 hover:text-blue-300"
       style={{ color: "var(--footer-text-light)" }}
     >
-      <span className="underline-offset-2 group-hover:underline">
-        {children}
-      </span>
+      <span className="underline-offset-2 group-hover:underline">{children}</span>
       <span className="ml-auto opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100">
         →
       </span>
     </a>
-  );
+  )
 }
 
 function SocialIcon({ icon, link, invert }: SocialIconProps) {
@@ -253,5 +221,5 @@ function SocialIcon({ icon, link, invert }: SocialIconProps) {
         />
       </a>
     </li>
-  );
+  )
 }

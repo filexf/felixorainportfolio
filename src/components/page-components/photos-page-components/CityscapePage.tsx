@@ -1,10 +1,10 @@
-import ImageGalleryStructuredData from "@/components/ImageGalleryStructuredData";
-import Gallery from "@/components/photos-components/PhotosGallery";
-import { getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server"
+import ImageGalleryStructuredData from "@/components/ImageGalleryStructuredData"
+import Gallery from "@/components/photos-components/PhotosGallery"
 
 interface GalleryImage {
-  src: string;
-  title: string;
+  src: string
+  title: string
 }
 
 // Définition des images avec leurs chemins corrects
@@ -89,10 +89,10 @@ const images: GalleryImage[] = [
     src: "/images/Photos-cityscape/Feu d'artifice-4.jpg",
     title: "Cityscape image",
   },
-];
+]
 
 export default async function CityscapePhotoPage() {
-  const t = await getTranslations("cityscapephotopage");
+  const t = await getTranslations("cityscapephotopage")
 
   return (
     <>
@@ -104,5 +104,5 @@ export default async function CityscapePhotoPage() {
       />
       <Gallery title={t("title")} images={images} text={t("desc")} />
     </>
-  );
+  )
 }

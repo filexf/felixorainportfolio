@@ -1,5 +1,5 @@
-import SportPhotoPage from "@/components/page-components/photos-page-components/SportPage";
-import { Metadata } from "next";
+import { Metadata } from "next"
+import SportPhotoPage from "@/components/page-components/photos-page-components/SportPage"
 
 export const metadata: Metadata = {
   title: "Photographe Sport & Parkour",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.felix-orain.com/photos/sport",
   },
-};
+}
 
 export default function Page() {
-  return <SportPhotoPage />;
+  return <SportPhotoPage />
 }

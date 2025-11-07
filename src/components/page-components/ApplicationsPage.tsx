@@ -1,14 +1,14 @@
-import GitHubButton from "@/components/applications-components/GitHubButton";
-import ProjectsGrid from "@/components/applications-components/ProjectsGrid";
-import Reveal from "@/components/Reveal";
-import SoftwareApplicationStructuredData from "@/components/SoftwareApplicationStructuredData";
-import { projects } from "@/lib/projects";
-import { getTranslations } from "next-intl/server";
-import Image from "next/image";
+import Image from "next/image"
+import { getTranslations } from "next-intl/server"
+import GitHubButton from "@/components/applications-components/GitHubButton"
+import ProjectsGrid from "@/components/applications-components/ProjectsGrid"
+import Reveal from "@/components/Reveal"
+import SoftwareApplicationStructuredData from "@/components/SoftwareApplicationStructuredData"
+import { projects } from "@/lib/projects"
 
 interface TechStackItem {
-  name: string;
-  icon: string;
+  name: string
+  icon: string
 }
 
 // Tech stack data
@@ -24,11 +24,11 @@ const techStack: TechStackItem[] = [
   { name: "Figma", icon: "/icons/Tech stack icons/Figma-icon.svg" },
   { name: "GitHub", icon: "/icons/Tech stack icons/Github-icon.svg" },
   { name: "JavaScript", icon: "/icons/Tech stack icons/Javascript-icon.svg" },
-];
+]
 
 interface TechStackIconProps {
-  name: string;
-  icon: string;
+  name: string
+  icon: string
 }
 
 // Reusable Tech Stack Icon component
@@ -36,19 +36,13 @@ function TechStackIcon({ name, icon }: TechStackIconProps) {
   return (
     <div className="border-2px bg-secondary mb-1 flex items-center gap-2 rounded-3xl border-1 border-gray-200 px-3 py-1 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200 sm:gap-3 sm:px-6 sm:py-2">
       <p className="text-gradient text-sm font-bold sm:text-base">{name}</p>
-      <Image
-        src={icon}
-        alt={name}
-        width={32}
-        height={32}
-        className="h-6 w-6 sm:h-8 sm:w-8"
-      />
+      <Image src={icon} alt={name} width={32} height={32} className="h-6 w-6 sm:h-8 sm:w-8" />
     </div>
-  );
+  )
 }
 
 export default async function ApplicationsPage() {
-  const t = await getTranslations();
+  const t = await getTranslations()
 
   // Prepare applications data for structured data
   const applicationsData = projects.map((project) => ({
@@ -58,7 +52,7 @@ export default async function ApplicationsPage() {
     image: project.image,
     applicationCategory: "WebApplication",
     operatingSystem: "Web",
-  }));
+  }))
 
   return (
     <>
@@ -104,5 +98,5 @@ export default async function ApplicationsPage() {
         </article>
       </Reveal>
     </>
-  );
+  )
 }

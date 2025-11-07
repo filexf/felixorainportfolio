@@ -1,18 +1,18 @@
 interface SoftwareApplicationStructuredDataProps {
   applications: Array<{
-    name: string;
-    description: string;
-    url?: string;
-    image: string;
-    applicationCategory?: string;
-    operatingSystem?: string;
+    name: string
+    description: string
+    url?: string
+    image: string
+    applicationCategory?: string
+    operatingSystem?: string
     offers?: {
-      price?: string;
-      priceCurrency?: string;
-    };
-  }>;
-  pageUrl: string;
-  author?: string;
+      price?: string
+      priceCurrency?: string
+    }
+  }>
+  pageUrl: string
+  author?: string
 }
 
 export default function SoftwareApplicationStructuredData({
@@ -51,12 +51,12 @@ export default function SoftwareApplicationStructuredData({
         ...(app.offers && { offers: app.offers }),
       },
     })),
-  };
+  }
 
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
     />
-  );
+  )
 }

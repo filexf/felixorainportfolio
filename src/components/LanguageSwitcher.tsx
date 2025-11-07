@@ -1,96 +1,93 @@
-"use client";
+"use client"
 
-import { useTheme } from "@/context/ThemeContext";
-import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation"
+import { useEffect, useRef, useState } from "react"
+import { useTheme } from "@/context/ThemeContext"
 
 interface Language {
-  code: string;
-  flag: string;
+  code: string
+  flag: string
 }
 
 interface Languages {
-  [key: string]: Language;
+  [key: string]: Language
 }
 
 export default function LanguageSwitcher() {
-  const [locale, setLocale] = useState<string>("");
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const { darkMode } = useTheme();
-  const dropdownRef = useRef<HTMLDivElement>(null);
-  const router = useRouter();
+  const [locale, setLocale] = useState<string>("")
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const { darkMode } = useTheme()
+  const dropdownRef = useRef<HTMLDivElement>(null)
+  const router = useRouter()
 
   // Langues disponibles avec leur code et drapeau
   const languages: Languages = {
     en: { code: "EN", flag: "🇬🇧" },
     fr: { code: "FR", flag: "🇫🇷" },
     es: { code: "ES", flag: "🇪🇸" },
-  };
+  }
 
   // Fonction pour lire le cookie
   const getCookieLocale = () => {
     return document.cookie
       .split("; ")
       .find((row) => row.startsWith("MYNEXTAPP_LOCALE="))
-      ?.split("=")[1];
-  };
+      ?.split("=")[1]
+  }
 
   useEffect(() => {
-    const cookieLocale = getCookieLocale();
+    const cookieLocale = getCookieLocale()
     if (cookieLocale) {
-      setLocale(cookieLocale);
+      setLocale(cookieLocale)
     } else {
-      const browserLocale = navigator.language.slice(0, 2);
-      setLocale(browserLocale);
-      document.cookie = `MYNEXTAPP_LOCALE=${browserLocale};`;
-      router.refresh();
+      const browserLocale = navigator.language.slice(0, 2)
+      setLocale(browserLocale)
+      document.cookie = `MYNEXTAPP_LOCALE=${browserLocale};`
+      router.refresh()
     }
-  }, [router]);
+  }, [router])
 
   // Ajoute un listener pour détecter les changements de cookie
   useEffect(() => {
     const checkForLocaleChange = () => {
-      const currentCookieLocale = getCookieLocale();
+      const currentCookieLocale = getCookieLocale()
       if (currentCookieLocale && currentCookieLocale !== locale) {
-        setLocale(currentCookieLocale);
+        setLocale(currentCookieLocale)
       }
-    };
+    }
 
     // Vérifie périodiquement les changements de cookie
-    const interval = setInterval(checkForLocaleChange, 100);
+    const interval = setInterval(checkForLocaleChange, 100)
 
     // Nettoie l'interval au démontage
-    return () => clearInterval(interval);
-  }, [locale]);
+    return () => clearInterval(interval)
+  }, [locale])
 
   // Ferme le menu déroulant si l'utilisateur clique ailleurs
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setIsOpen(false);
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside)
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [])
 
   const changeLocale = (newLocale: string) => {
-    setLocale(newLocale);
-    document.cookie = `MYNEXTAPP_LOCALE=${newLocale};`;
-    router.refresh();
-    setIsOpen(false);
-  };
+    setLocale(newLocale)
+    document.cookie = `MYNEXTAPP_LOCALE=${newLocale};`
+    router.refresh()
+    setIsOpen(false)
+  }
 
   // Gère la sélection d'une langue
   const handleLanguageSelect = (lang: string): void => {
-    changeLocale(lang);
-  };
+    changeLocale(lang)
+  }
 
   return (
     <div className="relative" ref={dropdownRef}>
@@ -103,12 +100,8 @@ export default function LanguageSwitcher() {
         aria-expanded={isOpen}
         aria-haspopup="true"
         style={{
-          backgroundColor: darkMode
-            ? "rgba(255, 255, 255, 0.1)"
-            : "rgba(0, 0, 0, 0.05)",
-          borderColor: darkMode
-            ? "rgba(255, 255, 255, 0.2)"
-            : "rgba(0, 0, 0, 0.1)",
+          backgroundColor: darkMode ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.05)",
+          borderColor: darkMode ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.1)",
           color: darkMode ? "var(--text-primary)" : "var(--text-secondary)",
         }}
       >
@@ -155,9 +148,7 @@ export default function LanguageSwitcher() {
                 onClick={() => handleLanguageSelect(lang)}
                 disabled={lang === locale}
               >
-                <span className="mr-2 text-base sm:mr-2.5 sm:text-lg">
-                  {languages[lang].flag}
-                </span>
+                <span className="mr-2 text-base sm:mr-2.5 sm:text-lg">{languages[lang].flag}</span>
                 {languages[lang].code}
                 {lang === locale && (
                   <span className="ml-auto flex h-1.5 w-1.5 rounded-full bg-sky-500 sm:h-2 sm:w-2"></span>
@@ -168,5 +159,5 @@ export default function LanguageSwitcher() {
         </div>
       )}
     </div>
-  );
+  )
 }

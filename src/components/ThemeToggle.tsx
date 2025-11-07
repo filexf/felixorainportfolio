@@ -1,18 +1,16 @@
-"use client";
+"use client"
 
-import React from "react";
-import { useTheme } from "@/context/ThemeContext";
+import React from "react"
+import { useTheme } from "@/context/ThemeContext"
 
 const ThemeToggle: React.FC = () => {
-  const { darkMode, toggleTheme } = useTheme();
+  const { darkMode, toggleTheme } = useTheme()
 
   return (
     <button
       onClick={toggleTheme}
       className={`flex h-8 w-8 items-center justify-center rounded-full transition-all duration-300 hover:shadow-md sm:h-10 sm:w-10 ${
-        darkMode
-          ? "bg-slate-700 hover:bg-slate-600"
-          : "bg-sky-100 hover:bg-sky-200"
+        darkMode ? "bg-slate-700 hover:bg-slate-600" : "bg-sky-100 hover:bg-sky-200"
       }`}
       aria-label={darkMode ? "Activer le mode clair" : "Activer le mode sombre"}
     >
@@ -50,7 +48,7 @@ const ThemeToggle: React.FC = () => {
         </svg>
       )}
     </button>
-  );
-};
+  )
+}
 
-export default ThemeToggle;
+export default ThemeToggle

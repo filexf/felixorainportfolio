@@ -1,17 +1,16 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import { MdArrowForward } from "react-icons/md";
-
-import { useTranslations } from "next-intl";
+import Link from "next/link"
+import { useTranslations } from "next-intl"
+import { MdArrowForward } from "react-icons/md"
 
 interface SeeMoreProps {
-  projectLink: string;
-  context: string; // ✅ Nouveau : contexte pour le texte
+  projectLink: string
+  context: string // ✅ Nouveau : contexte pour le texte
 }
 
 export default function SeeMore({ projectLink, context }: SeeMoreProps) {
-  const t = useTranslations();
+  const t = useTranslations()
 
   return (
     <div className="flex w-full justify-center px-4">
@@ -28,5 +27,5 @@ export default function SeeMore({ projectLink, context }: SeeMoreProps) {
         </div>
       </Link>
     </div>
-  );
+  )
 }

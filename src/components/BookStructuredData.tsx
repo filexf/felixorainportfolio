@@ -1,15 +1,15 @@
 interface BookStructuredDataProps {
-  title: string;
-  description: string;
-  coverImage: string;
-  pageUrl: string;
+  title: string
+  description: string
+  coverImage: string
+  pageUrl: string
   images?: Array<{
-    src: string;
-    title: string;
-  }>;
-  author?: string;
-  publisher?: string;
-  datePublished?: string;
+    src: string
+    title: string
+  }>
+  author?: string
+  publisher?: string
+  datePublished?: string
 }
 
 export default function BookStructuredData({
@@ -56,7 +56,7 @@ export default function BookStructuredData({
     },
     license: "https://www.felix-orain.com",
     ...(datePublished && { datePublished }),
-  };
+  }
 
   // Also create ImageGallery structured data for the pages
   const imageGalleryStructuredData =
@@ -79,7 +79,7 @@ export default function BookStructuredData({
             jobTitle: "Designer Graphique et Photographe",
           },
         }
-      : null;
+      : null
 
   return (
     <>
@@ -96,5 +96,5 @@ export default function BookStructuredData({
         />
       )}
     </>
-  );
+  )
 }

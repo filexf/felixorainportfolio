@@ -1,19 +1,15 @@
-"use client";
+"use client"
 
-import { useTheme } from "@/context/ThemeContext";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
+import Image from "next/image"
+import { useTranslations } from "next-intl"
+import { useTheme } from "@/context/ThemeContext"
 
 export default function GitHubButton() {
-  const { darkMode } = useTheme();
-  const t = useTranslations();
+  const { darkMode } = useTheme()
+  const t = useTranslations()
 
   return (
-    <a
-      href="https://github.com/filexf"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <a href="https://github.com/filexf" target="_blank" rel="noopener noreferrer">
       <div className="border-2px bg-secondary flex items-center gap-3 rounded-3xl border-1 border-gray-200 px-4 py-2 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200 sm:gap-5 sm:px-6 sm:py-3">
         <p className="text-gradient text-bold text-sm sm:text-lg md:text-xl">
           {t("applications.github")}
@@ -31,5 +27,5 @@ export default function GitHubButton() {
         />
       </div>
     </a>
-  );
+  )
 }

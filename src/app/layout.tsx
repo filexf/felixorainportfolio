@@ -1,15 +1,15 @@
-import { GridBackground } from "@/components/GridBackground";
-import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl"
+import { getLocale, getMessages } from "next-intl/server"
+import { GridBackground } from "@/components/GridBackground"
 
-import StructuredData from "@/components/StructuredData";
-import { ThemeProvider } from "@/context/ThemeContext";
-import Footer from "@/layouts/Footer";
-import Navbar from "@/layouts/Navbar";
-import "@/styles/globals.css";
-import { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
-import React from "react";
+import StructuredData from "@/components/StructuredData"
+import { ThemeProvider } from "@/context/ThemeContext"
+import Footer from "@/layouts/Footer"
+import Navbar from "@/layouts/Navbar"
+import "@/styles/globals.css"
+import { Metadata } from "next"
+import { Inter, Poppins } from "next/font/google"
+import React from "react"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,7 +18,7 @@ const inter = Inter({
   preload: true,
   weight: ["400", "500", "600", "700", "800", "900"],
   fallback: ["system-ui", "sans-serif"],
-});
+})
 
 // Ajout d'une police secondaire (optionnel)
 const poppins = Poppins({
@@ -27,7 +27,7 @@ const poppins = Poppins({
   variable: "--font-poppins",
   weight: ["600", "700"],
   fallback: ["system-ui", "sans-serif"],
-});
+})
 
 export const metadata: Metadata = {
   // Métadonnées de base
@@ -151,15 +151,15 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
-};
+}
 
 export default async function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
-  const messages = await getMessages();
-  const locale = await getLocale();
+  const messages = await getMessages()
+  const locale = await getLocale()
 
   return (
     <html
@@ -187,5 +187,5 @@ export default async function RootLayout({
         </NextIntlClientProvider>
       </body>
     </html>
-  );
+  )
 }

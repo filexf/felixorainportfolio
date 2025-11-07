@@ -1,5 +1,5 @@
-import WeddingPhotoPage from "@/components/page-components/photos-page-components/WeddingPage";
-import { Metadata } from "next";
+import { Metadata } from "next"
+import WeddingPhotoPage from "@/components/page-components/photos-page-components/WeddingPage"
 
 export const metadata: Metadata = {
   title: "Photographe de Mariage",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Félix Orain photographe",
     "photographe professionnel mariage",
     "photographe mariage haut de gamme",
-    "photographe mariage pas cher"
+    "photographe mariage pas cher",
   ],
   openGraph: {
     title: "Photographe de Mariage à Rennes | Félix Orain",
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.felix-orain.com/photos/wedding",
   },
-};
+}
 
 export default function Page() {
-  return <WeddingPhotoPage />;
+  return <WeddingPhotoPage />
 }

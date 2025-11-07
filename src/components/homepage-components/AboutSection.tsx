@@ -1,23 +1,22 @@
-"use client";
+"use client"
 
-import Reveal from "@/components/Reveal";
-import SectionWrapper from "@/components/homepage-components/SectionWrapper";
-import { ButtonLink } from "@/components/ui/button";
-import { Download } from "lucide-react";
-import { useLocale, useTranslations } from "next-intl";
-import Image from "next/image";
+import { Download } from "lucide-react"
+import Image from "next/image"
+import { useLocale, useTranslations } from "next-intl"
+import SectionWrapper from "@/components/homepage-components/SectionWrapper"
+import Reveal from "@/components/Reveal"
+import { ButtonLink } from "@/components/ui/button"
 
 export default function AboutSection() {
-  const t = useTranslations();
-  const locale = useLocale();
+  const t = useTranslations()
+  const locale = useLocale()
 
   const resumeMap = {
     en: "/Felix_Orain_Web_Developer_Resume.pdf",
     fr: "/Felix_Orain_CV_Developpeur_Web.pdf",
     es: "/Felix_Orain_Web_Developer_Resume.pdf", // fallback to English if Spanish
-  };
-  const resumeFile =
-    resumeMap[locale as keyof typeof resumeMap] || resumeMap.en;
+  }
+  const resumeFile = resumeMap[locale as keyof typeof resumeMap] || resumeMap.en
 
   return (
     <>
@@ -60,5 +59,5 @@ export default function AboutSection() {
         </SectionWrapper>
       </Reveal>
     </>
-  );
+  )
 }

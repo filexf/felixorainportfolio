@@ -1,20 +1,20 @@
-"use client";
+"use client"
 
-import { motion, Variants } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import { useTheme } from "@/context/ThemeContext";
-import { useTranslations } from "next-intl";
+import { motion, Variants } from "framer-motion"
+import Image from "next/image"
+import Link from "next/link"
+import { useTranslations } from "next-intl"
+import { useEffect, useState } from "react"
+import { useTheme } from "@/context/ThemeContext"
 
 export default function NotFound() {
-  const t = useTranslations();
-  const { darkMode } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const t = useTranslations()
+  const { darkMode } = useTheme()
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    setMounted(true)
+  }, [])
 
   // Animation variants
   const containerVariants: Variants = {
@@ -26,7 +26,7 @@ export default function NotFound() {
         delayChildren: 0.3,
       },
     },
-  };
+  }
 
   const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
@@ -39,7 +39,7 @@ export default function NotFound() {
         damping: 12,
       },
     },
-  };
+  }
 
   const logoVariants: Variants = {
     hidden: { scale: 0.8, opacity: 0, y: -20 },
@@ -53,7 +53,7 @@ export default function NotFound() {
         damping: 20,
       },
     },
-  };
+  }
 
   const numberVariants: Variants = {
     hidden: { opacity: 0, scale: 0.5 },
@@ -66,7 +66,7 @@ export default function NotFound() {
         bounce: 0.4,
       },
     },
-  };
+  }
 
   // Pulsing animation
   const pulse = {
@@ -76,9 +76,9 @@ export default function NotFound() {
       repeat: Infinity,
       repeatType: "reverse" as const,
     },
-  };
+  }
 
-  if (!mounted) return null;
+  if (!mounted) return null
 
   return (
     <div className="mt-12 flex min-h-screen flex-col items-center px-4">
@@ -100,11 +100,7 @@ export default function NotFound() {
         </motion.div>
 
         {/* Error number with pulse effect */}
-        <motion.div
-          className="relative mb-8"
-          variants={numberVariants}
-          animate={pulse}
-        >
+        <motion.div className="relative mb-8" variants={numberVariants} animate={pulse}>
           <h1 className="text-9xl font-bold text-gray-400">404</h1>
           <div className="absolute inset-0 flex items-center justify-center">
             <h2 className="text-4xl font-bold">Oops!</h2>
@@ -122,11 +118,7 @@ export default function NotFound() {
         </motion.p>
 
         {/* Button */}
-        <motion.div
-          variants={itemVariants}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
+        <motion.div variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link
             href="/"
             className={`inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-medium shadow-lg transition-all duration-300 ${
@@ -135,11 +127,7 @@ export default function NotFound() {
                 : "bg-black text-white hover:bg-gray-800"
             }`}
           >
-            <motion.span
-              initial={{ x: 0 }}
-              whileHover={{ x: -4 }}
-              className="mr-2"
-            >
+            <motion.span initial={{ x: 0 }} whileHover={{ x: -4 }} className="mr-2">
               ←
             </motion.span>
             {t("notFound.back")}
@@ -147,5 +135,5 @@ export default function NotFound() {
         </motion.div>
       </motion.div>
     </div>
-  );
+  )
 }

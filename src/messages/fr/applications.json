@@ -29,8 +29,7 @@
     },
     "portfolio": {
       "title": "PORTFOLIO",
-        "desc": "Portfolio développé avec Next.js, TypeScript et Tailwind. Intègre Next-intl pour le multilinguisme, le dark mode, des animations avec Framer Motion, une optimisation SEO avancée et un déploiement sur Vercel. Présente mes projets et services dans une interface moderne et responsive avec des performances optimales."
-
+      "desc": "Portfolio développé avec Next.js, TypeScript et Tailwind. Intègre Next-intl pour le multilinguisme, le dark mode, des animations avec Framer Motion, une optimisation SEO avancée et un déploiement sur Vercel. Présente mes projets et services dans une interface moderne et responsive avec des performances optimales."
     },
     "tymouet": {
       "title": "TY MOUET",

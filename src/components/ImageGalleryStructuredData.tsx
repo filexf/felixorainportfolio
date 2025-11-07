@@ -1,11 +1,11 @@
 interface ImageGalleryStructuredDataProps {
-  title: string;
-  description?: string;
+  title: string
+  description?: string
   images: Array<{
-    src: string;
-    title: string;
-  }>;
-  pageUrl: string;
+    src: string
+    title: string
+  }>
+  pageUrl: string
 }
 
 export default function ImageGalleryStructuredData({
@@ -42,12 +42,12 @@ export default function ImageGalleryStructuredData({
       name: "Félix Orain",
     },
     license: "https://www.felix-orain.com",
-  };
+  }
 
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
     />
-  );
+  )
 }

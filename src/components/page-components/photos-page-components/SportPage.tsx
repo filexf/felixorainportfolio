@@ -1,10 +1,10 @@
-import ImageGalleryStructuredData from "@/components/ImageGalleryStructuredData";
-import Gallery from "@/components/photos-components/PhotosGallery";
-import { getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server"
+import ImageGalleryStructuredData from "@/components/ImageGalleryStructuredData"
+import Gallery from "@/components/photos-components/PhotosGallery"
 
 interface GalleryImage {
-  src: string;
-  title: string;
+  src: string
+  title: string
 }
 
 // Définition des images avec leurs chemins corrects
@@ -81,10 +81,10 @@ const images: GalleryImage[] = [
     src: "/images/Photos-sport/Paris_Saint_Eustache.jpg",
     title: "Sport image",
   },
-];
+]
 
 export default async function SportPhotoPage() {
-  const t = await getTranslations("sportphotopage");
+  const t = await getTranslations("sportphotopage")
 
   return (
     <>
@@ -96,5 +96,5 @@ export default async function SportPhotoPage() {
       />
       <Gallery title={t("title")} images={images} text={t("desc")} />
     </>
-  );
+  )
 }
