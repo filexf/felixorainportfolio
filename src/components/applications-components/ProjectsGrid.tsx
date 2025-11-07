@@ -1,10 +1,11 @@
 "use client";
 
-import { ProjectCard, projects } from "./ProjectCard";
+import { projects } from "@/lib/projects";
+import { ProjectCard } from "./ProjectCard";
 
 export default function ProjectsGrid() {
   return (
-    <>
+    <div className="flex w-full flex-col gap-8" role="list">
       {projects.map((project, index) => (
         <ProjectCard
           key={index}
@@ -16,6 +17,6 @@ export default function ProjectsGrid() {
           images={project.images}
         />
       ))}
-    </>
+    </div>
   );
 }
