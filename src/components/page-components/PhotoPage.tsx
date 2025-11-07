@@ -41,7 +41,7 @@ export default async function PhotosPage() {
   ];
 
   return (
-    <main className="flex justify-center">
+    <div className="flex justify-center">
       <article className="mb-8 flex w-full max-w-4xl flex-col items-center gap-4 px-4 sm:mb-12 sm:gap-8 sm:px-8 md:px-12">
         <Reveal>
           <header>
@@ -67,7 +67,7 @@ export default async function PhotosPage() {
           </section>
         </Reveal>
       </article>
-    </main>
+    </div>
   );
 }
 

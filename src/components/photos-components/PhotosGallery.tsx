@@ -20,7 +20,7 @@ const Gallery = ({ title, images, text }: GalleryProps) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   return (
-    <main className="flex w-full justify-center pt-[40px] pb-[120px]">
+    <div className="flex w-full justify-center pt-[40px] pb-[120px]">
       <article className="flex flex-col gap-[40px] px-8">
         <header>
           <h1 className="text-gradient text-center text-5xl leading-normal font-bold md:text-7xl">
@@ -72,7 +72,7 @@ const Gallery = ({ title, images, text }: GalleryProps) => {
           }}
         />
       </article>
-    </main>
+    </div>
   );
 };
 

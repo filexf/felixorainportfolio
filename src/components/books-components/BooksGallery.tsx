@@ -22,7 +22,7 @@ export default function Gallery({ title, images }: GalleryProps) {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   return (
-    <main className="flex w-full justify-center px-2 py-12 sm:px-4">
+    <div className="flex w-full justify-center px-2 py-12 sm:px-4">
       <article className="flex w-full max-w-5xl flex-col gap-6 sm:gap-10">
         <header>
           <h1 className="text-gradient text-center text-5xl leading-normal font-bold sm:text-6xl md:text-7xl">
@@ -82,6 +82,6 @@ export default function Gallery({ title, images }: GalleryProps) {
           }}
         />
       </article>
-    </main>
+    </div>
   );
 }

@@ -6,7 +6,7 @@ export default async function BooksPage() {
   const t = await getTranslations();
 
   return (
-    <main className="flex justify-center p-4 sm:p-8">
+    <div className="flex justify-center p-4 sm:p-8">
       <article className="mt-[30px] flex w-full flex-col items-center gap-8 sm:w-[90%] sm:gap-12 lg:w-4/5">
         <Reveal>
           <header>
@@ -44,6 +44,6 @@ export default async function BooksPage() {
           </section>
         </Reveal>
       </article>
-    </main>
+    </div>
   );
 }
