@@ -1,4 +1,6 @@
 import BooksGallery from "@/components/books-components/BooksGallery";
+import BookStructuredData from "@/components/BookStructuredData";
+import { getTranslations } from "next-intl/server";
 
 interface GalleryImage {
   src: string;
@@ -64,9 +66,18 @@ const images: GalleryImage[] = [
   },
 ];
 
-export default function WizzyEnAsieBook() {
+export default async function WizzyEnAsieBook() {
+  const t = await getTranslations("books.wizzy");
+
   return (
     <>
+      <BookStructuredData
+        title="Wizzy en Asie"
+        description={t("description")}
+        coverImage="/images/Couvertures magazines/WIZZY En Asie BONNE VERSION.jpg"
+        pageUrl="https://www.felix-orain.com/books/wizzyenasie"
+        images={images}
+      />
       <BooksGallery title={"Wizzy en Asie"} images={images} />
     </>
   );

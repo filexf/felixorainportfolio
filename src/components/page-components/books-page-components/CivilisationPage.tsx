@@ -1,4 +1,6 @@
 import BooksGallery from "@/components/books-components/BooksGallery";
+import BookStructuredData from "@/components/BookStructuredData";
+import { getTranslations } from "next-intl/server";
 
 interface GalleryImage {
   src: string;
@@ -64,9 +66,18 @@ const images: GalleryImage[] = [
   },
 ];
 
-export default function CivilisationBook() {
+export default async function CivilisationBook() {
+  const t = await getTranslations("books.civilisation");
+
   return (
     <>
+      <BookStructuredData
+        title="Civilisation"
+        description={t("description")}
+        coverImage="/images/Couvertures magazines/Civilisation Mag.jpg"
+        pageUrl="https://www.felix-orain.com/books/civilisation"
+        images={images}
+      />
       <BooksGallery title={"Civilisation"} images={images} />
     </>
   );
