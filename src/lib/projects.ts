@@ -132,49 +132,4 @@ export const projects: Project[] = [
       },
     ],
   },
-  {
-    title: "tymouet",
-    description: "tymouet",
-    image: "/images/Photo-projets-dev/Photo_Ty_Mouet.jpg",
-    githubLink: "https://github.com/filexf/ty-mouet",
-    websiteLink: "https://ty-mouet-c5897a5b74b0.herokuapp.com/",
-    images: [
-      {
-        src: "/images/Screenshots-Tymouet/Tymouet-screenshot-1.jpeg",
-        alt: "Screenshot 1",
-      },
-      {
-        src: "/images/Screenshots-Tymouet/Tymouet-screenshot-2.jpeg",
-        alt: "Screenshot 2",
-      },
-      {
-        src: "/images/Screenshots-Tymouet/Tymouet-screenshot-3.jpeg",
-        alt: "Screenshot 3",
-      },
-      {
-        src: "/images/Screenshots-Tymouet/Tymouet-screenshot-4.jpeg",
-        alt: "Screenshot 4",
-      },
-      {
-        src: "/images/Screenshots-Tymouet/Tymouet-screenshot-5.jpeg",
-        alt: "Screenshot 5",
-      },
-      {
-        src: "/images/Screenshots-Tymouet/Tymouet-screenshot-6.jpeg",
-        alt: "Screenshot 6",
-      },
-      {
-        src: "/images/Screenshots-Tymouet/Tymouet-screenshot-7.jpeg",
-        alt: "Screenshot 7",
-      },
-      {
-        src: "/images/Screenshots-Tymouet/Tymouet-screenshot-8.jpeg",
-        alt: "Screenshot 8",
-      },
-      {
-        src: "/images/Screenshots-Tymouet/Tymouet-screenshot-9.jpeg",
-        alt: "Screenshot 9",
-      },
-    ],
-  },
 ]
