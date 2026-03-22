@@ -8,6 +8,7 @@ import Reveal from "@/components/Reveal"
 
 export default async function DesignSection() {
   const t = await getTranslations("designsection")
+
   return (
     <Reveal>
       <SectionWrapper title={t("title")}>

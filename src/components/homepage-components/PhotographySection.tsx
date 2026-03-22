@@ -1,20 +1,18 @@
-"use client"
-
-import Image from "next/image"
-import Link from "next/link"
-import { useTranslations } from "next-intl"
 import SectionWrapper from "@/components/homepage-components/SectionWrapper"
 import SeeMore from "@/components/homepage-components/SeeMore"
 import Reveal from "@/components/Reveal"
+import { getTranslations } from "next-intl/server"
+import Image from "next/image"
+import Link from "next/link"
 
-export default function PhotographySection() {
+export default async function PhotographySection() {
   const photos: string[] = [
     "/images/Important-photos/Tests_photos_USA_147.jpg",
     "/images/Important-photos/Photos_Bangkok_V1_33.jpg",
     "/images/Important-photos/Photos_HK_chill_109.jpg",
     "/images/Important-photos/Photos_HK_chill_132.jpg",
   ]
-  const t = useTranslations()
+  const t = await getTranslations()
 
   return (
     <Reveal>

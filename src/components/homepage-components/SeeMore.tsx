@@ -1,7 +1,5 @@
-"use client"
-
 import Link from "next/link"
-import { useTranslations } from "next-intl"
+import { getTranslations } from "next-intl/server"
 import { MdArrowForward } from "react-icons/md"
 
 interface SeeMoreProps {
@@ -9,8 +7,8 @@ interface SeeMoreProps {
   context: string // ✅ Nouveau : contexte pour le texte
 }
 
-export default function SeeMore({ projectLink, context }: SeeMoreProps) {
-  const t = useTranslations()
+export default async function SeeMore({ projectLink, context }: SeeMoreProps) {
+  const t = await getTranslations()
 
   return (
     <div className="flex w-full justify-center px-4">

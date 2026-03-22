@@ -62,8 +62,8 @@ export default async function ApplicationsPage() {
       />
       <Reveal>
         <article className="mt-4 flex flex-row justify-center">
-          <div className="mt-[30px] flex w-full max-w-6xl flex-col items-center gap-[40px] px-4 sm:px-8 md:gap-[70px] md:px-12">
-            <header>
+          <div className="mt-[30px] flex w-full max-w-6xl flex-col items-center gap-12 px-4 sm:px-8 md:px-12">
+            <header className="flex flex-col gap-8">
               <h1 className="text-gradient text-center text-4xl leading-normal font-bold sm:text-5xl md:text-7xl">
                 {t("applications.title")}
               </h1>

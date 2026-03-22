@@ -9,7 +9,7 @@ export default async function BooksPage() {
     <div className="flex justify-center p-4 sm:p-8">
       <article className="mt-[30px] flex w-full flex-col items-center gap-8 sm:w-[90%] sm:gap-12 lg:w-4/5">
         <Reveal>
-          <header>
+          <header className="flex flex-col items-center gap-8">
             <h1 className="text-gradient text-center text-5xl leading-normal font-bold md:text-7xl">
               {t("books.title")}
             </h1>
@@ -17,7 +17,7 @@ export default async function BooksPage() {
           </header>
 
           <section
-            className="flex w-full flex-col gap-8 sm:gap-12"
+            className="flex w-full flex-col gap-8 sm:gap-12 mt-8"
             aria-label="Magazines et livres"
           >
             {/* Civilisation Book */}

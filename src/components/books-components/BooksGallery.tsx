@@ -23,8 +23,8 @@ export default function Gallery({ title, images }: GalleryProps) {
 
   return (
     <div className="flex w-full justify-center px-2 py-12 sm:px-4">
-      <article className="flex w-full max-w-5xl flex-col gap-6 sm:gap-10">
-        <header>
+      <article className="flex w-full max-w-5xl flex-col gap-12">
+        <header className="flex flex-col gap-8">
           <h1 className="text-gradient text-center text-5xl leading-normal font-bold sm:text-6xl md:text-7xl">
             {title}
           </h1>

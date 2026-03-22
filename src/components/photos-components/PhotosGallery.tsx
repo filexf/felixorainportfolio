@@ -21,8 +21,8 @@ const Gallery = ({ title, images, text }: GalleryProps) => {
 
   return (
     <div className="flex w-full justify-center pt-[40px] pb-[120px]">
-      <article className="flex flex-col gap-[40px] px-8">
-        <header>
+      <article className="flex flex-col gap-16 px-8">
+        <header className="flex flex-col gap-8">
           <h1 className="text-gradient text-center text-5xl leading-normal font-bold md:text-7xl">
             {title}
           </h1>
