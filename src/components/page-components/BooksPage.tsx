@@ -28,7 +28,7 @@ export default async function BooksPage() {
               galleryLink="/books/civilisation"
               reverseLayout={true}
               hasFilmLink={true}
-              filmLink="https://www.youtube.com/watch?v=Q-gz6qA1h14"
+              filmLink="https://www.youtube.com/watch?v=vcjpJbInfEg"
             />
 
             {/* Wizzy en Asie Book */}
