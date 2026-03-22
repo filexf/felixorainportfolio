@@ -37,7 +37,7 @@ const Gallery = ({ title, images, text }: GalleryProps) => {
             <button
               key={`${image.src}-${index}`}
               type="button"
-              className="relative aspect-square cursor-pointer overflow-hidden rounded-md transition-all duration-300 hover:shadow-md"
+              className="group relative aspect-square cursor-pointer overflow-hidden rounded-md transition-shadow duration-300 hover:shadow-md"
               onClick={() => {
                 setCurrentIndex(index)
                 setOpen(true)
@@ -50,7 +50,7 @@ const Gallery = ({ title, images, text }: GalleryProps) => {
                   alt={image.title || `${title} - Image ${index + 1}`}
                   fill
                   sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  className="rounded-md object-cover transition-all duration-300 hover:scale-[0.97]"
+                  className="rounded-md object-cover transition-transform duration-300 group-hover:scale-105"
                   quality={85}
                   loading={index < 4 ? "eager" : "lazy"}
                   priority={index < 4}
