@@ -16,6 +16,40 @@ interface GalleryProps {
   images: GalleryImage[]
 }
 
+interface GalleryThumbnailProps {
+  src: string
+  alt: string
+  sizes: string
+  quality: number
+  loading: "eager" | "lazy"
+  priority?: boolean
+}
+
+function GalleryThumbnail({ src, alt, sizes, quality, loading, priority }: GalleryThumbnailProps) {
+  const [loaded, setLoaded] = useState(false)
+
+  const markLoaded = () => setLoaded(true)
+
+  return (
+    <div className="absolute inset-0 overflow-hidden rounded-md">
+      <div className="relative h-full w-full origin-center transition-transform duration-200 ease-out group-hover:scale-103">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes={sizes}
+          className={`object-cover ${loaded ? "blur-0" : "blur-md"}`}
+          style={{ transition: "filter 450ms ease-out" }}
+          quality={quality}
+          loading={loading}
+          priority={priority}
+          onLoad={markLoaded}
+        />
+      </div>
+    </div>
+  )
+}
+
 export default function Gallery({ title, images }: GalleryProps) {
   const t = useTranslations()
   const [open, setOpen] = useState<boolean>(false)
@@ -32,14 +66,14 @@ export default function Gallery({ title, images }: GalleryProps) {
         </header>
 
         <section
-          className="xs:grid-cols-2 grid grid-cols-1 gap-4 px-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-4"
+          className="xs:grid-cols-2 grid grid-cols-1 gap-4 overflow-hidden px-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-4"
           aria-label={`Galerie du magazine ${title}`}
         >
           {images.map((image, index) => (
             <button
               key={`${image.src}-${index}`}
               type="button"
-              className="relative aspect-[3/2] cursor-pointer overflow-hidden rounded-md transition-all duration-300 hover:shadow-md"
+              className="group relative aspect-[3/2] cursor-pointer overflow-hidden rounded-md transition-shadow duration-300 hover:shadow-md"
               onClick={() => {
                 setCurrentIndex(index)
                 setOpen(true)
@@ -47,15 +81,12 @@ export default function Gallery({ title, images }: GalleryProps) {
               aria-label={`Voir ${image.title || `${title} - Page ${index + 1}`}`}
             >
               <figure className="relative h-full w-full">
-                <Image
+                <GalleryThumbnail
                   src={image.src}
                   alt={image.title || `${title} - Page ${index + 1}`}
-                  fill
                   sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  className="rounded-md object-cover transition-all duration-300 hover:scale-[0.97]"
-                  quality={85}
+                  quality={90}
                   loading={index < 4 ? "eager" : "lazy"}
-                  priority={index < 4}
                 />
                 <figcaption className="sr-only">
                   {image.title || `${title} - Page ${index + 1}`}

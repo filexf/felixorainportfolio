@@ -15,6 +15,40 @@ interface GalleryProps {
   text?: string
 }
 
+interface GalleryThumbnailProps {
+  src: string
+  alt: string
+  sizes: string
+  quality: number
+  loading: "eager" | "lazy"
+  priority?: boolean
+}
+
+function GalleryThumbnail({ src, alt, sizes, quality, loading, priority }: GalleryThumbnailProps) {
+  const [loaded, setLoaded] = useState(false)
+
+  const markLoaded = () => setLoaded(true)
+
+  return (
+    <div className="absolute inset-0 overflow-hidden rounded-md">
+      <div className="relative h-full w-full origin-center transition-transform duration-200 ease-out group-hover:scale-105">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes={sizes}
+          className={`object-cover ${loaded ? "blur-0" : "blur-md"}`}
+          style={{ transition: "filter 450ms ease-out" }}
+          quality={quality}
+          loading={loading}
+          priority={priority}
+          onLoad={markLoaded}
+        />
+      </div>
+    </div>
+  )
+}
+
 const Gallery = ({ title, images, text }: GalleryProps) => {
   const [open, setOpen] = useState<boolean>(false)
   const [currentIndex, setCurrentIndex] = useState<number>(0)
@@ -45,15 +79,12 @@ const Gallery = ({ title, images, text }: GalleryProps) => {
               aria-label={`Voir ${image.title || `${title} - Image ${index + 1}`}`}
             >
               <figure className="relative h-full w-full">
-                <Image
+                <GalleryThumbnail
                   src={image.src}
                   alt={image.title || `${title} - Image ${index + 1}`}
-                  fill
                   sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  className="rounded-md object-cover transition-transform duration-300 group-hover:scale-105"
-                  quality={85}
+                  quality={90}
                   loading={index < 4 ? "eager" : "lazy"}
-                  priority={index < 4}
                 />
                 <figcaption className="sr-only">
                   {image.title || `${title} - Image ${index + 1}`}
