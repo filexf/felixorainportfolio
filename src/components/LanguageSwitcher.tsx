@@ -1,97 +1,71 @@
 "use client"
 
-import { useRouter } from "next/navigation"
-import { useCallback, useEffect, useRef, useState } from "react"
 import { useTheme } from "@/context/ThemeContext"
+import {
+  DEFAULT_LOCALE,
+  type Locale,
+  resolveLocale,
+  SUPPORTED_LOCALES,
+} from "@/i18n/locales"
+import Cookies from "js-cookie"
+import { useRouter } from "next/navigation"
+import { useEffect, useRef, useState } from "react"
 
-interface Language {
-  code: string
-  flag: string
-}
+const COOKIE = "MYNEXTAPP_LOCALE"
 
-interface Languages {
-  [key: string]: Language
+const cookieOpts = { path: "/", sameSite: "lax" as const, expires: 365 }
+
+function writeLocaleCookie(lang: Locale) {
+  Cookies.set(COOKIE, lang, cookieOpts)
 }
 
 export default function LanguageSwitcher() {
-  const [locale, setLocale] = useState<string>("")
-  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [locale, setLocale] = useState<Locale | "">("")
+  const [isOpen, setIsOpen] = useState(false)
   const { darkMode } = useTheme()
   const dropdownRef = useRef<HTMLDivElement>(null)
   const router = useRouter()
 
-  // Langues disponibles avec leur code et drapeau
-  const languages: Languages = {
+  const languages: Record<Locale, { code: string; flag: string }> = {
     en: { code: "EN", flag: "🇬🇧" },
     fr: { code: "FR", flag: "🇫🇷" },
     es: { code: "ES", flag: "🇪🇸" },
   }
 
-  // Fonction pour lire le cookie
-  const getCookieLocale = useCallback(() => {
-    return document.cookie
-      .split("; ")
-      .find((row) => row.startsWith("MYNEXTAPP_LOCALE="))
-      ?.split("=")[1]
-  }, [])
-
+  // Au 1er rendu client : lit le cookie → met à jour le drapeau. Sans cookie : on en écrit un (défaut "fr") puis refresh pour que next-intl charge les bons messages.
   useEffect(() => {
-    const cookieLocale = getCookieLocale()
-    if (cookieLocale) {
-      setLocale(cookieLocale)
-    } else {
-      const browserLocale = navigator.language.slice(0, 2)
-      setLocale(browserLocale)
-      document.cookie = `MYNEXTAPP_LOCALE=${browserLocale};`
+    const value = Cookies.get(COOKIE)
+    const nextLocale = resolveLocale(value)
+    setLocale(nextLocale)
+    if (!value) {
+      writeLocaleCookie(nextLocale)
       router.refresh()
     }
-  }, [router, getCookieLocale])
+  }, [router])
 
-  // Ajoute un listener pour détecter les changements de cookie
-  useEffect(() => {
-    const checkForLocaleChange = () => {
-      const currentCookieLocale = getCookieLocale()
-      if (currentCookieLocale && currentCookieLocale !== locale) {
-        setLocale(currentCookieLocale)
-      }
-    }
-
-    // Vérifie périodiquement les changements de cookie
-    const interval = setInterval(checkForLocaleChange, 100)
-
-    // Nettoie l'interval au démontage
-    return () => clearInterval(interval)
-  }, [locale, getCookieLocale])
-
-  // Ferme le menu déroulant si l'utilisateur clique ailleurs
+  // Fermer le menu lors d'un clic extérieur
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsOpen(false)
       }
     }
-
     document.addEventListener("mousedown", handleClickOutside)
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
+    return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
 
-  const changeLocale = (newLocale: string) => {
-    setLocale(newLocale)
-    document.cookie = `MYNEXTAPP_LOCALE=${newLocale};`
+  // Changer la langue et rafraîchir la page
+  const changeLocale = (lang: Locale) => {
+    setLocale(lang)
+    writeLocaleCookie(lang)
     router.refresh()
     setIsOpen(false)
   }
 
-  // Gère la sélection d'une langue
-  const handleLanguageSelect = (lang: string): void => {
-    changeLocale(lang)
-  }
+  const active = locale || DEFAULT_LOCALE
 
   return (
     <div className="relative" ref={dropdownRef}>
-      {/* Bouton principal avec la langue actuelle et le drapeau */}
       <button
         type="button"
         className={`flex items-center justify-center gap-1 rounded-full sm:gap-2 ${
@@ -106,12 +80,8 @@ export default function LanguageSwitcher() {
           color: darkMode ? "var(--text-primary)" : "var(--text-secondary)",
         }}
       >
-        <span className="mr-0.5 text-base sm:text-lg">
-          {languages[locale]?.flag || languages.fr.flag}
-        </span>
-        <span className="text-xs font-semibold sm:text-sm">
-          {languages[locale]?.code || languages.fr.code}
-        </span>
+        <span className="mr-0.5 text-base sm:text-lg">{languages[active].flag}</span>
+        <span className="text-xs font-semibold sm:text-sm">{languages[active].code}</span>
         <svg
           className={`h-3 w-3 transition-transform duration-200 sm:h-3.5 sm:w-3.5 ${
             isOpen ? "rotate-180" : ""
@@ -128,7 +98,6 @@ export default function LanguageSwitcher() {
         </svg>
       </button>
 
-      {/* Menu déroulant avec animation */}
       {isOpen && (
         <div
           className="absolute right-0 z-50 mt-1 w-24 origin-top-right transform overflow-hidden rounded-lg shadow-lg transition-all duration-200 ease-out sm:mt-1.5 sm:w-28"
@@ -138,21 +107,21 @@ export default function LanguageSwitcher() {
           }}
         >
           <div className="py-0.5">
-            {Object.keys(languages).map((lang) => (
+            {SUPPORTED_LOCALES.map((lang) => (
               <button
                 key={lang}
                 type="button"
                 className={`flex w-full items-center px-2 py-2 text-xs transition-colors duration-150 sm:px-3 sm:py-2.5 sm:text-sm ${
-                  lang === locale
+                  lang === active
                     ? "bg-opacity-10 bg-slate-400 font-semibold"
                     : "hover:bg-slate-200 dark:hover:bg-slate-700"
                 }`}
-                onClick={() => handleLanguageSelect(lang)}
-                disabled={lang === locale}
+                onClick={() => changeLocale(lang)}
+                disabled={lang === active}
               >
                 <span className="mr-2 text-base sm:mr-2.5 sm:text-lg">{languages[lang].flag}</span>
                 {languages[lang].code}
-                {lang === locale && (
+                {lang === active && (
                   <span className="ml-auto flex h-1.5 w-1.5 rounded-full bg-sky-500 sm:h-2 sm:w-2"></span>
                 )}
               </button>

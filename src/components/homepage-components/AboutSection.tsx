@@ -6,17 +6,18 @@ import { useLocale, useTranslations } from "next-intl"
 import SectionWrapper from "@/components/homepage-components/SectionWrapper"
 import Reveal from "@/components/Reveal"
 import { ButtonLink } from "@/components/ui/button"
+import { type Locale, resolveLocale } from "@/i18n/locales"
 
 export default function AboutSection() {
   const t = useTranslations()
   const locale = useLocale()
 
-  const resumeMap = {
+  const resumeMap: Record<Locale, string> = {
     en: "/Felix_Orain_Web_Developer_Resume.pdf",
     fr: "/Felix_Orain_CV_Developpeur_Web.pdf",
     es: "/Felix_Orain_Web_Developer_Resume.pdf", // fallback to English if Spanish
   }
-  const resumeFile = resumeMap[locale as keyof typeof resumeMap] || resumeMap.en
+  const resumeFile = resumeMap[resolveLocale(locale)]
 
   return (
     <Reveal>
