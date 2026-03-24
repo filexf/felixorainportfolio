@@ -1,70 +1,38 @@
 "use client"
 
-import React, { createContext, useContext, useEffect, useState } from "react"
-import { ThemeType } from "@/types"
+import { createContext, useContext, useEffect, useState } from "react"
 
-// Type pour le contexte
 interface ThemeContextType {
   darkMode: boolean
   toggleTheme: () => void
 }
 
-// Création du contexte de thème
-export const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
-// Hook personnalisé pour utiliser le contexte de thème
-export const useTheme = (): ThemeContextType => {
-  const context = useContext(ThemeContext)
-  if (context === undefined) {
-    throw new Error("useTheme doit être utilisé à l'intérieur d'un ThemeProvider")
-  }
-  return context
+export const useTheme = () => {
+  const ctx = useContext(ThemeContext)
+  if (!ctx) throw new Error("useTheme must be inside ThemeProvider")
+  return ctx
 }
 
-// Fournisseur du contexte de thème
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  // Initialize with a default value (light mode)
-  const [darkMode, setDarkMode] = useState<boolean>(false)
+  const [darkMode, setDarkMode] = useState(false)
 
-  // Only run on client side
   useEffect(() => {
-    // Vérifier si le thème est stocké dans localStorage
-    const savedTheme = localStorage.getItem("theme") as ThemeType | null
-    if (savedTheme) {
-      setDarkMode(savedTheme === "dark")
-    } else {
-      // Par défaut, utiliser le mode clair
-      setDarkMode(false)
-      localStorage.setItem("theme", "light")
-    }
+    if (localStorage.getItem("theme") === "dark") setDarkMode(true)
   }, [])
 
-  // Appliquer le thème au chargement et lors des changements
   useEffect(() => {
-    // Force overriding any browser default
-    document.documentElement.style.colorScheme = darkMode ? "dark" : "light"
-
-    if (darkMode) {
-      document.documentElement.classList.add("dark")
-      document.documentElement.classList.remove("light")
-      localStorage.setItem("theme", "dark")
-    } else {
-      document.documentElement.classList.remove("dark")
-      document.documentElement.classList.add("light")
-      localStorage.setItem("theme", "light")
-    }
+    const root = document.documentElement
+    root.classList.toggle("dark", darkMode)
+    root.classList.toggle("light", !darkMode)
+    root.style.colorScheme = darkMode ? "dark" : "light"
+    localStorage.setItem("theme", darkMode ? "dark" : "light")
   }, [darkMode])
 
-  // Fonction pour basculer le thème
-  const toggleTheme = (): void => {
-    setDarkMode(!darkMode)
-  }
-
-  // Valeurs à fournir dans le contexte
-  const value = {
-    darkMode,
-    toggleTheme,
-  }
-
-  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  return (
+    <ThemeContext.Provider value={{ darkMode, toggleTheme: () => setDarkMode((d) => !d) }}>
+      {children}
+    </ThemeContext.Provider>
+  )
 }
