@@ -49,6 +49,9 @@
   /* Nouvelles variables pour les gradients gris */
   --card-gradient-light-1: #f1f5f9;
   --card-gradient-light-2: #e2e8f0;
+  /* Cartes (RSC) : un seul style, le thème suit .dark sur html */
+  --card-surface-radial-1: var(--card-gradient-light-1);
+  --card-surface-radial-2: var(--card-gradient-light-2);
 }
 
 /* Mode sombre */
@@ -84,6 +87,8 @@
   /* Nouvelles variables pour les gradients gris en mode sombre */
   --card-gradient-dark-1: #2a3441;
   --card-gradient-dark-2: #232c3a;
+  --card-surface-radial-1: var(--card-gradient-dark-1);
+  --card-surface-radial-2: var(--card-gradient-dark-2);
 }
 
 /* Désactiver l'auto dark mode du système */

@@ -1,5 +1,3 @@
-import React from "react"
-
 interface SectionWrapperProps {
   children: React.ReactNode
   title: string

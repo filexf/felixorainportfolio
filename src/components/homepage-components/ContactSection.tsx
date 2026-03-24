@@ -1,12 +1,11 @@
-"use client"
-
-import { useTranslations } from "next-intl"
+import { getTranslations } from "next-intl/server"
 import ContactForm from "@/components/ContactForm"
 import SectionWrapper from "@/components/homepage-components/SectionWrapper"
 import Reveal from "@/components/Reveal"
 
-export default function ContactSection() {
-  const t = useTranslations("contact")
+export default async function ContactSection() {
+  const t = await getTranslations("contact")
+
   return (
     <Reveal>
       <SectionWrapper title={t("homepage.title")}>

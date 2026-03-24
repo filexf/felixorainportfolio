@@ -2,7 +2,7 @@ import AboutSection from "@/components/homepage-components/AboutSection"
 import CardsWork from "@/components/homepage-components/CardsWork"
 import ContactSection from "@/components/homepage-components/ContactSection"
 import DesignSection from "@/components/homepage-components/DesignSection"
-import LandingFrame from "@/components/homepage-components/HeroSection"
+import HeroSection from "@/components/homepage-components/HeroSection"
 import PhotographySection from "@/components/homepage-components/PhotographySection"
 import WebDevelopmentSection from "@/components/homepage-components/WebDevelopmentSection"
 
@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <LandingFrame />
+      <HeroSection />
 
       <CardsWork />
       <div className="mt-20 flex flex-col items-center justify-center gap-16 px-[20px]">

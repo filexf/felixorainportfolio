@@ -1,10 +1,10 @@
+import Image from "next/image"
+import { getTranslations } from "next-intl/server"
 import GitHubButton from "@/components/applications-components/GitHubButton"
 import ProjectsGrid from "@/components/applications-components/ProjectsGrid"
 import Reveal from "@/components/Reveal"
 import SoftwareApplicationStructuredData from "@/components/SoftwareApplicationStructuredData"
 import { projects } from "@/lib/projects"
-import { getTranslations } from "next-intl/server"
-import Image from "next/image"
 
 interface TechStackItem {
   name: string

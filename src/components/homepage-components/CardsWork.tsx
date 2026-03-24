@@ -1,14 +1,19 @@
-"use client"
-
 import { Brush, Camera, ChevronRight, Code } from "lucide-react"
-import { useTranslations } from "next-intl"
-import React from "react"
+import { getTranslations } from "next-intl/server"
 import Reveal from "@/components/Reveal"
 import { ButtonLink } from "@/components/ui/button"
-import { useTheme } from "@/context/ThemeContext"
 
-export default function CardsWork() {
-  const t = useTranslations()
+interface CardProps {
+  icon: React.ComponentType<{ className?: string }>
+  title: string
+  text: string
+  path: string
+  buttonText: string
+  delay: number
+}
+
+export default async function CardsWork() {
+  const t = await getTranslations()
 
   interface CardData {
     title: string
@@ -84,25 +89,10 @@ export default function CardsWork() {
   )
 }
 
-interface CardProps {
-  icon: React.ComponentType<{ className?: string }>
-  title: string
-  text: string
-  path: string
-  buttonText: string
-  delay: number
-}
-
-const Card = ({ icon: IconComponent, title, text, path, buttonText, delay }: CardProps) => {
-  const { darkMode } = useTheme()
-
+function Card({ icon: IconComponent, title, text, path, buttonText, delay }: CardProps) {
   return (
     <div
-      className={`group vertical-animation relative overflow-hidden rounded-3xl border transition-all duration-300 ease-in-out ${
-        darkMode
-          ? "border-gray-700/50 bg-gradient-to-br from-gray-800/80 via-gray-900/70 to-gray-800/80 backdrop-blur-xl"
-          : "border-gray-200/50 bg-gradient-to-br from-white/90 via-gray-50/80 to-white/90 backdrop-blur-xl"
-      }`}
+      className="group vertical-animation relative overflow-hidden rounded-3xl border border-gray-200/50 bg-gradient-to-br from-white/90 via-gray-50/80 to-white/90 backdrop-blur-xl transition-all duration-300 ease-in-out dark:border-gray-700/50 dark:from-gray-800/80 dark:via-gray-900/70 dark:to-gray-800/80"
       style={{
         animationDelay: `${delay}ms`,
         width: "300px",
@@ -121,9 +111,7 @@ const Card = ({ icon: IconComponent, title, text, path, buttonText, delay }: Car
       <div
         className="absolute inset-0 opacity-30"
         style={{
-          background: darkMode
-            ? "radial-gradient(circle at top left, var(--card-gradient-dark-1) 0%, transparent 70%), radial-gradient(circle at bottom right, var(--card-gradient-dark-2) 0%, transparent 70%)"
-            : "radial-gradient(circle at top left, var(--card-gradient-light-1) 0%, transparent 70%), radial-gradient(circle at bottom right, var(--card-gradient-light-2) 0%, transparent 70%)",
+          background: `radial-gradient(circle at top left, var(--card-surface-radial-1) 0%, transparent 70%), radial-gradient(circle at bottom right, var(--card-surface-radial-2) 0%, transparent 70%)`,
         }}
       />
 

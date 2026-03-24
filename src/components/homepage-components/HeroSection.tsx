@@ -9,7 +9,7 @@ import { AuroraBackground } from "@/components/ui/aurora-background"
 import { ButtonLink } from "@/components/ui/button"
 import { useTheme } from "@/context/ThemeContext"
 
-export default function AuroraBackgroundDemo() {
+export default function HeroSection() {
   const t = useTranslations("heroSection")
   const { darkMode } = useTheme()
 
@@ -34,7 +34,7 @@ export default function AuroraBackgroundDemo() {
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
         animate={controls} // Utiliser le contrôleur d'animation au lieu de whileInView
-        className="relative -mt-4 flex flex-col items-center justify-center gap-4 px-4 py-2"
+        className="relative flex flex-col items-center justify-center gap-4 px-4 py-2"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
