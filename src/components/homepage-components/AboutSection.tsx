@@ -15,7 +15,6 @@ export default function AboutSection() {
   const resumeMap: Record<Locale, string> = {
     en: "/Felix_Orain_Web_Developer_Resume.pdf",
     fr: "/Felix_Orain_CV_Developpeur_Web.pdf",
-    es: "/Felix_Orain_Web_Developer_Resume.pdf", // fallback to English if Spanish
   }
   const resumeFile = resumeMap[resolveLocale(locale)]
 

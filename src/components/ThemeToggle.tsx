@@ -10,7 +10,7 @@ const ThemeToggle: React.FC = () => {
     <button
       type="button"
       onClick={toggleTheme}
-      className={`flex h-8 w-8 items-center justify-center rounded-full transition-all duration-300 hover:shadow-md sm:h-10 sm:w-10 ${
+      className={`flex h-9 w-10 items-center justify-center rounded-full transition-all duration-300 shadow-sm hover:shadow-md ${
         darkMode ? "bg-slate-700 hover:bg-slate-600" : "bg-sky-100 hover:bg-sky-200"
       }`}
       aria-label={darkMode ? "Activer le mode clair" : "Activer le mode sombre"}

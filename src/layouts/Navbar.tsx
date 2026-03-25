@@ -1,8 +1,5 @@
 "use client"
 
-import LanguageSwitcher from "@/components/LanguageSwitcher"
-import ThemeToggle from "@/components/ThemeToggle"
-import { useTheme } from "@/context/ThemeContext"
 import {
   Book,
   Building,
@@ -14,10 +11,13 @@ import {
   Trophy,
   X,
 } from "lucide-react"
-import { useTranslations } from "next-intl"
 import Image from "next/image"
 import Link from "next/link"
+import { useTranslations } from "next-intl"
 import React, { useEffect, useState } from "react"
+import LanguageSwitcher from "@/components/LanguageSwitcher"
+import ThemeToggle from "@/components/ThemeToggle"
+import { useTheme } from "@/context/ThemeContext"
 
 interface MenuItem {
   title: string
@@ -336,7 +336,7 @@ const Navbar = ({
             </div>
 
             {/* Theme Toggle & Language Switcher */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               <ThemeToggle />
               <LanguageSwitcher />
             </div>

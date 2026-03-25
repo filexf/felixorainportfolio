@@ -104,7 +104,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    alternateLocale: ["en_US", "es_ES"],
+    alternateLocale: ["en_US"],
     url: "https://www.felix-orain.com",
     title: "Félix Orain - Développeur Web & Photographe à Rennes",
     description:

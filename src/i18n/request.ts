@@ -1,9 +1,9 @@
 import { cookies } from "next/headers"
 import { getRequestConfig } from "next-intl/server"
-import { type Locale, resolveLocale } from "./locales"
+import { LOCALE_COOKIE_NAME, type Locale, resolveLocale } from "./locales"
 
 export default getRequestConfig(async () => {
-  const locale: Locale = resolveLocale((await cookies()).get("MYNEXTAPP_LOCALE")?.value)
+  const locale: Locale = resolveLocale((await cookies()).get(LOCALE_COOKIE_NAME)?.value)
 
   // Import all translation files for the locale
   const layouts = (await import(`../messages/${locale}/layouts.json`)).default
