@@ -2,29 +2,30 @@ import { Metadata } from "next"
 import WeddingPhotoPage from "@/components/page-components/photos-page-components/WeddingPage"
 
 export const metadata: Metadata = {
-  title: "Photographe de Mariage",
+  title: "Photographe de Mariage en Bretagne - felix-orain.com",
   description:
-    "Photographe spécialisé dans les mariages à Rennes et en Bretagne. Captation d'émotions authentiques, reportages élégants et naturels, souvenirs intemporels de votre journée unique. Je propose des prix abordables et pas chers. Découvrez mon portfolio et racontez-moi votre histoire d'amour.",
+    "Photographe professionnel spécialisé dans les mariages en Bretagne. Captation d'émotions authentiques, reportages élégants et naturels, souvenirs intemporels de votre journée unique. Je vous proposerais des prix abordables. Découvrez mon portfolio et racontez-moi votre histoire d'amour.",
   keywords: [
-    "photographe mariage Rennes",
     "photographe mariage Bretagne",
+    "mariage en Bretagne",
+    "photographe mariage Rennes",
+    "photographe mariage professionnel",
+    "photographe mariage pas cher",
+    "photographe cérémonie",
     "reportage mariage",
     "photos mariage authentiques",
     "portfolio mariage",
-    "mariage en Bretagne",
-    "photographe cérémonie",
     "Félix Orain photographe",
     "photographe professionnel mariage",
     "photographe mariage haut de gamme",
-    "photographe mariage pas cher",
   ],
   openGraph: {
     title: "Photographe de Mariage à Rennes | Félix Orain",
     description:
-      "Immortalisez les émotions de votre mariage à Rennes et en Bretagne avec des photographies authentiques et intemporelles. Portfolio et disponibilités.",
+      "Immortalisez les émotions de votre mariage à Rennes et en Bretagne avec des photos authentiques et intemporelles.",
     images: [
       {
-        url: "/images/wedding/mariage-rennes-preview.jpg",
+        url: "/images/Photos-wedding/Wedding_photos_14.jpg",
         width: 1200,
         height: 630,
         alt: "Photographie de mariage par Félix Orain à Rennes",
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     title: "Photographe de Mariage à Rennes | Félix Orain",
     description:
       "Immortalisez les émotions de votre mariage en Bretagne avec des photographies authentiques.",
-    images: ["/images/wedding/mariage-rennes-preview.jpg"],
+    images: ["/images/Photos-wedding/Wedding_photos_14.jpg"],
   },
   alternates: {
     canonical: "https://www.felix-orain.com/photos/wedding",

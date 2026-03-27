@@ -74,8 +74,6 @@ export const metadata: Metadata = {
     "portfolio créatif Rennes",
     "photographe sport Bretagne",
     "développement web moderne",
-    "Tailwind CSS Rennes",
-    "Ruby on Rails développeur",
     "Félix Orain photographe",
     "freelance web Bretagne",
   ],

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "Photographe Sport & Parkour à Rennes | Félix Orain",
     description:
       "Capturez l'adrénaline et les performances sportives en Bretagne avec des photographies d'action professionnelles.",
-    images: ["/images/Photos-sport/sport-parkour-preview.jpg"],
+    images: ["/images/Photos-sport/Photo_dub_roofgap.jpg"],
   },
   alternates: {
     canonical: "https://www.felix-orain.com/photos/sport",
