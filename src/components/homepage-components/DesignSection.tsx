@@ -17,7 +17,7 @@ export default async function DesignSection() {
           <p className="body-font mx-auto max-w-3xl text-center">{t("desc")}</p>
 
           {/* Grille de designs */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-2">
+          <div className="flex flex-col items-center gap-10 md:flex-row md:justify-center md:gap-28">
             <DesignCard photo="/images/Couvertures magazines/Civilisation Mag.jpg" />
             <DesignCard photo="/images/Couvertures magazines/WIZZY En Asie BONNE VERSION.jpg" />
           </div>

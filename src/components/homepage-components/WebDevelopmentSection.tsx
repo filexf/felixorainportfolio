@@ -51,7 +51,7 @@ interface ProjectCardProps {
 function ProjectCard({ image, title, path }: ProjectCardProps) {
   return (
     <Link href={path}>
-      <div className="group relative h-[200px] overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:-translate-y-1 md:h-[300px]">
+      <div className="group relative h-[200px] overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:-translate-y-1 md:h-[250px]">
         {/* Image */}
         <Image
           src={image}

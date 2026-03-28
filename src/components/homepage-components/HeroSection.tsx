@@ -107,7 +107,7 @@ export default function HeroSection() {
                 darkMode ? "text-white" : "text-gray-900"
               }`}
             >
-              Web & Photo
+              Photo & Web
             </span>
           </div>
         </h1>

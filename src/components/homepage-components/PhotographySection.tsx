@@ -44,7 +44,7 @@ function PhotoCard({ photo }: PhotoCardProps) {
     <Link href="/photos">
       <div className="group relative mb-2 overflow-hidden rounded shadow-xl transition-all duration-300 hover:-translate-y-1">
         {/* Container d'image avec ratio aspect */}
-        <div className="relative h-[300px] md:h-[350px] overflow-hidden rounded">
+        <div className="relative h-[300px] md:h-[330px] overflow-hidden rounded">
           <Image
             src={photo}
             alt="Photography"
