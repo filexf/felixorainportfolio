@@ -85,7 +85,7 @@ export default function Gallery({ title, images }: GalleryProps) {
                   src={image.src}
                   alt={image.title || `${title} - Page ${index + 1}`}
                   sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  quality={90}
+                  quality={85}
                   loading={index < 4 ? "eager" : "lazy"}
                 />
                 <figcaption className="sr-only">
