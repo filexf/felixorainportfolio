@@ -6,7 +6,8 @@
     "mosaic": "Mosaic",
     "cityscape": "Cityscape",
     "landscape": "Landscape",
-    "mariage": "Mariage"
+    "mariage": "Mariage",
+    "portrait": "Portrait"
   },
   "sportphotopage": {
     "title": "Sports",
@@ -27,5 +28,9 @@
   "weddingphotopage": {
     "title": "Wedding",
     "desc": "Your wedding day is a unique story, and my goal is to capture it authentically and beautifully. I focus on candid moments and genuine emotions while ensuring every detail, from the décor to the small gestures, is thoughtfully documented. My style combines natural photojournalism with creative storytelling, shaped by my background in filmmaking. Here is a glimpse of the love and joy that fills the day."
+  },
+  "portraitphotopage": {
+    "title": "Portraits",
+    "desc": "A portrait session is above all a meeting. I like to take the time to get to know you, to find together the light and the decor that suit you — a specific architecture, a corner of nature, or simply a beautiful light of the evening. My approach is natural but refined: no studio, just you in your element, captured with sincerity. The result: images where you really recognize yourself, with a touch of aesthetics I like to bring to each shot."
   }
 }

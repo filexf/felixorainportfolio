@@ -38,6 +38,10 @@ export default async function PhotosPage() {
       id: "mariage",
       path: "/images/Photos-wedding/Wedding_photos_14.jpg",
     },
+    {
+      id: "portrait",
+      path: "/images/Photos-portraits/Photos-portraits-4.jpg",
+    },
   ]
 
   return (

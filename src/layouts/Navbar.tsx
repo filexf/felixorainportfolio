@@ -9,6 +9,7 @@ import {
   Menu,
   Mountain,
   Trophy,
+  User,
   X,
 } from "lucide-react"
 import Image from "next/image"
@@ -63,6 +64,12 @@ const Navbar = ({
           description: t("navbar.descriptions.wedding"),
           icon: <HeartHandshake className="size-5 shrink-0" />,
           url: "/photos/mariage",
+        },
+        {
+          title: t("navbar.portrait"),
+          description: t("navbar.descriptions.portrait"),
+          icon: <User className="size-5 shrink-0" />,
+          url: "/photos/portrait",
         },
         {
           title: t("navbar.mosaic"),
@@ -465,6 +472,9 @@ const Navbar = ({
           </li>
           <li>
             <Link href="/photos/sport">{t("navbar.sport")}</Link>
+          </li>
+          <li>
+            <Link href="/photos/portrait">{t("navbar.portrait")}</Link>
           </li>
           <li>
             <Link href="/photos/landscape">{t("navbar.landscape")}</Link>

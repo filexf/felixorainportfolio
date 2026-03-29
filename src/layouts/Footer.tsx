@@ -51,6 +51,7 @@ export default async function Footer({ noPadding }: FooterProps) {
                   <FooterLink href="/photos/landscape">{t("links.landscapes")}</FooterLink>
                   <FooterLink href="/photos/cityscape">{t("links.cityscape")}</FooterLink>
                   <FooterLink href="/photos/mosaic">{t("links.mosaic")}</FooterLink>
+                  <FooterLink href="/photos/portrait">{t("links.portraits")}</FooterLink>
                 </nav>
               </div>
 

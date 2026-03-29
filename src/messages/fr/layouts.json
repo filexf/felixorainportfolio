@@ -6,6 +6,7 @@
     "books": "Livres",
     "contact": "Contact",
     "wedding": "Mariage",
+    "portrait": "Portrait",
     "mosaic": "Mosaïque",
     "sport": "Sport",
     "cityscape": "Ville",
@@ -14,6 +15,7 @@
     "wizzyenasie": "Wizzy en Asie",
     "descriptions": {
       "wedding": "Découvrez mes photos de mariage",
+      "portrait": "Photos de personnes sur mesure",
       "mosaic": "Collection de photos en mosaïque",
       "sport": "Photos de sports et d'événements sportifs",
       "cityscape": "Paysages urbains et gratte-ciels",
@@ -36,6 +38,7 @@
       "photography": "Photographie",
       "graphicDesign": "Design Graphique",
       "weddings": "Mariages",
+      "portraits": "Portraits",
       "sportParkour": "Sport & Parkour",
       "landscapes": "Paysages",
       "cityscape": "Urbain",

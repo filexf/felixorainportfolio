@@ -24,6 +24,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
     },
     {
+      path: "/photos/portrait",
+      priority: 0.8,
+      changeFrequency: "monthly" as const,
+    },
+    {
       path: "/photos/landscape",
       priority: 0.8,
       changeFrequency: "monthly" as const,

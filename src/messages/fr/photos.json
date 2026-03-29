@@ -6,7 +6,8 @@
     "mosaic": "Mosaïque",
     "cityscape": "Ville",
     "landscape": "Paysage",
-    "mariage": "Mariage"
+    "mariage": "Mariage",
+    "portrait": "Portrait"
   },
   "sportphotopage": {
     "title": "Sport",
@@ -27,5 +28,9 @@
   "weddingphotopage": {
     "title": "Mariage",
     "desc": "Votre mariage est une histoire unique, et mon objectif est de la capturer avec authenticité et sensibilité. Je privilégie les moments spontanés et les émotions sincères, tout en portant une attention particulière à chaque détail, du décor aux gestes les plus discrets. Mon approche mêle photojournalisme naturel et narration visuelle, influencée par mon expérience du cinéma. À travers ces images, je cherche à retranscrire toute l’intensité, l’amour et la joie de cette magnifique journée."
+  },
+  "portraitphotopage": {
+    "title": "Portraits",
+    "desc": "La séance portrait, c'est avant tout une rencontre. J'aime prendre le temps d'apprendre à te connaître, de trouver ensemble la lumière et le décor qui te ressemblent — une architecture spécifique, un coin de nature, ou simplement une belle lumière de fin de journée. Mon approche se veut naturelle mais soignée : pas de studio, juste toi dans ton élément, capturé avec sincérité. Le résultat : des images où tu te reconnais vraiment, avec une touche d'esthétique que j'aime apporter à chaque cliché."
   }
 }
