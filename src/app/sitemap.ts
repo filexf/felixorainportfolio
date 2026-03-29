@@ -11,13 +11,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Pages principales - Niveau 1
     {
       path: "/applications",
-      priority: 0.9,
+      priority: 0.8,
       changeFrequency: "monthly" as const,
     },
     { path: "/photos", priority: 0.9, changeFrequency: "weekly" as const },
     { path: "/books", priority: 0.9, changeFrequency: "monthly" as const },
 
     // Pages de photographie - Niveau 2
+    {
+      path: "/photos/mariage",
+      priority: 0.9,
+      changeFrequency: "monthly" as const,
+    },
     {
       path: "/photos/landscape",
       priority: 0.8,
@@ -35,12 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       path: "/photos/sport",
-      priority: 0.7,
-      changeFrequency: "monthly" as const,
-    },
-    {
-      path: "/photos/wedding",
-      priority: 0.9,
+      priority: 0.8,
       changeFrequency: "monthly" as const,
     },
 

@@ -62,7 +62,7 @@ const Navbar = ({
           title: t("navbar.wedding"),
           description: t("navbar.descriptions.wedding"),
           icon: <HeartHandshake className="size-5 shrink-0" />,
-          url: "/photos/wedding",
+          url: "/photos/mariage",
         },
         {
           title: t("navbar.mosaic"),
@@ -461,7 +461,7 @@ const Navbar = ({
             <Link href="/photos">{t("navbar.photos")}</Link>
           </li>
           <li>
-            <Link href="/photos/wedding">{t("navbar.wedding")}</Link>
+            <Link href="/photos/mariage">{t("navbar.wedding")}</Link>
           </li>
           <li>
             <Link href="/photos/sport">{t("navbar.sport")}</Link>

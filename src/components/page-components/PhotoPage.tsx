@@ -35,7 +35,7 @@ export default async function PhotosPage() {
       path: "/images/Photos-landscape/Tests photos USA-147.jpg",
     },
     {
-      id: "wedding",
+      id: "mariage",
       path: "/images/Photos-wedding/Wedding_photos_14.jpg",
     },
   ]

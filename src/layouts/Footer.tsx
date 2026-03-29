@@ -46,7 +46,7 @@ export default async function Footer({ noPadding }: FooterProps) {
                   {t("sections.portfolio")}
                 </h3>
                 <nav className="space-y-3">
-                  <FooterLink href="/photos/wedding">{t("links.weddings")}</FooterLink>
+                  <FooterLink href="/photos/mariage">{t("links.weddings")}</FooterLink>
                   <FooterLink href="/photos/sport">{t("links.sportParkour")}</FooterLink>
                   <FooterLink href="/photos/landscape">{t("links.landscapes")}</FooterLink>
                   <FooterLink href="/photos/cityscape">{t("links.cityscape")}</FooterLink>

@@ -8,6 +8,15 @@ const nextConfig: NextConfig = {
   images: {
     qualities: [85],
   },
+  async redirects() {
+    return [
+      {
+        source: "/photos/wedding",
+        destination: "/photos/mariage",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");

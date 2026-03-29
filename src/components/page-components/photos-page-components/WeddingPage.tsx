@@ -11,99 +11,99 @@ interface GalleryImage {
 const images: GalleryImage[] = [
   {
     src: "/images/Photos-wedding/Wedding_photos_14.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_3.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_17.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_9.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_10.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_1.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_5.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_16.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_11.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_15.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_18.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_8.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_2.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_4.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_7.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_13.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_20.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_21.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_19.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_22.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_23.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_24.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_25.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_26.jpg",
-    title: "Wedding image",
+    title: "Photo de mariage",
   },
 ]
 
@@ -116,7 +116,7 @@ export default async function WeddingPhotoPage() {
         title={t("title")}
         description={t("desc")}
         images={images}
-        pageUrl="https://www.felix-orain.com/photos/wedding"
+        pageUrl="https://www.felix-orain.com/photos/mariage"
       />
       <Gallery title={t("title")} images={images} text={t("desc")} />
     </>

@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import WeddingPhotoPage from "@/components/page-components/photos-page-components/WeddingPage"
 
 export const metadata: Metadata = {
-  title: "Photographe de Mariage en Bretagne - felix-orain.com",
+  title: "Photographe de Mariage en Bretagne",
   description:
     "Photographe professionnel spécialisé dans les mariages en Bretagne. Captation d'émotions authentiques, reportages élégants et naturels, souvenirs intemporels de votre journée unique. Je vous proposerais des prix abordables. Découvrez mon portfolio et racontez-moi votre histoire d'amour.",
   keywords: [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     images: ["/images/Photos-wedding/Wedding_photos_14.jpg"],
   },
   alternates: {
-    canonical: "https://www.felix-orain.com/photos/wedding",
+    canonical: "https://www.felix-orain.com/photos/mariage",
   },
 }
 
