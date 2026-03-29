@@ -33,11 +33,11 @@ export const metadata: Metadata = {
   // Métadonnées de base
   metadataBase: new URL("https://www.felix-orain.com"), // Remplacez par votre domaine réel
   title: {
-    default: "Félix Orain - Développeur Web & Photographe à Rennes",
-    template: `%s | Félix Orain - Développeur & Photographe Rennes`,
+    default: "Félix Orain | Portfolio Photographe Professionnel en Bretagne",
+    template: `%s | Félix Orain - Photographe Professionnel en Bretagne`,
   },
   description:
-    "Développeur fullstack et photographe professionnel basé à Rennes, Bretagne. Spécialisé en Next.js, React, Tailwind CSS et photographie événementielle. Services sur mesure pour particuliers et entreprises.",
+    "Photographe professionnel basé à Rennes, Bretagne. Spécialisé en photographie événementielle, mariage, sport et créations visuelles. Services sur mesure pour particuliers et entreprises.",
 
   // Favoris et icônes
   icons: {
@@ -64,18 +64,14 @@ export const metadata: Metadata = {
 
   // Métadonnées pour les moteurs de recherche (enrichies)
   keywords: [
-    "développeur web Rennes",
+    "photographe professionnel Bretagne",
     "photographe Rennes",
-    "développeur fullstack Bretagne",
-    "Next.js React Rennes",
-    "photographe mariage Rennes",
+    "photographe mariage Bretagne",
     "photographie événementielle Bretagne",
-    "développeur freelance Rennes",
-    "portfolio créatif Rennes",
     "photographe sport Bretagne",
-    "développement web moderne",
+    "photographe créations visuelles Bretagne",
     "Félix Orain photographe",
-    "freelance web Bretagne",
+    "développeur web Bretagne",
   ],
   authors: [{ name: "Félix Orain", url: "https://www.felix-orain.com" }],
   creator: "Félix Orain",
@@ -104,22 +100,22 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     alternateLocale: ["en_US"],
     url: "https://www.felix-orain.com",
-    title: "Félix Orain - Développeur Web & Photographe à Rennes",
+    title: "Félix Orain - Photographe Professionnel en Bretagne",
     description:
-      "Développeur fullstack et photographe professionnel basé à Rennes, Bretagne. Services sur mesure pour particuliers et entreprises.",
+      "Photographe professionnel basé à Rennes, Bretagne. Services sur mesure pour particuliers et entreprises.",
     siteName: "Félix Orain - Portfolio",
     images: [
       {
         url: "https://www.felix-orain.com/Profile_Picture-Felix_Orain.webp",
         width: 1200,
         height: 630,
-        alt: "Portrait de Félix Orain - Développeur web et photographe professionnel basé à Rennes",
+        alt: "Portrait de Félix Orain - Photographe professionnel en Bretagne",
       },
       {
         url: "https://www.felix-orain.com/Profile_Picture-Felix_Orain.webp",
         width: 1080,
         height: 1080,
-        alt: "Portrait de Félix Orain - Développement web et photographie",
+        alt: "Portrait de Félix Orain - Photographe professionnel en Bretagne",
       },
     ],
   },
@@ -127,15 +123,15 @@ export const metadata: Metadata = {
   // Métadonnées Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: "Félix Orain - Développeur Web & Photographe à Rennes",
+    title: "Félix Orain - Photographe Professionnel en Bretagne",
     description:
-      "Développeur fullstack et photographe professionnel basé à Rennes, Bretagne. Spécialisé en Next.js, React et photographie événementielle.",
+      "Photographe professionnel basé à Rennes, Bretagne. Spécialisé en photographie événementielle, mariage, sport et créations visuelles. Services sur mesure pour particuliers et entreprises.",
     images: [
       {
         url: "https://www.felix-orain.com/Profile_Picture-Felix_Orain.webp",
         width: 1200,
         height: 630,
-        alt: "Portrait de Félix Orain - Développeur web et photographe professionnel",
+        alt: "Portrait de Félix Orain - Photographe professionnel en Bretagne",
       },
     ],
     creator: "@felixorain", // Remplace par ton vrai handle Twitter

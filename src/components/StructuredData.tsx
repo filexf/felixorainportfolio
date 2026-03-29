@@ -3,7 +3,7 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Félix Orain",
-    jobTitle: "Développeur Web et Photographe",
+    jobTitle: "Photographe Professionnel en Bretagne",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Rennes",
@@ -19,15 +19,15 @@ export default function StructuredData() {
       "https://www.instagram.com/_filex_/",
     ],
     knowsAbout: [
-      "Développement Web",
-      "Next.js",
-      "React",
-      "Tailwind CSS",
       "Photographie",
-      "Ruby on Rails",
       "Photographie de mariage",
       "Photographie de sport",
+      "Photographie événementielle",
+      "Photographie de créations visuelles",
       "Architecture web",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
     ],
     serviceArea: {
       "@type": "Place",
@@ -35,7 +35,7 @@ export default function StructuredData() {
     },
     hasOccupation: {
       "@type": "Occupation",
-      name: "Développeur Web Freelance et Photographe",
+      name: "Photographe Professionnel en Bretagne",
       occupationLocation: {
         "@type": "City",
         name: "Rennes",
