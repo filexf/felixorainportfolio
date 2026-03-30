@@ -55,7 +55,7 @@ export function ProjectCard({
             sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, (max-width: 1024px) 384px, 384px"
             className="object-cover"
             priority={title === "gis"}
-            quality={85}
+            quality={80}
           />
           <figcaption className="sr-only">
             {t(`projects.${title}.title`)} - Capture d'écran du projet

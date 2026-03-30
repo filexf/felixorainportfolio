@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   // Note: eslint.ignoreDuringBuilds was removed in Next.js 16
   // ESLint is now handled through the eslint.config.js file
   images: {
-    qualities: [85],
+    qualities: [80],
   },
   async redirects() {
     return [
