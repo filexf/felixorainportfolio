@@ -5,18 +5,19 @@ import Image from "next/image"
 import { useLocale, useTranslations } from "next-intl"
 import SectionWrapper from "@/components/homepage-components/SectionWrapper"
 import Reveal from "@/components/Reveal"
-import { ButtonLink } from "@/components/ui/button"
+import { ButtonAnchor } from "@/components/ui/button"
 import { type Locale, resolveLocale } from "@/i18n/locales"
+import { PUBLIC_FILES, type PublicFilePath } from "@/lib/publicFiles"
+
+const resumeByLocale: Record<Locale, PublicFilePath> = {
+  en: PUBLIC_FILES.resumeEn,
+  fr: PUBLIC_FILES.resumeFr,
+}
 
 export default function AboutSection() {
   const t = useTranslations()
   const locale = useLocale()
-
-  const resumeMap: Record<Locale, string> = {
-    en: "/Felix_Orain_Web_Developer_Resume.pdf",
-    fr: "/Felix_Orain_CV_Developpeur_Web.pdf",
-  }
-  const resumeFile = resumeMap[resolveLocale(locale)]
+  const resumeFile = resumeByLocale[resolveLocale(locale)]
 
   return (
     <Reveal>
@@ -43,7 +44,7 @@ export default function AboutSection() {
                   </span>
                 ))}
             </p>
-            <ButtonLink
+            <ButtonAnchor
               href={resumeFile}
               variant="outline"
               size="lg"
@@ -52,7 +53,7 @@ export default function AboutSection() {
             >
               <Download className="mr-2 h-5 w-5 transition-transform duration-300 group-hover:translate-y-[2px]" />
               {t("about.resume")}
-            </ButtonLink>
+            </ButtonAnchor>
           </div>
         </div>
       </SectionWrapper>
