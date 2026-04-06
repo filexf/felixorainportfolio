@@ -5,6 +5,11 @@ import createNextIntlPlugin from "next-intl/plugin";
 const nextConfig: NextConfig = {
   // Note: eslint.ignoreDuringBuilds was removed in Next.js 16
   // ESLint is now handled through the eslint.config.js file
+  typedRoutes: true,
+  experimental: {
+    /** Required with typedRoutes so `next-env.d.ts` imports `.next/types/link.d.ts` and `Route` is strict. */
+    strictRouteTypes: true,
+  },
   images: {
     qualities: [80],
   },

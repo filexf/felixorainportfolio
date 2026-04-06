@@ -1,3 +1,4 @@
+import type { Route } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { getTranslations } from "next-intl/server"
@@ -45,7 +46,7 @@ export default async function WebDevelopmentSection() {
 interface ProjectCardProps {
   image: string
   title: string
-  path: string
+  path: Route
 }
 
 function ProjectCard({ image, title, path }: ProjectCardProps) {

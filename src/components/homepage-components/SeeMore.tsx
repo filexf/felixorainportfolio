@@ -1,9 +1,10 @@
+import type { Route } from "next"
 import Link from "next/link"
 import { getTranslations } from "next-intl/server"
 import { MdArrowForward } from "react-icons/md"
 
 interface SeeMoreProps {
-  projectLink: string
+  projectLink: Route
   context: string // ✅ Nouveau : contexte pour le texte
 }
 

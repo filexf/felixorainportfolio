@@ -1,13 +1,12 @@
 "use client"
 
+import Image from "next/image"
+import { useTranslations } from "next-intl"
+import { useState } from "react"
+import Lightbox from "yet-another-react-lightbox"
 import Reveal from "@/components/Reveal"
 import { useTheme } from "@/context/ThemeContext"
 import { type ProjectImage, projects } from "@/lib/projects"
-import { useTranslations } from "next-intl"
-import Image from "next/image"
-import Link from "next/link"
-import { useState } from "react"
-import Lightbox from "yet-another-react-lightbox"
 import "yet-another-react-lightbox/styles.css"
 
 interface ProjectCardProps {
@@ -78,7 +77,7 @@ export function ProjectCard({
           >
             {/* GitHub */}
             <div className="flex flex-col items-center gap-1">
-              <Link
+              <a
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -96,7 +95,7 @@ export function ProjectCard({
                   className="vertical-animation h-8 w-8 opacity-80 hover:scale-102 hover:opacity-100 sm:h-10 sm:w-10 md:h-12 md:w-12"
                   aria-hidden="true"
                 />
-              </Link>
+              </a>
               <span className="text-[.625rem] font-medium sm:text-xs">
                 {t("projects.actions.code")}
               </span>
@@ -136,7 +135,7 @@ export function ProjectCard({
             {/* Website */}
             {websiteLink && websiteLink !== "#" && (
               <div className="flex flex-col items-center gap-1">
-                <Link
+                <a
                   href={websiteLink}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -150,7 +149,7 @@ export function ProjectCard({
                     className={`vertical-animation h-8 w-8 opacity-80 hover:scale-102 hover:opacity-100 sm:h-10 sm:w-10 md:h-12 md:w-12 ${darkMode ? "invert filter" : ""}`}
                     aria-hidden="true"
                   />
-                </Link>
+                </a>
                 <span className="text-[.625rem] font-medium sm:text-xs">
                   {t("projects.actions.demo")}
                 </span>

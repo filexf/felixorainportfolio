@@ -1,4 +1,5 @@
 import { FileText, MapPin } from "lucide-react"
+import type { Route } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { getTranslations } from "next-intl/server"
@@ -152,7 +153,7 @@ export default async function Footer({ noPadding }: FooterProps) {
 
 // ✅ Enhanced Footer Link Components
 interface FooterLinkProps {
-  href: string
+  href: Route
   children: React.ReactNode
   isButton?: boolean
 }

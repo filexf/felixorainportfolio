@@ -1,6 +1,7 @@
 "use client"
 
 import { BookOpen, Film } from "lucide-react"
+import type { Route } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { useTranslations } from "next-intl"
@@ -12,14 +13,14 @@ interface BookCardProps {
   title: string
   description: string
   coverImage: string
-  galleryLink: string
+  galleryLink: Route
   reverseLayout: boolean
   hasFilmLink?: boolean
-  filmLink?: string
+  filmLink?: Route
 }
 
 interface PhotoMagazineProps {
-  link: string
+  link: Route
   src: string
   title?: string
 }

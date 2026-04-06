@@ -12,6 +12,7 @@ import {
   User,
   X,
 } from "lucide-react"
+import type { Route } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { useTranslations } from "next-intl"
@@ -22,7 +23,7 @@ import { useTheme } from "@/context/ThemeContext"
 
 interface MenuItem {
   title: string
-  url: string
+  url: Route
   description?: string
   icon?: React.ReactNode
   items?: MenuItem[]
@@ -30,7 +31,7 @@ interface MenuItem {
 
 interface NavbarProps {
   logo?: {
-    url: string
+    url: Route
     src: string
     alt: string
     title: string
@@ -49,7 +50,7 @@ const Navbar = ({
   const { darkMode } = useTheme()
 
   // Create menu with translations
-  const menu = [
+  const menu: MenuItem[] = [
     { title: t("navbar.home"), url: "/" },
     {
       title: t("navbar.applications"),

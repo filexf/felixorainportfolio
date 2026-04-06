@@ -1,4 +1,5 @@
 import { Brush, Camera, ChevronRight, Code } from "lucide-react"
+import type { Route } from "next"
 import { getTranslations } from "next-intl/server"
 import Reveal from "@/components/Reveal"
 import { ButtonLink } from "@/components/ui/button"
@@ -7,7 +8,7 @@ interface CardProps {
   icon: React.ComponentType<{ className?: string }>
   title: string
   text: string
-  path: string
+  path: Route
   buttonText: string
   delay: number
 }
@@ -19,7 +20,7 @@ export default async function CardsWork() {
     title: string
     icon: React.ComponentType<{ className?: string }>
     text: string
-    path: string
+    path: Route
     buttonText: string
   }
 
