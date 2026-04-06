@@ -86,7 +86,7 @@ export default async function MosaicPhotoPage() {
         title={t("title")}
         description={t("desc")}
         images={images}
-        pageUrl="https://www.felix-orain.com/photos/mosaic"
+        pageUrl="https://www.felix-orain.com/photos/motif"
       />
       <Gallery title={t("title")} images={images} text={t("desc")} />
     </>

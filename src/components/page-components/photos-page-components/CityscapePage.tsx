@@ -100,7 +100,7 @@ export default async function CityscapePhotoPage() {
         title={t("title")}
         description={t("desc")}
         images={images}
-        pageUrl="https://www.felix-orain.com/photos/cityscape"
+        pageUrl="https://www.felix-orain.com/photos/urbain"
       />
       <Gallery title={t("title")} images={images} text={t("desc")} />
     </>

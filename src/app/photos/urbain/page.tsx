@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     images: ["/images/Photos-cityscape/Photos HK chill-109.jpg"],
   },
   alternates: {
-    canonical: "https://www.felix-orain.com/photos/cityscape",
+    canonical: "https://www.felix-orain.com/photos/urbain",
   },
 }
 

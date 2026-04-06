@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     images: ["/images/Couvertures magazines/WIZZY En Asie BONNE VERSION.jpg"],
   },
   alternates: {
-    canonical: "https://www.felix-orain.com/books/wizzyenasie",
+    canonical: "https://www.felix-orain.com/livres-photo/wizzy-en-asie",
   },
 }
 

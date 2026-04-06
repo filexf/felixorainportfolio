@@ -37,7 +37,7 @@ export default async function Footer({ noPadding }: FooterProps) {
                 <nav className="space-y-3">
                   <FooterLink href="/applications">{t("links.webDevelopment")}</FooterLink>
                   <FooterLink href="/photos">{t("links.photography")}</FooterLink>
-                  <FooterLink href="/books">{t("links.graphicDesign")}</FooterLink>
+                  <FooterLink href="/livres-photo">{t("links.graphicDesign")}</FooterLink>
                 </nav>
               </div>
 
@@ -49,9 +49,9 @@ export default async function Footer({ noPadding }: FooterProps) {
                 <nav className="space-y-3">
                   <FooterLink href="/photos/mariage">{t("links.weddings")}</FooterLink>
                   <FooterLink href="/photos/sport">{t("links.sportParkour")}</FooterLink>
-                  <FooterLink href="/photos/landscape">{t("links.landscapes")}</FooterLink>
-                  <FooterLink href="/photos/cityscape">{t("links.cityscape")}</FooterLink>
-                  <FooterLink href="/photos/mosaic">{t("links.mosaic")}</FooterLink>
+                  <FooterLink href="/photos/paysage">{t("links.landscapes")}</FooterLink>
+                  <FooterLink href="/photos/urbain">{t("links.cityscape")}</FooterLink>
+                  <FooterLink href="/photos/motif">{t("links.mosaic")}</FooterLink>
                   <FooterLink href="/photos/portrait">{t("links.portraits")}</FooterLink>
                 </nav>
               </div>
@@ -62,8 +62,8 @@ export default async function Footer({ noPadding }: FooterProps) {
                   {t("sections.creations")}
                 </h3>
                 <nav className="space-y-3">
-                  <FooterLink href="/books/civilisation">{t("links.civilisationMag")}</FooterLink>
-                  <FooterLink href="/books/wizzyenasie">{t("links.wizzyAsia")}</FooterLink>
+                  <FooterLink href="/livres-photo/civilisation">{t("links.civilisationMag")}</FooterLink>
+                  <FooterLink href="/livres-photo/wizzy-en-asie">{t("links.wizzyAsia")}</FooterLink>
                 </nav>
               </div>
 

@@ -75,7 +75,7 @@ export default async function WizzyEnAsieBook() {
         title="Wizzy en Asie"
         description={t("description")}
         coverImage="/images/Couvertures magazines/WIZZY En Asie BONNE VERSION.jpg"
-        pageUrl="https://www.felix-orain.com/books/wizzyenasie"
+        pageUrl="https://www.felix-orain.com/livres-photo/wizzy-en-asie"
         images={images}
       />
       <BooksGallery title={"Wizzy en Asie"} images={images} />

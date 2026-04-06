@@ -43,7 +43,7 @@ export default async function CardsWork() {
       title: t("cardData.design.title"),
       icon: Brush,
       text: t("cardData.design.text"),
-      path: "/books",
+      path: "/livres-photo",
       buttonText: t("cardData.design.buttonText"),
     },
   ]

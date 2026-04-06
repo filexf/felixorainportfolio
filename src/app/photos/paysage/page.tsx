@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     images: ["/images/Photos-landscape/Tests photos USA-147.jpg"],
   },
   alternates: {
-    canonical: "https://www.felix-orain.com/photos/landscape",
+    canonical: "https://www.felix-orain.com/photos/paysage",
   },
 }
 

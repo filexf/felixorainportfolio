@@ -20,6 +20,32 @@ const nextConfig: NextConfig = {
         destination: "/photos/mariage",
         permanent: true,
       },
+      { source: "/books", destination: "/livres-photo", permanent: true },
+      {
+        source: "/books/civilisation",
+        destination: "/livres-photo/civilisation",
+        permanent: true,
+      },
+      {
+        source: "/books/wizzyenasie",
+        destination: "/livres-photo/wizzy-en-asie",
+        permanent: true,
+      },
+      {
+        source: "/photos/landscape",
+        destination: "/photos/paysage",
+        permanent: true,
+      },
+      {
+        source: "/photos/cityscape",
+        destination: "/photos/urbain",
+        permanent: true,
+      },
+      {
+        source: "/photos/mosaic",
+        destination: "/photos/motif",
+        permanent: true,
+      },
     ];
   },
 };

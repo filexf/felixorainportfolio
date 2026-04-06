@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
     },
     { path: "/photos", priority: 0.9, changeFrequency: "weekly" as const },
-    { path: "/books", priority: 0.9, changeFrequency: "monthly" as const },
+    { path: "/livres-photo", priority: 0.9, changeFrequency: "monthly" as const },
 
     // Pages de photographie - Niveau 2
     {
@@ -29,17 +29,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
     },
     {
-      path: "/photos/landscape",
+      path: "/photos/paysage",
       priority: 0.8,
       changeFrequency: "monthly" as const,
     },
     {
-      path: "/photos/cityscape",
+      path: "/photos/urbain",
       priority: 0.8,
       changeFrequency: "monthly" as const,
     },
     {
-      path: "/photos/mosaic",
+      path: "/photos/motif",
       priority: 0.8,
       changeFrequency: "monthly" as const,
     },
@@ -51,12 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Pages de livres - Niveau 2
     {
-      path: "/books/civilisation",
+      path: "/livres-photo/civilisation",
       priority: 0.8,
       changeFrequency: "monthly" as const,
     },
     {
-      path: "/books/wizzyenasie",
+      path: "/livres-photo/wizzy-en-asie",
       priority: 0.8,
       changeFrequency: "monthly" as const,
     },

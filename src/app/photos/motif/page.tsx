@@ -2,9 +2,9 @@ import { Metadata } from "next"
 import MosaicPhotoPage from "@/components/page-components/photos-page-components/MosaicPage"
 
 export const metadata: Metadata = {
-  title: "Photographe Mosaïques & Patterns",
+  title: "Photographe Motifs & Mosaïques",
   description:
-    "Photographe spécialisé dans les mosaïques et motifs géométriques à Rennes et en Bretagne. Art urbain, textures architecturales, patterns créatifs et compositions abstraites. Portfolio artistique de photographie conceptuelle avec une approche moderne et créative.",
+    "Photographe spécialisé dans les motifs et mosaïques géométriques à Rennes et en Bretagne. Art urbain, textures architecturales, motifs créatifs et compositions abstraites. Portfolio artistique de photographie conceptuelle avec une approche moderne et créative.",
   keywords: [
     "photographe mosaïques Rennes",
     "photographie patterns Bretagne",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     images: ["/images/Photos-mosaics/Photos_HK_chill-128.jpg"],
   },
   alternates: {
-    canonical: "https://www.felix-orain.com/photos/mosaic",
+    canonical: "https://www.felix-orain.com/photos/motif",
   },
 }
 

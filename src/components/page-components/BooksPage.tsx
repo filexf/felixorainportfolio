@@ -25,7 +25,7 @@ export default async function BooksPage() {
               title={t("books.civilisation.title")}
               description={t("books.civilisation.description")}
               coverImage="/images/Couvertures magazines/Civilisation Mag.jpg"
-              galleryLink="/books/civilisation"
+              galleryLink="/livres-photo/civilisation"
               reverseLayout={true}
               hasFilmLink={true}
               filmLink="https://www.youtube.com/watch?v=vcjpJbInfEg"
@@ -36,7 +36,7 @@ export default async function BooksPage() {
               title={t("books.wizzy.title")}
               description={t("books.wizzy.description")}
               coverImage="/images/Couvertures magazines/WIZZY En Asie BONNE VERSION.jpg"
-              galleryLink="/books/wizzyenasie"
+              galleryLink="/livres-photo/wizzy-en-asie"
               reverseLayout={false}
             />
           </section>

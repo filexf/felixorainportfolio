@@ -76,7 +76,7 @@ const Navbar = ({
           title: t("navbar.mosaic"),
           description: t("navbar.descriptions.mosaic"),
           icon: <Grid className="size-5 shrink-0" />,
-          url: "/photos/mosaic",
+          url: "/photos/motif",
         },
         {
           title: t("navbar.sport"),
@@ -88,31 +88,31 @@ const Navbar = ({
           title: t("navbar.cityscape"),
           description: t("navbar.descriptions.cityscape"),
           icon: <Building className="size-5 shrink-0" />,
-          url: "/photos/cityscape",
+          url: "/photos/urbain",
         },
         {
           title: t("navbar.landscape"),
           description: t("navbar.descriptions.landscape"),
           icon: <Mountain className="size-5 shrink-0" />,
-          url: "/photos/landscape",
+          url: "/photos/paysage",
         },
       ],
     },
     {
       title: t("navbar.books"),
-      url: "/books",
+      url: "/livres-photo",
       items: [
         {
           title: t("navbar.civilisation"),
           description: t("navbar.descriptions.civilisation"),
           icon: <Book className="size-5 shrink-0" />,
-          url: "/books/civilisation",
+          url: "/livres-photo/civilisation",
         },
         {
           title: t("navbar.wizzyenasie"),
           description: t("navbar.descriptions.wizzyenasie"),
           icon: <Book className="size-5 shrink-0" />,
-          url: "/books/wizzyenasie",
+          url: "/livres-photo/wizzy-en-asie",
         },
       ],
     },
@@ -478,22 +478,22 @@ const Navbar = ({
             <Link href="/photos/portrait">{t("navbar.portrait")}</Link>
           </li>
           <li>
-            <Link href="/photos/landscape">{t("navbar.landscape")}</Link>
+            <Link href="/photos/paysage">{t("navbar.landscape")}</Link>
           </li>
           <li>
-            <Link href="/photos/cityscape">{t("navbar.cityscape")}</Link>
+            <Link href="/photos/urbain">{t("navbar.cityscape")}</Link>
           </li>
           <li>
-            <Link href="/photos/mosaic">{t("navbar.mosaic")}</Link>
+            <Link href="/photos/motif">{t("navbar.mosaic")}</Link>
           </li>
           <li>
-            <Link href="/books">{t("navbar.books")}</Link>
+            <Link href="/livres-photo">{t("navbar.books")}</Link>
           </li>
           <li>
-            <Link href="/books/civilisation">{t("navbar.civilisation")}</Link>
+            <Link href="/livres-photo/civilisation">{t("navbar.civilisation")}</Link>
           </li>
           <li>
-            <Link href="/books/wizzyenasie">{t("navbar.wizzyenasie")}</Link>
+            <Link href="/livres-photo/wizzy-en-asie">{t("navbar.wizzyenasie")}</Link>
           </li>
           <li>
             <Link href="/contact">{t("navbar.contact")}</Link>

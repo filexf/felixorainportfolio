@@ -88,7 +88,7 @@ export default async function LandscapePhotoPage() {
         title={t("title")}
         description={t("desc")}
         images={images}
-        pageUrl="https://www.felix-orain.com/photos/landscape"
+        pageUrl="https://www.felix-orain.com/photos/paysage"
       />
       <Gallery title={t("title")} images={images} text={t("desc")} />
     </>

@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     images: ["/images/Couvertures magazines/Civilisation Mag.jpg"],
   },
   alternates: {
-    canonical: "https://www.felix-orain.com/books",
+    canonical: "https://www.felix-orain.com/livres-photo",
   },
 }
 

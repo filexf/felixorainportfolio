@@ -14,9 +14,9 @@ type PhotoCategoryId =
 
 const GALLERY_HREF: Record<PhotoCategoryId, Route> = {
   sport: "/photos/sport",
-  mosaic: "/photos/mosaic",
-  cityscape: "/photos/cityscape",
-  landscape: "/photos/landscape",
+  mosaic: "/photos/motif",
+  cityscape: "/photos/urbain",
+  landscape: "/photos/paysage",
   mariage: "/photos/mariage",
   portrait: "/photos/portrait",
 }

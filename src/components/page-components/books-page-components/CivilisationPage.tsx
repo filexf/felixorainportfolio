@@ -75,7 +75,7 @@ export default async function CivilisationBook() {
         title="Civilisation"
         description={t("description")}
         coverImage="/images/Couvertures magazines/Civilisation Mag.jpg"
-        pageUrl="https://www.felix-orain.com/books/civilisation"
+        pageUrl="https://www.felix-orain.com/livres-photo/civilisation"
         images={images}
       />
       <BooksGallery title={"Civilisation"} images={images} />

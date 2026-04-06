@@ -22,7 +22,7 @@ export default async function DesignSection() {
             <DesignCard photo="/images/Couvertures magazines/WIZZY En Asie BONNE VERSION.jpg" />
           </div>
 
-          <SeeMore projectLink={"/books"} context="books" />
+          <SeeMore projectLink={"/livres-photo"} context="books" />
         </div>
       </SectionWrapper>
     </Reveal>
@@ -35,7 +35,7 @@ interface DesignCardProps {
 
 function DesignCard({ photo }: DesignCardProps) {
   return (
-    <Link href="/books">
+    <Link href="/livres-photo">
       <div className="group relative mx-auto aspect-[2/3] w-full max-w-[250px] overflow-hidden rounded-lg transition-all duration-300 hover:-translate-y-1 md:max-w-[280px]">
         <Image
           src={photo}

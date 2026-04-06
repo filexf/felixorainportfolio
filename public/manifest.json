@@ -106,8 +106,8 @@
       ]
     },
     {
-      "name": "Books",
-      "url": "/books",
+      "name": "Livres photo",
+      "url": "/livres-photo",
       "description": "Découvrir mes publications et livres",
       "icons": [
         {
