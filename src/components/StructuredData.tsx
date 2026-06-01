@@ -12,7 +12,7 @@ export default function StructuredData() {
     },
     telephone: "+33778764454",
     email: "felix.orain@gmail.com",
-    url: "https://www.felixorain.com",
+    url: "https://www.felix-orain.com",
     sameAs: [
       "https://github.com/filexf",
       "https://www.linkedin.com/in/felix-orain/",

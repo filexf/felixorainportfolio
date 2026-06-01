@@ -42,6 +42,14 @@ export default async function PhotosPage() {
       path: "/images/Photos-sport/Photo_dub_roofgap.jpg",
     },
     {
+      id: "mariage",
+      path: "/images/Photos-wedding/Wedding_photos_14.jpg",
+    },
+    {
+      id: "portrait",
+      path: "/images/Photos-portraits/Photos-portraits-4.jpg",
+    },
+    {
       id: "mosaic",
       path: "/images/Photos-mosaics/Photos_Bangkok_V1-33.jpg",
     },
@@ -52,14 +60,6 @@ export default async function PhotosPage() {
     {
       id: "landscape",
       path: "/images/Photos-landscape/Tests photos USA-147.jpg",
-    },
-    {
-      id: "mariage",
-      path: "/images/Photos-wedding/Wedding_photos_14.jpg",
-    },
-    {
-      id: "portrait",
-      path: "/images/Photos-portraits/Photos-portraits-4.jpg",
     },
   ]
 

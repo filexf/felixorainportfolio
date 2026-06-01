@@ -26,10 +26,6 @@ const images: GalleryImage[] = [
     title: "Sport image",
   },
   {
-    src: "/images/Photos-sport/Photo_Saint_Sulpice.jpg",
-    title: "Sport image",
-  },
-  {
     src: "/images/Photos-sport/Photos_Bangkok_V1-27.jpg",
     title: "Sport image",
   },
@@ -75,10 +71,6 @@ const images: GalleryImage[] = [
   },
   {
     src: "/images/Photos-sport/Photo_roofgap_Leo.jpg",
-    title: "Sport image",
-  },
-  {
-    src: "/images/Photos-sport/Paris_Saint_Eustache.jpg",
     title: "Sport image",
   },
 ]

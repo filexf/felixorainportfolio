@@ -53,10 +53,6 @@ const Navbar = ({
   const menu: MenuItem[] = [
     { title: t("navbar.home"), url: "/" },
     {
-      title: t("navbar.applications"),
-      url: "/applications",
-    },
-    {
       title: t("navbar.photos"),
       url: "/photos",
       items: [
@@ -115,6 +111,10 @@ const Navbar = ({
           url: "/livres-photo/wizzy-en-asie",
         },
       ],
+    },
+    {
+      title: t("navbar.applications"),
+      url: "/applications",
     },
     {
       title: t("navbar.contact"),

@@ -26,13 +26,6 @@ export default async function CardsWork() {
 
   const cardData: CardData[] = [
     {
-      title: t("cardData.webDevelopment.title"),
-      icon: Code,
-      text: t("cardData.webDevelopment.text"),
-      path: "/applications",
-      buttonText: t("cardData.webDevelopment.buttonText"),
-    },
-    {
       title: t("cardData.photography.title"),
       icon: Camera,
       text: t("cardData.photography.text"),
@@ -45,6 +38,13 @@ export default async function CardsWork() {
       text: t("cardData.design.text"),
       path: "/livres-photo",
       buttonText: t("cardData.design.buttonText"),
+    },
+    {
+      title: t("cardData.webDevelopment.title"),
+      icon: Code,
+      text: t("cardData.webDevelopment.text"),
+      path: "/applications",
+      buttonText: t("cardData.webDevelopment.buttonText"),
     },
   ]
 

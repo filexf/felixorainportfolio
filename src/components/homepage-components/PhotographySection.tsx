@@ -7,10 +7,10 @@ import Reveal from "@/components/Reveal"
 
 export default async function PhotographySection() {
   const photos: string[] = [
-    "/images/Important-photos/Tests_photos_USA_147.jpg",
+    "/images/Important-photos/Wedding_photos_14.jpg",
     "/images/Important-photos/Photos_Bangkok_V1_33.jpg",
-    "/images/Important-photos/Photos_HK_chill_109.jpg",
-    "/images/Important-photos/Photos_HK_chill_132.jpg",
+    "/images/Important-photos/Photos-portraits-4.jpg",
+    "/images/Important-photos/Photos-HK-chill-29.jpg",
   ]
   const t = await getTranslations()
 
