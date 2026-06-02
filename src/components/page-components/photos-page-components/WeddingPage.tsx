@@ -91,7 +91,38 @@ const images: GalleryImage[] = [
     src: "/images/Photos-wedding/Wedding_photos_23.jpg",
     title: "Photo de mariage",
   },
-  
+  {
+    src: "/images/Photos-wedding/Wedding_photos_27.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_33.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_28.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_29.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_30.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_31.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_32.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_34.jpg",
+    title: "Photo de mariage",
+  },
 ]
 
 export default async function WeddingPhotoPage() {
