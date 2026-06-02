@@ -51,7 +51,6 @@ const Navbar = ({
 
   // Create menu with translations
   const menu: MenuItem[] = [
-    { title: t("navbar.home"), url: "/" },
     {
       title: t("navbar.photos"),
       url: "/photos",
@@ -318,7 +317,7 @@ const Navbar = ({
         <div className="container mx-auto px-4">
           {/* Desktop Menu */}
           <nav className="hidden justify-between py-4 lg:flex">
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-12">
               {/* Logo */}
               <Link href={logo.url} className="flex items-center gap-4">
                 <Image

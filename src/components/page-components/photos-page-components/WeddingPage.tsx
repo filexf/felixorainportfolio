@@ -25,6 +25,7 @@ const images: GalleryImage[] = [
     src: "/images/Photos-wedding/Wedding_photos_9.jpg",
     title: "Photo de mariage",
   },
+
   {
     src: "/images/Photos-wedding/Wedding_photos_1.jpg",
     title: "Photo de mariage",
@@ -41,12 +42,13 @@ const images: GalleryImage[] = [
     src: "/images/Photos-wedding/Wedding_photos_11.jpg",
     title: "Photo de mariage",
   },
+
   {
-    src: "/images/Photos-wedding/Wedding_photos_15.jpg",
+    src: "/images/Photos-wedding/Wedding_photos_25.jpg",
     title: "Photo de mariage",
   },
   {
-    src: "/images/Photos-wedding/Wedding_photos_18.jpg",
+    src: "/images/Photos-wedding/Wedding_photos_15.jpg",
     title: "Photo de mariage",
   },
   {
@@ -54,11 +56,11 @@ const images: GalleryImage[] = [
     title: "Photo de mariage",
   },
   {
-    src: "/images/Photos-wedding/Wedding_photos_2.jpg",
+    src: "/images/Photos-wedding/Wedding_photos_18.jpg",
     title: "Photo de mariage",
   },
   {
-    src: "/images/Photos-wedding/Wedding_photos_4.jpg",
+    src: "/images/Photos-wedding/Wedding_photos_2.jpg",
     title: "Photo de mariage",
   },
   {
@@ -82,25 +84,14 @@ const images: GalleryImage[] = [
     title: "Photo de mariage",
   },
   {
-    src: "/images/Photos-wedding/Wedding_photos_22.jpg",
+    src: "/images/Photos-wedding/Wedding_photos_24.jpg",
     title: "Photo de mariage",
   },
   {
     src: "/images/Photos-wedding/Wedding_photos_23.jpg",
     title: "Photo de mariage",
   },
-  {
-    src: "/images/Photos-wedding/Wedding_photos_24.jpg",
-    title: "Photo de mariage",
-  },
-  {
-    src: "/images/Photos-wedding/Wedding_photos_25.jpg",
-    title: "Photo de mariage",
-  },
-  {
-    src: "/images/Photos-wedding/Wedding_photos_26.jpg",
-    title: "Photo de mariage",
-  },
+  
 ]
 
 export default async function WeddingPhotoPage() {

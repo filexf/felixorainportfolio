@@ -45,7 +45,7 @@ function GalleryThumbnail({ src, alt, sizes, quality, loading, priority }: Galle
   const [loaded, setLoaded] = useState(false)
 
   return (
-    <div className="overflow-hidden rounded-md">
+    <div className="overflow-hidden rounded-sm">
       <div className="origin-center transition-transform duration-200 ease-out group-hover:scale-105">
         <Image
           src={src}
@@ -88,7 +88,7 @@ const Gallery = ({ title, images, text }: GalleryProps) => {
 
   return (
     <div className="flex w-full justify-center pt-[40px] pb-[120px]">
-      <article className="flex flex-col gap-16 px-8">
+      <article className="flex flex-col gap-16 px-4">
         <header className="flex flex-col gap-8">
           <h1 className="text-gradient text-center text-5xl leading-normal font-bold md:text-7xl">
             {title}
@@ -96,17 +96,17 @@ const Gallery = ({ title, images, text }: GalleryProps) => {
           {text && <p className="body-font mx-auto max-w-5xl text-center">{text}</p>}
         </header>
 
-        <section className="flex w-full gap-4 px-4 sm:gap-5" aria-label={`Galerie de ${title}`}>
+        <section className="flex w-full gap-4 sm:px-4" aria-label={`Galerie de ${title}`}>
           {columns.map((column) => (
             <div
               key={column[0] ? `${column[0].image.src}-${column[0].index}` : "empty"}
-              className="flex min-w-0 flex-1 flex-col gap-4 sm:gap-5"
+              className="flex min-w-0 flex-1 flex-col gap-4"
             >
               {column.map(({ image, index }) => (
                 <button
                   key={`${image.src}-${index}`}
                   type="button"
-                  className="group w-full cursor-pointer overflow-hidden rounded-md border-0 bg-transparent p-0 text-left transition-shadow duration-300 hover:shadow-md"
+                  className="group w-full cursor-pointer overflow-hidden rounded-sm border-0 bg-transparent p-0 text-left transition-shadow duration-300 hover:shadow-md"
                   onClick={() => {
                     setCurrentIndex(index)
                     setOpen(true)
