@@ -31,7 +31,7 @@ function GalleryThumbnail({ src, alt, sizes, quality, loading, priority }: Galle
   const markLoaded = () => setLoaded(true)
 
   return (
-    <div className="absolute inset-0 overflow-hidden rounded-md">
+    <div className="absolute inset-0 overflow-hidden rounded-sm">
       <div className="relative h-full w-full origin-center transition-transform duration-200 ease-out group-hover:scale-103">
         <Image
           src={src}
@@ -56,8 +56,8 @@ export default function Gallery({ title, images }: GalleryProps) {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
 
   return (
-    <div className="flex w-full justify-center px-2 py-12 sm:px-4">
-      <article className="flex w-full max-w-5xl flex-col gap-12">
+    <div className="flex w-full justify-center px-2 py-12 sm:px-4 lg:px-12">
+      <article className="flex w-full max-w-5xl flex-col gap-12 lg:max-w-7xl">
         <header className="flex flex-col gap-8">
           <h1 className="text-gradient text-center text-5xl leading-normal font-bold sm:text-6xl md:text-7xl">
             {title}
@@ -66,14 +66,14 @@ export default function Gallery({ title, images }: GalleryProps) {
         </header>
 
         <section
-          className="xs:grid-cols-2 grid grid-cols-1 gap-4 overflow-hidden px-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-4"
+          className="grid grid-cols-2 gap-4 overflow-hidden px-4 md:grid-cols-3 lg:grid-cols-4 lg:px-0"
           aria-label={`Galerie du magazine ${title}`}
         >
           {images.map((image, index) => (
             <button
               key={`${image.src}-${index}`}
               type="button"
-              className="group relative aspect-[3/2] cursor-pointer overflow-hidden rounded-md transition-shadow duration-300 hover:shadow-md"
+              className="group relative aspect-[3/2] cursor-pointer overflow-hidden rounded-sm transition-shadow duration-300 hover:shadow-md"
               onClick={() => {
                 setCurrentIndex(index)
                 setOpen(true)
@@ -84,7 +84,7 @@ export default function Gallery({ title, images }: GalleryProps) {
                 <GalleryThumbnail
                   src={image.src}
                   alt={image.title || `${title} - Page ${index + 1}`}
-                  sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1536px) 25vw, 20vw"
                   quality={80}
                   loading={index < 4 ? "eager" : "lazy"}
                 />
