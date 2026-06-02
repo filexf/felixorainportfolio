@@ -26,10 +26,6 @@ const images: GalleryImage[] = [
     title: "Photo de mariage",
   },
   {
-    src: "/images/Photos-wedding/Wedding_photos_10.jpg",
-    title: "Photo de mariage",
-  },
-  {
     src: "/images/Photos-wedding/Wedding_photos_1.jpg",
     title: "Photo de mariage",
   },
