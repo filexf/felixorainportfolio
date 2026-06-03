@@ -18,12 +18,11 @@ interface GalleryProps {
 type GalleryItem = { image: GalleryImage; index: number }
 
 function getColumnCount(width: number) {
-  if (width >= 1024) return 4
-  if (width >= 768) return 3
+  if (width >= 640) return 3
   return 2
 }
 
-/** Row-first masonry: [0][1][2][3] on the first row, then [4][5]… */
+/** Row-first masonry: [0][1][2] on the first row, then [3][4]… */
 function splitIntoColumns(items: GalleryItem[], columnCount: number): GalleryItem[][] {
   const columns = Array.from({ length: columnCount }, () => [] as GalleryItem[])
   for (let i = 0; i < items.length; i++) {
@@ -45,7 +44,7 @@ function GalleryThumbnail({ src, alt, sizes, quality, loading, priority }: Galle
   const [loaded, setLoaded] = useState(false)
 
   return (
-    <div className="overflow-hidden rounded-sm">
+    <div className="overflow-hidden">
       <div className="origin-center transition-transform duration-200 ease-out group-hover:scale-105">
         <Image
           src={src}
@@ -88,7 +87,7 @@ const Gallery = ({ title, images, text }: GalleryProps) => {
 
   return (
     <div className="flex w-full justify-center pt-[40px] pb-[120px]">
-      <article className="flex flex-col gap-16 px-4">
+      <article className="flex w-full max-w-[1400px] flex-col gap-16 px-2 sm:px-8">
         <header className="flex flex-col gap-8">
           <h1 className="text-gradient text-center text-5xl leading-normal font-bold md:text-7xl">
             {title}
@@ -96,17 +95,17 @@ const Gallery = ({ title, images, text }: GalleryProps) => {
           {text && <p className="body-font mx-auto max-w-5xl text-center">{text}</p>}
         </header>
 
-        <section className="flex w-full gap-4 sm:px-4" aria-label={`Galerie de ${title}`}>
+        <section className="flex w-full gap-2" aria-label={`Galerie de ${title}`}>
           {columns.map((column) => (
             <div
               key={column[0] ? `${column[0].image.src}-${column[0].index}` : "empty"}
-              className="flex min-w-0 flex-1 flex-col gap-4"
+              className="flex min-w-0 flex-1 flex-col gap-2"
             >
               {column.map(({ image, index }) => (
                 <button
                   key={`${image.src}-${index}`}
                   type="button"
-                  className="group w-full cursor-pointer overflow-hidden rounded-sm border-0 bg-transparent p-0 text-left transition-shadow duration-300 hover:shadow-md"
+                  className="group w-full cursor-pointer overflow-hidden border-0 bg-transparent p-0 text-left"
                   onClick={() => {
                     setCurrentIndex(index)
                     setOpen(true)
@@ -117,7 +116,7 @@ const Gallery = ({ title, images, text }: GalleryProps) => {
                     <GalleryThumbnail
                       src={image.src}
                       alt={image.title || `${title} - Image ${index + 1}`}
-                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      sizes="(max-width: 640px) 50vw, 33vw"
                       quality={80}
                       loading={index < columnCount ? "eager" : "lazy"}
                       priority={index < columnCount}

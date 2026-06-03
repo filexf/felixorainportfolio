@@ -41,8 +41,8 @@ export function GridBackground({
   lineOpacity,
   dotOpacity,
   lineSize = 1,
-  dotSize = 2,
-  gridSize = 40,
+  dotSize = 1,
+  gridSize = 60,
   transparencyLevel = "medium",
 }: GridBackgroundProps) {
   const finalLineOpacity = lineOpacity ?? transparencyLevels[transparencyLevel].lineOpacity

@@ -10,45 +10,7 @@ interface GalleryImage {
 // Définition des images avec leurs chemins corrects
 const images: GalleryImage[] = [
   {
-    src: "/images/Photos-wedding/Wedding_photos_14.jpg",
-    title: "Photo de mariage",
-  },
-  {
-    src: "/images/Photos-wedding/Wedding_photos_3.jpg",
-    title: "Photo de mariage",
-  },
-  {
-    src: "/images/Photos-wedding/Wedding_photos_17.jpg",
-    title: "Photo de mariage",
-  },
-  {
-    src: "/images/Photos-wedding/Wedding_photos_9.jpg",
-    title: "Photo de mariage",
-  },
-
-  {
-    src: "/images/Photos-wedding/Wedding_photos_1.jpg",
-    title: "Photo de mariage",
-  },
-  {
-    src: "/images/Photos-wedding/Wedding_photos_5.jpg",
-    title: "Photo de mariage",
-  },
-  {
-    src: "/images/Photos-wedding/Wedding_photos_16.jpg",
-    title: "Photo de mariage",
-  },
-  {
-    src: "/images/Photos-wedding/Wedding_photos_11.jpg",
-    title: "Photo de mariage",
-  },
-
-  {
-    src: "/images/Photos-wedding/Wedding_photos_25.jpg",
-    title: "Photo de mariage",
-  },
-  {
-    src: "/images/Photos-wedding/Wedding_photos_15.jpg",
+    src: "/images/Photos-wedding/Wedding_photos_28.jpg",
     title: "Photo de mariage",
   },
   {
@@ -56,11 +18,47 @@ const images: GalleryImage[] = [
     title: "Photo de mariage",
   },
   {
-    src: "/images/Photos-wedding/Wedding_photos_18.jpg",
+    src: "/images/Photos-wedding/Wedding_photos_31.jpg",
     title: "Photo de mariage",
   },
   {
-    src: "/images/Photos-wedding/Wedding_photos_2.jpg",
+    src: "/images/Photos-wedding/Wedding_photos_17.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_23.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_14.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_35.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_9.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_29.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_25.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_5.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_1.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_16.jpg",
     title: "Photo de mariage",
   },
   {
@@ -68,7 +66,23 @@ const images: GalleryImage[] = [
     title: "Photo de mariage",
   },
   {
+    src: "/images/Photos-wedding/Wedding_photos_15.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_31.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_2.jpg",
+    title: "Photo de mariage",
+  },
+  {
     src: "/images/Photos-wedding/Wedding_photos_13.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_34.jpg",
     title: "Photo de mariage",
   },
   {
@@ -88,7 +102,7 @@ const images: GalleryImage[] = [
     title: "Photo de mariage",
   },
   {
-    src: "/images/Photos-wedding/Wedding_photos_23.jpg",
+    src: "/images/Photos-wedding/Wedding_photos_33.jpg",
     title: "Photo de mariage",
   },
   {
@@ -96,23 +110,7 @@ const images: GalleryImage[] = [
     title: "Photo de mariage",
   },
   {
-    src: "/images/Photos-wedding/Wedding_photos_33.jpg",
-    title: "Photo de mariage",
-  },
-  {
-    src: "/images/Photos-wedding/Wedding_photos_28.jpg",
-    title: "Photo de mariage",
-  },
-  {
-    src: "/images/Photos-wedding/Wedding_photos_29.jpg",
-    title: "Photo de mariage",
-  },
-  {
-    src: "/images/Photos-wedding/Wedding_photos_30.jpg",
-    title: "Photo de mariage",
-  },
-  {
-    src: "/images/Photos-wedding/Wedding_photos_31.jpg",
+    src: "/images/Photos-wedding/Wedding_photos_18.jpg",
     title: "Photo de mariage",
   },
   {
@@ -120,7 +118,15 @@ const images: GalleryImage[] = [
     title: "Photo de mariage",
   },
   {
-    src: "/images/Photos-wedding/Wedding_photos_34.jpg",
+    src: "/images/Photos-wedding/Wedding_photos_22.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_30.jpg",
+    title: "Photo de mariage",
+  },
+  {
+    src: "/images/Photos-wedding/Wedding_photos_18.jpg",
     title: "Photo de mariage",
   },
 ]
