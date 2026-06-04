@@ -70,7 +70,7 @@ const images: GalleryImage[] = [
     title: "Photo de mariage",
   },
   {
-    src: "/images/Photos-wedding/Wedding_photos_31.jpg",
+    src: "/images/Photos-wedding/Wedding_photos_36.jpg",
     title: "Photo de mariage",
   },
   {
@@ -126,7 +126,7 @@ const images: GalleryImage[] = [
     title: "Photo de mariage",
   },
   {
-    src: "/images/Photos-wedding/Wedding_photos_18.jpg",
+    src: "/images/Photos-wedding/Wedding_photos_37.jpg",
     title: "Photo de mariage",
   },
 ]
